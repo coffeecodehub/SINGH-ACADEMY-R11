@@ -63,6 +63,14 @@ jobs:
             echo "::error::MongoDB /data/db must have at least 768 MiB free. Check tmpfs size, not only the runner root disk."
             exit 1
           fi
+      - name: Install FFmpeg for media integration tests
+        shell: bash
+        run: |
+          set -euo pipefail
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends ffmpeg
+          ffmpeg -version
+          ffprobe -version
       - name: Real HTTP and transaction tests
         run: npm run test:integration --prefix backend
       - name: Install browser and run actual frontend checks
