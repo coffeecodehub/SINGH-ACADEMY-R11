@@ -1,0 +1,4378 @@
+{
+  "label": "before-final",
+  "source": "Actual Next production UI with local synthetic API/content; Fast3G=150ms RTT+1.6Mbps down+0.75Mbps up+4xCPU; both landing and review navigation cold browser cache; no deployed-host latency claim",
+  "rows": [
+    {
+      "mode": "desktop",
+      "sample": 0,
+      "landing": {
+        "metrics": {
+          "lcp": 300,
+          "cls": 0,
+          "heroSources": [
+            {
+              "src": "/optimized/993d85b15e13dd3a-hero-q92-960.webp",
+              "at": 180.90000000596046
+            },
+            {
+              "src": "/images/global-learning/brazil-1.jpg",
+              "at": 452.40000000596046
+            }
+          ],
+          "firstSection": 522.8000000119209,
+          "playing": [],
+          "posters": [
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f4?poster=1",
+              "at": 561.4000000059605
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f5?poster=1",
+              "at": 561.5
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f6?poster=1",
+              "at": 561.6000000238419
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f7?poster=1",
+              "at": 561.7000000178814
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f8?poster=1",
+              "at": 561.9000000059605
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f9?poster=1",
+              "at": 562
+            }
+          ],
+          "errors": []
+        },
+        "navigation": {
+          "name": "http://127.0.0.1:3108/",
+          "entryType": "navigation",
+          "startTime": 0,
+          "duration": 347.10000002384186,
+          "navigationId": 5072,
+          "initiatorType": "navigation",
+          "deliveryType": "",
+          "nextHopProtocol": "http/1.1",
+          "renderBlockingStatus": "non-blocking",
+          "contentType": "text/html",
+          "contentEncoding": "gzip",
+          "workerStart": 0,
+          "workerRouterEvaluationStart": 0,
+          "workerCacheLookupStart": 0,
+          "workerMatchedSourceType": "",
+          "workerFinalSourceType": "",
+          "redirectStart": 0,
+          "redirectEnd": 0,
+          "fetchStart": 0.7000000178813934,
+          "domainLookupStart": 0.7000000178813934,
+          "domainLookupEnd": 0.7000000178813934,
+          "connectStart": 0.7000000178813934,
+          "secureConnectionStart": 0,
+          "connectEnd": 0.7000000178813934,
+          "requestStart": 1.9000000059604645,
+          "responseStart": 128.10000002384186,
+          "firstInterimResponseStart": 0,
+          "finalResponseHeadersStart": 128.10000002384186,
+          "responseEnd": 153,
+          "transferSize": 10091,
+          "encodedBodySize": 9791,
+          "decodedBodySize": 32145,
+          "responseStatus": 200,
+          "serverTiming": [],
+          "unloadEventStart": 0,
+          "unloadEventEnd": 0,
+          "domInteractive": 183.2000000178814,
+          "domContentLoadedEventStart": 183.30000001192093,
+          "domContentLoadedEventEnd": 183.40000000596046,
+          "domComplete": 347,
+          "loadEventStart": 347.10000002384186,
+          "loadEventEnd": 347.10000002384186,
+          "type": "navigate",
+          "redirectCount": 0,
+          "activationStart": 0,
+          "criticalCHRestart": 0,
+          "notRestoredReasons": null,
+          "confidence": {
+            "randomizedTriggerRate": 0.4994798,
+            "value": "low"
+          }
+        },
+        "fcp": 300,
+        "resources": [
+          {
+            "name": "/singh-academy-logo-clean.png",
+            "start": 148.7000000178814,
+            "end": 168.2000000178814,
+            "duration": 19.5,
+            "bytes": 55621,
+            "initiator": "link"
+          },
+          {
+            "name": "/optimized/993d85b15e13dd3a-hero-q92-960.webp",
+            "start": 149.10000002384186,
+            "end": 177.90000000596046,
+            "duration": 28.799999982118607,
+            "bytes": 206862,
+            "initiator": "link"
+          },
+          {
+            "name": "/_next/static/css/b0fbcacf720193d7.css",
+            "start": 149.2000000178814,
+            "end": 174.7000000178814,
+            "duration": 25.5,
+            "bytes": 13942,
+            "initiator": "link"
+          },
+          {
+            "name": "/_next/static/css/5695babccd524f26.css",
+            "start": 149.30000001192093,
+            "end": 169.40000000596046,
+            "duration": 20.099999994039536,
+            "bytes": 2207,
+            "initiator": "link"
+          },
+          {
+            "name": "/_next/static/css/38d485da94015b92.css",
+            "start": 149.30000001192093,
+            "end": 174.30000001192093,
+            "duration": 25,
+            "bytes": 1231,
+            "initiator": "link"
+          },
+          {
+            "name": "/_next/static/css/9948d50dd0c2f555.css",
+            "start": 149.5,
+            "end": 174.90000000596046,
+            "duration": 25.400000005960464,
+            "bytes": 743,
+            "initiator": "link"
+          },
+          {
+            "name": "/_next/static/chunks/webpack-307289169f5f15be.js",
+            "start": 149.5,
+            "end": 189.30000001192093,
+            "duration": 39.80000001192093,
+            "bytes": 2821,
+            "initiator": "link"
+          },
+          {
+            "name": "/_next/static/chunks/8360f048-dac7fe76b0c5a6eb.js",
+            "start": 149.60000002384186,
+            "end": 206.5,
+            "duration": 56.89999997615814,
+            "bytes": 54361,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/main-app-ab931d25a27f4282.js",
+            "start": 149.7000000178814,
+            "end": 186.7000000178814,
+            "duration": 37,
+            "bytes": 561,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/9074-f1f1781cb1ecb192.js",
+            "start": 149.7000000178814,
+            "end": 190,
+            "duration": 40.29999998211861,
+            "bytes": 3376,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/2760-f5df0ae57b14800d.js",
+            "start": 149.7000000178814,
+            "end": 196.5,
+            "duration": 46.79999998211861,
+            "bytes": 45709,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/1321-f5e068a0ebbbc1bd.js",
+            "start": 149.90000000596046,
+            "end": 190.7000000178814,
+            "duration": 40.80000001192093,
+            "bytes": 4342,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/6650-7aac8a24b5437238.js",
+            "start": 149.90000000596046,
+            "end": 194.5,
+            "duration": 44.599999994039536,
+            "bytes": 8034,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/3041-4f71811899053c49.js",
+            "start": 149.90000000596046,
+            "end": 204.90000000596046,
+            "duration": 55,
+            "bytes": 5096,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/8476-bb712270480e1438.js",
+            "start": 150.10000002384186,
+            "end": 209.40000000596046,
+            "duration": 59.29999998211861,
+            "bytes": 4629,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/3133-7530dc1827656826.js",
+            "start": 150.10000002384186,
+            "end": 211.10000002384186,
+            "duration": 61,
+            "bytes": 7145,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/2542-63c1ad0a9ab63c64.js",
+            "start": 150.10000002384186,
+            "end": 211.40000000596046,
+            "duration": 61.29999998211861,
+            "bytes": 3693,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/app/page-45a7180228edb620.js",
+            "start": 150.2000000178814,
+            "end": 211.80000001192093,
+            "duration": 61.599999994039536,
+            "bytes": 6785,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/app/not-found-60e8a90bb191b74f.js",
+            "start": 150.30000001192093,
+            "end": 213.2000000178814,
+            "duration": 62.900000005960464,
+            "bytes": 188,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/app/error-0b639f64da56eedc.js",
+            "start": 150.30000001192093,
+            "end": 213.30000001192093,
+            "duration": 63,
+            "bytes": 980,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/app/layout-308cc580cafe3009.js",
+            "start": 150.30000001192093,
+            "end": 212.7000000178814,
+            "duration": 62.400000005960464,
+            "bytes": 4324,
+            "initiator": "script"
+          },
+          {
+            "name": "/images/founder/dr-sukhsimranjit-singh.png",
+            "start": 274.60000002384186,
+            "end": 284.40000000596046,
+            "duration": 9.799999982118607,
+            "bytes": 220256,
+            "initiator": "img"
+          },
+          {
+            "name": "/favicon.ico",
+            "start": 358.90000000596046,
+            "end": 389.5,
+            "duration": 30.599999994039536,
+            "bytes": 6382,
+            "initiator": "other"
+          },
+          {
+            "name": "/api/content/site",
+            "start": 361.80000001192093,
+            "end": 438.10000002384186,
+            "duration": 76.30000001192093,
+            "bytes": 272,
+            "initiator": "fetch"
+          },
+          {
+            "name": "/api/page-sections/landing",
+            "start": 383.30000001192093,
+            "end": 439.5,
+            "duration": 56.19999998807907,
+            "bytes": 28,
+            "initiator": "fetch"
+          },
+          {
+            "name": "/api/video-reviews",
+            "start": 384.2000000178814,
+            "end": 442.2000000178814,
+            "duration": 58,
+            "bytes": 4542,
+            "initiator": "fetch"
+          },
+          {
+            "name": "/api/content/landing",
+            "start": 385.30000001192093,
+            "end": 452.40000000596046,
+            "duration": 67.09999999403954,
+            "bytes": 8330,
+            "initiator": "fetch"
+          },
+          {
+            "name": "/images/global-learning/brazil-1.jpg",
+            "start": 446.90000000596046,
+            "end": 468.30000001192093,
+            "duration": 21.400000005960464,
+            "bytes": 1732282,
+            "initiator": "img"
+          },
+          {
+            "name": "/api/media/0000000000000000000001f4?poster=1",
+            "start": 471.40000000596046,
+            "end": 511.2000000178814,
+            "duration": 39.80000001192093,
+            "bytes": 118,
+            "initiator": "img"
+          },
+          {
+            "name": "/api/media/0000000000000000000001f5?poster=1",
+            "start": 471.5,
+            "end": 515,
+            "duration": 43.5,
+            "bytes": 118,
+            "initiator": "img"
+          },
+          {
+            "name": "/api/media/0000000000000000000001f6?poster=1",
+            "start": 471.5,
+            "end": 516.1000000238419,
+            "duration": 44.60000002384186,
+            "bytes": 118,
+            "initiator": "img"
+          },
+          {
+            "name": "/api/media/0000000000000000000001f7?poster=1",
+            "start": 471.60000002384186,
+            "end": 518.6000000238419,
+            "duration": 47,
+            "bytes": 118,
+            "initiator": "img"
+          },
+          {
+            "name": "/api/media/0000000000000000000001f8?poster=1",
+            "start": 471.60000002384186,
+            "end": 520.7000000178814,
+            "duration": 49.099999994039536,
+            "bytes": 118,
+            "initiator": "img"
+          },
+          {
+            "name": "/api/media/0000000000000000000001f9?poster=1",
+            "start": 471.7000000178814,
+            "end": 522.7000000178814,
+            "duration": 51,
+            "bytes": 118,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/a97ce5db60a034d1-480.webp",
+            "start": 523,
+            "end": 529.3000000119209,
+            "duration": 6.300000011920929,
+            "bytes": 8610,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/c7d3ae1455dd2e3d-480.webp",
+            "start": 523.2000000178814,
+            "end": 529.4000000059605,
+            "duration": 6.199999988079071,
+            "bytes": 19108,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/f03e702faeb36387-480.webp",
+            "start": 523.2000000178814,
+            "end": 529.5,
+            "duration": 6.299999982118607,
+            "bytes": 18216,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/c0f77440330c1fc6-480.webp",
+            "start": 523.2000000178814,
+            "end": 529.6000000238419,
+            "duration": 6.4000000059604645,
+            "bytes": 7202,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/8285e7b5e6daba8d-480.webp",
+            "start": 523.2000000178814,
+            "end": 529.7000000178814,
+            "duration": 6.5,
+            "bytes": 14610,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/218ac50924ec0449-480.webp",
+            "start": 523.3000000119209,
+            "end": 529.8000000119209,
+            "duration": 6.5,
+            "bytes": 16116,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/159093844148271c-480.webp",
+            "start": 523.4000000059605,
+            "end": 532.1000000238419,
+            "duration": 8.700000017881393,
+            "bytes": 15092,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/e68935fd0b33a39b-480.webp",
+            "start": 523.4000000059605,
+            "end": 534.1000000238419,
+            "duration": 10.700000017881393,
+            "bytes": 10802,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/b5a9cd0f62e99d39-480.webp",
+            "start": 523.5,
+            "end": 534.2000000178814,
+            "duration": 10.700000017881393,
+            "bytes": 15184,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/03c6128422f457c4-480.webp",
+            "start": 523.5,
+            "end": 534.3000000119209,
+            "duration": 10.800000011920929,
+            "bytes": 9598,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/a32069f7c78dfaf8-480.webp",
+            "start": 523.6000000238419,
+            "end": 534.3000000119209,
+            "duration": 10.699999988079071,
+            "bytes": 9520,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/293c83498da3edb7-480.webp",
+            "start": 523.6000000238419,
+            "end": 534.4000000059605,
+            "duration": 10.799999982118607,
+            "bytes": 9642,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/44c02b794427b1b9-480.webp",
+            "start": 523.6000000238419,
+            "end": 538.6000000238419,
+            "duration": 15,
+            "bytes": 9182,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/575a66ca7c5efc40-480.webp",
+            "start": 523.7000000178814,
+            "end": 538.7000000178814,
+            "duration": 15,
+            "bytes": 15236,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/286432a191091959-480.webp",
+            "start": 523.7000000178814,
+            "end": 538.8000000119209,
+            "duration": 15.099999994039536,
+            "bytes": 11070,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/ccf3e820b21d0ded-480.webp",
+            "start": 523.8000000119209,
+            "end": 538.9000000059605,
+            "duration": 15.099999994039536,
+            "bytes": 12124,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/1a9115411a6e8871-480.webp",
+            "start": 523.8000000119209,
+            "end": 539,
+            "duration": 15.199999988079071,
+            "bytes": 28644,
+            "initiator": "img"
+          },
+          {
+            "name": "/api/content/team",
+            "start": 1255.6000000238419,
+            "end": 1267.5,
+            "duration": 11.899999976158142,
+            "bytes": 6007,
+            "initiator": "fetch"
+          },
+          {
+            "name": "/api/content/events",
+            "start": 1256,
+            "end": 1267.300000011921,
+            "duration": 11.300000011920929,
+            "bytes": 28,
+            "initiator": "fetch"
+          }
+        ],
+        "visibleImages": [
+          {
+            "src": "http://127.0.0.1:3108/singh-academy-logo-clean.png",
+            "complete": true
+          },
+          {
+            "src": "http://127.0.0.1:3108/images/global-learning/brazil-1.jpg",
+            "complete": true
+          }
+        ],
+        "overflow": false
+      },
+      "videos": {
+        "metrics": {
+          "lcp": 104,
+          "cls": 0.2971757486979167,
+          "heroSources": [],
+          "firstSection": null,
+          "playing": [
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f6?preview=1",
+              "at": 326.59999999403954
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f4?preview=1",
+              "at": 327.40000000596046
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f5?preview=1",
+              "at": 327.59999999403954
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f6?preview=1",
+              "at": 329.19999998807907
+            }
+          ],
+          "posters": [
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f4?poster=1",
+              "at": 233.90000000596046
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f5?poster=1",
+              "at": 258.59999999403954
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f6?poster=1",
+              "at": 258.7999999821186
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f7?poster=1",
+              "at": 258.90000000596046
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f8?poster=1",
+              "at": 258.90000000596046
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f9?poster=1",
+              "at": 259
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001fa?poster=1",
+              "at": 273.09999999403954
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001fb?poster=1",
+              "at": 274.40000000596046
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001fc?poster=1",
+              "at": 274.59999999403954
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001fd?poster=1",
+              "at": 285.5
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001fe?poster=1",
+              "at": 285.69999998807907
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001ff?poster=1",
+              "at": 285.7999999821186
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/000000000000000000000200?poster=1",
+              "at": 294.69999998807907
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/000000000000000000000201?poster=1",
+              "at": 294.7999999821186
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/000000000000000000000202?poster=1",
+              "at": 294.90000000596046
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/000000000000000000000203?poster=1",
+              "at": 295.09999999403954
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/000000000000000000000204?poster=1",
+              "at": 295.19999998807907
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/000000000000000000000205?poster=1",
+              "at": 295.5
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/000000000000000000000206?poster=1",
+              "at": 299.69999998807907
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/000000000000000000000207?poster=1",
+              "at": 301.7999999821186
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/000000000000000000000208?poster=1",
+              "at": 302.40000000596046
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/000000000000000000000209?poster=1",
+              "at": 302.69999998807907
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/00000000000000000000020a?poster=1",
+              "at": 302.7999999821186
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/00000000000000000000020b?poster=1",
+              "at": 303
+            }
+          ],
+          "errors": []
+        },
+        "posterElements": 21,
+        "videoElements": 6,
+        "posterRequests": 24,
+        "videoResources": [
+          {
+            "name": "http://127.0.0.1:3108/api/media/0000000000000000000001f4?preview=1",
+            "start": 288.19999998807907,
+            "end": 307.7999999821186,
+            "bytes": 18112
+          },
+          {
+            "name": "http://127.0.0.1:3108/api/media/0000000000000000000001f5?preview=1",
+            "start": 291.69999998807907,
+            "end": 309.19999998807907,
+            "bytes": 18112
+          },
+          {
+            "name": "http://127.0.0.1:3108/api/media/0000000000000000000001f6?preview=1",
+            "start": 292.2999999821186,
+            "end": 310.59999999403954,
+            "bytes": 18112
+          },
+          {
+            "name": "http://127.0.0.1:3108/api/media/0000000000000000000001f7?preview=1",
+            "start": 292.7999999821186,
+            "end": 311.69999998807907,
+            "bytes": 18112
+          },
+          {
+            "name": "http://127.0.0.1:3108/api/media/0000000000000000000001f8?preview=1",
+            "start": 293.19999998807907,
+            "end": 316.19999998807907,
+            "bytes": 18112
+          },
+          {
+            "name": "http://127.0.0.1:3108/api/media/0000000000000000000001f9?preview=1",
+            "start": 293.69999998807907,
+            "end": 316.2999999821186,
+            "bytes": 18112
+          }
+        ],
+        "visibleVideos": [
+          {
+            "paused": false,
+            "time": 0.741251,
+            "muted": true
+          },
+          {
+            "paused": false,
+            "time": 0.739925,
+            "muted": true
+          },
+          {
+            "paused": false,
+            "time": 0.738819,
+            "muted": true
+          },
+          {
+            "paused": true,
+            "time": 0,
+            "muted": true
+          },
+          {
+            "paused": true,
+            "time": 0,
+            "muted": true
+          },
+          {
+            "paused": true,
+            "time": 0,
+            "muted": true
+          }
+        ],
+        "overflow": false
+      },
+      "errors": []
+    },
+    {
+      "mode": "desktop",
+      "sample": 1,
+      "landing": {
+        "metrics": {
+          "lcp": 232,
+          "cls": 0,
+          "heroSources": [
+            {
+              "src": "/optimized/993d85b15e13dd3a-hero-q92-960.webp",
+              "at": 112.09999999403954
+            },
+            {
+              "src": "/images/global-learning/brazil-1.jpg",
+              "at": 339.30000001192093
+            }
+          ],
+          "firstSection": 401.2000000178814,
+          "playing": [],
+          "posters": [
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f4?poster=1",
+              "at": 428.2000000178814
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f5?poster=1",
+              "at": 428.30000001192093
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f6?poster=1",
+              "at": 428.40000000596046
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f7?poster=1",
+              "at": 428.59999999403954
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f8?poster=1",
+              "at": 428.59999999403954
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f9?poster=1",
+              "at": 428.80000001192093
+            }
+          ],
+          "errors": []
+        },
+        "navigation": {
+          "name": "http://127.0.0.1:3108/",
+          "entryType": "navigation",
+          "startTime": 0,
+          "duration": 282.90000000596046,
+          "navigationId": 8120,
+          "initiatorType": "navigation",
+          "deliveryType": "",
+          "nextHopProtocol": "http/1.1",
+          "renderBlockingStatus": "non-blocking",
+          "contentType": "text/html",
+          "contentEncoding": "gzip",
+          "workerStart": 0,
+          "workerRouterEvaluationStart": 0,
+          "workerCacheLookupStart": 0,
+          "workerMatchedSourceType": "",
+          "workerFinalSourceType": "",
+          "redirectStart": 0,
+          "redirectEnd": 0,
+          "fetchStart": 0.5999999940395355,
+          "domainLookupStart": 0.5999999940395355,
+          "domainLookupEnd": 0.5999999940395355,
+          "connectStart": 0.5999999940395355,
+          "secureConnectionStart": 0,
+          "connectEnd": 0.5999999940395355,
+          "requestStart": 2.0999999940395355,
+          "responseStart": 20.80000001192093,
+          "firstInterimResponseStart": 0,
+          "finalResponseHeadersStart": 20.80000001192093,
+          "responseEnd": 50.80000001192093,
+          "transferSize": 10078,
+          "encodedBodySize": 9778,
+          "decodedBodySize": 32145,
+          "responseStatus": 200,
+          "serverTiming": [],
+          "unloadEventStart": 0,
+          "unloadEventEnd": 0,
+          "domInteractive": 114.90000000596046,
+          "domContentLoadedEventStart": 114.90000000596046,
+          "domContentLoadedEventEnd": 115,
+          "domComplete": 282.7000000178814,
+          "loadEventStart": 282.80000001192093,
+          "loadEventEnd": 282.90000000596046,
+          "type": "navigate",
+          "redirectCount": 0,
+          "activationStart": 0,
+          "criticalCHRestart": 0,
+          "notRestoredReasons": null,
+          "confidence": {
+            "randomizedTriggerRate": 0.4994798,
+            "value": "low"
+          }
+        },
+        "fcp": 232,
+        "resources": [
+          {
+            "name": "/singh-academy-logo-clean.png",
+            "start": 54,
+            "end": 86.2000000178814,
+            "duration": 32.20000001788139,
+            "bytes": 55621,
+            "initiator": "link"
+          },
+          {
+            "name": "/_next/static/css/b0fbcacf720193d7.css",
+            "start": 54.5,
+            "end": 96.30000001192093,
+            "duration": 41.80000001192093,
+            "bytes": 13942,
+            "initiator": "link"
+          },
+          {
+            "name": "/optimized/993d85b15e13dd3a-hero-q92-960.webp",
+            "start": 54.5,
+            "end": 105,
+            "duration": 50.5,
+            "bytes": 206862,
+            "initiator": "link"
+          },
+          {
+            "name": "/_next/static/css/5695babccd524f26.css",
+            "start": 54.599999994039536,
+            "end": 96.80000001192093,
+            "duration": 42.20000001788139,
+            "bytes": 2207,
+            "initiator": "link"
+          },
+          {
+            "name": "/_next/static/css/38d485da94015b92.css",
+            "start": 54.70000001788139,
+            "end": 98.30000001192093,
+            "duration": 43.599999994039536,
+            "bytes": 1231,
+            "initiator": "link"
+          },
+          {
+            "name": "/_next/static/css/9948d50dd0c2f555.css",
+            "start": 54.80000001192093,
+            "end": 99.40000000596046,
+            "duration": 44.599999994039536,
+            "bytes": 743,
+            "initiator": "link"
+          },
+          {
+            "name": "/_next/static/chunks/webpack-307289169f5f15be.js",
+            "start": 54.900000005960464,
+            "end": 108.2000000178814,
+            "duration": 53.30000001192093,
+            "bytes": 2821,
+            "initiator": "link"
+          },
+          {
+            "name": "/_next/static/chunks/8360f048-dac7fe76b0c5a6eb.js",
+            "start": 54.900000005960464,
+            "end": 126,
+            "duration": 71.09999999403954,
+            "bytes": 54361,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/2760-f5df0ae57b14800d.js",
+            "start": 55,
+            "end": 128.5,
+            "duration": 73.5,
+            "bytes": 45709,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/main-app-ab931d25a27f4282.js",
+            "start": 55.099999994039536,
+            "end": 110.7000000178814,
+            "duration": 55.60000002384186,
+            "bytes": 561,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/9074-f1f1781cb1ecb192.js",
+            "start": 55.099999994039536,
+            "end": 117.5,
+            "duration": 62.400000005960464,
+            "bytes": 3376,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/6650-7aac8a24b5437238.js",
+            "start": 55.20000001788139,
+            "end": 130.7000000178814,
+            "duration": 75.5,
+            "bytes": 8034,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/1321-f5e068a0ebbbc1bd.js",
+            "start": 55.20000001788139,
+            "end": 130.40000000596046,
+            "duration": 75.19999998807907,
+            "bytes": 4342,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/3041-4f71811899053c49.js",
+            "start": 55.30000001192093,
+            "end": 131.09999999403954,
+            "duration": 75.7999999821186,
+            "bytes": 5096,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/8476-bb712270480e1438.js",
+            "start": 55.400000005960464,
+            "end": 130.59999999403954,
+            "duration": 75.19999998807907,
+            "bytes": 4629,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/3133-7530dc1827656826.js",
+            "start": 55.5,
+            "end": 142.2000000178814,
+            "duration": 86.7000000178814,
+            "bytes": 7145,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/2542-63c1ad0a9ab63c64.js",
+            "start": 55.5,
+            "end": 143.90000000596046,
+            "duration": 88.40000000596046,
+            "bytes": 3693,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/app/layout-308cc580cafe3009.js",
+            "start": 55.599999994039536,
+            "end": 144.90000000596046,
+            "duration": 89.30000001192093,
+            "bytes": 4324,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/app/page-45a7180228edb620.js",
+            "start": 55.599999994039536,
+            "end": 145.80000001192093,
+            "duration": 90.2000000178814,
+            "bytes": 6785,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/app/not-found-60e8a90bb191b74f.js",
+            "start": 55.70000001788139,
+            "end": 137.09999999403954,
+            "duration": 81.39999997615814,
+            "bytes": 188,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/app/error-0b639f64da56eedc.js",
+            "start": 55.70000001788139,
+            "end": 145.59999999403954,
+            "duration": 89.89999997615814,
+            "bytes": 980,
+            "initiator": "script"
+          },
+          {
+            "name": "/images/founder/dr-sukhsimranjit-singh.png",
+            "start": 193.5,
+            "end": 202.59999999403954,
+            "duration": 9.099999994039536,
+            "bytes": 220256,
+            "initiator": "img"
+          },
+          {
+            "name": "/favicon.ico",
+            "start": 294.80000001192093,
+            "end": 298.90000000596046,
+            "duration": 4.0999999940395355,
+            "bytes": 6382,
+            "initiator": "other"
+          },
+          {
+            "name": "/api/content/site",
+            "start": 298.7000000178814,
+            "end": 308.80000001192093,
+            "duration": 10.099999994039536,
+            "bytes": 272,
+            "initiator": "fetch"
+          },
+          {
+            "name": "/api/page-sections/landing",
+            "start": 322.09999999403954,
+            "end": 333.90000000596046,
+            "duration": 11.800000011920929,
+            "bytes": 28,
+            "initiator": "fetch"
+          },
+          {
+            "name": "/api/video-reviews",
+            "start": 323.2000000178814,
+            "end": 335.59999999403954,
+            "duration": 12.399999976158142,
+            "bytes": 4542,
+            "initiator": "fetch"
+          },
+          {
+            "name": "/api/content/landing",
+            "start": 324.09999999403954,
+            "end": 337.7000000178814,
+            "duration": 13.600000023841858,
+            "bytes": 8330,
+            "initiator": "fetch"
+          },
+          {
+            "name": "/images/global-learning/brazil-1.jpg",
+            "start": 337.7000000178814,
+            "end": 353.2000000178814,
+            "duration": 15.5,
+            "bytes": 1732282,
+            "initiator": "img"
+          },
+          {
+            "name": "/api/media/0000000000000000000001f4?poster=1",
+            "start": 359.30000001192093,
+            "end": 383.30000001192093,
+            "duration": 24,
+            "bytes": 118,
+            "initiator": "img"
+          },
+          {
+            "name": "/api/media/0000000000000000000001f5?poster=1",
+            "start": 359.5,
+            "end": 384.80000001192093,
+            "duration": 25.30000001192093,
+            "bytes": 118,
+            "initiator": "img"
+          },
+          {
+            "name": "/api/media/0000000000000000000001f6?poster=1",
+            "start": 359.59999999403954,
+            "end": 387.09999999403954,
+            "duration": 27.5,
+            "bytes": 118,
+            "initiator": "img"
+          },
+          {
+            "name": "/api/media/0000000000000000000001f7?poster=1",
+            "start": 359.80000001192093,
+            "end": 389,
+            "duration": 29.19999998807907,
+            "bytes": 118,
+            "initiator": "img"
+          },
+          {
+            "name": "/api/media/0000000000000000000001f8?poster=1",
+            "start": 359.80000001192093,
+            "end": 390.59999999403954,
+            "duration": 30.799999982118607,
+            "bytes": 118,
+            "initiator": "img"
+          },
+          {
+            "name": "/api/media/0000000000000000000001f9?poster=1",
+            "start": 360,
+            "end": 391.80000001192093,
+            "duration": 31.80000001192093,
+            "bytes": 118,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/a97ce5db60a034d1-480.webp",
+            "start": 401.5,
+            "end": 406.09999999403954,
+            "duration": 4.5999999940395355,
+            "bytes": 8610,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/c7d3ae1455dd2e3d-480.webp",
+            "start": 401.59999999403954,
+            "end": 406.30000001192093,
+            "duration": 4.700000017881393,
+            "bytes": 19108,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/f03e702faeb36387-480.webp",
+            "start": 401.59999999403954,
+            "end": 414.2000000178814,
+            "duration": 12.600000023841858,
+            "bytes": 18216,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/c0f77440330c1fc6-480.webp",
+            "start": 401.7000000178814,
+            "end": 414.5,
+            "duration": 12.799999982118607,
+            "bytes": 7202,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/8285e7b5e6daba8d-480.webp",
+            "start": 401.7000000178814,
+            "end": 414.7000000178814,
+            "duration": 13,
+            "bytes": 14610,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/218ac50924ec0449-480.webp",
+            "start": 401.80000001192093,
+            "end": 414.80000001192093,
+            "duration": 13,
+            "bytes": 16116,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/159093844148271c-480.webp",
+            "start": 401.80000001192093,
+            "end": 415,
+            "duration": 13.199999988079071,
+            "bytes": 15092,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/e68935fd0b33a39b-480.webp",
+            "start": 401.90000000596046,
+            "end": 415.09999999403954,
+            "duration": 13.199999988079071,
+            "bytes": 10802,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/b5a9cd0f62e99d39-480.webp",
+            "start": 401.90000000596046,
+            "end": 420.90000000596046,
+            "duration": 19,
+            "bytes": 15184,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/03c6128422f457c4-480.webp",
+            "start": 402,
+            "end": 421.09999999403954,
+            "duration": 19.099999994039536,
+            "bytes": 9598,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/a32069f7c78dfaf8-480.webp",
+            "start": 402.09999999403954,
+            "end": 421.2000000178814,
+            "duration": 19.100000023841858,
+            "bytes": 9520,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/293c83498da3edb7-480.webp",
+            "start": 402.09999999403954,
+            "end": 421.30000001192093,
+            "duration": 19.200000017881393,
+            "bytes": 9642,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/44c02b794427b1b9-480.webp",
+            "start": 402.2000000178814,
+            "end": 421.5,
+            "duration": 19.299999982118607,
+            "bytes": 9182,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/575a66ca7c5efc40-480.webp",
+            "start": 402.2000000178814,
+            "end": 421.5,
+            "duration": 19.299999982118607,
+            "bytes": 15236,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/286432a191091959-480.webp",
+            "start": 402.30000001192093,
+            "end": 435.30000001192093,
+            "duration": 33,
+            "bytes": 11070,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/ccf3e820b21d0ded-480.webp",
+            "start": 402.30000001192093,
+            "end": 435.5,
+            "duration": 33.19999998807907,
+            "bytes": 12124,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/1a9115411a6e8871-480.webp",
+            "start": 402.30000001192093,
+            "end": 435.7000000178814,
+            "duration": 33.400000005960464,
+            "bytes": 28644,
+            "initiator": "img"
+          },
+          {
+            "name": "/api/content/team",
+            "start": 1151.9000000059605,
+            "end": 1158.9000000059605,
+            "duration": 7,
+            "bytes": 6007,
+            "initiator": "fetch"
+          },
+          {
+            "name": "/api/content/events",
+            "start": 1152.0999999940395,
+            "end": 1160,
+            "duration": 7.9000000059604645,
+            "bytes": 28,
+            "initiator": "fetch"
+          }
+        ],
+        "visibleImages": [
+          {
+            "src": "http://127.0.0.1:3108/singh-academy-logo-clean.png",
+            "complete": true
+          },
+          {
+            "src": "http://127.0.0.1:3108/images/global-learning/brazil-1.jpg",
+            "complete": true
+          }
+        ],
+        "overflow": false
+      },
+      "videos": {
+        "metrics": {
+          "lcp": 84,
+          "cls": 0.31151851851851853,
+          "heroSources": [],
+          "firstSection": null,
+          "playing": [
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f5?preview=1",
+              "at": 279.30000001192093
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f4?preview=1",
+              "at": 279.60000002384186
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f6?preview=1",
+              "at": 280.5
+            }
+          ],
+          "posters": [
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f4?poster=1",
+              "at": 203.40000000596046
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f5?poster=1",
+              "at": 222.5
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f6?poster=1",
+              "at": 233.5
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f7?poster=1",
+              "at": 233.7000000178814
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f8?poster=1",
+              "at": 233.90000000596046
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f9?poster=1",
+              "at": 234.10000002384186
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001fa?poster=1",
+              "at": 235.5
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001fb?poster=1",
+              "at": 236
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001fc?poster=1",
+              "at": 236.2000000178814
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001fd?poster=1",
+              "at": 236.40000000596046
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001fe?poster=1",
+              "at": 236.5
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001ff?poster=1",
+              "at": 236.60000002384186
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/000000000000000000000200?poster=1",
+              "at": 237.10000002384186
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/000000000000000000000201?poster=1",
+              "at": 240
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/000000000000000000000202?poster=1",
+              "at": 240.2000000178814
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/000000000000000000000203?poster=1",
+              "at": 240.5
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/000000000000000000000204?poster=1",
+              "at": 240.7000000178814
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/000000000000000000000205?poster=1",
+              "at": 240.90000000596046
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/000000000000000000000206?poster=1",
+              "at": 254.90000000596046
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/000000000000000000000207?poster=1",
+              "at": 255.60000002384186
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/000000000000000000000208?poster=1",
+              "at": 255.80000001192093
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/000000000000000000000209?poster=1",
+              "at": 255.90000000596046
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/00000000000000000000020a?poster=1",
+              "at": 256.10000002384186
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/00000000000000000000020b?poster=1",
+              "at": 256.2000000178814
+            }
+          ],
+          "errors": []
+        },
+        "posterElements": 21,
+        "videoElements": 6,
+        "posterRequests": 24,
+        "videoResources": [
+          {
+            "name": "http://127.0.0.1:3108/api/media/0000000000000000000001f4?preview=1",
+            "start": 196.90000000596046,
+            "end": 265.80000001192093,
+            "bytes": 18112
+          },
+          {
+            "name": "http://127.0.0.1:3108/api/media/0000000000000000000001f5?preview=1",
+            "start": 198.10000002384186,
+            "end": 266.60000002384186,
+            "bytes": 18112
+          },
+          {
+            "name": "http://127.0.0.1:3108/api/media/0000000000000000000001f6?preview=1",
+            "start": 200.2000000178814,
+            "end": 267.80000001192093,
+            "bytes": 18112
+          },
+          {
+            "name": "http://127.0.0.1:3108/api/media/0000000000000000000001f7?preview=1",
+            "start": 200.80000001192093,
+            "end": 271.30000001192093,
+            "bytes": 18112
+          },
+          {
+            "name": "http://127.0.0.1:3108/api/media/0000000000000000000001f8?preview=1",
+            "start": 201.30000001192093,
+            "end": 271.5,
+            "bytes": 18112
+          },
+          {
+            "name": "http://127.0.0.1:3108/api/media/0000000000000000000001f9?preview=1",
+            "start": 201.80000001192093,
+            "end": 272,
+            "bytes": 18112
+          }
+        ],
+        "visibleVideos": [
+          {
+            "paused": false,
+            "time": 0.728058,
+            "muted": true
+          },
+          {
+            "paused": false,
+            "time": 0.728325,
+            "muted": true
+          },
+          {
+            "paused": false,
+            "time": 0.727776,
+            "muted": true
+          },
+          {
+            "paused": true,
+            "time": 0,
+            "muted": true
+          },
+          {
+            "paused": true,
+            "time": 0,
+            "muted": true
+          },
+          {
+            "paused": true,
+            "time": 0,
+            "muted": true
+          }
+        ],
+        "overflow": false
+      },
+      "errors": []
+    },
+    {
+      "mode": "desktop",
+      "sample": 2,
+      "landing": {
+        "metrics": {
+          "lcp": 352,
+          "cls": 0,
+          "heroSources": [
+            {
+              "src": "/optimized/993d85b15e13dd3a-hero-q92-960.webp",
+              "at": 137.30000001192093
+            },
+            {
+              "src": "/images/global-learning/brazil-1.jpg",
+              "at": 419.59999999403954
+            }
+          ],
+          "firstSection": 370,
+          "playing": [],
+          "posters": [
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f4?poster=1",
+              "at": 400.09999999403954
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f5?poster=1",
+              "at": 400.2000000178814
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f6?poster=1",
+              "at": 400.40000000596046
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f7?poster=1",
+              "at": 400.59999999403954
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f8?poster=1",
+              "at": 400.80000001192093
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f9?poster=1",
+              "at": 401.2000000178814
+            }
+          ],
+          "errors": []
+        },
+        "navigation": {
+          "name": "http://127.0.0.1:3108/",
+          "entryType": "navigation",
+          "startTime": 0,
+          "duration": 226.80000001192093,
+          "navigationId": 9635,
+          "initiatorType": "navigation",
+          "deliveryType": "",
+          "nextHopProtocol": "http/1.1",
+          "renderBlockingStatus": "non-blocking",
+          "contentType": "text/html",
+          "contentEncoding": "gzip",
+          "workerStart": 0,
+          "workerRouterEvaluationStart": 0,
+          "workerCacheLookupStart": 0,
+          "workerMatchedSourceType": "",
+          "workerFinalSourceType": "",
+          "redirectStart": 0,
+          "redirectEnd": 0,
+          "fetchStart": 0.9000000059604645,
+          "domainLookupStart": 0.9000000059604645,
+          "domainLookupEnd": 0.9000000059604645,
+          "connectStart": 0.9000000059604645,
+          "secureConnectionStart": 0,
+          "connectEnd": 0.9000000059604645,
+          "requestStart": 1.800000011920929,
+          "responseStart": 34.400000005960464,
+          "firstInterimResponseStart": 0,
+          "finalResponseHeadersStart": 34.400000005960464,
+          "responseEnd": 62.70000001788139,
+          "transferSize": 10078,
+          "encodedBodySize": 9778,
+          "decodedBodySize": 32145,
+          "responseStatus": 200,
+          "serverTiming": [],
+          "unloadEventStart": 0,
+          "unloadEventEnd": 0,
+          "domInteractive": 151.30000001192093,
+          "domContentLoadedEventStart": 151.40000000596046,
+          "domContentLoadedEventEnd": 151.40000000596046,
+          "domComplete": 226.80000001192093,
+          "loadEventStart": 226.80000001192093,
+          "loadEventEnd": 226.80000001192093,
+          "type": "navigate",
+          "redirectCount": 0,
+          "activationStart": 0,
+          "criticalCHRestart": 0,
+          "notRestoredReasons": null,
+          "confidence": {
+            "randomizedTriggerRate": 0.4994798,
+            "value": "low"
+          }
+        },
+        "fcp": 140,
+        "resources": [
+          {
+            "name": "/singh-academy-logo-clean.png",
+            "start": 55.80000001192093,
+            "end": 89.40000000596046,
+            "duration": 33.599999994039536,
+            "bytes": 55621,
+            "initiator": "link"
+          },
+          {
+            "name": "/optimized/993d85b15e13dd3a-hero-q92-960.webp",
+            "start": 60.900000005960464,
+            "end": 111,
+            "duration": 50.099999994039536,
+            "bytes": 206862,
+            "initiator": "link"
+          },
+          {
+            "name": "/_next/static/css/b0fbcacf720193d7.css",
+            "start": 61,
+            "end": 108.7000000178814,
+            "duration": 47.70000001788139,
+            "bytes": 13942,
+            "initiator": "link"
+          },
+          {
+            "name": "/_next/static/css/5695babccd524f26.css",
+            "start": 61,
+            "end": 109,
+            "duration": 48,
+            "bytes": 2207,
+            "initiator": "link"
+          },
+          {
+            "name": "/_next/static/css/38d485da94015b92.css",
+            "start": 61,
+            "end": 109.2000000178814,
+            "duration": 48.20000001788139,
+            "bytes": 1231,
+            "initiator": "link"
+          },
+          {
+            "name": "/_next/static/css/9948d50dd0c2f555.css",
+            "start": 61.099999994039536,
+            "end": 109.40000000596046,
+            "duration": 48.30000001192093,
+            "bytes": 743,
+            "initiator": "link"
+          },
+          {
+            "name": "/_next/static/chunks/webpack-307289169f5f15be.js",
+            "start": 61.20000001788139,
+            "end": 114.40000000596046,
+            "duration": 53.19999998807907,
+            "bytes": 2821,
+            "initiator": "link"
+          },
+          {
+            "name": "/_next/static/chunks/2760-f5df0ae57b14800d.js",
+            "start": 61.20000001788139,
+            "end": 133,
+            "duration": 71.7999999821186,
+            "bytes": 45709,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/8360f048-dac7fe76b0c5a6eb.js",
+            "start": 61.20000001788139,
+            "end": 133.40000000596046,
+            "duration": 72.19999998807907,
+            "bytes": 54361,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/main-app-ab931d25a27f4282.js",
+            "start": 61.30000001192093,
+            "end": 116.2000000178814,
+            "duration": 54.900000005960464,
+            "bytes": 561,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/9074-f1f1781cb1ecb192.js",
+            "start": 61.400000005960464,
+            "end": 119.30000001192093,
+            "duration": 57.900000005960464,
+            "bytes": 3376,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/1321-f5e068a0ebbbc1bd.js",
+            "start": 61.400000005960464,
+            "end": 120.2000000178814,
+            "duration": 58.80000001192093,
+            "bytes": 4342,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/6650-7aac8a24b5437238.js",
+            "start": 61.5,
+            "end": 124.59999999403954,
+            "duration": 63.099999994039536,
+            "bytes": 8034,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/3041-4f71811899053c49.js",
+            "start": 61.5,
+            "end": 125.7000000178814,
+            "duration": 64.2000000178814,
+            "bytes": 5096,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/8476-bb712270480e1438.js",
+            "start": 61.599999994039536,
+            "end": 134.2000000178814,
+            "duration": 72.60000002384186,
+            "bytes": 4629,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/3133-7530dc1827656826.js",
+            "start": 61.599999994039536,
+            "end": 134.5,
+            "duration": 72.90000000596046,
+            "bytes": 7145,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/2542-63c1ad0a9ab63c64.js",
+            "start": 61.70000001788139,
+            "end": 134.59999999403954,
+            "duration": 72.89999997615814,
+            "bytes": 3693,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/app/page-45a7180228edb620.js",
+            "start": 61.70000001788139,
+            "end": 142.30000001192093,
+            "duration": 80.59999999403954,
+            "bytes": 6785,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/app/error-0b639f64da56eedc.js",
+            "start": 61.80000001192093,
+            "end": 142.7000000178814,
+            "duration": 80.90000000596046,
+            "bytes": 980,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/app/not-found-60e8a90bb191b74f.js",
+            "start": 61.80000001192093,
+            "end": 142.80000001192093,
+            "duration": 81,
+            "bytes": 188,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/app/layout-308cc580cafe3009.js",
+            "start": 61.80000001192093,
+            "end": 143,
+            "duration": 81.19999998807907,
+            "bytes": 4324,
+            "initiator": "script"
+          },
+          {
+            "name": "/favicon.ico",
+            "start": 238.30000001192093,
+            "end": 241.5,
+            "duration": 3.199999988079071,
+            "bytes": 6382,
+            "initiator": "other"
+          },
+          {
+            "name": "/api/content/site",
+            "start": 241.7000000178814,
+            "end": 249.59999999403954,
+            "duration": 7.899999976158142,
+            "bytes": 272,
+            "initiator": "fetch"
+          },
+          {
+            "name": "/images/global-learning/brazil-1.jpg",
+            "start": 258.5,
+            "end": 271,
+            "duration": 12.5,
+            "bytes": 1732282,
+            "initiator": "img"
+          },
+          {
+            "name": "/api/page-sections/landing",
+            "start": 272,
+            "end": 284,
+            "duration": 12,
+            "bytes": 28,
+            "initiator": "fetch"
+          },
+          {
+            "name": "/api/video-reviews",
+            "start": 273,
+            "end": 287.7000000178814,
+            "duration": 14.700000017881393,
+            "bytes": 4542,
+            "initiator": "fetch"
+          },
+          {
+            "name": "/api/content/landing",
+            "start": 273.59999999403954,
+            "end": 289.40000000596046,
+            "duration": 15.800000011920929,
+            "bytes": 8330,
+            "initiator": "fetch"
+          },
+          {
+            "name": "/images/founder/dr-sukhsimranjit-singh.png",
+            "start": 317.5,
+            "end": 322.59999999403954,
+            "duration": 5.0999999940395355,
+            "bytes": 220256,
+            "initiator": "img"
+          },
+          {
+            "name": "/api/media/0000000000000000000001f4?poster=1",
+            "start": 338.40000000596046,
+            "end": 358,
+            "duration": 19.599999994039536,
+            "bytes": 118,
+            "initiator": "img"
+          },
+          {
+            "name": "/api/media/0000000000000000000001f5?poster=1",
+            "start": 338.5,
+            "end": 359.30000001192093,
+            "duration": 20.80000001192093,
+            "bytes": 118,
+            "initiator": "img"
+          },
+          {
+            "name": "/api/media/0000000000000000000001f6?poster=1",
+            "start": 338.59999999403954,
+            "end": 360.90000000596046,
+            "duration": 22.30000001192093,
+            "bytes": 118,
+            "initiator": "img"
+          },
+          {
+            "name": "/api/media/0000000000000000000001f7?poster=1",
+            "start": 338.59999999403954,
+            "end": 362.59999999403954,
+            "duration": 24,
+            "bytes": 118,
+            "initiator": "img"
+          },
+          {
+            "name": "/api/media/0000000000000000000001f8?poster=1",
+            "start": 338.59999999403954,
+            "end": 364.2000000178814,
+            "duration": 25.600000023841858,
+            "bytes": 118,
+            "initiator": "img"
+          },
+          {
+            "name": "/api/media/0000000000000000000001f9?poster=1",
+            "start": 338.80000001192093,
+            "end": 365.40000000596046,
+            "duration": 26.599999994039536,
+            "bytes": 118,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/a97ce5db60a034d1-480.webp",
+            "start": 370.2000000178814,
+            "end": 375.5,
+            "duration": 5.299999982118607,
+            "bytes": 8610,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/c7d3ae1455dd2e3d-480.webp",
+            "start": 370.30000001192093,
+            "end": 378.90000000596046,
+            "duration": 8.599999994039536,
+            "bytes": 19108,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/f03e702faeb36387-480.webp",
+            "start": 370.40000000596046,
+            "end": 379,
+            "duration": 8.599999994039536,
+            "bytes": 18216,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/c0f77440330c1fc6-480.webp",
+            "start": 370.40000000596046,
+            "end": 379.09999999403954,
+            "duration": 8.699999988079071,
+            "bytes": 7202,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/8285e7b5e6daba8d-480.webp",
+            "start": 370.5,
+            "end": 379.30000001192093,
+            "duration": 8.800000011920929,
+            "bytes": 14610,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/218ac50924ec0449-480.webp",
+            "start": 370.5,
+            "end": 379.40000000596046,
+            "duration": 8.900000005960464,
+            "bytes": 16116,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/159093844148271c-480.webp",
+            "start": 370.59999999403954,
+            "end": 382.09999999403954,
+            "duration": 11.5,
+            "bytes": 15092,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/e68935fd0b33a39b-480.webp",
+            "start": 370.59999999403954,
+            "end": 384.30000001192093,
+            "duration": 13.700000017881393,
+            "bytes": 10802,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/b5a9cd0f62e99d39-480.webp",
+            "start": 370.7000000178814,
+            "end": 386,
+            "duration": 15.299999982118607,
+            "bytes": 15184,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/03c6128422f457c4-480.webp",
+            "start": 370.7000000178814,
+            "end": 386.09999999403954,
+            "duration": 15.399999976158142,
+            "bytes": 9598,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/a32069f7c78dfaf8-480.webp",
+            "start": 370.80000001192093,
+            "end": 388.30000001192093,
+            "duration": 17.5,
+            "bytes": 9520,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/293c83498da3edb7-480.webp",
+            "start": 370.80000001192093,
+            "end": 389.90000000596046,
+            "duration": 19.099999994039536,
+            "bytes": 9642,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/44c02b794427b1b9-480.webp",
+            "start": 370.80000001192093,
+            "end": 390,
+            "duration": 19.19999998807907,
+            "bytes": 9182,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/575a66ca7c5efc40-480.webp",
+            "start": 370.80000001192093,
+            "end": 391.30000001192093,
+            "duration": 20.5,
+            "bytes": 15236,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/286432a191091959-480.webp",
+            "start": 370.90000000596046,
+            "end": 391.40000000596046,
+            "duration": 20.5,
+            "bytes": 11070,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/ccf3e820b21d0ded-480.webp",
+            "start": 370.90000000596046,
+            "end": 392.5,
+            "duration": 21.599999994039536,
+            "bytes": 12124,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/1a9115411a6e8871-480.webp",
+            "start": 371,
+            "end": 392.7000000178814,
+            "duration": 21.700000017881393,
+            "bytes": 28644,
+            "initiator": "img"
+          },
+          {
+            "name": "/api/content/team",
+            "start": 1133.9000000059605,
+            "end": 1142.2000000178814,
+            "duration": 8.300000011920929,
+            "bytes": 6007,
+            "initiator": "fetch"
+          },
+          {
+            "name": "/api/content/events",
+            "start": 1134.2000000178814,
+            "end": 1142.5,
+            "duration": 8.299999982118607,
+            "bytes": 28,
+            "initiator": "fetch"
+          }
+        ],
+        "visibleImages": [
+          {
+            "src": "http://127.0.0.1:3108/singh-academy-logo-clean.png",
+            "complete": true
+          },
+          {
+            "src": "http://127.0.0.1:3108/images/global-learning/brazil-1.jpg",
+            "complete": true
+          }
+        ],
+        "overflow": false
+      },
+      "videos": {
+        "metrics": {
+          "lcp": 72,
+          "cls": 0.31151851851851853,
+          "heroSources": [],
+          "firstSection": null,
+          "playing": [
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f4?preview=1",
+              "at": 293.5
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f5?preview=1",
+              "at": 305.90000000596046
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f6?preview=1",
+              "at": 306.40000000596046
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f6?preview=1",
+              "at": 308.90000000596046
+            }
+          ],
+          "posters": [
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f4?poster=1",
+              "at": 218.90000000596046
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f5?poster=1",
+              "at": 220.90000000596046
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f6?poster=1",
+              "at": 221.2999999821186
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f7?poster=1",
+              "at": 221.7999999821186
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f8?poster=1",
+              "at": 221.7999999821186
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f9?poster=1",
+              "at": 222.2999999821186
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001fa?poster=1",
+              "at": 223.19999998807907
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001fb?poster=1",
+              "at": 225.5
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001fc?poster=1",
+              "at": 229.19999998807907
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001fd?poster=1",
+              "at": 229.2999999821186
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001fe?poster=1",
+              "at": 235.90000000596046
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001ff?poster=1",
+              "at": 240.69999998807907
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/000000000000000000000200?poster=1",
+              "at": 241.5
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/000000000000000000000201?poster=1",
+              "at": 251.90000000596046
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/000000000000000000000202?poster=1",
+              "at": 252
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/000000000000000000000203?poster=1",
+              "at": 253.90000000596046
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/000000000000000000000204?poster=1",
+              "at": 258.69999998807907
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/000000000000000000000205?poster=1",
+              "at": 258.7999999821186
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/000000000000000000000206?poster=1",
+              "at": 267.19999998807907
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/000000000000000000000207?poster=1",
+              "at": 278.40000000596046
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/000000000000000000000208?poster=1",
+              "at": 278.5
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/000000000000000000000209?poster=1",
+              "at": 278.69999998807907
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/00000000000000000000020a?poster=1",
+              "at": 289
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/00000000000000000000020b?poster=1",
+              "at": 289.19999998807907
+            }
+          ],
+          "errors": []
+        },
+        "posterElements": 21,
+        "videoElements": 6,
+        "posterRequests": 24,
+        "videoResources": [
+          {
+            "name": "http://127.0.0.1:3108/api/media/0000000000000000000001f4?preview=1",
+            "start": 192.40000000596046,
+            "end": 285,
+            "bytes": 18112
+          },
+          {
+            "name": "http://127.0.0.1:3108/api/media/0000000000000000000001f5?preview=1",
+            "start": 194.19999998807907,
+            "end": 296.19999998807907,
+            "bytes": 18112
+          },
+          {
+            "name": "http://127.0.0.1:3108/api/media/0000000000000000000001f6?preview=1",
+            "start": 194.90000000596046,
+            "end": 297.19999998807907,
+            "bytes": 18112
+          },
+          {
+            "name": "http://127.0.0.1:3108/api/media/0000000000000000000001f7?preview=1",
+            "start": 195.2999999821186,
+            "end": 299,
+            "bytes": 18112
+          },
+          {
+            "name": "http://127.0.0.1:3108/api/media/0000000000000000000001f8?preview=1",
+            "start": 196,
+            "end": 299.19999998807907,
+            "bytes": 18112
+          },
+          {
+            "name": "http://127.0.0.1:3108/api/media/0000000000000000000001f9?preview=1",
+            "start": 196.59999999403954,
+            "end": 301.2999999821186,
+            "bytes": 18112
+          }
+        ],
+        "visibleVideos": [
+          {
+            "paused": false,
+            "time": 0.713503,
+            "muted": true
+          },
+          {
+            "paused": false,
+            "time": 0.704171,
+            "muted": true
+          },
+          {
+            "paused": false,
+            "time": 0.69934,
+            "muted": true
+          },
+          {
+            "paused": true,
+            "time": 0,
+            "muted": true
+          },
+          {
+            "paused": true,
+            "time": 0,
+            "muted": true
+          },
+          {
+            "paused": true,
+            "time": 0,
+            "muted": true
+          }
+        ],
+        "overflow": false
+      },
+      "errors": []
+    },
+    {
+      "mode": "mobile-fast3g",
+      "sample": 0,
+      "landing": {
+        "metrics": {
+          "lcp": 1804,
+          "cls": 0,
+          "heroSources": [
+            {
+              "src": "/optimized/993d85b15e13dd3a-hero-q92-960.webp",
+              "at": 675.6999999880791
+            },
+            {
+              "src": "/images/global-learning/brazil-1.jpg",
+              "at": 2436.4000000059605
+            }
+          ],
+          "firstSection": 2805.5999999940395,
+          "playing": [],
+          "posters": [
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f4?poster=1",
+              "at": 2888.5
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f5?poster=1",
+              "at": 2893.300000011921
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f6?poster=1",
+              "at": 2895.699999988079
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f7?poster=1",
+              "at": 2895.9000000059605
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f8?poster=1",
+              "at": 2968.0999999940395
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f9?poster=1",
+              "at": 2978.300000011921
+            }
+          ],
+          "errors": []
+        },
+        "navigation": {
+          "name": "http://127.0.0.1:3108/",
+          "entryType": "navigation",
+          "startTime": 0,
+          "duration": 12755.09999999404,
+          "navigationId": 310,
+          "initiatorType": "navigation",
+          "deliveryType": "",
+          "nextHopProtocol": "http/1.1",
+          "renderBlockingStatus": "non-blocking",
+          "contentType": "text/html",
+          "contentEncoding": "gzip",
+          "workerStart": 0,
+          "workerRouterEvaluationStart": 0,
+          "workerCacheLookupStart": 0,
+          "workerMatchedSourceType": "",
+          "workerFinalSourceType": "",
+          "redirectStart": 0,
+          "redirectEnd": 0,
+          "fetchStart": 0.800000011920929,
+          "domainLookupStart": 0.800000011920929,
+          "domainLookupEnd": 0.800000011920929,
+          "connectStart": 0.800000011920929,
+          "secureConnectionStart": 0,
+          "connectEnd": 0.800000011920929,
+          "requestStart": 3.300000011920929,
+          "responseStart": 32.19999998807907,
+          "firstInterimResponseStart": 0,
+          "finalResponseHeadersStart": 32.19999998807907,
+          "responseEnd": 208.90000000596046,
+          "transferSize": 10069,
+          "encodedBodySize": 9769,
+          "decodedBodySize": 32145,
+          "responseStatus": 200,
+          "serverTiming": [],
+          "unloadEventStart": 0,
+          "unloadEventEnd": 0,
+          "domInteractive": 689.3000000119209,
+          "domContentLoadedEventStart": 689.4000000059605,
+          "domContentLoadedEventEnd": 689.4000000059605,
+          "domComplete": 12754.5,
+          "loadEventStart": 12755.09999999404,
+          "loadEventEnd": 12755.09999999404,
+          "type": "navigate",
+          "redirectCount": 0,
+          "activationStart": 0,
+          "criticalCHRestart": 0,
+          "notRestoredReasons": null,
+          "confidence": {
+            "randomizedTriggerRate": 0.4994798,
+            "value": "low"
+          }
+        },
+        "fcp": 680,
+        "resources": [
+          {
+            "name": "/singh-academy-logo-clean.png",
+            "start": 188.5,
+            "end": 1589,
+            "duration": 1400.5,
+            "bytes": 55621,
+            "initiator": "link"
+          },
+          {
+            "name": "/optimized/993d85b15e13dd3a-hero-q92-480.webp",
+            "start": 190.59999999403954,
+            "end": 1775.800000011921,
+            "duration": 1585.2000000178814,
+            "bytes": 61150,
+            "initiator": "link"
+          },
+          {
+            "name": "/_next/static/css/b0fbcacf720193d7.css",
+            "start": 191.19999998807907,
+            "end": 636.3000000119209,
+            "duration": 445.10000002384186,
+            "bytes": 13942,
+            "initiator": "link"
+          },
+          {
+            "name": "/_next/static/css/5695babccd524f26.css",
+            "start": 191.30000001192093,
+            "end": 396.30000001192093,
+            "duration": 205,
+            "bytes": 2207,
+            "initiator": "link"
+          },
+          {
+            "name": "/_next/static/css/38d485da94015b92.css",
+            "start": 191.40000000596046,
+            "end": 418.40000000596046,
+            "duration": 227,
+            "bytes": 1231,
+            "initiator": "link"
+          },
+          {
+            "name": "/_next/static/css/9948d50dd0c2f555.css",
+            "start": 192.59999999403954,
+            "end": 381.30000001192093,
+            "duration": 188.7000000178814,
+            "bytes": 743,
+            "initiator": "link"
+          },
+          {
+            "name": "/_next/static/chunks/webpack-307289169f5f15be.js",
+            "start": 193.40000000596046,
+            "end": 643.9000000059605,
+            "duration": 450.5,
+            "bytes": 2821,
+            "initiator": "link"
+          },
+          {
+            "name": "/_next/static/chunks/8360f048-dac7fe76b0c5a6eb.js",
+            "start": 193.5,
+            "end": 1828.800000011921,
+            "duration": 1635.300000011921,
+            "bytes": 54361,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/2760-f5df0ae57b14800d.js",
+            "start": 193.59999999403954,
+            "end": 1693.800000011921,
+            "duration": 1500.2000000178814,
+            "bytes": 45709,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/main-app-ab931d25a27f4282.js",
+            "start": 193.69999998807907,
+            "end": 824.3000000119209,
+            "duration": 630.6000000238419,
+            "bytes": 561,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/9074-f1f1781cb1ecb192.js",
+            "start": 193.69999998807907,
+            "end": 913.5999999940395,
+            "duration": 719.9000000059605,
+            "bytes": 3376,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/1321-f5e068a0ebbbc1bd.js",
+            "start": 193.80000001192093,
+            "end": 1131.300000011921,
+            "duration": 937.5,
+            "bytes": 4342,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/6650-7aac8a24b5437238.js",
+            "start": 193.80000001192093,
+            "end": 1304,
+            "duration": 1110.199999988079,
+            "bytes": 8034,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/3041-4f71811899053c49.js",
+            "start": 193.80000001192093,
+            "end": 1438.800000011921,
+            "duration": 1245,
+            "bytes": 5096,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/8476-bb712270480e1438.js",
+            "start": 193.90000000596046,
+            "end": 1603.9000000059605,
+            "duration": 1410,
+            "bytes": 4629,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/3133-7530dc1827656826.js",
+            "start": 194,
+            "end": 1760.9000000059605,
+            "duration": 1566.9000000059605,
+            "bytes": 7145,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/2542-63c1ad0a9ab63c64.js",
+            "start": 194,
+            "end": 1821.4000000059605,
+            "duration": 1627.4000000059605,
+            "bytes": 3693,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/app/page-45a7180228edb620.js",
+            "start": 194,
+            "end": 1851.5,
+            "duration": 1657.5,
+            "bytes": 6785,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/app/layout-308cc580cafe3009.js",
+            "start": 194.09999999403954,
+            "end": 1881.4000000059605,
+            "duration": 1687.300000011921,
+            "bytes": 4324,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/app/error-0b639f64da56eedc.js",
+            "start": 194.09999999403954,
+            "end": 1925.9000000059605,
+            "duration": 1731.800000011921,
+            "bytes": 980,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/app/not-found-60e8a90bb191b74f.js",
+            "start": 194.19999998807907,
+            "end": 1933.800000011921,
+            "duration": 1739.6000000238419,
+            "bytes": 188,
+            "initiator": "script"
+          },
+          {
+            "name": "/images/founder/dr-sukhsimranjit-singh.png",
+            "start": 1149.699999988079,
+            "end": 4453.199999988079,
+            "duration": 3303.5,
+            "bytes": 220256,
+            "initiator": "img"
+          },
+          {
+            "name": "/api/content/site",
+            "start": 2178.699999988079,
+            "end": 2338.699999988079,
+            "duration": 160,
+            "bytes": 272,
+            "initiator": "fetch"
+          },
+          {
+            "name": "/api/page-sections/landing",
+            "start": 2329.0999999940395,
+            "end": 2488.300000011921,
+            "duration": 159.2000000178814,
+            "bytes": 28,
+            "initiator": "fetch"
+          },
+          {
+            "name": "/api/video-reviews",
+            "start": 2334.0999999940395,
+            "end": 2571,
+            "duration": 236.90000000596046,
+            "bytes": 4542,
+            "initiator": "fetch"
+          },
+          {
+            "name": "/api/content/landing",
+            "start": 2339.5999999940395,
+            "end": 2615.9000000059605,
+            "duration": 276.30000001192093,
+            "bytes": 8330,
+            "initiator": "fetch"
+          },
+          {
+            "name": "/images/global-learning/brazil-1.jpg",
+            "start": 2428.699999988079,
+            "end": 12749,
+            "duration": 10320.300000011921,
+            "bytes": 1732282,
+            "initiator": "img"
+          },
+          {
+            "name": "/api/media/0000000000000000000001f4?poster=1",
+            "start": 2597.199999988079,
+            "end": 2766.5,
+            "duration": 169.30000001192093,
+            "bytes": 118,
+            "initiator": "img"
+          },
+          {
+            "name": "/api/media/0000000000000000000001f5?poster=1",
+            "start": 2597.300000011921,
+            "end": 2774.0999999940395,
+            "duration": 176.7999999821186,
+            "bytes": 118,
+            "initiator": "img"
+          },
+          {
+            "name": "/api/media/0000000000000000000001f6?poster=1",
+            "start": 2598,
+            "end": 2781.5999999940395,
+            "duration": 183.59999999403954,
+            "bytes": 118,
+            "initiator": "img"
+          },
+          {
+            "name": "/api/media/0000000000000000000001f7?poster=1",
+            "start": 2598.0999999940395,
+            "end": 2803.5,
+            "duration": 205.40000000596046,
+            "bytes": 118,
+            "initiator": "img"
+          },
+          {
+            "name": "/api/media/0000000000000000000001f8?poster=1",
+            "start": 2598.199999988079,
+            "end": 2938.800000011921,
+            "duration": 340.60000002384186,
+            "bytes": 118,
+            "initiator": "img"
+          },
+          {
+            "name": "/api/media/0000000000000000000001f9?poster=1",
+            "start": 2598.199999988079,
+            "end": 2954.0999999940395,
+            "duration": 355.90000000596046,
+            "bytes": 118,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/a97ce5db60a034d1-240.webp",
+            "start": 2807.0999999940395,
+            "end": 3036.699999988079,
+            "duration": 229.59999999403954,
+            "bytes": 3434,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/c7d3ae1455dd2e3d-240.webp",
+            "start": 2807.699999988079,
+            "end": 3088.4000000059605,
+            "duration": 280.7000000178814,
+            "bytes": 5690,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/f03e702faeb36387-240.webp",
+            "start": 2808.199999988079,
+            "end": 3230.9000000059605,
+            "duration": 422.7000000178814,
+            "bytes": 6012,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/c0f77440330c1fc6-240.webp",
+            "start": 2808.800000011921,
+            "end": 3193.0999999940395,
+            "duration": 384.2999999821186,
+            "bytes": 3044,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/8285e7b5e6daba8d-240.webp",
+            "start": 2809,
+            "end": 3314,
+            "duration": 505,
+            "bytes": 5340,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/218ac50924ec0449-240.webp",
+            "start": 2809,
+            "end": 3381.800000011921,
+            "duration": 572.8000000119209,
+            "bytes": 6252,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/159093844148271c-240.webp",
+            "start": 2809.0999999940395,
+            "end": 3463.800000011921,
+            "duration": 654.7000000178814,
+            "bytes": 4802,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/e68935fd0b33a39b-240.webp",
+            "start": 2809.0999999940395,
+            "end": 3471.5,
+            "duration": 662.4000000059605,
+            "bytes": 3782,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/b5a9cd0f62e99d39-240.webp",
+            "start": 2809.199999988079,
+            "end": 3726.300000011921,
+            "duration": 917.1000000238419,
+            "bytes": 5102,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/03c6128422f457c4-240.webp",
+            "start": 2809.300000011921,
+            "end": 3749.5,
+            "duration": 940.1999999880791,
+            "bytes": 4294,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/a32069f7c78dfaf8-240.webp",
+            "start": 2809.300000011921,
+            "end": 3838.300000011921,
+            "duration": 1029,
+            "bytes": 4246,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/293c83498da3edb7-240.webp",
+            "start": 2809.5,
+            "end": 3860.699999988079,
+            "duration": 1051.199999988079,
+            "bytes": 4162,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/44c02b794427b1b9-240.webp",
+            "start": 2812,
+            "end": 3951.0999999940395,
+            "duration": 1139.0999999940395,
+            "bytes": 3264,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/575a66ca7c5efc40-240.webp",
+            "start": 2812.199999988079,
+            "end": 4003.800000011921,
+            "duration": 1191.6000000238419,
+            "bytes": 4766,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/286432a191091959-240.webp",
+            "start": 2813.0999999940395,
+            "end": 4101.699999988079,
+            "duration": 1288.5999999940395,
+            "bytes": 4364,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/ccf3e820b21d0ded-240.webp",
+            "start": 2813.199999988079,
+            "end": 4123.5999999940395,
+            "duration": 1310.4000000059605,
+            "bytes": 4038,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/1a9115411a6e8871-240.webp",
+            "start": 2813.199999988079,
+            "end": 4265.800000011921,
+            "duration": 1452.6000000238419,
+            "bytes": 7506,
+            "initiator": "img"
+          },
+          {
+            "name": "/api/content/team",
+            "start": 3263.300000011921,
+            "end": 3591.4000000059605,
+            "duration": 328.09999999403954,
+            "bytes": 6007,
+            "initiator": "fetch"
+          },
+          {
+            "name": "/api/content/events",
+            "start": 3265.199999988079,
+            "end": 3560.9000000059605,
+            "duration": 295.7000000178814,
+            "bytes": 28,
+            "initiator": "fetch"
+          },
+          {
+            "name": "/optimized/a97ce5db60a034d1-480.webp",
+            "start": 3608.4000000059605,
+            "end": 4363.699999988079,
+            "duration": 755.2999999821186,
+            "bytes": 8610,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/c7d3ae1455dd2e3d-480.webp",
+            "start": 3609.4000000059605,
+            "end": 4574,
+            "duration": 964.5999999940395,
+            "bytes": 19108,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/f03e702faeb36387-480.webp",
+            "start": 4373.5999999940395,
+            "end": 4738.9000000059605,
+            "duration": 365.30000001192093,
+            "bytes": 18216,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/c0f77440330c1fc6-480.webp",
+            "start": 4585.0999999940395,
+            "end": 4828.800000011921,
+            "duration": 243.7000000178814,
+            "bytes": 7202,
+            "initiator": "img"
+          },
+          {
+            "name": "/favicon.ico",
+            "start": 12779.40000000596,
+            "end": 12966,
+            "duration": 186.59999999403954,
+            "bytes": 6382,
+            "initiator": "other"
+          }
+        ],
+        "visibleImages": [
+          {
+            "src": "http://127.0.0.1:3108/singh-academy-logo-clean.png",
+            "complete": true
+          },
+          {
+            "src": "http://127.0.0.1:3108/images/global-learning/brazil-1.jpg",
+            "complete": true
+          }
+        ],
+        "overflow": false
+      },
+      "videos": {
+        "metrics": {
+          "lcp": 712,
+          "cls": 0.34015578144860625,
+          "heroSources": [],
+          "firstSection": null,
+          "playing": [
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f4?preview=1",
+              "at": 3326.5999999940395
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f4?preview=1",
+              "at": 3344.800000011921
+            }
+          ],
+          "posters": [
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f5?poster=1",
+              "at": 2493.4000000059605
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f6?poster=1",
+              "at": 2502.5999999940395
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f4?poster=1",
+              "at": 2503.9000000059605
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f7?poster=1",
+              "at": 2504
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f8?poster=1",
+              "at": 2505.5999999940395
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f9?poster=1",
+              "at": 2506.300000011921
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001fa?poster=1",
+              "at": 2652.9000000059605
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001fb?poster=1",
+              "at": 2654.4000000059605
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001fc?poster=1",
+              "at": 2654.7000000178814
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001fd?poster=1",
+              "at": 2655.800000011921
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001fe?poster=1",
+              "at": 2656.5
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001ff?poster=1",
+              "at": 2656.7000000178814
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/000000000000000000000200?poster=1",
+              "at": 2792.5999999940395
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/000000000000000000000201?poster=1",
+              "at": 2795
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/000000000000000000000202?poster=1",
+              "at": 2797.0999999940395
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/000000000000000000000203?poster=1",
+              "at": 2803.5
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/000000000000000000000204?poster=1",
+              "at": 2803.800000011921
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/000000000000000000000205?poster=1",
+              "at": 2804
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/000000000000000000000206?poster=1",
+              "at": 2913.300000011921
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/000000000000000000000207?poster=1",
+              "at": 2941.2000000178814
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/000000000000000000000208?poster=1",
+              "at": 2943.7000000178814
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/000000000000000000000209?poster=1",
+              "at": 2945.800000011921
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/00000000000000000000020a?poster=1",
+              "at": 2953.300000011921
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/00000000000000000000020b?poster=1",
+              "at": 2955.2000000178814
+            }
+          ],
+          "errors": []
+        },
+        "posterElements": 23,
+        "videoElements": 2,
+        "posterRequests": 24,
+        "videoResources": [
+          {
+            "name": "http://127.0.0.1:3108/api/media/0000000000000000000001f4?preview=1",
+            "start": 2453.0999999940395,
+            "end": 3309.7000000178814,
+            "bytes": 18112
+          },
+          {
+            "name": "http://127.0.0.1:3108/api/media/0000000000000000000001f5?preview=1",
+            "start": 2467.5999999940395,
+            "end": 3324,
+            "bytes": 18112
+          }
+        ],
+        "visibleVideos": [
+          {
+            "paused": false,
+            "time": 0.721192,
+            "muted": true
+          },
+          {
+            "paused": true,
+            "time": 0,
+            "muted": true
+          }
+        ],
+        "overflow": false
+      },
+      "errors": []
+    },
+    {
+      "mode": "mobile-fast3g",
+      "sample": 1,
+      "landing": {
+        "metrics": {
+          "lcp": 1824,
+          "cls": 0,
+          "heroSources": [
+            {
+              "src": "/optimized/993d85b15e13dd3a-hero-q92-960.webp",
+              "at": 698.2999999821186
+            },
+            {
+              "src": "/images/global-learning/brazil-1.jpg",
+              "at": 2501.699999988079
+            }
+          ],
+          "firstSection": 2886.5999999940395,
+          "playing": [],
+          "posters": [
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f4?poster=1",
+              "at": 3050.899999976158
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f6?poster=1",
+              "at": 3053.199999988079
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f5?poster=1",
+              "at": 3054.5
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f7?poster=1",
+              "at": 3054.5999999940395
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f8?poster=1",
+              "at": 3060
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f9?poster=1",
+              "at": 3069.2999999821186
+            }
+          ],
+          "errors": []
+        },
+        "navigation": {
+          "name": "http://127.0.0.1:3108/",
+          "entryType": "navigation",
+          "startTime": 0,
+          "duration": 12760.899999976158,
+          "navigationId": 6519,
+          "initiatorType": "navigation",
+          "deliveryType": "",
+          "nextHopProtocol": "http/1.1",
+          "renderBlockingStatus": "non-blocking",
+          "contentType": "text/html",
+          "contentEncoding": "gzip",
+          "workerStart": 0,
+          "workerRouterEvaluationStart": 0,
+          "workerCacheLookupStart": 0,
+          "workerMatchedSourceType": "",
+          "workerFinalSourceType": "",
+          "redirectStart": 0,
+          "redirectEnd": 0,
+          "fetchStart": 0.699999988079071,
+          "domainLookupStart": 0.699999988079071,
+          "domainLookupEnd": 0.699999988079071,
+          "connectStart": 0.699999988079071,
+          "secureConnectionStart": 0,
+          "connectEnd": 0.699999988079071,
+          "requestStart": 2,
+          "responseStart": 51.5,
+          "firstInterimResponseStart": 0,
+          "finalResponseHeadersStart": 51.5,
+          "responseEnd": 212.59999999403954,
+          "transferSize": 10095,
+          "encodedBodySize": 9795,
+          "decodedBodySize": 32145,
+          "responseStatus": 200,
+          "serverTiming": [],
+          "unloadEventStart": 0,
+          "unloadEventEnd": 0,
+          "domInteractive": 730.6999999880791,
+          "domContentLoadedEventStart": 730.6999999880791,
+          "domContentLoadedEventEnd": 730.7999999821186,
+          "domComplete": 12760.799999982119,
+          "loadEventStart": 12760.899999976158,
+          "loadEventEnd": 12760.899999976158,
+          "type": "navigate",
+          "redirectCount": 0,
+          "activationStart": 0,
+          "criticalCHRestart": 0,
+          "notRestoredReasons": null,
+          "confidence": {
+            "randomizedTriggerRate": 0.4994798,
+            "value": "high"
+          }
+        },
+        "fcp": 696,
+        "resources": [
+          {
+            "name": "/singh-academy-logo-clean.png",
+            "start": 197.69999998807907,
+            "end": 1690.0999999940395,
+            "duration": 1492.4000000059605,
+            "bytes": 55621,
+            "initiator": "link"
+          },
+          {
+            "name": "/optimized/993d85b15e13dd3a-hero-q92-480.webp",
+            "start": 199.7999999821186,
+            "end": 1796.2999999821186,
+            "duration": 1596.5,
+            "bytes": 61150,
+            "initiator": "link"
+          },
+          {
+            "name": "/_next/static/css/b0fbcacf720193d7.css",
+            "start": 200.7999999821186,
+            "end": 648.3999999761581,
+            "duration": 447.59999999403954,
+            "bytes": 13942,
+            "initiator": "link"
+          },
+          {
+            "name": "/_next/static/css/5695babccd524f26.css",
+            "start": 201,
+            "end": 415,
+            "duration": 214,
+            "bytes": 2207,
+            "initiator": "link"
+          },
+          {
+            "name": "/_next/static/css/38d485da94015b92.css",
+            "start": 201.59999999403954,
+            "end": 407.89999997615814,
+            "duration": 206.2999999821186,
+            "bytes": 1231,
+            "initiator": "link"
+          },
+          {
+            "name": "/_next/static/css/9948d50dd0c2f555.css",
+            "start": 202.19999998807907,
+            "end": 378,
+            "duration": 175.80000001192093,
+            "bytes": 743,
+            "initiator": "link"
+          },
+          {
+            "name": "/_next/static/chunks/webpack-307289169f5f15be.js",
+            "start": 202.2999999821186,
+            "end": 632.7999999821186,
+            "duration": 430.5,
+            "bytes": 2821,
+            "initiator": "link"
+          },
+          {
+            "name": "/_next/static/chunks/8360f048-dac7fe76b0c5a6eb.js",
+            "start": 202.2999999821186,
+            "end": 1832.5,
+            "duration": 1630.2000000178814,
+            "bytes": 54361,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/2760-f5df0ae57b14800d.js",
+            "start": 202.39999997615814,
+            "end": 1712.5999999940395,
+            "duration": 1510.2000000178814,
+            "bytes": 45709,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/main-app-ab931d25a27f4282.js",
+            "start": 202.5,
+            "end": 820.3999999761581,
+            "duration": 617.8999999761581,
+            "bytes": 561,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/9074-f1f1781cb1ecb192.js",
+            "start": 202.5,
+            "end": 917.6999999880791,
+            "duration": 715.1999999880791,
+            "bytes": 3376,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/1321-f5e068a0ebbbc1bd.js",
+            "start": 203.19999998807907,
+            "end": 1127.3999999761581,
+            "duration": 924.1999999880791,
+            "bytes": 4342,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/6650-7aac8a24b5437238.js",
+            "start": 203.2999999821186,
+            "end": 1308.199999988079,
+            "duration": 1104.9000000059605,
+            "bytes": 8034,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/3041-4f71811899053c49.js",
+            "start": 203.2999999821186,
+            "end": 1427.5999999940395,
+            "duration": 1224.300000011921,
+            "bytes": 5096,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/8476-bb712270480e1438.js",
+            "start": 203.2999999821186,
+            "end": 1608.699999988079,
+            "duration": 1405.4000000059605,
+            "bytes": 4629,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/3133-7530dc1827656826.js",
+            "start": 206.5,
+            "end": 1772.5999999940395,
+            "duration": 1566.0999999940395,
+            "bytes": 7145,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/2542-63c1ad0a9ab63c64.js",
+            "start": 206.59999999403954,
+            "end": 1825.7999999821186,
+            "duration": 1619.199999988079,
+            "bytes": 3693,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/app/page-45a7180228edb620.js",
+            "start": 206.59999999403954,
+            "end": 1885.5999999940395,
+            "duration": 1679,
+            "bytes": 6785,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/app/layout-308cc580cafe3009.js",
+            "start": 206.69999998807907,
+            "end": 1908.199999988079,
+            "duration": 1701.5,
+            "bytes": 4324,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/app/error-0b639f64da56eedc.js",
+            "start": 207.5,
+            "end": 1937.8999999761581,
+            "duration": 1730.3999999761581,
+            "bytes": 980,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/app/not-found-60e8a90bb191b74f.js",
+            "start": 207.59999999403954,
+            "end": 1953.3999999761581,
+            "duration": 1745.7999999821186,
+            "bytes": 188,
+            "initiator": "script"
+          },
+          {
+            "name": "/images/founder/dr-sukhsimranjit-singh.png",
+            "start": 1136.699999988079,
+            "end": 4277.0999999940395,
+            "duration": 3140.4000000059605,
+            "bytes": 220256,
+            "initiator": "img"
+          },
+          {
+            "name": "/api/content/site",
+            "start": 2257.0999999940395,
+            "end": 2417.5999999940395,
+            "duration": 160.5,
+            "bytes": 272,
+            "initiator": "fetch"
+          },
+          {
+            "name": "/api/page-sections/landing",
+            "start": 2384.399999976158,
+            "end": 2545,
+            "duration": 160.60000002384186,
+            "bytes": 28,
+            "initiator": "fetch"
+          },
+          {
+            "name": "/api/video-reviews",
+            "start": 2391.5999999940395,
+            "end": 2627.899999976158,
+            "duration": 236.2999999821186,
+            "bytes": 4542,
+            "initiator": "fetch"
+          },
+          {
+            "name": "/api/content/landing",
+            "start": 2395.2999999821186,
+            "end": 2673.0999999940395,
+            "duration": 277.80000001192093,
+            "bytes": 8330,
+            "initiator": "fetch"
+          },
+          {
+            "name": "/images/global-learning/brazil-1.jpg",
+            "start": 2493.5999999940395,
+            "end": 12753,
+            "duration": 10259.40000000596,
+            "bytes": 1732282,
+            "initiator": "img"
+          },
+          {
+            "name": "/api/media/0000000000000000000001f4?poster=1",
+            "start": 2649,
+            "end": 2823.0999999940395,
+            "duration": 174.09999999403954,
+            "bytes": 118,
+            "initiator": "img"
+          },
+          {
+            "name": "/api/media/0000000000000000000001f5?poster=1",
+            "start": 2649.0999999940395,
+            "end": 2837.699999988079,
+            "duration": 188.59999999403954,
+            "bytes": 118,
+            "initiator": "img"
+          },
+          {
+            "name": "/api/media/0000000000000000000001f6?poster=1",
+            "start": 2649.199999988079,
+            "end": 2830.2999999821186,
+            "duration": 181.09999999403954,
+            "bytes": 118,
+            "initiator": "img"
+          },
+          {
+            "name": "/api/media/0000000000000000000001f7?poster=1",
+            "start": 2649.2999999821186,
+            "end": 2859.899999976158,
+            "duration": 210.59999999403954,
+            "bytes": 118,
+            "initiator": "img"
+          },
+          {
+            "name": "/api/media/0000000000000000000001f8?poster=1",
+            "start": 2649.399999976158,
+            "end": 2995.7999999821186,
+            "duration": 346.40000000596046,
+            "bytes": 118,
+            "initiator": "img"
+          },
+          {
+            "name": "/api/media/0000000000000000000001f9?poster=1",
+            "start": 2649.399999976158,
+            "end": 3010.5,
+            "duration": 361.10000002384186,
+            "bytes": 118,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/a97ce5db60a034d1-240.webp",
+            "start": 2892.399999976158,
+            "end": 3122.399999976158,
+            "duration": 230,
+            "bytes": 3434,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/c7d3ae1455dd2e3d-240.webp",
+            "start": 2894.0999999940395,
+            "end": 3183.7999999821186,
+            "duration": 289.69999998807907,
+            "bytes": 5690,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/f03e702faeb36387-240.webp",
+            "start": 2895.7999999821186,
+            "end": 3303,
+            "duration": 407.2000000178814,
+            "bytes": 6012,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/c0f77440330c1fc6-240.webp",
+            "start": 2901.5999999940395,
+            "end": 3257.899999976158,
+            "duration": 356.2999999821186,
+            "bytes": 3044,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/8285e7b5e6daba8d-240.webp",
+            "start": 2903,
+            "end": 3377.2999999821186,
+            "duration": 474.2999999821186,
+            "bytes": 5340,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/218ac50924ec0449-240.webp",
+            "start": 2904.0999999940395,
+            "end": 3475.0999999940395,
+            "duration": 571,
+            "bytes": 6252,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/159093844148271c-240.webp",
+            "start": 2904.199999988079,
+            "end": 3535,
+            "duration": 630.8000000119209,
+            "bytes": 4802,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/e68935fd0b33a39b-240.webp",
+            "start": 2905.399999976158,
+            "end": 3550.2999999821186,
+            "duration": 644.9000000059605,
+            "bytes": 3782,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/b5a9cd0f62e99d39-240.webp",
+            "start": 2906.199999988079,
+            "end": 3797.7999999821186,
+            "duration": 891.5999999940395,
+            "bytes": 5102,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/03c6128422f457c4-240.webp",
+            "start": 2907.399999976158,
+            "end": 3820,
+            "duration": 912.6000000238419,
+            "bytes": 4294,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/a32069f7c78dfaf8-240.webp",
+            "start": 2908.2999999821186,
+            "end": 3917.199999988079,
+            "duration": 1008.9000000059605,
+            "bytes": 4246,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/293c83498da3edb7-240.webp",
+            "start": 2909.5999999940395,
+            "end": 3940.5,
+            "duration": 1030.9000000059605,
+            "bytes": 4162,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/44c02b794427b1b9-240.webp",
+            "start": 2910.2999999821186,
+            "end": 4029.7999999821186,
+            "duration": 1119.5,
+            "bytes": 3264,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/575a66ca7c5efc40-240.webp",
+            "start": 2910.5,
+            "end": 4075,
+            "duration": 1164.5,
+            "bytes": 4766,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/286432a191091959-240.webp",
+            "start": 2912.5999999940395,
+            "end": 4187.899999976158,
+            "duration": 1275.2999999821186,
+            "bytes": 4364,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/ccf3e820b21d0ded-240.webp",
+            "start": 2915.2999999821186,
+            "end": 4210.0999999940395,
+            "duration": 1294.800000011921,
+            "bytes": 4038,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/1a9115411a6e8871-240.webp",
+            "start": 2916.5,
+            "end": 4345.199999988079,
+            "duration": 1428.699999988079,
+            "bytes": 7506,
+            "initiator": "img"
+          },
+          {
+            "name": "/api/content/team",
+            "start": 3346.2999999821186,
+            "end": 3662.7999999821186,
+            "duration": 316.5,
+            "bytes": 6007,
+            "initiator": "fetch"
+          },
+          {
+            "name": "/api/content/events",
+            "start": 3347.7999999821186,
+            "end": 3647.699999988079,
+            "duration": 299.90000000596046,
+            "bytes": 28,
+            "initiator": "fetch"
+          },
+          {
+            "name": "/optimized/a97ce5db60a034d1-480.webp",
+            "start": 3674.5999999940395,
+            "end": 4398.299999982119,
+            "duration": 723.6999999880791,
+            "bytes": 8610,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/c7d3ae1455dd2e3d-480.webp",
+            "start": 3675.0999999940395,
+            "end": 4586.0999999940395,
+            "duration": 911,
+            "bytes": 19108,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/f03e702faeb36387-480.webp",
+            "start": 4409.399999976158,
+            "end": 4772.899999976158,
+            "duration": 363.5,
+            "bytes": 18216,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/c0f77440330c1fc6-480.webp",
+            "start": 4592.899999976158,
+            "end": 4848.0999999940395,
+            "duration": 255.2000000178814,
+            "bytes": 7202,
+            "initiator": "img"
+          },
+          {
+            "name": "/favicon.ico",
+            "start": 12787.399999976158,
+            "end": 12977.5,
+            "duration": 190.10000002384186,
+            "bytes": 6382,
+            "initiator": "other"
+          }
+        ],
+        "visibleImages": [
+          {
+            "src": "http://127.0.0.1:3108/singh-academy-logo-clean.png",
+            "complete": true
+          },
+          {
+            "src": "http://127.0.0.1:3108/images/global-learning/brazil-1.jpg",
+            "complete": true
+          }
+        ],
+        "overflow": false
+      },
+      "videos": {
+        "metrics": {
+          "lcp": 676,
+          "cls": 0.34015578144860625,
+          "heroSources": [],
+          "firstSection": null,
+          "playing": [
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f4?preview=1",
+              "at": 3283.100000023842
+            }
+          ],
+          "posters": [
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f4?poster=1",
+              "at": 2459.4000000059605
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f5?poster=1",
+              "at": 2471.300000011921
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f6?poster=1",
+              "at": 2471.5
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f7?poster=1",
+              "at": 2471.800000011921
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f8?poster=1",
+              "at": 2471.800000011921
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f9?poster=1",
+              "at": 2471.9000000059605
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001fa?poster=1",
+              "at": 2580.2000000178814
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001fb?poster=1",
+              "at": 2593.2000000178814
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001fc?poster=1",
+              "at": 2594.5
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001fd?poster=1",
+              "at": 2595.300000011921
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001fe?poster=1",
+              "at": 2596.300000011921
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001ff?poster=1",
+              "at": 2597.600000023842
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/000000000000000000000200?poster=1",
+              "at": 2726
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/000000000000000000000201?poster=1",
+              "at": 2726.300000011921
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/000000000000000000000202?poster=1",
+              "at": 2730.9000000059605
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/000000000000000000000203?poster=1",
+              "at": 2732.600000023842
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/000000000000000000000204?poster=1",
+              "at": 2732.600000023842
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/000000000000000000000205?poster=1",
+              "at": 2739.800000011921
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/000000000000000000000206?poster=1",
+              "at": 2883.2000000178814
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/000000000000000000000207?poster=1",
+              "at": 2883.7000000178814
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/000000000000000000000208?poster=1",
+              "at": 2883.800000011921
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/000000000000000000000209?poster=1",
+              "at": 2884
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/00000000000000000000020a?poster=1",
+              "at": 2884.100000023842
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/00000000000000000000020b?poster=1",
+              "at": 2884.2000000178814
+            }
+          ],
+          "errors": []
+        },
+        "posterElements": 23,
+        "videoElements": 2,
+        "posterRequests": 24,
+        "videoResources": [
+          {
+            "name": "http://127.0.0.1:3108/api/media/0000000000000000000001f4?preview=1",
+            "start": 2421.800000011921,
+            "end": 3261,
+            "bytes": 18112
+          },
+          {
+            "name": "http://127.0.0.1:3108/api/media/0000000000000000000001f5?preview=1",
+            "start": 2427.5,
+            "end": 3268.300000011921,
+            "bytes": 18112
+          }
+        ],
+        "visibleVideos": [
+          {
+            "paused": false,
+            "time": 0.722675,
+            "muted": true
+          },
+          {
+            "paused": true,
+            "time": 0,
+            "muted": true
+          }
+        ],
+        "overflow": false
+      },
+      "errors": []
+    },
+    {
+      "mode": "mobile-fast3g",
+      "sample": 2,
+      "landing": {
+        "metrics": {
+          "lcp": 1780,
+          "cls": 0,
+          "heroSources": [
+            {
+              "src": "/optimized/993d85b15e13dd3a-hero-q92-960.webp",
+              "at": 666.2000000178814
+            },
+            {
+              "src": "/images/global-learning/brazil-1.jpg",
+              "at": 2408.600000023842
+            }
+          ],
+          "firstSection": 2739,
+          "playing": [],
+          "posters": [
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f4?poster=1",
+              "at": 2821.600000023842
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f5?poster=1",
+              "at": 2830.600000023842
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f6?poster=1",
+              "at": 2832.100000023842
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f7?poster=1",
+              "at": 2832.4000000059605
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f8?poster=1",
+              "at": 2958.5
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f9?poster=1",
+              "at": 2967
+            }
+          ],
+          "errors": []
+        },
+        "navigation": {
+          "name": "http://127.0.0.1:3108/",
+          "entryType": "navigation",
+          "startTime": 0,
+          "duration": 12726.200000017881,
+          "navigationId": 2415,
+          "initiatorType": "navigation",
+          "deliveryType": "",
+          "nextHopProtocol": "http/1.1",
+          "renderBlockingStatus": "non-blocking",
+          "contentType": "text/html",
+          "contentEncoding": "gzip",
+          "workerStart": 0,
+          "workerRouterEvaluationStart": 0,
+          "workerCacheLookupStart": 0,
+          "workerMatchedSourceType": "",
+          "workerFinalSourceType": "",
+          "redirectStart": 0,
+          "redirectEnd": 0,
+          "fetchStart": 0.7000000178813934,
+          "domainLookupStart": 0.7000000178813934,
+          "domainLookupEnd": 0.7000000178813934,
+          "connectStart": 0.7000000178813934,
+          "secureConnectionStart": 0,
+          "connectEnd": 0.7000000178813934,
+          "requestStart": 2.4000000059604645,
+          "responseStart": 25.900000005960464,
+          "firstInterimResponseStart": 0,
+          "finalResponseHeadersStart": 25.900000005960464,
+          "responseEnd": 206.7000000178814,
+          "transferSize": 10092,
+          "encodedBodySize": 9792,
+          "decodedBodySize": 32145,
+          "responseStatus": 200,
+          "serverTiming": [],
+          "unloadEventStart": 0,
+          "unloadEventEnd": 0,
+          "domInteractive": 845.3000000119209,
+          "domContentLoadedEventStart": 845.4000000059605,
+          "domContentLoadedEventEnd": 845.4000000059605,
+          "domComplete": 12726.200000017881,
+          "loadEventStart": 12726.200000017881,
+          "loadEventEnd": 12726.200000017881,
+          "type": "navigate",
+          "redirectCount": 0,
+          "activationStart": 0,
+          "criticalCHRestart": 0,
+          "notRestoredReasons": null,
+          "confidence": {
+            "randomizedTriggerRate": 0.4994798,
+            "value": "high"
+          }
+        },
+        "fcp": 656,
+        "resources": [
+          {
+            "name": "/singh-academy-logo-clean.png",
+            "start": 184.40000000596046,
+            "end": 1692.1000000238419,
+            "duration": 1507.7000000178814,
+            "bytes": 55621,
+            "initiator": "link"
+          },
+          {
+            "name": "/optimized/993d85b15e13dd3a-hero-q92-480.webp",
+            "start": 185.60000002384186,
+            "end": 1760,
+            "duration": 1574.3999999761581,
+            "bytes": 61150,
+            "initiator": "link"
+          },
+          {
+            "name": "/_next/static/css/b0fbcacf720193d7.css",
+            "start": 185.7000000178814,
+            "end": 612.3000000119209,
+            "duration": 426.59999999403954,
+            "bytes": 13942,
+            "initiator": "link"
+          },
+          {
+            "name": "/_next/static/css/5695babccd524f26.css",
+            "start": 185.80000001192093,
+            "end": 395.2000000178814,
+            "duration": 209.40000000596046,
+            "bytes": 2207,
+            "initiator": "link"
+          },
+          {
+            "name": "/_next/static/css/9948d50dd0c2f555.css",
+            "start": 185.90000000596046,
+            "end": 372,
+            "duration": 186.09999999403954,
+            "bytes": 743,
+            "initiator": "link"
+          },
+          {
+            "name": "/_next/static/css/38d485da94015b92.css",
+            "start": 185.90000000596046,
+            "end": 409.7000000178814,
+            "duration": 223.80000001192093,
+            "bytes": 1231,
+            "initiator": "link"
+          },
+          {
+            "name": "/_next/static/chunks/webpack-307289169f5f15be.js",
+            "start": 185.90000000596046,
+            "end": 619.7000000178814,
+            "duration": 433.80000001192093,
+            "bytes": 2821,
+            "initiator": "link"
+          },
+          {
+            "name": "/_next/static/chunks/8360f048-dac7fe76b0c5a6eb.js",
+            "start": 185.90000000596046,
+            "end": 1812,
+            "duration": 1626.0999999940395,
+            "bytes": 54361,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/2760-f5df0ae57b14800d.js",
+            "start": 186,
+            "end": 1706.800000011921,
+            "duration": 1520.800000011921,
+            "bytes": 45709,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/main-app-ab931d25a27f4282.js",
+            "start": 186.10000002384186,
+            "end": 800.4000000059605,
+            "duration": 614.2999999821186,
+            "bytes": 561,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/9074-f1f1781cb1ecb192.js",
+            "start": 186.10000002384186,
+            "end": 882.1000000238419,
+            "duration": 696,
+            "bytes": 3376,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/1321-f5e068a0ebbbc1bd.js",
+            "start": 186.10000002384186,
+            "end": 1107.7000000178814,
+            "duration": 921.5999999940395,
+            "bytes": 4342,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/6650-7aac8a24b5437238.js",
+            "start": 186.10000002384186,
+            "end": 1265,
+            "duration": 1078.8999999761581,
+            "bytes": 8034,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/3041-4f71811899053c49.js",
+            "start": 186.10000002384186,
+            "end": 1415.4000000059605,
+            "duration": 1229.2999999821186,
+            "bytes": 5096,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/8476-bb712270480e1438.js",
+            "start": 186.2000000178814,
+            "end": 1565.2000000178814,
+            "duration": 1379,
+            "bytes": 4629,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/3133-7530dc1827656826.js",
+            "start": 186.2000000178814,
+            "end": 1766.7000000178814,
+            "duration": 1580.5,
+            "bytes": 7145,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/2542-63c1ad0a9ab63c64.js",
+            "start": 186.30000001192093,
+            "end": 1790.2000000178814,
+            "duration": 1603.9000000059605,
+            "bytes": 3693,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/app/page-45a7180228edb620.js",
+            "start": 186.30000001192093,
+            "end": 1894.9000000059605,
+            "duration": 1708.5999999940395,
+            "bytes": 6785,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/app/layout-308cc580cafe3009.js",
+            "start": 186.30000001192093,
+            "end": 1910.5,
+            "duration": 1724.199999988079,
+            "bytes": 4324,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/app/not-found-60e8a90bb191b74f.js",
+            "start": 186.40000000596046,
+            "end": 1925,
+            "duration": 1738.5999999940395,
+            "bytes": 188,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/app/error-0b639f64da56eedc.js",
+            "start": 186.40000000596046,
+            "end": 1932.5,
+            "duration": 1746.0999999940395,
+            "bytes": 980,
+            "initiator": "script"
+          },
+          {
+            "name": "/images/founder/dr-sukhsimranjit-singh.png",
+            "start": 843.8000000119209,
+            "end": 4370.100000023842,
+            "duration": 3526.300000011921,
+            "bytes": 220256,
+            "initiator": "img"
+          },
+          {
+            "name": "/api/content/site",
+            "start": 2195.600000023842,
+            "end": 2354.300000011921,
+            "duration": 158.69999998807907,
+            "bytes": 272,
+            "initiator": "fetch"
+          },
+          {
+            "name": "/api/page-sections/landing",
+            "start": 2322,
+            "end": 2487.7000000178814,
+            "duration": 165.7000000178814,
+            "bytes": 28,
+            "initiator": "fetch"
+          },
+          {
+            "name": "/api/video-reviews",
+            "start": 2323.7000000178814,
+            "end": 2561.800000011921,
+            "duration": 238.09999999403954,
+            "bytes": 4542,
+            "initiator": "fetch"
+          },
+          {
+            "name": "/api/content/landing",
+            "start": 2324.7000000178814,
+            "end": 2615.100000023842,
+            "duration": 290.40000000596046,
+            "bytes": 8330,
+            "initiator": "fetch"
+          },
+          {
+            "name": "/images/global-learning/brazil-1.jpg",
+            "start": 2406.800000011921,
+            "end": 12717.800000011921,
+            "duration": 10311,
+            "bytes": 1732282,
+            "initiator": "img"
+          },
+          {
+            "name": "/api/media/0000000000000000000001f4?poster=1",
+            "start": 2585,
+            "end": 2757.600000023842,
+            "duration": 172.60000002384186,
+            "bytes": 118,
+            "initiator": "img"
+          },
+          {
+            "name": "/api/media/0000000000000000000001f5?poster=1",
+            "start": 2585.100000023842,
+            "end": 2764.4000000059605,
+            "duration": 179.2999999821186,
+            "bytes": 118,
+            "initiator": "img"
+          },
+          {
+            "name": "/api/media/0000000000000000000001f6?poster=1",
+            "start": 2585.100000023842,
+            "end": 2773.600000023842,
+            "duration": 188.5,
+            "bytes": 118,
+            "initiator": "img"
+          },
+          {
+            "name": "/api/media/0000000000000000000001f7?poster=1",
+            "start": 2586.100000023842,
+            "end": 2794.600000023842,
+            "duration": 208.5,
+            "bytes": 118,
+            "initiator": "img"
+          },
+          {
+            "name": "/api/media/0000000000000000000001f8?poster=1",
+            "start": 2586.2000000178814,
+            "end": 2930,
+            "duration": 343.7999999821186,
+            "bytes": 118,
+            "initiator": "img"
+          },
+          {
+            "name": "/api/media/0000000000000000000001f9?poster=1",
+            "start": 2587.2000000178814,
+            "end": 2944.5,
+            "duration": 357.2999999821186,
+            "bytes": 118,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/a97ce5db60a034d1-240.webp",
+            "start": 2740,
+            "end": 3020,
+            "duration": 280,
+            "bytes": 3434,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/c7d3ae1455dd2e3d-240.webp",
+            "start": 2740.600000023842,
+            "end": 3080.2000000178814,
+            "duration": 339.59999999403954,
+            "bytes": 5690,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/f03e702faeb36387-240.webp",
+            "start": 2741.100000023842,
+            "end": 3222,
+            "duration": 480.89999997615814,
+            "bytes": 6012,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/c0f77440330c1fc6-240.webp",
+            "start": 2741.7000000178814,
+            "end": 3185.100000023842,
+            "duration": 443.40000000596046,
+            "bytes": 3044,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/8285e7b5e6daba8d-240.webp",
+            "start": 2741.800000011921,
+            "end": 3297.2000000178814,
+            "duration": 555.4000000059605,
+            "bytes": 5340,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/218ac50924ec0449-240.webp",
+            "start": 2742.800000011921,
+            "end": 3372.7000000178814,
+            "duration": 629.9000000059605,
+            "bytes": 6252,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/159093844148271c-240.webp",
+            "start": 2742.9000000059605,
+            "end": 3454.100000023842,
+            "duration": 711.2000000178814,
+            "bytes": 4802,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/e68935fd0b33a39b-240.webp",
+            "start": 2743.600000023842,
+            "end": 3462.5,
+            "duration": 718.8999999761581,
+            "bytes": 3782,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/b5a9cd0f62e99d39-240.webp",
+            "start": 2743.800000011921,
+            "end": 3716.800000011921,
+            "duration": 973,
+            "bytes": 5102,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/03c6128422f457c4-240.webp",
+            "start": 2744.600000023842,
+            "end": 3731.7000000178814,
+            "duration": 987.0999999940395,
+            "bytes": 4294,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/a32069f7c78dfaf8-240.webp",
+            "start": 2745.100000023842,
+            "end": 3830.100000023842,
+            "duration": 1085,
+            "bytes": 4246,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/293c83498da3edb7-240.webp",
+            "start": 2745.2000000178814,
+            "end": 3852.300000011921,
+            "duration": 1107.0999999940395,
+            "bytes": 4162,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/44c02b794427b1b9-240.webp",
+            "start": 2745.9000000059605,
+            "end": 3942.7000000178814,
+            "duration": 1196.800000011921,
+            "bytes": 3264,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/575a66ca7c5efc40-240.webp",
+            "start": 2746,
+            "end": 3986.800000011921,
+            "duration": 1240.800000011921,
+            "bytes": 4766,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/286432a191091959-240.webp",
+            "start": 2746.9000000059605,
+            "end": 4100.300000011921,
+            "duration": 1353.4000000059605,
+            "bytes": 4364,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/ccf3e820b21d0ded-240.webp",
+            "start": 2747.4000000059605,
+            "end": 4122.600000023842,
+            "duration": 1375.2000000178814,
+            "bytes": 4038,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/1a9115411a6e8871-240.webp",
+            "start": 2748.2000000178814,
+            "end": 4272,
+            "duration": 1523.7999999821186,
+            "bytes": 7506,
+            "initiator": "img"
+          },
+          {
+            "name": "/api/content/team",
+            "start": 3241.5,
+            "end": 3582,
+            "duration": 340.5,
+            "bytes": 6007,
+            "initiator": "fetch"
+          },
+          {
+            "name": "/api/content/events",
+            "start": 3242.5,
+            "end": 3552.7000000178814,
+            "duration": 310.2000000178814,
+            "bytes": 28,
+            "initiator": "fetch"
+          },
+          {
+            "name": "/optimized/a97ce5db60a034d1-480.webp",
+            "start": 3594.9000000059605,
+            "end": 4354.200000017881,
+            "duration": 759.3000000119209,
+            "bytes": 8610,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/c7d3ae1455dd2e3d-480.webp",
+            "start": 3594.9000000059605,
+            "end": 4527,
+            "duration": 932.0999999940395,
+            "bytes": 19108,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/f03e702faeb36387-480.webp",
+            "start": 4365.4000000059605,
+            "end": 4722.700000017881,
+            "duration": 357.30000001192093,
+            "bytes": 18216,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/c0f77440330c1fc6-480.webp",
+            "start": 4538,
+            "end": 4789.5,
+            "duration": 251.5,
+            "bytes": 7202,
+            "initiator": "img"
+          },
+          {
+            "name": "/favicon.ico",
+            "start": 12751.700000017881,
+            "end": 12942.700000017881,
+            "duration": 191,
+            "bytes": 6382,
+            "initiator": "other"
+          }
+        ],
+        "visibleImages": [
+          {
+            "src": "http://127.0.0.1:3108/singh-academy-logo-clean.png",
+            "complete": true
+          },
+          {
+            "src": "http://127.0.0.1:3108/images/global-learning/brazil-1.jpg",
+            "complete": true
+          }
+        ],
+        "overflow": false
+      },
+      "videos": {
+        "metrics": {
+          "lcp": 688,
+          "cls": 0.34015578144860625,
+          "heroSources": [],
+          "firstSection": null,
+          "playing": [
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f4?preview=1",
+              "at": 3277.5
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f4?preview=1",
+              "at": 3281.9000000059605
+            }
+          ],
+          "posters": [
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f4?poster=1",
+              "at": 2463.5
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f5?poster=1",
+              "at": 2474
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f6?poster=1",
+              "at": 2476.0999999940395
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f7?poster=1",
+              "at": 2477
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f8?poster=1",
+              "at": 2478.199999988079
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f9?poster=1",
+              "at": 2478.199999988079
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001fa?poster=1",
+              "at": 2563
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001fb?poster=1",
+              "at": 2592.199999988079
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001fc?poster=1",
+              "at": 2593.2999999821186
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001fd?poster=1",
+              "at": 2594.2999999821186
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001fe?poster=1",
+              "at": 2594.4000000059605
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001ff?poster=1",
+              "at": 2601.4000000059605
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/000000000000000000000200?poster=1",
+              "at": 2723.9000000059605
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/000000000000000000000201?poster=1",
+              "at": 2739.9000000059605
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/000000000000000000000202?poster=1",
+              "at": 2741.4000000059605
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/000000000000000000000203?poster=1",
+              "at": 2741.699999988079
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/000000000000000000000204?poster=1",
+              "at": 2743.199999988079
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/000000000000000000000205?poster=1",
+              "at": 2744.5999999940395
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/000000000000000000000206?poster=1",
+              "at": 2892.9000000059605
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/000000000000000000000207?poster=1",
+              "at": 2894.0999999940395
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/000000000000000000000208?poster=1",
+              "at": 2894.5
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/000000000000000000000209?poster=1",
+              "at": 2896.699999988079
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/00000000000000000000020a?poster=1",
+              "at": 2897.199999988079
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/00000000000000000000020b?poster=1",
+              "at": 2898.2999999821186
+            }
+          ],
+          "errors": []
+        },
+        "posterElements": 23,
+        "videoElements": 2,
+        "posterRequests": 24,
+        "videoResources": [
+          {
+            "name": "http://127.0.0.1:3108/api/media/0000000000000000000001f4?preview=1",
+            "start": 2371.699999988079,
+            "end": 3259.0999999940395,
+            "bytes": 18112
+          },
+          {
+            "name": "http://127.0.0.1:3108/api/media/0000000000000000000001f5?preview=1",
+            "start": 2428.2999999821186,
+            "end": 3273.5999999940395,
+            "bytes": 18112
+          }
+        ],
+        "visibleVideos": [
+          {
+            "paused": false,
+            "time": 0.718001,
+            "muted": true
+          },
+          {
+            "paused": true,
+            "time": 0,
+            "muted": true
+          }
+        ],
+        "overflow": false
+      },
+      "errors": []
+    }
+  ]
+}

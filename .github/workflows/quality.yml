@@ -1,0 +1,83 @@
+name: Quality gates - not automatic deployment
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  verify:
+    name: Verify (Node ${{ matrix.node }})
+    strategy:
+      fail-fast: false
+      matrix:
+        node: ['22', '24']
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    env:
+      TEST_MONGODB_URI: mongodb://127.0.0.1:27018/sa_test?replicaSet=rs0&directConnection=true
+      NEXT_PUBLIC_API_URL: /api
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: ${{ matrix.node }}
+          package-manager-cache: false
+      - name: Check runtime policy and package consistency
+        run: |
+          npm run check:runtime
+          npm run test:runtime
+      - name: Install dependencies without hiding lockfile problems
+        shell: bash
+        run: |
+          set -euo pipefail
+          for dir in backend frontend; do
+            if [ -f "$dir/package-lock.json" ]; then
+              npm ci --prefix "$dir"
+            else
+              echo "::error::$dir/package-lock.json must be generated/reviewed locally and committed. CI will not invent a different dependency tree."
+              exit 1
+            fi
+          done
+      - name: Source, unit, types, production build and dependency audit
+        run: npm run verify
+      - name: Start isolated test replica set
+        run: |
+          docker compose -f dev/test-mongo-compose.yml up -d --wait
+          docker compose -f dev/test-mongo-compose.yml exec -T mongo mongosh --eval "rs.initiate({_id:'rs0',members:[{_id:0,host:'localhost:27017'}]})"
+          for i in $(seq 1 45); do
+            docker compose -f dev/test-mongo-compose.yml exec -T mongo mongosh --quiet --eval 'if (!db.hello().isWritablePrimary) quit(2)' && break
+            sleep 2
+          done
+          docker compose -f dev/test-mongo-compose.yml exec -T mongo mongosh --quiet --eval 'if (!db.hello().isWritablePrimary) quit(2)'
+      - name: Check actual MongoDB filesystem headroom
+        shell: bash
+        run: |
+          set -euo pipefail
+          docker compose -f dev/test-mongo-compose.yml exec -T mongo df -h /data/db
+          available="$(docker compose -f dev/test-mongo-compose.yml exec -T mongo df -Pk /data/db | awk 'NR==2 {print $4}')"
+          if [ "${available:-0}" -lt 786432 ]; then
+            echo "::error::MongoDB /data/db must have at least 768 MiB free. Check tmpfs size, not only the runner root disk."
+            exit 1
+          fi
+      - name: Real HTTP and transaction tests
+        run: npm run test:integration --prefix backend
+      - name: Install browser and run actual frontend checks
+        run: |
+          cd frontend
+          npx playwright install --with-deps chromium
+          npm run test:browser
+      - name: Actual UI reliability fixtures (isolated local API, no provider or SMTP calls)
+        run: npm run test:ui
+      - name: Preserve failed-run evidence
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: verification-node-${{ matrix.node }}
+          path: |
+            qa/security-audit.json
+            qa/audit-*.json
+            frontend/test-results/
+            frontend/qa/ui-results.json
+          if-no-files-found: ignore
+          retention-days: 7
+      - name: Stop test services
+        if: always()
+        run: docker compose -f dev/test-mongo-compose.yml down -v --remove-orphans

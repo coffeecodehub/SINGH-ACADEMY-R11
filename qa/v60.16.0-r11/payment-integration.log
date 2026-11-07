@@ -1,0 +1,160 @@
+▶ catalog access, course entry and fresh checkout share owned active grants
+  ✔ lightweight snapshot is owned, private, price-free and excludes expired or scheduled terms (41.838363ms)
+  ✔ course entry includes the parent section and all its published children without enrollment writes (179.441934ms)
+  ✔ fresh purchases covered directly, by a section, or by membership fail before coupon claims or payment writes (355.300182ms)
+  ✔ expiry uses an exact half-open boundary and independent refund evidence stays intact (160.448169ms)
+  ✔ live policy excludes sandbox evidence and grants never mix payment environments (35.007761ms)
+  ✔ expired access can be purchased again while replay returns the same settled order and historical grants stay unchanged (155.327318ms)
+✔ catalog access, course entry and fresh checkout share owned active grants (3724.337646ms)
+▶ paid purchase renewal setup defers the first real charge and never grants from a zero trial invoice
+  ✔ paid records expose owned actionable setup cards at the current account price (61.279461ms)
+  ✔ the charge date unions future section and Academy contributions without bridging unpaid gaps (63.297859ms)
+  ✔ changed prepaid coverage invalidates the consenting quote before any provider mutation (51.221937ms)
+  ✔ setup forbids coupons, missing consent and unconfigured providers (59.243711ms)
+  ✔ an unresolved normal checkout must be safely closed before deferred setup can start (93.801512ms)
+  ✔ new consented Checkout saves a payment method and schedules the provider first charge after all paid coverage (132.983943ms)
+  ✔ approved zero trial invoice records a scheduled agreement and no fake payment or access grant (83.971532ms)
+  ✔ zero invoice and browser replays remain idempotent and do not manufacture receipts (62.782435ms)
+  ✔ trialing agreements have working provider-confirmed disable and consented enable controls (182.995363ms)
+  ✔ 48-hour and 730-day provider limits are explicit and never become immediate setup charges (93.68734ms)
+  ✔ exact 48-hour/730-day limits use the saved paid end without rounding into an overlap (17.247743ms)
+  ✔ an early collected invoice or an unrelated zero invoice never grants the future term (26.426421ms)
+  ✔ the first actual settled future invoice alone creates its exact paid term (112.663176ms)
+  ✔ expired paid purchases link to a normal priced checkout and owner isolation remains enforced (58.295066ms)
+✔ paid purchase renewal setup defers the first real charge and never grants from a zero trial invoice (3371.193539ms)
+✔ owned billing DTOs display fulfilled invoice periods without modifying financial records (545.87797ms)
+{"event":"http","requestId":"a19b534c-ba1b-4b20-995c-3ea02c13ea41","method":"POST","route":"/checkout","status":502,"durationMs":56}
+▶ provider checkout failures retain safe diagnostics and one immutable pending order
+  ✔ real SDK 400 stays on the same checkout (67.451993ms)
+{"event":"http","requestId":"7b006f60-f6d5-423f-be4e-a82fb5e2f7b5","method":"POST","route":"/checkout","status":503,"durationMs":23}
+  ✔ real SDK 401 stays on the same checkout (32.334582ms)
+{"event":"http","requestId":"04364cbe-5e9f-4ade-bc80-9bde368f5594","method":"POST","route":"/checkout","status":503,"durationMs":23}
+  ✔ real SDK 429 stays on the same checkout (38.023172ms)
+{"event":"http","requestId":"6022ed87-936a-4a6b-bd91-4d9a6a1e0bc3","method":"POST","route":"/checkout","status":503,"durationMs":23}
+  ✔ real SDK 500 stays on the same checkout (30.369383ms)
+{"event":"http","requestId":"e573fa4f-d596-4854-9608-39b1c667c55d","method":"POST","route":"/checkout","status":503,"durationMs":526}
+  ✔ real SDK connection failure stays on the same checkout (534.623962ms)
+  ✔ explicit same-order retry succeeds, signed webhook grants once and repeated delivery is idempotent (93.719696ms)
+✔ provider checkout failures retain safe diagnostics and one immutable pending order (2285.069206ms)
+▶ PayPal recurring course/section purchases, deferred setup and confirmed renewal controls
+  ✔ country prices and PayPal 1–12 month recurring capability are authoritative (107.84433ms)
+  ✔ different request keys cannot create duplicate PayPal subscriptions or competing Stripe billing (176.454759ms)
+  ✔ approval and ACTIVE without collection never create financial records or access (79.907705ms)
+  ✔ a verified first paid sale grants only its discounted provider period once (77.35464ms)
+  ✔ renewals use the undiscounted price and exact current calendar cycle (42.768301ms)
+  ✔ plan changes, arrears and unrecorded historical sales do not create guessed grants (29.825742ms)
+  ✔ owner controls suspend immediately, preserve paid grants and safely reactivate only an unchanged future schedule (171.950712ms)
+  ✔ deferred PayPal setup approves a future start without a fake charge, invoice, or new section grant (157.581271ms)
+  ✔ a deferred setup grants its new paid section period only after the future collection (80.610831ms)
+{"event":"api_error","requestId":"0168982d-b04f-4550-a020-9ce666102206","type":"Error","code":"PAYMENT_PROVIDER_UNAVAILABLE","paymentProvider":"paypal","providerStatus":503,"providerCode":"SYNTHETIC_LOST_CREATION_RESPONSE"}
+{"event":"http","requestId":"0168982d-b04f-4550-a020-9ce666102206","method":"POST","route":"/checkout","status":503,"durationMs":57}
+  ✔ unapproved subscription release retains its key and never creates a competing purchase (319.867924ms)
+  ✔ explicit refunds are ignored while a full involuntary reversal credits only its linked invoice once (90.063157ms)
+{"event":"api_error","requestId":"e7ba763d-68ba-4a39-8e6b-94911b81b161","type":"Error","code":"PAYMENT_PROVIDER_UNAVAILABLE","paymentProvider":"paypal","providerStatus":503,"providerCode":"SYNTHETIC_READ_OUTAGE"}
+{"event":"http","requestId":"e7ba763d-68ba-4a39-8e6b-94911b81b161","method":"POST","route":"/mine/agreements/:id/end","status":503,"durationMs":52}
+  ✔ ending a disabled expired PayPal agreement is serialized, retryable and frees only its billing key (278.735204ms)
+  ✔ ending first records a collected sale whose webhook was delayed, before freeing its billing key (310.419647ms)
+{"event":"api_error","requestId":"c0391a47-428a-4ef8-9a90-afb162652859","type":"Error"}
+{"event":"http","requestId":"c0391a47-428a-4ef8-9a90-afb162652859","method":"POST","route":"/paypal","status":503,"durationMs":11}
+{"event":"api_error","requestId":"9abe97db-8b30-41cc-b21c-5c7740bb6e61","type":"Error"}
+{"event":"http","requestId":"9abe97db-8b30-41cc-b21c-5c7740bb6e61","method":"POST","route":"/mine/agreements/:id/cancel","status":503,"durationMs":29}
+{"event":"api_error","requestId":"2c08d372-198f-4d9a-9513-2d587233f5ec","type":"Error"}
+{"event":"http","requestId":"2c08d372-198f-4d9a-9513-2d587233f5ec","method":"POST","route":"/paypal","status":503,"durationMs":10}
+{"event":"api_error","requestId":"04cdc5f3-90e8-43b5-8a7f-9458b7e5cf9d","type":"Error"}
+{"event":"http","requestId":"04cdc5f3-90e8-43b5-8a7f-9458b7e5cf9d","method":"POST","route":"/mine/agreements/:id/cancel","status":503,"durationMs":25}
+{"event":"api_error","requestId":"48e4d1a6-fadc-4ccc-85f2-2c78e2ae06d4","type":"Error"}
+{"event":"http","requestId":"48e4d1a6-fadc-4ccc-85f2-2c78e2ae06d4","method":"POST","route":"/paypal","status":503,"durationMs":13}
+{"event":"api_error","requestId":"1a95b251-6f50-4157-948e-d4f3606cf83f","type":"Error"}
+{"event":"http","requestId":"1a95b251-6f50-4157-948e-d4f3606cf83f","method":"POST","route":"/mine/agreements/:id/cancel","status":503,"durationMs":36}
+{"event":"api_error","requestId":"7f3be197-253c-4e81-92bf-95e6a0f18609","type":"Error"}
+{"event":"http","requestId":"7f3be197-253c-4e81-92bf-95e6a0f18609","method":"POST","route":"/paypal","status":503,"durationMs":9}
+{"event":"api_error","requestId":"c12fe33c-e8ba-4a37-8547-b8124e33ce3c","type":"Error"}
+{"event":"http","requestId":"c12fe33c-e8ba-4a37-8547-b8124e33ce3c","method":"POST","route":"/mine/agreements/:id/cancel","status":503,"durationMs":22}
+  ✔ terminal provider status with pending or ambiguous collections retains the original billing key (518.360177ms)
+✔ PayPal recurring course/section purchases, deferred setup and confirmed renewal controls (5363.498742ms)
+▶ pending billing checkout continuation/cancellation retains provider truth and paid history
+  ✔ owned pending view exposes actions; another owner cannot cause provider traffic (67.087589ms)
+  ✔ Continue reads existing provider session and returns the same whitelisted URL without a create or capture (35.091885ms)
+  ✔ Continue rejects an invalid persisted redirect and cannot continue a cancellation-requested checkout (61.285971ms)
+  ✔ unpaid provider-confirmed cancellation releases only its key and preserves a paid original purchase (108.470618ms)
+  ✔ late verified collection is recorded without reactivating a cancelled pending mandate or revoking its original purchase (32.265052ms)
+  ✔ never-sent local pending creation closes without any external create replay (45.027633ms)
+  ✔ a provider-closed checkout with a stale creating agreement exposes safe dismissal and releases the old key (76.362538ms)
+{"event":"api_error","requestId":"77fbde6f-11bf-4b57-bf5f-a7b2d1bf869d","type":"Error"}
+{"event":"http","requestId":"77fbde6f-11bf-4b57-bf5f-a7b2d1bf869d","method":"POST","route":"/mine/agreements/:id/cancel-pending","status":503,"durationMs":19}
+  ✔ an old failed attempt with unknown provider identity never claims cancellation or releases its key (33.346402ms)
+{"event":"api_error","requestId":"f216d028-ac0d-4208-b3cf-657afd80b6ff","type":"Error"}
+{"event":"http","requestId":"f216d028-ac0d-4208-b3cf-657afd80b6ff","method":"POST","route":"/mine/agreements/:id/cancel-pending","status":503,"durationMs":13}
+  ✔ a live creation lease prevents local cancellation; an expired lease is atomically fenced before key release (63.587118ms)
+  ✔ a paused creator cannot mark or send after a concurrent cancellation marker (26.950474ms)
+  ✔ older active controls survive more than one hundred newer cancelled attempts (70.789439ms)
+  ✔ a verified completion racing expiration remains visible instead of pretending cancellation (53.027712ms)
+✔ pending billing checkout continuation/cancellation retains provider truth and paid history (2663.412564ms)
+▶ regional quotes, single-use discounts and provider-backed recurring periods
+  ✔ country and price are server-owned and country maps never leak (40.631788ms)
+  ✔ full coupon atomically grants only its section with no fake payment (116.838549ms)
+  ✔ refunding an older section invoice preserves only the later independent interval (127.655872ms)
+  ✔ provider connection state and unsupported recurring intervals are explicit (37.346829ms)
+  ✔ recurring checkout persists accepted snapshot and first-term discount (109.182766ms)
+  ✔ first settled subscription invoice grants exact provider period once (50.89432ms)
+  ✔ signed renewal invoices are undiscounted and webhook replay is idempotent (52.896343ms)
+{"event":"api_error","requestId":"1146846b-7f8f-47e6-bb65-c752641748ba","type":"Error"}
+{"event":"http","requestId":"1146846b-7f8f-47e6-bb65-c752641748ba","method":"POST","route":"/stripe","status":503,"durationMs":6}
+  ✔ unpaid or mismatched renewal never grants access (22.258579ms)
+  ✔ a second active recurring agreement for the same product is refused (34.194875ms)
+  ✔ renewal cancellation is owner-scoped, provider-confirmed, replay-safe and preserves paid access (100.703669ms)
+✔ regional quotes, single-use discounts and provider-backed recurring periods (3367.625184ms)
+▶ owned renewal controls require consent and provider confirmation without changing paid access
+  ✔ owner sees a visible enabled state while foreign actions cannot contact the provider (122.116598ms)
+  ✔ disable is confirmed remotely and leaves independent paid access and financial records unchanged (220.451272ms)
+  ✔ enable requires explicit consent bound to the undiscounted recurring price (197.659631ms)
+  ✔ disable-enable-disable uses a fresh provider key for each actual toggle (39.996823ms)
+  ✔ a provider price change or an unconfirmed paid period cannot be enabled (58.901583ms)
+{"event":"api_error","requestId":"e8ad36b6-1a28-4444-af98-1c5573453ef1","type":"Error","code":"PAYMENT_PROVIDER_UNAVAILABLE","paymentProvider":"stripe","providerStatus":503,"providerType":"StripeAPIError"}
+{"event":"http","requestId":"e8ad36b6-1a28-4444-af98-1c5573453ef1","method":"POST","route":"/mine/agreements/:id/resume","status":503,"durationMs":522}
+  ✔ uncertain provider changes retain a retry key and block opposing changes (572.111413ms)
+  ✔ simultaneous opposite changes cannot override an unconfirmed operation (61.489894ms)
+  ✔ ended agreements and one-time purchases require a new consented checkout (58.891623ms)
+  ✔ retired blanket membership sales cannot create quotes/orders, while legacy paid order recovery remains owned (118.116257ms)
+✔ owned renewal controls require consent and provider confirmation without changing paid access (3965.921515ms)
+▶ V47 database settlement, student completion and admin certificate lifecycle
+  ✔ new checkout has no invoice, receipt or entitlement before settlement (32.215113ms)
+{"event":"api_error","requestId":"b9ebb0d3-5aa1-42da-a1d2-36a34c2f5a2e","type":"Error"}
+{"event":"http","requestId":"b9ebb0d3-5aa1-42da-a1d2-36a34c2f5a2e","method":"POST","route":"/checkout","status":503,"durationMs":22}
+  ✔ unknown/disabled methods refuse starting a new provider checkout (24.746243ms)
+  ✔ wrong amount fails before any business mutation (9.049505ms)
+  ✔ concurrent duplicate fixture settlement creates one receipt, invoice and enrollment (76.014134ms)
+  ✔ student order polling cannot read another student order (22.321713ms)
+  ✔ admin and builder cannot mark student lessons complete (27.117131ms)
+  ✔ sequential final lesson cannot complete before the first (26.106215ms)
+  ✔ required lesson completion creates one pending certificate and business notification (166.004362ms)
+  ✔ pending PDF is not downloadable and issuer is Client Admin only (23.648687ms)
+  ✔ incorrect current admin password cannot issue (341.287474ms)
+  ✔ admin issues actual persisted PDF, with no token or PDF in list responses (390.315039ms)
+  ✔ owner can download PDF; another student and builder cannot (50.139361ms)
+  ✔ random verification token returns certificate information, never customer contact or payment (9.113891ms)
+  ✔ reissued request keeps original serial and PDF snapshot (342.063051ms)
+  ✔ revocation changes verification and prevents further downloads (363.174192ms)
+  ✔ lightweight certificate status is immediately updated and scoped to its learner (17.228774ms)
+  ✔ verified refund fixture creates one credit and revokes linked access only once (54.555719ms)
+  ✔ tampered Stripe webhook is not accepted as payment evidence (5.952871ms)
+✔ V47 database settlement, student completion and admin certificate lifecycle (5121.477774ms)
+▶ V60.14 provider switch persists closure, capture exclusion and owned replacement identity
+  ✔ stripe/course closes unpaid order before replacement eligibility is checked (146.42878ms)
+  ✔ stripe/membership closes unpaid order before replacement eligibility is checked (89.926859ms)
+  ✔ paypal/course closes unpaid order before replacement eligibility is checked (112.714274ms)
+  ✔ paypal/membership closes unpaid order before replacement eligibility is checked (84.714663ms)
+  ✔ foreign owner release is denied without disclosing the order or its replacement key (13.455749ms)
+  ✔ database lease excludes a simultaneous capture/switch and does not clear another operation (15.885605ms)
+  ✔ expired lease does not make an uncertain earlier capture safe to replace (29.35155ms)
+  ✔ two release requests share one replacement identity rather than authorize two new checkouts (59.603282ms)
+  ✔ normal PayPal approved checkout still captures once and fulfills a real database invoice (79.347589ms)
+✔ V60.14 provider switch persists closure, capture exclusion and owned replacement identity (3085.744901ms)
+ℹ tests 108
+ℹ suites 0
+ℹ pass 108
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 34130.030201

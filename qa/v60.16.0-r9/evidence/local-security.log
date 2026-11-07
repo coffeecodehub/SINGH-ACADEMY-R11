@@ -1,0 +1,5 @@
+
+> singh-academy@60.16.0 check:security
+> node scripts/check-security-deps.mjs
+
+Installed Sharp and native image checks passed: [{"scope":"backend","package":"node_modules/sharp","sharp":"0.35.5","vips":"8.18.7","rsvg":"2.63.2","svgEnabled":true,"transforms":[{"input":"png","output":"webp","width":64,"height":36,"bytes":82},{"input":"jpeg","output":"webp","width":64,"height":36,"bytes":82},{"input":"webp","output":"webp","width":64,"height":36,"bytes":82},{"input":"gif","output":"webp","width":64,"height":36,"bytes":82}]},{"scope":"frontend","package":"node_modules/sharp","sharp":"0.35.5","vips":"8.18.7","rsvg":"2.63.2","svgEnabled":true,"transforms":[{"input":"png","output":"webp","width":64,"height":36,"bytes":82},{"input":"jpeg","output":"webp","width":64,"height":36,"bytes":82},{"input":"webp","output":"webp","width":64,"height":36,"bytes":82},{"input":"gif","output":"webp","width":64,"height":36,"bytes":82}]}]

@@ -1,0 +1,439 @@
+{
+  "sourceZip": "Singh-Academy-V60.14.1.zip",
+  "sourceZipSHA256": "518c794c9298943bca256bdffdda68991b9c9d4441b368ef9170107d8812fe4d",
+  "version": "60.15.0",
+  "originalFiles": 1275,
+  "comparisons": {
+    "css": {
+      "count": 13,
+      "changed": []
+    },
+    "assets": {
+      "count": 253,
+      "changed": []
+    },
+    "removedFiles": []
+  },
+  "changes": [
+    {
+      "path": "package.json",
+      "type": "modified",
+      "before": "acead3f62adde43cb4c5681ae69400b30ac4931dbdca39abf238fbf4c130e740",
+      "after": "716a09a2fb72706e1e40ab706b9cfdd96616b4fba04f93bf49df9f3d162b8392"
+    },
+    {
+      "path": "qa/release-checks.json",
+      "type": "modified",
+      "before": "21e4cfe14e50b538dc7c873ec46e6f378b6e2501745379f8da2e8bfea43f80d3",
+      "after": "47b886b9601a33535831c8cbed2ead7940ffde450be8a1fe6648b2a2b2c3a36e"
+    },
+    {
+      "path": "qa/integration-checks.json",
+      "type": "added",
+      "before": null,
+      "after": "2c1ed55d9fc9ed8e0028436874c3c98605a778e66548be0e698ebc0bf80b38ce"
+    },
+    {
+      "path": "backend/package.json",
+      "type": "modified",
+      "before": "3878b6d605fe44df9f2b5908a203f2782396205c6c3096731b28dcf3dd4761b2",
+      "after": "9d986277970cba2d9b8500366aaba16b4df6ca51cf0e51916052bce1eb3c9748"
+    },
+    {
+      "path": "backend/.env.example",
+      "type": "modified",
+      "before": "eb177647c531578fadca859db66b40ec643037c742929c219d764e773897d584",
+      "after": "2cd51610dd9c7cb81e6f42bc5f6ea3fff3c36eb733352cac8952609858d32458"
+    },
+    {
+      "path": "frontend/package.json",
+      "type": "modified",
+      "before": "bfa0129277e39082ade198311c8ca0ba8547ba4131b5343d24ca22ebe6c6de5d",
+      "after": "a6f96794fa8e877655c545859f8511c0e31e7395119ac0943129b924d66b393c"
+    },
+    {
+      "path": "frontend/.env.example",
+      "type": "modified",
+      "before": "bb0f4587b6c5171de758192e5c3b39ad38259e8a36c33a5ccfc73624502c5397",
+      "after": "b51b163652fdbcbf7b219963b79bb00da5e604cb2c4ce74fbb952475d5110aa5"
+    },
+    {
+      "path": "scripts/start-browser-stack.mjs",
+      "type": "modified",
+      "before": "d78906ca8518f05707f0f9e5c8a09ebad913d0f1fc954b2b603d2082e86c8605",
+      "after": "6a0f60c8d0d74fd8d865681449d090aa89bc79bfb862972a7f7bd631cfd5849e"
+    },
+    {
+      "path": "scripts/release-check.mjs",
+      "type": "modified",
+      "before": "81d42e6afe358f7d8f8351fe5a2d5d40455f7667f27d828c83aa22c262377bf1",
+      "after": "c797f957e1c9a6ea6be93f1f97de60ee5504291af15150a1ef2223e0da2d7d9e"
+    },
+    {
+      "path": "scripts/security-audit.mjs",
+      "type": "modified",
+      "before": "5268eabba5e91affbb10fb2dbbd90e4fcb99753910aa4e452c56ec4817b23041",
+      "after": "febb74b85c85e858d7f81fa8baf1eb5ac5c6489dfa00370ba6c7820d29fa13d6"
+    },
+    {
+      "path": "scripts/integration-check.mjs",
+      "type": "added",
+      "before": null,
+      "after": "3b462472bd491dfb953e06e646ed4cf4b6de96cf86eb1d0bab4252ea6c6ed943"
+    },
+    {
+      "path": "scripts/test/v60-15-release.test.mjs",
+      "type": "added",
+      "before": null,
+      "after": "532dde47d84f8e47ae997b9bb7ba32dbf42a690cfa1959207a24c93830ec0358"
+    },
+    {
+      "path": "scripts/test/runtime-compatibility.test.mjs",
+      "type": "modified",
+      "before": "3876f00d88d915c063a80fc97af0897368c7f27f25b50d24f1a73f429b7840e9",
+      "after": "22e22c040f14914542273539a98246e59c6dfd9914a2790371916687e098322f"
+    },
+    {
+      "path": "scripts/test/security-dependencies.test.mjs",
+      "type": "modified",
+      "before": "ff74a83115b01c4cee95515f299408abc8c282f484a9c7fc744720c356418a08",
+      "after": "d45e729238092ce1f0876db4d75e5c1a926415c5eeb522720cf579e2fdc607ed"
+    },
+    {
+      "path": "frontend/test/v60-15-proxy-network.test.mjs",
+      "type": "added",
+      "before": null,
+      "after": "7d4926173aa0ce2cf08a242f771f000ce782f056e029a010f0dc34f462d74e19"
+    },
+    {
+      "path": "frontend/app/checkout/page.tsx",
+      "type": "modified",
+      "before": "a38e870afee1f3982e11a6c613659f8b5b4c2494b004a567fb202c6d578c2c57",
+      "after": "5e5a97c9ae93da3fae92c39b7df150414a5bf2beb654315f277a8efed4dddcc0"
+    },
+    {
+      "path": "frontend/lib/server/apiProxy.mjs",
+      "type": "modified",
+      "before": "3d8f37376accc9ffa9df984068a86763ec7ff28d295ba66a178afdb755eb3dfe",
+      "after": "4b1a5719bb9be23687e99ed68c53f4e61852717ca23176c2fb376b491926f895"
+    },
+    {
+      "path": "frontend/lib/server/proxyIdentity.mjs",
+      "type": "added",
+      "before": null,
+      "after": "035271dcbbc257680b16e32983ed90868a4e770dedd11f92efa549f469800fdd"
+    },
+    {
+      "path": "frontend/components/business/BusinessPortal.tsx",
+      "type": "modified",
+      "before": "a9d3e476de2e1276b6e52d3b99f097c4342c9c7034e6598f8e95388bbb3e0e5d",
+      "after": "a89c73cbaee300b258525eca577958ff09d26e7cd53ff449ee812d97167751c0"
+    },
+    {
+      "path": "backend/src/server.js",
+      "type": "modified",
+      "before": "fed39ad0fa4feda227cc753517e0968e797fd40a8f049870de07007351f35e0b",
+      "after": "249cdf83d5c69f789e520ff8b66b3537c4ca9364abd7e9b791e81f930c95e9d0"
+    },
+    {
+      "path": "backend/src/app.js",
+      "type": "modified",
+      "before": "7d81ed984c4d6b3b87de8efe28d723a1dd8a99a02385af05227c4b558ccdeb9c",
+      "after": "53219994d0bec723854e0009f5541fd907f30f5634bc9f37193565a9e2cf1469"
+    },
+    {
+      "path": "backend/integration/isolation.js",
+      "type": "modified",
+      "before": "85d315e74642090d6d08e3013e13437d90edfac147ca68c1d3885e5630a4820f",
+      "after": "770c567621fcc474c48a3e9a2163a69cbebd891ab655d065986865353bba3dc4"
+    },
+    {
+      "path": "backend/integration/v60-15-security.test.js",
+      "type": "added",
+      "before": null,
+      "after": "47e558367ff133c5ad95dd9a4048c71ffe82e52afe4c8b67d8438e1d8a97d103"
+    },
+    {
+      "path": "backend/test/v58-regressions.test.js",
+      "type": "modified",
+      "before": "d87e5e553bd36be602de3a0989493a8e477afe8a0b6dab052c01e07fdb8e077b",
+      "after": "7cbd39adddcfbbba16ae5355bc19c3e84615501a5c9364a417be94b916ad5483"
+    },
+    {
+      "path": "backend/test/v60-3-regressions.test.js",
+      "type": "modified",
+      "before": "33378b80b5c8cb2d7757c0cb56815c3f6a346025b97339f4bc5f152f78b0e8f4",
+      "after": "41c04dece782a24d3214cd3d01d98c4b0c1adfbc9834486a75dedf4b37a57adc"
+    },
+    {
+      "path": "backend/test/entitlementHarness.js",
+      "type": "added",
+      "before": null,
+      "after": "c3fb93e527a407eeb64f8106e8e9ff17dffb5eb3ffbfbc1b5d7467f8bdbbd40f"
+    },
+    {
+      "path": "backend/test/v60-5-regressions.test.js",
+      "type": "modified",
+      "before": "08cbdeeea9b5b1d4033bdbab9902a6753d3d52903b2721bf0bf7085f05c61cfb",
+      "after": "3aef6d6cc04571c3b53b7e4c25beaf032b17a46bc97fc401004cf45e309da2bf"
+    },
+    {
+      "path": "backend/test/cms-handlers.test.js",
+      "type": "modified",
+      "before": "79930662f196d007ea034c001ea7ad29ecb4c04eed96d0c6fb9a26ec62760cfc",
+      "after": "17c21d3cd2bcdf9169db3c8a2c5187a25588861fc4bf3a447728316c8e7d8e63"
+    },
+    {
+      "path": "backend/test/v59-regressions.test.js",
+      "type": "modified",
+      "before": "48cabb8b16a1ec2ef012f2f69c6a0043d6546f881a8abf45783e8c92d936b4f3",
+      "after": "9971f406319365e8ce193519ed0cf765a1ec0e58035c896210d187a38bf1438c"
+    },
+    {
+      "path": "backend/test/v48-learning-review.test.js",
+      "type": "modified",
+      "before": "b4fd577b1b48cc745dc3c234d0058c02c6ec8ce67b158694c5e2ae44f654b218",
+      "after": "098e5e999bb764a638f3e925b204ea96c8e9ef7738c2513a4e7ac3bc3583f386"
+    },
+    {
+      "path": "backend/test/v60-15-security.test.js",
+      "type": "added",
+      "before": null,
+      "after": "50f707b6ea767f605ed0c0028d04824c552b8ba82fb63a557c3a12a1b45db55c"
+    },
+    {
+      "path": "backend/test/auth-handlers.test.js",
+      "type": "modified",
+      "before": "a93d94694b0c49cbe7dccf6664acdac7e36564b5c1c2576ce46251988a8a75c3",
+      "after": "7552480f0256d37b2b3f9aede6fe1c6bc2ae4778450aedf6960a9d9d94cadbdf"
+    },
+    {
+      "path": "backend/test/v47-workflows.test.js",
+      "type": "modified",
+      "before": "0993d9d8224ba44baf75d0fe615d62a78e47031e02764ea53809e047e95c4138",
+      "after": "44c1e1917927abd8b150c0e09d5aa71761d6ad726d0cc54aa461e4aa1fabf4de"
+    },
+    {
+      "path": "backend/test/business-handlers.test.js",
+      "type": "modified",
+      "before": "a194e2384efa9d958169182abc0405e545c5c4b6dcd3bb99d43c15bfae7977b0",
+      "after": "16bdac5c2730fcd0379e0c72f8c471297785ce42927fbca6c30e388732c3b096"
+    },
+    {
+      "path": "backend/test/v60-4-regressions.test.js",
+      "type": "modified",
+      "before": "6b5d541eb489e300145f5e4f8ad3486cf7a860ac89e2ccbf8995e95cf9c31d96",
+      "after": "123e1607103ecd14985bb3db46c4943add663a6328b86bcc8d3490a69570409f"
+    },
+    {
+      "path": "backend/test/v60-15-checkout-recovery.test.js",
+      "type": "added",
+      "before": null,
+      "after": "ced899bf352ddf961c33dc994bbf139f1f2889b34072c2147087f4378b38ef32"
+    },
+    {
+      "path": "backend/src/routes/courseRoutes.js",
+      "type": "modified",
+      "before": "05a95afea2c760d5bc4ed1cd4f3ab983dc050d8dcc4e60b20f5f0ae04fba9133",
+      "after": "1015463480b0deba3fe9ca684690e067d0e3aacd283240f10137bebbead4cdb7"
+    },
+    {
+      "path": "backend/src/routes/academyAdminRoutes.js",
+      "type": "modified",
+      "before": "1853d033bf6c1d50cab3640ad381b808a5a5cc0df65b6119a33c5ca07a66f28a",
+      "after": "065bd11a0fadd22075bc8a6ed83fa66945a173ddd2497b33e8e002fced9e7760"
+    },
+    {
+      "path": "backend/src/routes/paymentRoutes.js",
+      "type": "modified",
+      "before": "0fec93795e4ba72059c2e11b11c51c7f86544e9d6b4e7d77caaf5811b195b533",
+      "after": "978d6d3a1beffdeaa8436012302370661be0da4c75b07e4cf5d05779dfe0ba21"
+    },
+    {
+      "path": "backend/src/routes/mediaRoutes.js",
+      "type": "modified",
+      "before": "9560ea746946e2bee99841b08614caa5e482acb8a1b2c41de5efd15866bced77",
+      "after": "5970a5ba5f43eed598e91b581a5c25667d46fded8e7fa550d52ec97264caa520"
+    },
+    {
+      "path": "backend/src/middleware/httpSafety.js",
+      "type": "modified",
+      "before": "d8f335ce94685ece844803450171e3825d042e1ee98a5aee4ffe7f62dc00a1c0",
+      "after": "47584dbe61377b45853498aedcd98666e1a533d25ec4fa8a5fad44177889c0aa"
+    },
+    {
+      "path": "backend/src/middleware/rateLimit.js",
+      "type": "modified",
+      "before": "a2eaf85408b5fc2efa04cd4927ed86f13b2b30f194db1163e67996f6d9caf074",
+      "after": "703863a9eee9217de59f462ce2e703fd98e76bc31648c905e66ecbe98054a7c9"
+    },
+    {
+      "path": "backend/src/middleware/proxyIdentity.js",
+      "type": "added",
+      "before": null,
+      "after": "35676751d40b79143fccb0a32f99c27cfedc681c5395a1a05a0b9345e4f25fe5"
+    },
+    {
+      "path": "backend/src/models/CheckoutOrder.js",
+      "type": "modified",
+      "before": "1534f62f2059d1a35baa30fb6f084594866ba57ca859245ee02fdbe4e1576080",
+      "after": "525324bf72f89998eb70bd600b01a6e725cd919ce95ba5336b301884ab10e8f2"
+    },
+    {
+      "path": "backend/src/models/Enrollment.js",
+      "type": "modified",
+      "before": "0c0caaf3be430910857b224abbc212329e2aef0585da113f381c56dba65c3a4c",
+      "after": "d15ec5b42225ad903a0f95fc373660f6ee9172c3fe183038d859bd311155ec77"
+    },
+    {
+      "path": "backend/src/models/Invoice.js",
+      "type": "modified",
+      "before": "0d76896d5090ba3b157cbf484e6135c408dad4b21fd9d88d016fff4d09041eb9",
+      "after": "52edf87f59983746130fcdef45d708bb3ca2eb157a4fc2805b48ae309611105c"
+    },
+    {
+      "path": "backend/src/utils/courseEntitlements.js",
+      "type": "added",
+      "before": null,
+      "after": "4a60bfc91b3b023f0b3db0c3a254d505165182df62cf7f584a04fa8798be85f4"
+    },
+    {
+      "path": "backend/src/utils/deploymentMode.js",
+      "type": "added",
+      "before": null,
+      "after": "f4d4cbb51bb129d467160d535408baba460d8be31899b074fd74dd55b7fc6703"
+    },
+    {
+      "path": "backend/src/utils/indexPolicy.js",
+      "type": "added",
+      "before": null,
+      "after": "fb7ccac93af4912ced5683849201e6f34f619d7026ccbf8bbb8abcf658547a09"
+    },
+    {
+      "path": "backend/src/utils/assessments.js",
+      "type": "modified",
+      "before": "b49e87a576fd88552b2aa63809a8e7fc10f2bd138766a7906d0681e8ffb18395",
+      "after": "677a4d05984005a516f198fc7fbb33882836c8c80223c77234ce8a3760106eb0"
+    },
+    {
+      "path": "backend/src/utils/proxyIdentity.js",
+      "type": "added",
+      "before": null,
+      "after": "035271dcbbc257680b16e32983ed90868a4e770dedd11f92efa549f469800fdd"
+    },
+    {
+      "path": "backend/src/utils/security.js",
+      "type": "modified",
+      "before": "79a8b7cf9b32076e1abf8ca3f12fbec1a9d209b40db4bc14219c85105b032d79",
+      "after": "b8f8339c8a43626b71a14676e8b47ccac746fab173ca29fa8c1bb327d30c733c"
+    },
+    {
+      "path": "backend/src/utils/commerce.js",
+      "type": "modified",
+      "before": "ac2d3b306f440a677158fddd0eed77fe3e164ae09f4efccb7a63c609e6ecf086",
+      "after": "11f8856b8ed0d9297d7a63f73df1f184648cc3cd8efcc44650db0a35c17b04d0"
+    },
+    {
+      "path": "backend/src/utils/deployment.js",
+      "type": "modified",
+      "before": "472250f4d83936abfb129969b5a78d9599a4cef19dba0d5eef4fecf43beebd65",
+      "after": "dd8aa7c7969536d7dcc381ee10a475fb765e7b7392c40d2d4575d76821dfbc69"
+    },
+    {
+      "path": "backend/src/services/membershipEnrollments.js",
+      "type": "modified",
+      "before": "12045dbf1b79af707285ed4b01a8266380ad13dcf594d19c46dd665af79d50e9",
+      "after": "05b878d504aa9d789c15cf49cda09199ed7f18c31dbb91c3e74c51be599a211a"
+    },
+    {
+      "path": "backend/src/services/courseEntitlements.js",
+      "type": "added",
+      "before": null,
+      "after": "73fa9e57e5f08468eac5594c252694d3528e3998505f034f3287e99212cad059"
+    },
+    {
+      "path": "backend/src/services/businessWrite.js",
+      "type": "modified",
+      "before": "0d156751649e749331f1e3893e9572298153e4464011439b6e57d632a41507fb",
+      "after": "e09f5667ab50d2e2dbb2e2c707d7197fcb29552ad93075152b6de098c7ce268c"
+    },
+    {
+      "path": "backend/src/services/gatewayRefunds.js",
+      "type": "modified",
+      "before": "b5da1b83faa3ba51521b59023e708ba3aa68a50794aeddf9ebe799179aedefd2",
+      "after": "e8473ecd58bc3724cd346eacd69cc39d34362ad047c03f9df9c491151fd84cac"
+    },
+    {
+      "path": "backend/src/services/databaseIndexes.js",
+      "type": "added",
+      "before": null,
+      "after": "d58b628ba28a03d5696727fc047565a404e66051c28d499b9a3cdf467b3de659"
+    },
+    {
+      "path": "backend/src/services/onlineCheckout.js",
+      "type": "modified",
+      "before": "d28c1f8586059b5f63ec94e6fb4e2d5ae6d7456337086f36664928136b505291",
+      "after": "2e5c54de7f6affaffd20bb2aff07c74495316edce07a256d3bbf1068e5a140f4"
+    },
+    {
+      "path": "backend/src/services/learningSubmissions.js",
+      "type": "modified",
+      "before": "1cb4300d48a0d0b2eaa9a9776b3255119781d90d8a21ec501fe139258c608634",
+      "after": "01e63ac6e8eb659c1f319493f888ee6109c757b00d599ae1edaae4e5c6f8a076"
+    },
+    {
+      "path": "backend/src/services/paymentProviders.js",
+      "type": "modified",
+      "before": "c460db73a8399c2754c3081c86f77f74c53be26b8df084f13260940e38a2e366",
+      "after": "7256efeffe6f316952d15a255ad57cdd65623e01f3285d81942cbc0b18545269"
+    },
+    {
+      "path": "backend/src/services/audit.js",
+      "type": "modified",
+      "before": "0b673f2d9d2caf5bbe44cbf31a08e1d79f8f6ec59c3e1c0f57b1510710a08241",
+      "after": "0dde4a9b1bce08de01ee0a83faab48877b556013060a9230612cfca8cfa47e14"
+    },
+    {
+      "path": "backend/src/services/learningAccess.js",
+      "type": "modified",
+      "before": "57eb4217d6b9e3cc343b0d318f10a5463986255a83dfe7e59834f4cc2bb321d3",
+      "after": "193cf99920b0a07a1a737629a074d98df6fb67b740122e2e5b1a8a4b3e2dcdbf"
+    },
+    {
+      "path": "backend/src/scripts/checkAccessHistory.js",
+      "type": "added",
+      "before": null,
+      "after": "52409cc5712095db97f2e872d4024c40934c2606be6bcbf9d60b2aecb2b6bfd4"
+    },
+    {
+      "path": "backend/src/scripts/reconcilePayments.js",
+      "type": "modified",
+      "before": "a3e5f68bf509b70fc2bd6a13b806a46d98b34c194c3d612cf1292b8053c93d3c",
+      "after": "660552cf10e4ff66da7007983c0a4cab6330f45066ff97f744134d3da60d9dfa"
+    },
+    {
+      "path": "backend/src/scripts/checkDatabase.js",
+      "type": "added",
+      "before": null,
+      "after": "5f7375f0180bff036ec432b6486d678f080d2fb6dc827e8c8958a51067272001"
+    },
+    {
+      "path": "backend/src/scripts/checkHandover.js",
+      "type": "added",
+      "before": null,
+      "after": "9986727d1306a77bcf4740ee6f25f73f99ddc68f1e0bddb01c18d27f64e38c6b"
+    },
+    {
+      "path": "backend/src/controllers/authController.js",
+      "type": "modified",
+      "before": "e43c51320232797659a93bcd1f0e8d3fc3d4f69d624d4c141aa97dd3fbface8c",
+      "after": "4b578a9119d24863a8313d4c7062b08288513040ebfd3d17e25f98eb8a83b6b4"
+    },
+    {
+      "path": ".github/workflows/quality.yml",
+      "type": "modified",
+      "before": "f762e0fb8979898d5bc4b3d371b800819901d2951c3572f01b4972fee3fa9235",
+      "after": "f9bec952f58029cb2f73dbfd369d8f8e3caa119ecf8bbae72ce9bc92fe0158e5"
+    }
+  ]
+}

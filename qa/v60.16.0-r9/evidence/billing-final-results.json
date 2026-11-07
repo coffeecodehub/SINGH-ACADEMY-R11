@@ -1,0 +1,442 @@
+{
+  "config": {
+    "argv": [
+      "/workspace/.cloud-setup/node22/node-v22.23.4-linux-x64/bin/node",
+      "/workspace/SINGH-ACADEMY-V60.15.3-P1-EYE-LOADING-REVIEW/frontend/node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "/workspace/r9-evidence/playwright.billing.config.ts",
+      "billing-action-confirmation.spec.ts",
+      "cancel-access.spec.ts"
+    ],
+    "configFile": "/workspace/r9-evidence/playwright.billing.config.ts",
+    "rootDir": "/workspace/SINGH-ACADEMY-V60.15.3-P1-EYE-LOADING-REVIEW/frontend/ui-tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/workspace/r9-evidence/billing-test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/workspace/SINGH-ACADEMY-V60.15.3-P1-EYE-LOADING-REVIEW/frontend/ui-tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/workspace/r9-evidence/billing-test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "/workspace/SINGH-ACADEMY-V60.15.3-P1-EYE-LOADING-REVIEW/frontend/ui-tests",
+        "snapshotDir": "/workspace/SINGH-ACADEMY-V60.15.3-P1-EYE-LOADING-REVIEW/frontend/ui-tests",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 45000,
+        "use": {
+          "baseURL": "http://127.0.0.1:3108",
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure",
+          "launchOptions": {
+            "executablePath": "/usr/bin/chromium"
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "/workspace/r9-evidence/billing-final-results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.0",
+    "workers": 1,
+    "webServer": {
+      "command": "node /workspace/r9-evidence/start-built-ui.mjs",
+      "url": "http://127.0.0.1:3108/login",
+      "reuseExistingServer": false,
+      "timeout": 240000,
+      "gracefulShutdown": {
+        "signal": "SIGTERM",
+        "timeout": 10000
+      },
+      "cwd": "/workspace/SINGH-ACADEMY-V60.15.3-P1-EYE-LOADING-REVIEW/frontend"
+    }
+  },
+  "suites": [
+    {
+      "title": "billing-action-confirmation.spec.ts",
+      "file": "billing-action-confirmation.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "stripe billing confirmation uses themed action colors, keyboard consent and one write at 1280px",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2391,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-06T19:17:58.986Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d8e2333cb69c94b833fe-c3ceb5c0b7b76d528c2a",
+          "file": "billing-action-confirmation.spec.ts",
+          "line": 4,
+          "column": 77
+        },
+        {
+          "title": "stripe billing confirmation uses themed action colors, keyboard consent and one write at 390px",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2119,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-06T19:18:01.596Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d8e2333cb69c94b833fe-2ae7779ae59419cc8b18",
+          "file": "billing-action-confirmation.spec.ts",
+          "line": 4,
+          "column": 77
+        },
+        {
+          "title": "paypal billing confirmation uses themed action colors, keyboard consent and one write at 1280px",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2134,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-06T19:18:03.728Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d8e2333cb69c94b833fe-a6ce842caefb060a564f",
+          "file": "billing-action-confirmation.spec.ts",
+          "line": 4,
+          "column": 77
+        },
+        {
+          "title": "paypal billing confirmation uses themed action colors, keyboard consent and one write at 390px",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2007,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-06T19:18:05.875Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d8e2333cb69c94b833fe-bfd050008ee3ed7707ad",
+          "file": "billing-action-confirmation.spec.ts",
+          "line": 4,
+          "column": 77
+        }
+      ]
+    },
+    {
+      "title": "cancel-access.spec.ts",
+      "file": "cancel-access.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "stripe subscription cancellation requires explicit consent and ends selected access without a refund claim",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1400,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-06T19:18:07.908Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "522ad200320f9fceef41-1b97d3c320ef1e159cc6",
+          "file": "cancel-access.spec.ts",
+          "line": 7,
+          "column": 47
+        },
+        {
+          "title": "paypal subscription cancellation requires explicit consent and ends selected access without a refund claim",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1417,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-06T19:18:09.323Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "522ad200320f9fceef41-09345a7868b251b19ad9",
+          "file": "cancel-access.spec.ts",
+          "line": 7,
+          "column": 47
+        },
+        {
+          "title": "one-time purchase cancellation uses its invoice and a missing provider confirmation is not shown as success",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1532,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-06T19:18:10.759Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "522ad200320f9fceef41-df6b7fd823ddf5150ad2",
+          "file": "cancel-access.spec.ts",
+          "line": 17,
+          "column": 5
+        },
+        {
+          "title": "invoice history keeps paid totals and shows actual cancellation time after cancelling its selected purchase",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1171,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-06T19:18:12.307Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "522ad200320f9fceef41-2e6b3ac35d17b3986c26",
+          "file": "cancel-access.spec.ts",
+          "line": 24,
+          "column": 5
+        },
+        {
+          "title": "legacy paid plan exposes immediate access cancellation beside its invoice without inventing a recurring agreement",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1188,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-06T19:18:13.495Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "522ad200320f9fceef41-d020198d2cc5f0bec87e",
+          "file": "cancel-access.spec.ts",
+          "line": 31,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-06T19:17:57.524Z",
+    "duration": 17304.352,
+    "expected": 9,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

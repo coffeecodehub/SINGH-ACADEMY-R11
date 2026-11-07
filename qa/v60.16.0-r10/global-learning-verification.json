@@ -1,0 +1,174 @@
+{
+  "preservedExistingPublicAssets": 264,
+  "preservedManifestEntries": 74,
+  "preservedPresentationFiles": [
+    "frontend/components/AcademyImage.tsx",
+    "frontend/lib/learningPhotos.ts",
+    "frontend/lib/website-slots.json",
+    "frontend/lib/heroPhotos.json",
+    "docs/global-learning-images.json",
+    "scripts/optimize-assets.cjs"
+  ],
+  "newFiles": 25,
+  "newManifestEntries": 5,
+  "originalBytes": 9152738,
+  "cardBytes": 109318,
+  "cardReductionPercent": 98.81,
+  "images": [
+    {
+      "src": "/images/global-learning/brazil-1.jpg",
+      "originalBytes": 1732282,
+      "variants": [
+        {
+          "width": 240,
+          "bytes": 7414,
+          "reductionPercent": 99.57
+        },
+        {
+          "width": 480,
+          "bytes": 18964,
+          "reductionPercent": 98.91
+        },
+        {
+          "width": 800,
+          "bytes": 38172,
+          "reductionPercent": 97.8
+        },
+        {
+          "width": 1280,
+          "bytes": 75984,
+          "reductionPercent": 95.61
+        },
+        {
+          "width": 1920,
+          "bytes": 140344,
+          "reductionPercent": 91.9
+        }
+      ]
+    },
+    {
+      "src": "/images/global-learning/brazil-2.jpg",
+      "originalBytes": 1654385,
+      "variants": [
+        {
+          "width": 240,
+          "bytes": 7930,
+          "reductionPercent": 99.52
+        },
+        {
+          "width": 480,
+          "bytes": 19200,
+          "reductionPercent": 98.84
+        },
+        {
+          "width": 800,
+          "bytes": 36880,
+          "reductionPercent": 97.77
+        },
+        {
+          "width": 1280,
+          "bytes": 70078,
+          "reductionPercent": 95.76
+        },
+        {
+          "width": 1920,
+          "bytes": 126220,
+          "reductionPercent": 92.37
+        }
+      ]
+    },
+    {
+      "src": "/images/global-learning/brazil-3.jpg",
+      "originalBytes": 2089492,
+      "variants": [
+        {
+          "width": 240,
+          "bytes": 7390,
+          "reductionPercent": 99.65
+        },
+        {
+          "width": 480,
+          "bytes": 19078,
+          "reductionPercent": 99.09
+        },
+        {
+          "width": 800,
+          "bytes": 36824,
+          "reductionPercent": 98.24
+        },
+        {
+          "width": 1280,
+          "bytes": 65610,
+          "reductionPercent": 96.86
+        },
+        {
+          "width": 1920,
+          "bytes": 106726,
+          "reductionPercent": 94.89
+        }
+      ]
+    },
+    {
+      "src": "/images/global-learning/ukraine-delegation-1.jpg",
+      "originalBytes": 1714312,
+      "variants": [
+        {
+          "width": 240,
+          "bytes": 8312,
+          "reductionPercent": 99.52
+        },
+        {
+          "width": 480,
+          "bytes": 24316,
+          "reductionPercent": 98.58
+        },
+        {
+          "width": 800,
+          "bytes": 54624,
+          "reductionPercent": 96.81
+        },
+        {
+          "width": 1280,
+          "bytes": 108344,
+          "reductionPercent": 93.68
+        },
+        {
+          "width": 1920,
+          "bytes": 184628,
+          "reductionPercent": 89.23
+        }
+      ]
+    },
+    {
+      "src": "/images/global-learning/ukraine-delegation-2.jpg",
+      "originalBytes": 1962267,
+      "variants": [
+        {
+          "width": 240,
+          "bytes": 9922,
+          "reductionPercent": 99.49
+        },
+        {
+          "width": 480,
+          "bytes": 27760,
+          "reductionPercent": 98.59
+        },
+        {
+          "width": 800,
+          "bytes": 62470,
+          "reductionPercent": 96.82
+        },
+        {
+          "width": 1280,
+          "bytes": 129714,
+          "reductionPercent": 93.39
+        },
+        {
+          "width": 1920,
+          "bytes": 227528,
+          "reductionPercent": 88.4
+        }
+      ]
+    }
+  ]
+}

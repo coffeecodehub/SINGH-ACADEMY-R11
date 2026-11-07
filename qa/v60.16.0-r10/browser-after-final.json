@@ -1,0 +1,3344 @@
+{
+  "label": "after-final",
+  "source": "Actual Next production UI with local synthetic API/content; Fast3G=150ms RTT+1.6Mbps down+0.75Mbps up+4xCPU; both landing and review navigation cold browser cache; no deployed-host latency claim",
+  "rows": [
+    {
+      "mode": "desktop",
+      "sample": 0,
+      "landing": {
+        "metrics": {
+          "lcp": 524,
+          "cls": 0,
+          "heroSources": [
+            {
+              "src": "/optimized/9c34a34e240a7dc2-800.webp",
+              "at": 265.80000001192093
+            }
+          ],
+          "firstSection": 590.4000000059605,
+          "playing": [],
+          "posters": [],
+          "errors": []
+        },
+        "navigation": {
+          "name": "http://127.0.0.1:3108/",
+          "entryType": "navigation",
+          "startTime": 0,
+          "duration": 374.09999999403954,
+          "navigationId": 1981,
+          "initiatorType": "navigation",
+          "deliveryType": "",
+          "nextHopProtocol": "http/1.1",
+          "renderBlockingStatus": "non-blocking",
+          "contentType": "text/html",
+          "contentEncoding": "gzip",
+          "workerStart": 0,
+          "workerRouterEvaluationStart": 0,
+          "workerCacheLookupStart": 0,
+          "workerMatchedSourceType": "",
+          "workerFinalSourceType": "",
+          "redirectStart": 0,
+          "redirectEnd": 0,
+          "fetchStart": 1.0999999940395355,
+          "domainLookupStart": 1.0999999940395355,
+          "domainLookupEnd": 1.0999999940395355,
+          "connectStart": 1.0999999940395355,
+          "secureConnectionStart": 0,
+          "connectEnd": 1.0999999940395355,
+          "requestStart": 2.5,
+          "responseStart": 185.09999999403954,
+          "firstInterimResponseStart": 0,
+          "finalResponseHeadersStart": 185.09999999403954,
+          "responseEnd": 256.30000001192093,
+          "transferSize": 15121,
+          "encodedBodySize": 14821,
+          "decodedBodySize": 121435,
+          "responseStatus": 200,
+          "serverTiming": [],
+          "unloadEventStart": 0,
+          "unloadEventEnd": 0,
+          "domInteractive": 303.90000000596046,
+          "domContentLoadedEventStart": 304,
+          "domContentLoadedEventEnd": 304.09999999403954,
+          "domComplete": 374,
+          "loadEventStart": 374.09999999403954,
+          "loadEventEnd": 374.09999999403954,
+          "type": "navigate",
+          "redirectCount": 0,
+          "activationStart": 0,
+          "criticalCHRestart": 0,
+          "notRestoredReasons": null,
+          "confidence": {
+            "randomizedTriggerRate": 0.4994798,
+            "value": "low"
+          }
+        },
+        "fcp": 300,
+        "resources": [
+          {
+            "name": "/_next/static/css/b0fbcacf720193d7.css",
+            "start": 201.5,
+            "end": 214.59999999403954,
+            "duration": 13.099999994039536,
+            "bytes": 13942,
+            "initiator": "link"
+          },
+          {
+            "name": "/singh-academy-logo-clean.png",
+            "start": 204.90000000596046,
+            "end": 219.5,
+            "duration": 14.599999994039536,
+            "bytes": 55621,
+            "initiator": "link"
+          },
+          {
+            "name": "/optimized/9c34a34e240a7dc2-800.webp",
+            "start": 205.09999999403954,
+            "end": 219.30000001192093,
+            "duration": 14.200000017881393,
+            "bytes": 38172,
+            "initiator": "link"
+          },
+          {
+            "name": "/optimized/a97ce5db60a034d1-480.webp",
+            "start": 205.09999999403954,
+            "end": 244.59999999403954,
+            "duration": 39.5,
+            "bytes": 8610,
+            "initiator": "link"
+          },
+          {
+            "name": "/optimized/c7d3ae1455dd2e3d-480.webp",
+            "start": 209.5,
+            "end": 244.59999999403954,
+            "duration": 35.099999994039536,
+            "bytes": 19108,
+            "initiator": "link"
+          },
+          {
+            "name": "/optimized/f03e702faeb36387-480.webp",
+            "start": 209.69999998807907,
+            "end": 253.09999999403954,
+            "duration": 43.400000005960464,
+            "bytes": 18216,
+            "initiator": "link"
+          },
+          {
+            "name": "/optimized/c0f77440330c1fc6-480.webp",
+            "start": 209.69999998807907,
+            "end": 255.80000001192093,
+            "duration": 46.10000002384186,
+            "bytes": 7202,
+            "initiator": "link"
+          },
+          {
+            "name": "/optimized/8285e7b5e6daba8d-480.webp",
+            "start": 209.80000001192093,
+            "end": 255.90000000596046,
+            "duration": 46.099999994039536,
+            "bytes": 14610,
+            "initiator": "link"
+          },
+          {
+            "name": "/optimized/218ac50924ec0449-480.webp",
+            "start": 209.80000001192093,
+            "end": 256,
+            "duration": 46.19999998807907,
+            "bytes": 16116,
+            "initiator": "link"
+          },
+          {
+            "name": "/optimized/159093844148271c-480.webp",
+            "start": 209.90000000596046,
+            "end": 256.19999998807907,
+            "duration": 46.29999998211861,
+            "bytes": 15092,
+            "initiator": "link"
+          },
+          {
+            "name": "/optimized/e68935fd0b33a39b-480.webp",
+            "start": 210,
+            "end": 258.90000000596046,
+            "duration": 48.900000005960464,
+            "bytes": 10802,
+            "initiator": "link"
+          },
+          {
+            "name": "/_next/static/css/5695babccd524f26.css",
+            "start": 210.09999999403954,
+            "end": 242.69999998807907,
+            "duration": 32.599999994039536,
+            "bytes": 2207,
+            "initiator": "link"
+          },
+          {
+            "name": "/_next/static/css/9948d50dd0c2f555.css",
+            "start": 210.30000001192093,
+            "end": 239.69999998807907,
+            "duration": 29.399999976158142,
+            "bytes": 743,
+            "initiator": "link"
+          },
+          {
+            "name": "/_next/static/css/38d485da94015b92.css",
+            "start": 210.30000001192093,
+            "end": 243.09999999403954,
+            "duration": 32.79999998211861,
+            "bytes": 1231,
+            "initiator": "link"
+          },
+          {
+            "name": "/_next/static/chunks/webpack-faac3c6bfbd0791b.js",
+            "start": 210.40000000596046,
+            "end": 265.19999998807907,
+            "duration": 54.79999998211861,
+            "bytes": 2811,
+            "initiator": "link"
+          },
+          {
+            "name": "/_next/static/chunks/4bd1b696-f785427dddbba9fb.js",
+            "start": 210.5,
+            "end": 276.69999998807907,
+            "duration": 66.19999998807907,
+            "bytes": 54359,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/main-app-8054e35eb3fa5ffb.js",
+            "start": 210.59999999403954,
+            "end": 264.19999998807907,
+            "duration": 53.599999994039536,
+            "bytes": 560,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/2619-3c9e02e22d10480a.js",
+            "start": 210.59999999403954,
+            "end": 265.30000001192093,
+            "duration": 54.70000001788139,
+            "bytes": 3388,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/1255-b84741b894bb9354.js",
+            "start": 210.59999999403954,
+            "end": 275.69999998807907,
+            "duration": 65.09999999403954,
+            "bytes": 46708,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/4104-5baf32942e4cbd52.js",
+            "start": 210.69999998807907,
+            "end": 266,
+            "duration": 55.30000001192093,
+            "bytes": 4340,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/1362-094dc1d9327d299f.js",
+            "start": 210.80000001192093,
+            "end": 275.90000000596046,
+            "duration": 65.09999999403954,
+            "bytes": 8572,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/3068-4875d81ad21e609b.js",
+            "start": 210.80000001192093,
+            "end": 276.5,
+            "duration": 65.69999998807907,
+            "bytes": 5197,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/1372-ee9fef3f7ff9cc13.js",
+            "start": 210.90000000596046,
+            "end": 277.30000001192093,
+            "duration": 66.40000000596046,
+            "bytes": 4805,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/9807-31983b693d71cbab.js",
+            "start": 210.90000000596046,
+            "end": 284.90000000596046,
+            "duration": 74,
+            "bytes": 7077,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/app/page-866ed4da39965e94.js",
+            "start": 211,
+            "end": 285.80000001192093,
+            "duration": 74.80000001192093,
+            "bytes": 6813,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/8578-79ec2432efaa185f.js",
+            "start": 211,
+            "end": 285,
+            "duration": 74,
+            "bytes": 3696,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/app/not-found-39d43097f419a748.js",
+            "start": 211.09999999403954,
+            "end": 282.59999999403954,
+            "duration": 71.5,
+            "bytes": 188,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/app/error-d58b36beab2ea5f1.js",
+            "start": 211.09999999403954,
+            "end": 285.40000000596046,
+            "duration": 74.30000001192093,
+            "bytes": 974,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/app/layout-ffa3527ff7262ce9.js",
+            "start": 211.09999999403954,
+            "end": 285.19999998807907,
+            "duration": 74.09999999403954,
+            "bytes": 4472,
+            "initiator": "script"
+          },
+          {
+            "name": "/optimized/b5a9cd0f62e99d39-480.webp",
+            "start": 211.19999998807907,
+            "end": 291.90000000596046,
+            "duration": 80.7000000178814,
+            "bytes": 15184,
+            "initiator": "link"
+          },
+          {
+            "name": "/optimized/03c6128422f457c4-480.webp",
+            "start": 211.19999998807907,
+            "end": 292.09999999403954,
+            "duration": 80.90000000596046,
+            "bytes": 9598,
+            "initiator": "link"
+          },
+          {
+            "name": "/optimized/a32069f7c78dfaf8-480.webp",
+            "start": 211.40000000596046,
+            "end": 294.30000001192093,
+            "duration": 82.90000000596046,
+            "bytes": 9520,
+            "initiator": "link"
+          },
+          {
+            "name": "/optimized/293c83498da3edb7-480.webp",
+            "start": 211.40000000596046,
+            "end": 297.90000000596046,
+            "duration": 86.5,
+            "bytes": 9642,
+            "initiator": "link"
+          },
+          {
+            "name": "/optimized/44c02b794427b1b9-480.webp",
+            "start": 211.40000000596046,
+            "end": 298.09999999403954,
+            "duration": 86.69999998807907,
+            "bytes": 9182,
+            "initiator": "link"
+          },
+          {
+            "name": "/optimized/575a66ca7c5efc40-480.webp",
+            "start": 211.40000000596046,
+            "end": 298.19999998807907,
+            "duration": 86.7999999821186,
+            "bytes": 15236,
+            "initiator": "link"
+          },
+          {
+            "name": "/optimized/286432a191091959-480.webp",
+            "start": 211.5,
+            "end": 298.30000001192093,
+            "duration": 86.80000001192093,
+            "bytes": 11070,
+            "initiator": "link"
+          },
+          {
+            "name": "/optimized/ccf3e820b21d0ded-480.webp",
+            "start": 211.59999999403954,
+            "end": 298.40000000596046,
+            "duration": 86.80000001192093,
+            "bytes": 12124,
+            "initiator": "link"
+          },
+          {
+            "name": "/optimized/1a9115411a6e8871-480.webp",
+            "start": 211.69999998807907,
+            "end": 300.40000000596046,
+            "duration": 88.7000000178814,
+            "bytes": 28644,
+            "initiator": "link"
+          },
+          {
+            "name": "/favicon.ico",
+            "start": 392,
+            "end": 398.90000000596046,
+            "duration": 6.9000000059604645,
+            "bytes": 6382,
+            "initiator": "other"
+          },
+          {
+            "name": "/api/content/site",
+            "start": 395.30000001192093,
+            "end": 420.09999999403954,
+            "duration": 24.799999982118607,
+            "bytes": 272,
+            "initiator": "fetch"
+          },
+          {
+            "name": "/api/page-sections/landing",
+            "start": 439.19999998807907,
+            "end": 456,
+            "duration": 16.80000001192093,
+            "bytes": 28,
+            "initiator": "fetch"
+          },
+          {
+            "name": "/api/video-reviews",
+            "start": 440.09999999403954,
+            "end": 457.40000000596046,
+            "duration": 17.30000001192093,
+            "bytes": 4542,
+            "initiator": "fetch"
+          },
+          {
+            "name": "/api/content/landing",
+            "start": 441,
+            "end": 460.40000000596046,
+            "duration": 19.400000005960464,
+            "bytes": 8330,
+            "initiator": "fetch"
+          },
+          {
+            "name": "/images/founder/dr-sukhsimranjit-singh.png",
+            "start": 505.09999999403954,
+            "end": 514.9000000059605,
+            "duration": 9.800000011920929,
+            "bytes": 220256,
+            "initiator": "img"
+          }
+        ],
+        "visibleImages": [
+          {
+            "src": "http://127.0.0.1:3108/singh-academy-logo-clean.png",
+            "complete": true
+          },
+          {
+            "src": "http://127.0.0.1:3108/optimized/9c34a34e240a7dc2-800.webp",
+            "complete": true
+          }
+        ],
+        "overflow": false
+      },
+      "videos": {
+        "metrics": {
+          "lcp": 208,
+          "cls": 0.2971757486979167,
+          "heroSources": [],
+          "firstSection": null,
+          "playing": [
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f4?preview=1&rendition=0000000000000000000001f4",
+              "at": 284
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f5?preview=1&rendition=0000000000000000000001f5",
+              "at": 295.5
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f6?preview=1&rendition=0000000000000000000001f6",
+              "at": 295.7999999821186
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f5?preview=1&rendition=0000000000000000000001f5",
+              "at": 304
+            }
+          ],
+          "posters": [
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f4?poster=1",
+              "at": 80.7999999821186
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f4?poster=1",
+              "at": 228.7999999821186
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f5?poster=1",
+              "at": 258.69999998807907
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f6?poster=1",
+              "at": 263.59999999403954
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f7?poster=1",
+              "at": 263.7999999821186
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f8?poster=1",
+              "at": 265.09999999403954
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f9?poster=1",
+              "at": 275.40000000596046
+            }
+          ],
+          "errors": []
+        },
+        "posterElements": 3,
+        "videoElements": 6,
+        "posterRequests": 7,
+        "videoResources": [
+          {
+            "name": "http://127.0.0.1:3108/api/media/0000000000000000000001f4?preview=1&rendition=0000000000000000000001f4",
+            "start": 237.19999998807907,
+            "end": 268.69999998807907,
+            "bytes": 18112
+          },
+          {
+            "name": "http://127.0.0.1:3108/api/media/0000000000000000000001f5?preview=1&rendition=0000000000000000000001f5",
+            "start": 244,
+            "end": 282.59999999403954,
+            "bytes": 18112
+          },
+          {
+            "name": "http://127.0.0.1:3108/api/media/0000000000000000000001f6?preview=1&rendition=0000000000000000000001f6",
+            "start": 244.69999998807907,
+            "end": 284.19999998807907,
+            "bytes": 18112
+          },
+          {
+            "name": "http://127.0.0.1:3108/api/media/0000000000000000000001f7?preview=1&rendition=0000000000000000000001f7",
+            "start": 245.40000000596046,
+            "end": 285.90000000596046,
+            "bytes": 18112
+          },
+          {
+            "name": "http://127.0.0.1:3108/api/media/0000000000000000000001f8?preview=1&rendition=0000000000000000000001f8",
+            "start": 246.2999999821186,
+            "end": 287,
+            "bytes": 18112
+          },
+          {
+            "name": "http://127.0.0.1:3108/api/media/0000000000000000000001f9?preview=1&rendition=0000000000000000000001f9",
+            "start": 247.40000000596046,
+            "end": 288.2999999821186,
+            "bytes": 18112
+          }
+        ],
+        "visibleVideos": [
+          {
+            "paused": false,
+            "time": 0.724179,
+            "muted": true
+          },
+          {
+            "paused": false,
+            "time": 0.709835,
+            "muted": true
+          },
+          {
+            "paused": false,
+            "time": 0.713133,
+            "muted": true
+          },
+          {
+            "paused": true,
+            "time": 0,
+            "muted": true
+          },
+          {
+            "paused": true,
+            "time": 0,
+            "muted": true
+          },
+          {
+            "paused": true,
+            "time": 0,
+            "muted": true
+          }
+        ],
+        "overflow": false
+      },
+      "errors": []
+    },
+    {
+      "mode": "desktop",
+      "sample": 1,
+      "landing": {
+        "metrics": {
+          "lcp": 372,
+          "cls": 0,
+          "heroSources": [
+            {
+              "src": "/optimized/9c34a34e240a7dc2-800.webp",
+              "at": 149.40000000596046
+            }
+          ],
+          "firstSection": 432.90000000596046,
+          "playing": [],
+          "posters": [],
+          "errors": []
+        },
+        "navigation": {
+          "name": "http://127.0.0.1:3108/",
+          "entryType": "navigation",
+          "startTime": 0,
+          "duration": 255.7000000178814,
+          "navigationId": 5921,
+          "initiatorType": "navigation",
+          "deliveryType": "",
+          "nextHopProtocol": "http/1.1",
+          "renderBlockingStatus": "non-blocking",
+          "contentType": "text/html",
+          "contentEncoding": "gzip",
+          "workerStart": 0,
+          "workerRouterEvaluationStart": 0,
+          "workerCacheLookupStart": 0,
+          "workerMatchedSourceType": "",
+          "workerFinalSourceType": "",
+          "redirectStart": 0,
+          "redirectEnd": 0,
+          "fetchStart": 0.800000011920929,
+          "domainLookupStart": 0.800000011920929,
+          "domainLookupEnd": 0.800000011920929,
+          "connectStart": 0.800000011920929,
+          "secureConnectionStart": 0,
+          "connectEnd": 0.800000011920929,
+          "requestStart": 2.300000011920929,
+          "responseStart": 48.70000001788139,
+          "firstInterimResponseStart": 0,
+          "finalResponseHeadersStart": 48.70000001788139,
+          "responseEnd": 61.20000001788139,
+          "transferSize": 15108,
+          "encodedBodySize": 14808,
+          "decodedBodySize": 121435,
+          "responseStatus": 200,
+          "serverTiming": [],
+          "unloadEventStart": 0,
+          "unloadEventEnd": 0,
+          "domInteractive": 159.30000001192093,
+          "domContentLoadedEventStart": 159.30000001192093,
+          "domContentLoadedEventEnd": 159.5,
+          "domComplete": 255.59999999403954,
+          "loadEventStart": 255.7000000178814,
+          "loadEventEnd": 255.7000000178814,
+          "type": "navigate",
+          "redirectCount": 0,
+          "activationStart": 0,
+          "criticalCHRestart": 0,
+          "notRestoredReasons": null,
+          "confidence": {
+            "randomizedTriggerRate": 0.4994798,
+            "value": "high"
+          }
+        },
+        "fcp": 148,
+        "resources": [
+          {
+            "name": "/_next/static/css/b0fbcacf720193d7.css",
+            "start": 66.40000000596046,
+            "end": 78.40000000596046,
+            "duration": 12,
+            "bytes": 13942,
+            "initiator": "link"
+          },
+          {
+            "name": "/singh-academy-logo-clean.png",
+            "start": 71.7000000178814,
+            "end": 86.80000001192093,
+            "duration": 15.099999994039536,
+            "bytes": 55621,
+            "initiator": "link"
+          },
+          {
+            "name": "/optimized/9c34a34e240a7dc2-800.webp",
+            "start": 71.80000001192093,
+            "end": 86.30000001192093,
+            "duration": 14.5,
+            "bytes": 38172,
+            "initiator": "link"
+          },
+          {
+            "name": "/optimized/a97ce5db60a034d1-480.webp",
+            "start": 72,
+            "end": 87.90000000596046,
+            "duration": 15.900000005960464,
+            "bytes": 8610,
+            "initiator": "link"
+          },
+          {
+            "name": "/optimized/c7d3ae1455dd2e3d-480.webp",
+            "start": 72,
+            "end": 90,
+            "duration": 18,
+            "bytes": 19108,
+            "initiator": "link"
+          },
+          {
+            "name": "/optimized/f03e702faeb36387-480.webp",
+            "start": 72,
+            "end": 109.7000000178814,
+            "duration": 37.70000001788139,
+            "bytes": 18216,
+            "initiator": "link"
+          },
+          {
+            "name": "/optimized/c0f77440330c1fc6-480.webp",
+            "start": 72.09999999403954,
+            "end": 109.90000000596046,
+            "duration": 37.80000001192093,
+            "bytes": 7202,
+            "initiator": "link"
+          },
+          {
+            "name": "/optimized/8285e7b5e6daba8d-480.webp",
+            "start": 72.2000000178814,
+            "end": 130.59999999403954,
+            "duration": 58.39999997615814,
+            "bytes": 14610,
+            "initiator": "link"
+          },
+          {
+            "name": "/optimized/218ac50924ec0449-480.webp",
+            "start": 72.2000000178814,
+            "end": 133.90000000596046,
+            "duration": 61.69999998807907,
+            "bytes": 16116,
+            "initiator": "link"
+          },
+          {
+            "name": "/optimized/159093844148271c-480.webp",
+            "start": 72.30000001192093,
+            "end": 134.2000000178814,
+            "duration": 61.900000005960464,
+            "bytes": 15092,
+            "initiator": "link"
+          },
+          {
+            "name": "/optimized/e68935fd0b33a39b-480.webp",
+            "start": 72.40000000596046,
+            "end": 134.40000000596046,
+            "duration": 62,
+            "bytes": 10802,
+            "initiator": "link"
+          },
+          {
+            "name": "/_next/static/css/5695babccd524f26.css",
+            "start": 72.5,
+            "end": 87,
+            "duration": 14.5,
+            "bytes": 2207,
+            "initiator": "link"
+          },
+          {
+            "name": "/_next/static/css/38d485da94015b92.css",
+            "start": 72.59999999403954,
+            "end": 87.2000000178814,
+            "duration": 14.600000023841858,
+            "bytes": 1231,
+            "initiator": "link"
+          },
+          {
+            "name": "/_next/static/css/9948d50dd0c2f555.css",
+            "start": 72.59999999403954,
+            "end": 87.40000000596046,
+            "duration": 14.800000011920929,
+            "bytes": 743,
+            "initiator": "link"
+          },
+          {
+            "name": "/_next/static/chunks/webpack-faac3c6bfbd0791b.js",
+            "start": 72.7000000178814,
+            "end": 133.30000001192093,
+            "duration": 60.599999994039536,
+            "bytes": 2811,
+            "initiator": "link"
+          },
+          {
+            "name": "/_next/static/chunks/4bd1b696-f785427dddbba9fb.js",
+            "start": 72.90000000596046,
+            "end": 136.90000000596046,
+            "duration": 64,
+            "bytes": 54359,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/main-app-8054e35eb3fa5ffb.js",
+            "start": 73,
+            "end": 145.59999999403954,
+            "duration": 72.59999999403954,
+            "bytes": 560,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/1255-b84741b894bb9354.js",
+            "start": 73,
+            "end": 155.09999999403954,
+            "duration": 82.09999999403954,
+            "bytes": 46708,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/2619-3c9e02e22d10480a.js",
+            "start": 73.09999999403954,
+            "end": 151.30000001192093,
+            "duration": 78.2000000178814,
+            "bytes": 3388,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/4104-5baf32942e4cbd52.js",
+            "start": 73.09999999403954,
+            "end": 150.80000001192093,
+            "duration": 77.7000000178814,
+            "bytes": 4340,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/3068-4875d81ad21e609b.js",
+            "start": 73.2000000178814,
+            "end": 151.40000000596046,
+            "duration": 78.19999998807907,
+            "bytes": 5197,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/1362-094dc1d9327d299f.js",
+            "start": 73.2000000178814,
+            "end": 151.2000000178814,
+            "duration": 78,
+            "bytes": 8572,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/1372-ee9fef3f7ff9cc13.js",
+            "start": 73.30000001192093,
+            "end": 161.30000001192093,
+            "duration": 88,
+            "bytes": 4805,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/9807-31983b693d71cbab.js",
+            "start": 73.30000001192093,
+            "end": 163.80000001192093,
+            "duration": 90.5,
+            "bytes": 7077,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/8578-79ec2432efaa185f.js",
+            "start": 77.90000000596046,
+            "end": 164,
+            "duration": 86.09999999403954,
+            "bytes": 3696,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/app/layout-ffa3527ff7262ce9.js",
+            "start": 79.30000001192093,
+            "end": 164.40000000596046,
+            "duration": 85.09999999403954,
+            "bytes": 4472,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/app/page-866ed4da39965e94.js",
+            "start": 79.30000001192093,
+            "end": 164.2000000178814,
+            "duration": 84.90000000596046,
+            "bytes": 6813,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/app/error-d58b36beab2ea5f1.js",
+            "start": 79.40000000596046,
+            "end": 175.5,
+            "duration": 96.09999999403954,
+            "bytes": 974,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/app/not-found-39d43097f419a748.js",
+            "start": 79.5,
+            "end": 174.7000000178814,
+            "duration": 95.2000000178814,
+            "bytes": 188,
+            "initiator": "script"
+          },
+          {
+            "name": "/optimized/b5a9cd0f62e99d39-480.webp",
+            "start": 79.59999999403954,
+            "end": 175.90000000596046,
+            "duration": 96.30000001192093,
+            "bytes": 15184,
+            "initiator": "link"
+          },
+          {
+            "name": "/optimized/03c6128422f457c4-480.webp",
+            "start": 79.59999999403954,
+            "end": 178,
+            "duration": 98.40000000596046,
+            "bytes": 9598,
+            "initiator": "link"
+          },
+          {
+            "name": "/optimized/a32069f7c78dfaf8-480.webp",
+            "start": 79.80000001192093,
+            "end": 177.90000000596046,
+            "duration": 98.09999999403954,
+            "bytes": 9520,
+            "initiator": "link"
+          },
+          {
+            "name": "/optimized/293c83498da3edb7-480.webp",
+            "start": 79.90000000596046,
+            "end": 178,
+            "duration": 98.09999999403954,
+            "bytes": 9642,
+            "initiator": "link"
+          },
+          {
+            "name": "/optimized/44c02b794427b1b9-480.webp",
+            "start": 80,
+            "end": 181.2000000178814,
+            "duration": 101.2000000178814,
+            "bytes": 9182,
+            "initiator": "link"
+          },
+          {
+            "name": "/optimized/575a66ca7c5efc40-480.webp",
+            "start": 80.09999999403954,
+            "end": 182.2000000178814,
+            "duration": 102.10000002384186,
+            "bytes": 15236,
+            "initiator": "link"
+          },
+          {
+            "name": "/optimized/286432a191091959-480.webp",
+            "start": 80.40000000596046,
+            "end": 183.09999999403954,
+            "duration": 102.69999998807907,
+            "bytes": 11070,
+            "initiator": "link"
+          },
+          {
+            "name": "/optimized/ccf3e820b21d0ded-480.webp",
+            "start": 80.59999999403954,
+            "end": 183.2000000178814,
+            "duration": 102.60000002384186,
+            "bytes": 12124,
+            "initiator": "link"
+          },
+          {
+            "name": "/optimized/1a9115411a6e8871-480.webp",
+            "start": 80.59999999403954,
+            "end": 183.80000001192093,
+            "duration": 103.2000000178814,
+            "bytes": 28644,
+            "initiator": "link"
+          },
+          {
+            "name": "/favicon.ico",
+            "start": 272.30000001192093,
+            "end": 277.5,
+            "duration": 5.199999988079071,
+            "bytes": 6382,
+            "initiator": "other"
+          },
+          {
+            "name": "/api/content/site",
+            "start": 277.90000000596046,
+            "end": 284.40000000596046,
+            "duration": 6.5,
+            "bytes": 272,
+            "initiator": "fetch"
+          },
+          {
+            "name": "/api/page-sections/landing",
+            "start": 304.30000001192093,
+            "end": 319.09999999403954,
+            "duration": 14.799999982118607,
+            "bytes": 28,
+            "initiator": "fetch"
+          },
+          {
+            "name": "/api/video-reviews",
+            "start": 305,
+            "end": 320.59999999403954,
+            "duration": 15.599999994039536,
+            "bytes": 4542,
+            "initiator": "fetch"
+          },
+          {
+            "name": "/api/content/landing",
+            "start": 305.7000000178814,
+            "end": 321.90000000596046,
+            "duration": 16.19999998807907,
+            "bytes": 8330,
+            "initiator": "fetch"
+          },
+          {
+            "name": "/images/founder/dr-sukhsimranjit-singh.png",
+            "start": 350.90000000596046,
+            "end": 357.7000000178814,
+            "duration": 6.800000011920929,
+            "bytes": 220256,
+            "initiator": "img"
+          }
+        ],
+        "visibleImages": [
+          {
+            "src": "http://127.0.0.1:3108/singh-academy-logo-clean.png",
+            "complete": true
+          },
+          {
+            "src": "http://127.0.0.1:3108/optimized/9c34a34e240a7dc2-800.webp",
+            "complete": true
+          }
+        ],
+        "overflow": false
+      },
+      "videos": {
+        "metrics": {
+          "lcp": 184,
+          "cls": 0.2971757486979167,
+          "heroSources": [],
+          "firstSection": null,
+          "playing": [
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f4?preview=1&rendition=0000000000000000000001f4",
+              "at": 268.2000000178814
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f5?preview=1&rendition=0000000000000000000001f5",
+              "at": 288.10000002384186
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f6?preview=1&rendition=0000000000000000000001f6",
+              "at": 291.5
+            }
+          ],
+          "posters": [
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f4?poster=1",
+              "at": 58
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f4?poster=1",
+              "at": 209.5
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f5?poster=1",
+              "at": 255.2000000178814
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f6?poster=1",
+              "at": 255.5
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f7?poster=1",
+              "at": 255.80000001192093
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f8?poster=1",
+              "at": 256
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f9?poster=1",
+              "at": 256.2000000178814
+            }
+          ],
+          "errors": []
+        },
+        "posterElements": 3,
+        "videoElements": 6,
+        "posterRequests": 7,
+        "videoResources": [
+          {
+            "name": "http://127.0.0.1:3108/api/media/0000000000000000000001f4?preview=1&rendition=0000000000000000000001f4",
+            "start": 216.90000000596046,
+            "end": 253.7000000178814,
+            "bytes": 18112
+          },
+          {
+            "name": "http://127.0.0.1:3108/api/media/0000000000000000000001f5?preview=1&rendition=0000000000000000000001f5",
+            "start": 217.60000002384186,
+            "end": 276.40000000596046,
+            "bytes": 18112
+          },
+          {
+            "name": "http://127.0.0.1:3108/api/media/0000000000000000000001f6?preview=1&rendition=0000000000000000000001f6",
+            "start": 218.2000000178814,
+            "end": 278.40000000596046,
+            "bytes": 18112
+          },
+          {
+            "name": "http://127.0.0.1:3108/api/media/0000000000000000000001f7?preview=1&rendition=0000000000000000000001f7",
+            "start": 218.60000002384186,
+            "end": 281.5,
+            "bytes": 18112
+          },
+          {
+            "name": "http://127.0.0.1:3108/api/media/0000000000000000000001f8?preview=1&rendition=0000000000000000000001f8",
+            "start": 219.2000000178814,
+            "end": 284.60000002384186,
+            "bytes": 18112
+          },
+          {
+            "name": "http://127.0.0.1:3108/api/media/0000000000000000000001f9?preview=1&rendition=0000000000000000000001f9",
+            "start": 219.80000001192093,
+            "end": 285,
+            "bytes": 18112
+          }
+        ],
+        "visibleVideos": [
+          {
+            "paused": false,
+            "time": 0.72433,
+            "muted": true
+          },
+          {
+            "paused": false,
+            "time": 0.703686,
+            "muted": true
+          },
+          {
+            "paused": false,
+            "time": 0.700518,
+            "muted": true
+          },
+          {
+            "paused": true,
+            "time": 0,
+            "muted": true
+          },
+          {
+            "paused": true,
+            "time": 0,
+            "muted": true
+          },
+          {
+            "paused": true,
+            "time": 0,
+            "muted": true
+          }
+        ],
+        "overflow": false
+      },
+      "errors": []
+    },
+    {
+      "mode": "desktop",
+      "sample": 2,
+      "landing": {
+        "metrics": {
+          "lcp": 400,
+          "cls": 0,
+          "heroSources": [
+            {
+              "src": "/optimized/9c34a34e240a7dc2-800.webp",
+              "at": 97.30000001192093
+            }
+          ],
+          "firstSection": 470.59999999403954,
+          "playing": [],
+          "posters": [],
+          "errors": []
+        },
+        "navigation": {
+          "name": "http://127.0.0.1:3108/",
+          "entryType": "navigation",
+          "startTime": 0,
+          "duration": 237.19999998807907,
+          "navigationId": 6851,
+          "initiatorType": "navigation",
+          "deliveryType": "",
+          "nextHopProtocol": "http/1.1",
+          "renderBlockingStatus": "non-blocking",
+          "contentType": "text/html",
+          "contentEncoding": "gzip",
+          "workerStart": 0,
+          "workerRouterEvaluationStart": 0,
+          "workerCacheLookupStart": 0,
+          "workerMatchedSourceType": "",
+          "workerFinalSourceType": "",
+          "redirectStart": 0,
+          "redirectEnd": 0,
+          "fetchStart": 0.800000011920929,
+          "domainLookupStart": 0.800000011920929,
+          "domainLookupEnd": 0.800000011920929,
+          "connectStart": 0.800000011920929,
+          "secureConnectionStart": 0,
+          "connectEnd": 0.800000011920929,
+          "requestStart": 1.699999988079071,
+          "responseStart": 40.80000001192093,
+          "firstInterimResponseStart": 0,
+          "finalResponseHeadersStart": 40.80000001192093,
+          "responseEnd": 54.400000005960464,
+          "transferSize": 15121,
+          "encodedBodySize": 14821,
+          "decodedBodySize": 121435,
+          "responseStatus": 200,
+          "serverTiming": [],
+          "unloadEventStart": 0,
+          "unloadEventEnd": 0,
+          "domInteractive": 156,
+          "domContentLoadedEventStart": 156,
+          "domContentLoadedEventEnd": 156.19999998807907,
+          "domComplete": 237,
+          "loadEventStart": 237.09999999403954,
+          "loadEventEnd": 237.19999998807907,
+          "type": "navigate",
+          "redirectCount": 0,
+          "activationStart": 0,
+          "criticalCHRestart": 0,
+          "notRestoredReasons": null,
+          "confidence": {
+            "randomizedTriggerRate": 0.4994798,
+            "value": "low"
+          }
+        },
+        "fcp": 148,
+        "resources": [
+          {
+            "name": "/_next/static/css/b0fbcacf720193d7.css",
+            "start": 54.80000001192093,
+            "end": 71.09999999403954,
+            "duration": 16.299999982118607,
+            "bytes": 13942,
+            "initiator": "link"
+          },
+          {
+            "name": "/singh-academy-logo-clean.png",
+            "start": 58.599999994039536,
+            "end": 72,
+            "duration": 13.400000005960464,
+            "bytes": 55621,
+            "initiator": "link"
+          },
+          {
+            "name": "/optimized/9c34a34e240a7dc2-800.webp",
+            "start": 58.80000001192093,
+            "end": 71.90000000596046,
+            "duration": 13.099999994039536,
+            "bytes": 38172,
+            "initiator": "link"
+          },
+          {
+            "name": "/optimized/a97ce5db60a034d1-480.webp",
+            "start": 58.900000005960464,
+            "end": 74.69999998807907,
+            "duration": 15.799999982118607,
+            "bytes": 8610,
+            "initiator": "link"
+          },
+          {
+            "name": "/optimized/c7d3ae1455dd2e3d-480.webp",
+            "start": 59.099999994039536,
+            "end": 74.80000001192093,
+            "duration": 15.700000017881393,
+            "bytes": 19108,
+            "initiator": "link"
+          },
+          {
+            "name": "/optimized/f03e702faeb36387-480.webp",
+            "start": 59.099999994039536,
+            "end": 87.59999999403954,
+            "duration": 28.5,
+            "bytes": 18216,
+            "initiator": "link"
+          },
+          {
+            "name": "/optimized/c0f77440330c1fc6-480.webp",
+            "start": 59.19999998807907,
+            "end": 87.80000001192093,
+            "duration": 28.600000023841858,
+            "bytes": 7202,
+            "initiator": "link"
+          },
+          {
+            "name": "/optimized/8285e7b5e6daba8d-480.webp",
+            "start": 59.19999998807907,
+            "end": 111.5,
+            "duration": 52.30000001192093,
+            "bytes": 14610,
+            "initiator": "link"
+          },
+          {
+            "name": "/optimized/218ac50924ec0449-480.webp",
+            "start": 59.400000005960464,
+            "end": 111.90000000596046,
+            "duration": 52.5,
+            "bytes": 16116,
+            "initiator": "link"
+          },
+          {
+            "name": "/optimized/159093844148271c-480.webp",
+            "start": 59.400000005960464,
+            "end": 112.80000001192093,
+            "duration": 53.400000005960464,
+            "bytes": 15092,
+            "initiator": "link"
+          },
+          {
+            "name": "/optimized/e68935fd0b33a39b-480.webp",
+            "start": 59.400000005960464,
+            "end": 113.40000000596046,
+            "duration": 54,
+            "bytes": 10802,
+            "initiator": "link"
+          },
+          {
+            "name": "/_next/static/css/5695babccd524f26.css",
+            "start": 59.599999994039536,
+            "end": 70.5,
+            "duration": 10.900000005960464,
+            "bytes": 2207,
+            "initiator": "link"
+          },
+          {
+            "name": "/_next/static/css/38d485da94015b92.css",
+            "start": 59.69999998807907,
+            "end": 70.59999999403954,
+            "duration": 10.900000005960464,
+            "bytes": 1231,
+            "initiator": "link"
+          },
+          {
+            "name": "/_next/static/css/9948d50dd0c2f555.css",
+            "start": 59.80000001192093,
+            "end": 70.69999998807907,
+            "duration": 10.899999976158142,
+            "bytes": 743,
+            "initiator": "link"
+          },
+          {
+            "name": "/_next/static/chunks/webpack-faac3c6bfbd0791b.js",
+            "start": 59.900000005960464,
+            "end": 111.30000001192093,
+            "duration": 51.400000005960464,
+            "bytes": 2811,
+            "initiator": "link"
+          },
+          {
+            "name": "/_next/static/chunks/4bd1b696-f785427dddbba9fb.js",
+            "start": 60.099999994039536,
+            "end": 120.40000000596046,
+            "duration": 60.30000001192093,
+            "bytes": 54359,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/1255-b84741b894bb9354.js",
+            "start": 60.099999994039536,
+            "end": 134.90000000596046,
+            "duration": 74.80000001192093,
+            "bytes": 46708,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/2619-3c9e02e22d10480a.js",
+            "start": 60.19999998807907,
+            "end": 126.69999998807907,
+            "duration": 66.5,
+            "bytes": 3388,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/main-app-8054e35eb3fa5ffb.js",
+            "start": 60.19999998807907,
+            "end": 126.69999998807907,
+            "duration": 66.5,
+            "bytes": 560,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/4104-5baf32942e4cbd52.js",
+            "start": 60.30000001192093,
+            "end": 127.5,
+            "duration": 67.19999998807907,
+            "bytes": 4340,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/1362-094dc1d9327d299f.js",
+            "start": 60.30000001192093,
+            "end": 127.59999999403954,
+            "duration": 67.2999999821186,
+            "bytes": 8572,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/3068-4875d81ad21e609b.js",
+            "start": 60.5,
+            "end": 135.5,
+            "duration": 75,
+            "bytes": 5197,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/1372-ee9fef3f7ff9cc13.js",
+            "start": 62.099999994039536,
+            "end": 143.30000001192093,
+            "duration": 81.2000000178814,
+            "bytes": 4805,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/9807-31983b693d71cbab.js",
+            "start": 66.30000001192093,
+            "end": 140.19999998807907,
+            "duration": 73.89999997615814,
+            "bytes": 7077,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/8578-79ec2432efaa185f.js",
+            "start": 66.5,
+            "end": 143,
+            "duration": 76.5,
+            "bytes": 3696,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/app/layout-ffa3527ff7262ce9.js",
+            "start": 66.5,
+            "end": 145.30000001192093,
+            "duration": 78.80000001192093,
+            "bytes": 4472,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/app/page-866ed4da39965e94.js",
+            "start": 66.5,
+            "end": 143.40000000596046,
+            "duration": 76.90000000596046,
+            "bytes": 6813,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/app/error-d58b36beab2ea5f1.js",
+            "start": 66.59999999403954,
+            "end": 154,
+            "duration": 87.40000000596046,
+            "bytes": 974,
+            "initiator": "script"
+          },
+          {
+            "name": "/optimized/b5a9cd0f62e99d39-480.webp",
+            "start": 66.69999998807907,
+            "end": 149.90000000596046,
+            "duration": 83.2000000178814,
+            "bytes": 15184,
+            "initiator": "link"
+          },
+          {
+            "name": "/_next/static/chunks/app/not-found-39d43097f419a748.js",
+            "start": 66.69999998807907,
+            "end": 148.19999998807907,
+            "duration": 81.5,
+            "bytes": 188,
+            "initiator": "script"
+          },
+          {
+            "name": "/optimized/03c6128422f457c4-480.webp",
+            "start": 66.80000001192093,
+            "end": 150.09999999403954,
+            "duration": 83.2999999821186,
+            "bytes": 9598,
+            "initiator": "link"
+          },
+          {
+            "name": "/optimized/a32069f7c78dfaf8-480.webp",
+            "start": 66.90000000596046,
+            "end": 150.80000001192093,
+            "duration": 83.90000000596046,
+            "bytes": 9520,
+            "initiator": "link"
+          },
+          {
+            "name": "/optimized/293c83498da3edb7-480.webp",
+            "start": 66.90000000596046,
+            "end": 159,
+            "duration": 92.09999999403954,
+            "bytes": 9642,
+            "initiator": "link"
+          },
+          {
+            "name": "/optimized/44c02b794427b1b9-480.webp",
+            "start": 67,
+            "end": 159.30000001192093,
+            "duration": 92.30000001192093,
+            "bytes": 9182,
+            "initiator": "link"
+          },
+          {
+            "name": "/optimized/286432a191091959-480.webp",
+            "start": 67.09999999403954,
+            "end": 159.59999999403954,
+            "duration": 92.5,
+            "bytes": 11070,
+            "initiator": "link"
+          },
+          {
+            "name": "/optimized/575a66ca7c5efc40-480.webp",
+            "start": 67.09999999403954,
+            "end": 159.5,
+            "duration": 92.40000000596046,
+            "bytes": 15236,
+            "initiator": "link"
+          },
+          {
+            "name": "/optimized/ccf3e820b21d0ded-480.webp",
+            "start": 67.19999998807907,
+            "end": 159.69999998807907,
+            "duration": 92.5,
+            "bytes": 12124,
+            "initiator": "link"
+          },
+          {
+            "name": "/optimized/1a9115411a6e8871-480.webp",
+            "start": 67.30000001192093,
+            "end": 163.69999998807907,
+            "duration": 96.39999997615814,
+            "bytes": 28644,
+            "initiator": "link"
+          },
+          {
+            "name": "/favicon.ico",
+            "start": 256.40000000596046,
+            "end": 261.19999998807907,
+            "duration": 4.799999982118607,
+            "bytes": 6382,
+            "initiator": "other"
+          },
+          {
+            "name": "/api/content/site",
+            "start": 258.80000001192093,
+            "end": 270.30000001192093,
+            "duration": 11.5,
+            "bytes": 272,
+            "initiator": "fetch"
+          },
+          {
+            "name": "/api/page-sections/landing",
+            "start": 289.40000000596046,
+            "end": 304.90000000596046,
+            "duration": 15.5,
+            "bytes": 28,
+            "initiator": "fetch"
+          },
+          {
+            "name": "/api/video-reviews",
+            "start": 290.40000000596046,
+            "end": 306.30000001192093,
+            "duration": 15.900000005960464,
+            "bytes": 4542,
+            "initiator": "fetch"
+          },
+          {
+            "name": "/api/content/landing",
+            "start": 291.19999998807907,
+            "end": 307.5,
+            "duration": 16.30000001192093,
+            "bytes": 8330,
+            "initiator": "fetch"
+          },
+          {
+            "name": "/images/founder/dr-sukhsimranjit-singh.png",
+            "start": 372.80000001192093,
+            "end": 382.09999999403954,
+            "duration": 9.299999982118607,
+            "bytes": 220256,
+            "initiator": "img"
+          }
+        ],
+        "visibleImages": [
+          {
+            "src": "http://127.0.0.1:3108/singh-academy-logo-clean.png",
+            "complete": true
+          },
+          {
+            "src": "http://127.0.0.1:3108/optimized/9c34a34e240a7dc2-800.webp",
+            "complete": true
+          }
+        ],
+        "overflow": false
+      },
+      "videos": {
+        "metrics": {
+          "lcp": 208,
+          "cls": 0.2966666666666667,
+          "heroSources": [],
+          "firstSection": null,
+          "playing": [
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f4?preview=1&rendition=0000000000000000000001f4",
+              "at": 267.90000000596046
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f6?preview=1&rendition=0000000000000000000001f6",
+              "at": 277.7999999821186
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f5?preview=1&rendition=0000000000000000000001f5",
+              "at": 278.19999998807907
+            }
+          ],
+          "posters": [
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f4?poster=1",
+              "at": 75.19999998807907
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f4?poster=1",
+              "at": 221.09999999403954
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f5?poster=1",
+              "at": 254.59999999403954
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f6?poster=1",
+              "at": 254.7999999821186
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f7?poster=1",
+              "at": 256.90000000596046
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f8?poster=1",
+              "at": 257.09999999403954
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f9?poster=1",
+              "at": 257.09999999403954
+            }
+          ],
+          "errors": []
+        },
+        "posterElements": 3,
+        "videoElements": 6,
+        "posterRequests": 7,
+        "videoResources": [
+          {
+            "name": "http://127.0.0.1:3108/api/media/0000000000000000000001f4?preview=1&rendition=0000000000000000000001f4",
+            "start": 228.59999999403954,
+            "end": 251.2999999821186,
+            "bytes": 18112
+          },
+          {
+            "name": "http://127.0.0.1:3108/api/media/0000000000000000000001f5?preview=1&rendition=0000000000000000000001f5",
+            "start": 229.19999998807907,
+            "end": 264.69999998807907,
+            "bytes": 18112
+          },
+          {
+            "name": "http://127.0.0.1:3108/api/media/0000000000000000000001f6?preview=1&rendition=0000000000000000000001f6",
+            "start": 229.59999999403954,
+            "end": 266.59999999403954,
+            "bytes": 18112
+          },
+          {
+            "name": "http://127.0.0.1:3108/api/media/0000000000000000000001f7?preview=1&rendition=0000000000000000000001f7",
+            "start": 230.19999998807907,
+            "end": 268.40000000596046,
+            "bytes": 18112
+          },
+          {
+            "name": "http://127.0.0.1:3108/api/media/0000000000000000000001f8?preview=1&rendition=0000000000000000000001f8",
+            "start": 230.69999998807907,
+            "end": 268.90000000596046,
+            "bytes": 18112
+          },
+          {
+            "name": "http://127.0.0.1:3108/api/media/0000000000000000000001f9?preview=1&rendition=0000000000000000000001f9",
+            "start": 231,
+            "end": 269,
+            "bytes": 18112
+          }
+        ],
+        "visibleVideos": [
+          {
+            "paused": false,
+            "time": 0.710315,
+            "muted": true
+          },
+          {
+            "paused": false,
+            "time": 0.699725,
+            "muted": true
+          },
+          {
+            "paused": false,
+            "time": 0.699813,
+            "muted": true
+          },
+          {
+            "paused": true,
+            "time": 0,
+            "muted": true
+          },
+          {
+            "paused": true,
+            "time": 0,
+            "muted": true
+          },
+          {
+            "paused": true,
+            "time": 0,
+            "muted": true
+          }
+        ],
+        "overflow": false
+      },
+      "errors": []
+    },
+    {
+      "mode": "mobile-fast3g",
+      "sample": 0,
+      "landing": {
+        "metrics": {
+          "lcp": 1176,
+          "cls": 0,
+          "heroSources": [
+            {
+              "src": "/optimized/9c34a34e240a7dc2-800.webp",
+              "at": 640.7999999821186
+            }
+          ],
+          "firstSection": 1125,
+          "playing": [],
+          "posters": [],
+          "errors": []
+        },
+        "navigation": {
+          "name": "http://127.0.0.1:3108/",
+          "entryType": "navigation",
+          "startTime": 0,
+          "duration": 3449,
+          "navigationId": 4244,
+          "initiatorType": "navigation",
+          "deliveryType": "",
+          "nextHopProtocol": "http/1.1",
+          "renderBlockingStatus": "non-blocking",
+          "contentType": "text/html",
+          "contentEncoding": "gzip",
+          "workerStart": 0,
+          "workerRouterEvaluationStart": 0,
+          "workerCacheLookupStart": 0,
+          "workerMatchedSourceType": "",
+          "workerFinalSourceType": "",
+          "redirectStart": 0,
+          "redirectEnd": 0,
+          "fetchStart": 1.2999999821186066,
+          "domainLookupStart": 1.2999999821186066,
+          "domainLookupEnd": 1.2999999821186066,
+          "connectStart": 1.2999999821186066,
+          "secureConnectionStart": 0,
+          "connectEnd": 1.2999999821186066,
+          "requestStart": 3.2999999821186066,
+          "responseStart": 36.19999998807907,
+          "firstInterimResponseStart": 0,
+          "finalResponseHeadersStart": 36.19999998807907,
+          "responseEnd": 236.2999999821186,
+          "transferSize": 15114,
+          "encodedBodySize": 14814,
+          "decodedBodySize": 121435,
+          "responseStatus": 200,
+          "serverTiming": [],
+          "unloadEventStart": 0,
+          "unloadEventEnd": 0,
+          "domInteractive": 712.2999999821186,
+          "domContentLoadedEventStart": 713.0999999940395,
+          "domContentLoadedEventEnd": 713.6999999880791,
+          "domComplete": 3448.7999999821186,
+          "loadEventStart": 3449,
+          "loadEventEnd": 3449,
+          "type": "navigate",
+          "redirectCount": 0,
+          "activationStart": 0,
+          "criticalCHRestart": 0,
+          "notRestoredReasons": null,
+          "confidence": {
+            "randomizedTriggerRate": 0.4994798,
+            "value": "high"
+          }
+        },
+        "fcp": 636,
+        "resources": [
+          {
+            "name": "/_next/static/css/b0fbcacf720193d7.css",
+            "start": 182.19999998807907,
+            "end": 589.3999999761581,
+            "duration": 407.19999998807907,
+            "bytes": 13942,
+            "initiator": "link"
+          },
+          {
+            "name": "/singh-academy-logo-clean.png",
+            "start": 186.39999997615814,
+            "end": 1143.5999999940395,
+            "duration": 957.2000000178814,
+            "bytes": 55621,
+            "initiator": "link"
+          },
+          {
+            "name": "/optimized/a97ce5db60a034d1-240.webp",
+            "start": 186.89999997615814,
+            "end": 663.8999999761581,
+            "duration": 477,
+            "bytes": 3434,
+            "initiator": "link"
+          },
+          {
+            "name": "/optimized/9c34a34e240a7dc2-480.webp",
+            "start": 186.89999997615814,
+            "end": 701.2999999821186,
+            "duration": 514.4000000059605,
+            "bytes": 18964,
+            "initiator": "link"
+          },
+          {
+            "name": "/optimized/f03e702faeb36387-240.webp",
+            "start": 187.5,
+            "end": 746.3999999761581,
+            "duration": 558.8999999761581,
+            "bytes": 6012,
+            "initiator": "link"
+          },
+          {
+            "name": "/optimized/c7d3ae1455dd2e3d-240.webp",
+            "start": 187.5,
+            "end": 731.5999999940395,
+            "duration": 544.0999999940395,
+            "bytes": 5690,
+            "initiator": "link"
+          },
+          {
+            "name": "/optimized/c0f77440330c1fc6-240.webp",
+            "start": 187.5,
+            "end": 791,
+            "duration": 603.5,
+            "bytes": 3044,
+            "initiator": "link"
+          },
+          {
+            "name": "/optimized/8285e7b5e6daba8d-240.webp",
+            "start": 187.59999999403954,
+            "end": 881.1999999880791,
+            "duration": 693.5999999940395,
+            "bytes": 5340,
+            "initiator": "link"
+          },
+          {
+            "name": "/optimized/218ac50924ec0449-240.webp",
+            "start": 187.59999999403954,
+            "end": 986.3999999761581,
+            "duration": 798.7999999821186,
+            "bytes": 6252,
+            "initiator": "link"
+          },
+          {
+            "name": "/_next/static/css/5695babccd524f26.css",
+            "start": 187.69999998807907,
+            "end": 401.09999999403954,
+            "duration": 213.40000000596046,
+            "bytes": 2207,
+            "initiator": "link"
+          },
+          {
+            "name": "/_next/static/css/38d485da94015b92.css",
+            "start": 187.69999998807907,
+            "end": 416,
+            "duration": 228.30000001192093,
+            "bytes": 1231,
+            "initiator": "link"
+          },
+          {
+            "name": "/optimized/e68935fd0b33a39b-240.webp",
+            "start": 187.69999998807907,
+            "end": 993.8999999761581,
+            "duration": 806.1999999880791,
+            "bytes": 3782,
+            "initiator": "link"
+          },
+          {
+            "name": "/optimized/159093844148271c-240.webp",
+            "start": 187.69999998807907,
+            "end": 1001.5999999940395,
+            "duration": 813.9000000059605,
+            "bytes": 4802,
+            "initiator": "link"
+          },
+          {
+            "name": "/_next/static/css/9948d50dd0c2f555.css",
+            "start": 195.89999997615814,
+            "end": 423.59999999403954,
+            "duration": 227.7000000178814,
+            "bytes": 743,
+            "initiator": "link"
+          },
+          {
+            "name": "/_next/static/chunks/webpack-faac3c6bfbd0791b.js",
+            "start": 195.89999997615814,
+            "end": 1031.3999999761581,
+            "duration": 835.5,
+            "bytes": 2811,
+            "initiator": "link"
+          },
+          {
+            "name": "/_next/static/chunks/4bd1b696-f785427dddbba9fb.js",
+            "start": 196,
+            "end": 1916.5999999940395,
+            "duration": 1720.5999999940395,
+            "bytes": 54359,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/1255-b84741b894bb9354.js",
+            "start": 196,
+            "end": 1939.199999988079,
+            "duration": 1743.199999988079,
+            "bytes": 46708,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/main-app-8054e35eb3fa5ffb.js",
+            "start": 196.09999999403954,
+            "end": 1166.7999999821186,
+            "duration": 970.6999999880791,
+            "bytes": 560,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/2619-3c9e02e22d10480a.js",
+            "start": 196.09999999403954,
+            "end": 1234.0999999940395,
+            "duration": 1038,
+            "bytes": 3388,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/4104-5baf32942e4cbd52.js",
+            "start": 199,
+            "end": 1286.699999988079,
+            "duration": 1087.699999988079,
+            "bytes": 4340,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/1362-094dc1d9327d299f.js",
+            "start": 199,
+            "end": 1503.5999999940395,
+            "duration": 1304.5999999940395,
+            "bytes": 8572,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/3068-4875d81ad21e609b.js",
+            "start": 199.5,
+            "end": 1444.199999988079,
+            "duration": 1244.699999988079,
+            "bytes": 5197,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/1372-ee9fef3f7ff9cc13.js",
+            "start": 199.5,
+            "end": 1526.5,
+            "duration": 1327,
+            "bytes": 4805,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/9807-31983b693d71cbab.js",
+            "start": 199.59999999403954,
+            "end": 1616.5,
+            "duration": 1416.9000000059605,
+            "bytes": 7077,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/8578-79ec2432efaa185f.js",
+            "start": 200,
+            "end": 1668.8999999761581,
+            "duration": 1468.8999999761581,
+            "bytes": 3696,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/app/page-866ed4da39965e94.js",
+            "start": 200.09999999403954,
+            "end": 1788.5999999940395,
+            "duration": 1588.5,
+            "bytes": 6813,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/app/layout-ffa3527ff7262ce9.js",
+            "start": 200.09999999403954,
+            "end": 1795.7999999821186,
+            "duration": 1595.699999988079,
+            "bytes": 4472,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/app/error-d58b36beab2ea5f1.js",
+            "start": 200.09999999403954,
+            "end": 1826.699999988079,
+            "duration": 1626.5999999940395,
+            "bytes": 974,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/app/not-found-39d43097f419a748.js",
+            "start": 200.19999998807907,
+            "end": 1849.5,
+            "duration": 1649.300000011921,
+            "bytes": 188,
+            "initiator": "script"
+          },
+          {
+            "name": "/optimized/b5a9cd0f62e99d39-240.webp",
+            "start": 200.19999998807907,
+            "end": 1990.8999999761581,
+            "duration": 1790.699999988079,
+            "bytes": 5102,
+            "initiator": "link"
+          },
+          {
+            "name": "/optimized/03c6128422f457c4-240.webp",
+            "start": 200.89999997615814,
+            "end": 2006,
+            "duration": 1805.1000000238419,
+            "bytes": 4294,
+            "initiator": "link"
+          },
+          {
+            "name": "/optimized/a32069f7c78dfaf8-240.webp",
+            "start": 200.89999997615814,
+            "end": 2043.8999999761581,
+            "duration": 1843,
+            "bytes": 4246,
+            "initiator": "link"
+          },
+          {
+            "name": "/optimized/293c83498da3edb7-240.webp",
+            "start": 201.39999997615814,
+            "end": 2059.0999999940395,
+            "duration": 1857.7000000178814,
+            "bytes": 4162,
+            "initiator": "link"
+          },
+          {
+            "name": "/optimized/44c02b794427b1b9-240.webp",
+            "start": 201.5,
+            "end": 2089.2999999821186,
+            "duration": 1887.7999999821186,
+            "bytes": 3264,
+            "initiator": "link"
+          },
+          {
+            "name": "/optimized/575a66ca7c5efc40-240.webp",
+            "start": 201.59999999403954,
+            "end": 2118.7999999821186,
+            "duration": 1917.199999988079,
+            "bytes": 4766,
+            "initiator": "link"
+          },
+          {
+            "name": "/optimized/286432a191091959-240.webp",
+            "start": 201.89999997615814,
+            "end": 2179.7999999821186,
+            "duration": 1977.9000000059605,
+            "bytes": 4364,
+            "initiator": "link"
+          },
+          {
+            "name": "/optimized/ccf3e820b21d0ded-240.webp",
+            "start": 201.89999997615814,
+            "end": 2201.7999999821186,
+            "duration": 1999.9000000059605,
+            "bytes": 4038,
+            "initiator": "link"
+          },
+          {
+            "name": "/optimized/1a9115411a6e8871-240.webp",
+            "start": 202,
+            "end": 2283.699999988079,
+            "duration": 2081.699999988079,
+            "bytes": 7506,
+            "initiator": "link"
+          },
+          {
+            "name": "/images/founder/dr-sukhsimranjit-singh.png",
+            "start": 1160.5999999940395,
+            "end": 3446.2999999821186,
+            "duration": 2285.699999988079,
+            "bytes": 220256,
+            "initiator": "img"
+          },
+          {
+            "name": "/api/content/site",
+            "start": 2311.399999976158,
+            "end": 2479.5999999940395,
+            "duration": 168.2000000178814,
+            "bytes": 272,
+            "initiator": "fetch"
+          },
+          {
+            "name": "/api/page-sections/landing",
+            "start": 2477.5,
+            "end": 2643.699999988079,
+            "duration": 166.19999998807907,
+            "bytes": 28,
+            "initiator": "fetch"
+          },
+          {
+            "name": "/api/video-reviews",
+            "start": 2488.2999999821186,
+            "end": 2726.5,
+            "duration": 238.2000000178814,
+            "bytes": 4542,
+            "initiator": "fetch"
+          },
+          {
+            "name": "/api/content/landing",
+            "start": 2493,
+            "end": 2763.5999999940395,
+            "duration": 270.59999999403954,
+            "bytes": 8330,
+            "initiator": "fetch"
+          },
+          {
+            "name": "/favicon.ico",
+            "start": 3465.2999999821186,
+            "end": 3671.699999988079,
+            "duration": 206.40000000596046,
+            "bytes": 6382,
+            "initiator": "other"
+          },
+          {
+            "name": "/api/content/team",
+            "start": 3478.5999999940395,
+            "end": 3693.699999988079,
+            "duration": 215.09999999403954,
+            "bytes": 6007,
+            "initiator": "fetch"
+          },
+          {
+            "name": "/api/content/events",
+            "start": 3480,
+            "end": 3649.699999988079,
+            "duration": 169.69999998807907,
+            "bytes": 28,
+            "initiator": "fetch"
+          },
+          {
+            "name": "/optimized/a97ce5db60a034d1-480.webp",
+            "start": 3702.0999999940395,
+            "end": 3949.0999999940395,
+            "duration": 247,
+            "bytes": 8610,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/c7d3ae1455dd2e3d-480.webp",
+            "start": 3704,
+            "end": 4008.5999999940395,
+            "duration": 304.59999999403954,
+            "bytes": 19108,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/f03e702faeb36387-480.webp",
+            "start": 3966.5,
+            "end": 4248.399999976158,
+            "duration": 281.89999997615814,
+            "bytes": 18216,
+            "initiator": "img"
+          }
+        ],
+        "visibleImages": [
+          {
+            "src": "http://127.0.0.1:3108/singh-academy-logo-clean.png",
+            "complete": true
+          },
+          {
+            "src": "http://127.0.0.1:3108/optimized/9c34a34e240a7dc2-480.webp",
+            "complete": true
+          }
+        ],
+        "overflow": false
+      },
+      "videos": {
+        "metrics": {
+          "lcp": 636,
+          "cls": 0.0024780563301228056,
+          "heroSources": [],
+          "firstSection": null,
+          "playing": [
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f4?preview=1&rendition=0000000000000000000001f4",
+              "at": 2542.300000011921
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f4?preview=1&rendition=0000000000000000000001f4",
+              "at": 2549.800000011921
+            }
+          ],
+          "posters": [
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f4?poster=1",
+              "at": 621.1999999880791
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f5?poster=1",
+              "at": 2308.800000011921
+            }
+          ],
+          "errors": []
+        },
+        "posterElements": 1,
+        "videoElements": 2,
+        "posterRequests": 3,
+        "videoResources": [
+          {
+            "name": "http://127.0.0.1:3108/api/media/0000000000000000000001f4?preview=1&rendition=0000000000000000000001f4",
+            "start": 2186.699999988079,
+            "end": 2528.9000000059605,
+            "bytes": 18112
+          },
+          {
+            "name": "http://127.0.0.1:3108/api/media/0000000000000000000001f5?preview=1&rendition=0000000000000000000001f5",
+            "start": 2199.300000011921,
+            "end": 2536.300000011921,
+            "bytes": 18112
+          }
+        ],
+        "visibleVideos": [
+          {
+            "paused": false,
+            "time": 0.716536,
+            "muted": true
+          },
+          {
+            "paused": true,
+            "time": 0,
+            "muted": true
+          }
+        ],
+        "overflow": false
+      },
+      "errors": []
+    },
+    {
+      "mode": "mobile-fast3g",
+      "sample": 1,
+      "landing": {
+        "metrics": {
+          "lcp": 1104,
+          "cls": 0,
+          "heroSources": [
+            {
+              "src": "/optimized/9c34a34e240a7dc2-800.webp",
+              "at": 602.0999999940395
+            }
+          ],
+          "firstSection": 1058.0999999940395,
+          "playing": [],
+          "posters": [],
+          "errors": []
+        },
+        "navigation": {
+          "name": "http://127.0.0.1:3108/",
+          "entryType": "navigation",
+          "startTime": 0,
+          "duration": 3471,
+          "navigationId": 4406,
+          "initiatorType": "navigation",
+          "deliveryType": "",
+          "nextHopProtocol": "http/1.1",
+          "renderBlockingStatus": "non-blocking",
+          "contentType": "text/html",
+          "contentEncoding": "gzip",
+          "workerStart": 0,
+          "workerRouterEvaluationStart": 0,
+          "workerCacheLookupStart": 0,
+          "workerMatchedSourceType": "",
+          "workerFinalSourceType": "",
+          "redirectStart": 0,
+          "redirectEnd": 0,
+          "fetchStart": 0.5999999940395355,
+          "domainLookupStart": 0.5999999940395355,
+          "domainLookupEnd": 0.5999999940395355,
+          "connectStart": 0.5999999940395355,
+          "secureConnectionStart": 0,
+          "connectEnd": 0.5999999940395355,
+          "requestStart": 1.9000000059604645,
+          "responseStart": 67.2000000178814,
+          "firstInterimResponseStart": 0,
+          "finalResponseHeadersStart": 67.2000000178814,
+          "responseEnd": 229.90000000596046,
+          "transferSize": 15117,
+          "encodedBodySize": 14817,
+          "decodedBodySize": 121435,
+          "responseStatus": 200,
+          "serverTiming": [],
+          "unloadEventStart": 0,
+          "unloadEventEnd": 0,
+          "domInteractive": 664.5,
+          "domContentLoadedEventStart": 664.5999999940395,
+          "domContentLoadedEventEnd": 664.5999999940395,
+          "domComplete": 3471,
+          "loadEventStart": 3471,
+          "loadEventEnd": 3471,
+          "type": "navigate",
+          "redirectCount": 0,
+          "activationStart": 0,
+          "criticalCHRestart": 0,
+          "notRestoredReasons": null,
+          "confidence": {
+            "randomizedTriggerRate": 0.4994798,
+            "value": "high"
+          }
+        },
+        "fcp": 596,
+        "resources": [
+          {
+            "name": "/_next/static/css/b0fbcacf720193d7.css",
+            "start": 188.80000001192093,
+            "end": 559.5999999940395,
+            "duration": 370.7999999821186,
+            "bytes": 13942,
+            "initiator": "link"
+          },
+          {
+            "name": "/singh-academy-logo-clean.png",
+            "start": 206.2000000178814,
+            "end": 1151.7000000178814,
+            "duration": 945.5,
+            "bytes": 55621,
+            "initiator": "link"
+          },
+          {
+            "name": "/optimized/9c34a34e240a7dc2-480.webp",
+            "start": 206.40000000596046,
+            "end": 709.7000000178814,
+            "duration": 503.30000001192093,
+            "bytes": 18964,
+            "initiator": "link"
+          },
+          {
+            "name": "/optimized/a97ce5db60a034d1-240.webp",
+            "start": 206.59999999403954,
+            "end": 672.0999999940395,
+            "duration": 465.5,
+            "bytes": 3434,
+            "initiator": "link"
+          },
+          {
+            "name": "/optimized/c7d3ae1455dd2e3d-240.webp",
+            "start": 209.40000000596046,
+            "end": 747.0999999940395,
+            "duration": 537.6999999880791,
+            "bytes": 5690,
+            "initiator": "link"
+          },
+          {
+            "name": "/optimized/f03e702faeb36387-240.webp",
+            "start": 209.59999999403954,
+            "end": 761.8000000119209,
+            "duration": 552.2000000178814,
+            "bytes": 6012,
+            "initiator": "link"
+          },
+          {
+            "name": "/optimized/c0f77440330c1fc6-240.webp",
+            "start": 210.7000000178814,
+            "end": 784.9000000059605,
+            "duration": 574.1999999880791,
+            "bytes": 3044,
+            "initiator": "link"
+          },
+          {
+            "name": "/optimized/8285e7b5e6daba8d-240.webp",
+            "start": 210.80000001192093,
+            "end": 889.9000000059605,
+            "duration": 679.0999999940395,
+            "bytes": 5340,
+            "initiator": "link"
+          },
+          {
+            "name": "/optimized/218ac50924ec0449-240.webp",
+            "start": 210.90000000596046,
+            "end": 994.5999999940395,
+            "duration": 783.6999999880791,
+            "bytes": 6252,
+            "initiator": "link"
+          },
+          {
+            "name": "/optimized/159093844148271c-240.webp",
+            "start": 211.7000000178814,
+            "end": 1024.800000011921,
+            "duration": 813.0999999940395,
+            "bytes": 4802,
+            "initiator": "link"
+          },
+          {
+            "name": "/optimized/e68935fd0b33a39b-240.webp",
+            "start": 212.2000000178814,
+            "end": 1017.7000000178814,
+            "duration": 805.5,
+            "bytes": 3782,
+            "initiator": "link"
+          },
+          {
+            "name": "/_next/static/css/5695babccd524f26.css",
+            "start": 212.90000000596046,
+            "end": 432.40000000596046,
+            "duration": 219.5,
+            "bytes": 2207,
+            "initiator": "link"
+          },
+          {
+            "name": "/_next/static/css/9948d50dd0c2f555.css",
+            "start": 213.09999999403954,
+            "end": 424.80000001192093,
+            "duration": 211.7000000178814,
+            "bytes": 743,
+            "initiator": "link"
+          },
+          {
+            "name": "/_next/static/css/38d485da94015b92.css",
+            "start": 213.09999999403954,
+            "end": 439.2000000178814,
+            "duration": 226.10000002384186,
+            "bytes": 1231,
+            "initiator": "link"
+          },
+          {
+            "name": "/_next/static/chunks/webpack-faac3c6bfbd0791b.js",
+            "start": 215.7000000178814,
+            "end": 1039.5,
+            "duration": 823.7999999821186,
+            "bytes": 2811,
+            "initiator": "link"
+          },
+          {
+            "name": "/_next/static/chunks/4bd1b696-f785427dddbba9fb.js",
+            "start": 217.59999999403954,
+            "end": 1925.2000000178814,
+            "duration": 1707.6000000238419,
+            "bytes": 54359,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/1255-b84741b894bb9354.js",
+            "start": 217.59999999403954,
+            "end": 1947,
+            "duration": 1729.4000000059605,
+            "bytes": 46708,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/main-app-8054e35eb3fa5ffb.js",
+            "start": 217.7000000178814,
+            "end": 1189.7000000178814,
+            "duration": 972,
+            "bytes": 560,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/2619-3c9e02e22d10480a.js",
+            "start": 218.59999999403954,
+            "end": 1265.0999999940395,
+            "duration": 1046.5,
+            "bytes": 3388,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/4104-5baf32942e4cbd52.js",
+            "start": 218.7000000178814,
+            "end": 1302.7000000178814,
+            "duration": 1084,
+            "bytes": 4340,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/3068-4875d81ad21e609b.js",
+            "start": 218.80000001192093,
+            "end": 1467.0999999940395,
+            "duration": 1248.2999999821186,
+            "bytes": 5197,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/1362-094dc1d9327d299f.js",
+            "start": 218.80000001192093,
+            "end": 1511.9000000059605,
+            "duration": 1293.0999999940395,
+            "bytes": 8572,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/1372-ee9fef3f7ff9cc13.js",
+            "start": 218.90000000596046,
+            "end": 1557.2000000178814,
+            "duration": 1338.300000011921,
+            "bytes": 4805,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/9807-31983b693d71cbab.js",
+            "start": 219.80000001192093,
+            "end": 1632.5,
+            "duration": 1412.699999988079,
+            "bytes": 7077,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/8578-79ec2432efaa185f.js",
+            "start": 219.90000000596046,
+            "end": 1699.5,
+            "duration": 1479.5999999940395,
+            "bytes": 3696,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/app/page-866ed4da39965e94.js",
+            "start": 219.90000000596046,
+            "end": 1812.5999999940395,
+            "duration": 1592.699999988079,
+            "bytes": 6813,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/app/layout-ffa3527ff7262ce9.js",
+            "start": 219.90000000596046,
+            "end": 1834.9000000059605,
+            "duration": 1615,
+            "bytes": 4472,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/app/error-d58b36beab2ea5f1.js",
+            "start": 220,
+            "end": 1850.300000011921,
+            "duration": 1630.300000011921,
+            "bytes": 974,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/app/not-found-39d43097f419a748.js",
+            "start": 220,
+            "end": 1872.5999999940395,
+            "duration": 1652.5999999940395,
+            "bytes": 188,
+            "initiator": "script"
+          },
+          {
+            "name": "/optimized/b5a9cd0f62e99d39-240.webp",
+            "start": 221,
+            "end": 1991.7000000178814,
+            "duration": 1770.7000000178814,
+            "bytes": 5102,
+            "initiator": "link"
+          },
+          {
+            "name": "/optimized/03c6128422f457c4-240.webp",
+            "start": 221,
+            "end": 2037.2000000178814,
+            "duration": 1816.2000000178814,
+            "bytes": 4294,
+            "initiator": "link"
+          },
+          {
+            "name": "/optimized/a32069f7c78dfaf8-240.webp",
+            "start": 221.09999999403954,
+            "end": 2067.0999999940395,
+            "duration": 1846,
+            "bytes": 4246,
+            "initiator": "link"
+          },
+          {
+            "name": "/optimized/293c83498da3edb7-240.webp",
+            "start": 221.90000000596046,
+            "end": 2081.9000000059605,
+            "duration": 1860,
+            "bytes": 4162,
+            "initiator": "link"
+          },
+          {
+            "name": "/optimized/44c02b794427b1b9-240.webp",
+            "start": 221.90000000596046,
+            "end": 2105,
+            "duration": 1883.0999999940395,
+            "bytes": 3264,
+            "initiator": "link"
+          },
+          {
+            "name": "/optimized/575a66ca7c5efc40-240.webp",
+            "start": 221.90000000596046,
+            "end": 2134.4000000059605,
+            "duration": 1912.5,
+            "bytes": 4766,
+            "initiator": "link"
+          },
+          {
+            "name": "/optimized/286432a191091959-240.webp",
+            "start": 222.59999999403954,
+            "end": 2172,
+            "duration": 1949.4000000059605,
+            "bytes": 4364,
+            "initiator": "link"
+          },
+          {
+            "name": "/optimized/ccf3e820b21d0ded-240.webp",
+            "start": 222.7000000178814,
+            "end": 2216.800000011921,
+            "duration": 1994.0999999940395,
+            "bytes": 4038,
+            "initiator": "link"
+          },
+          {
+            "name": "/optimized/1a9115411a6e8871-240.webp",
+            "start": 222.80000001192093,
+            "end": 2292.2000000178814,
+            "duration": 2069.4000000059605,
+            "bytes": 7506,
+            "initiator": "link"
+          },
+          {
+            "name": "/images/founder/dr-sukhsimranjit-singh.png",
+            "start": 1086.5,
+            "end": 3461.9000000059605,
+            "duration": 2375.4000000059605,
+            "bytes": 220256,
+            "initiator": "img"
+          },
+          {
+            "name": "/api/content/site",
+            "start": 2339.0999999940395,
+            "end": 2502.5,
+            "duration": 163.40000000596046,
+            "bytes": 272,
+            "initiator": "fetch"
+          },
+          {
+            "name": "/api/page-sections/landing",
+            "start": 2502.5,
+            "end": 2667.5999999940395,
+            "duration": 165.09999999403954,
+            "bytes": 28,
+            "initiator": "fetch"
+          },
+          {
+            "name": "/api/video-reviews",
+            "start": 2515.2000000178814,
+            "end": 2750.0999999940395,
+            "duration": 234.89999997615814,
+            "bytes": 4542,
+            "initiator": "fetch"
+          },
+          {
+            "name": "/api/content/landing",
+            "start": 2520.5,
+            "end": 2787.5,
+            "duration": 267,
+            "bytes": 8330,
+            "initiator": "fetch"
+          },
+          {
+            "name": "/api/content/team",
+            "start": 3487.9000000059605,
+            "end": 3701.7000000178814,
+            "duration": 213.80000001192093,
+            "bytes": 6007,
+            "initiator": "fetch"
+          },
+          {
+            "name": "/api/content/events",
+            "start": 3489.9000000059605,
+            "end": 3650,
+            "duration": 160.09999999403954,
+            "bytes": 28,
+            "initiator": "fetch"
+          },
+          {
+            "name": "/favicon.ico",
+            "start": 3499.9000000059605,
+            "end": 3717.4000000059605,
+            "duration": 217.5,
+            "bytes": 6382,
+            "initiator": "other"
+          },
+          {
+            "name": "/optimized/a97ce5db60a034d1-480.webp",
+            "start": 3704.0999999940395,
+            "end": 3949.5999999940395,
+            "duration": 245.5,
+            "bytes": 8610,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/c7d3ae1455dd2e3d-480.webp",
+            "start": 3704.2000000178814,
+            "end": 4009.800000011921,
+            "duration": 305.59999999403954,
+            "bytes": 19108,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/f03e702faeb36387-480.webp",
+            "start": 3962.9000000059605,
+            "end": 4250.300000011921,
+            "duration": 287.40000000596046,
+            "bytes": 18216,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/c0f77440330c1fc6-480.webp",
+            "start": 4021.0999999940395,
+            "end": 4257.700000017881,
+            "duration": 236.60000002384186,
+            "bytes": 7202,
+            "initiator": "img"
+          }
+        ],
+        "visibleImages": [
+          {
+            "src": "http://127.0.0.1:3108/singh-academy-logo-clean.png",
+            "complete": true
+          },
+          {
+            "src": "http://127.0.0.1:3108/optimized/9c34a34e240a7dc2-480.webp",
+            "complete": true
+          }
+        ],
+        "overflow": false
+      },
+      "videos": {
+        "metrics": {
+          "lcp": 640,
+          "cls": 0.0024780563301228056,
+          "heroSources": [],
+          "firstSection": null,
+          "playing": [
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f4?preview=1&rendition=0000000000000000000001f4",
+              "at": 2552.7999999821186
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f4?preview=1&rendition=0000000000000000000001f4",
+              "at": 2568.7999999821186
+            }
+          ],
+          "posters": [
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f4?poster=1",
+              "at": 630.0999999940395
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f5?poster=1",
+              "at": 2319.699999988079
+            }
+          ],
+          "errors": []
+        },
+        "posterElements": 1,
+        "videoElements": 2,
+        "posterRequests": 3,
+        "videoResources": [
+          {
+            "name": "http://127.0.0.1:3108/api/media/0000000000000000000001f4?preview=1&rendition=0000000000000000000001f4",
+            "start": 2217.7999999821186,
+            "end": 2539.699999988079,
+            "bytes": 18112
+          },
+          {
+            "name": "http://127.0.0.1:3108/api/media/0000000000000000000001f5?preview=1&rendition=0000000000000000000001f5",
+            "start": 2235.2999999821186,
+            "end": 2562,
+            "bytes": 18112
+          }
+        ],
+        "visibleVideos": [
+          {
+            "paused": false,
+            "time": 0.711914,
+            "muted": true
+          },
+          {
+            "paused": true,
+            "time": 0,
+            "muted": true
+          }
+        ],
+        "overflow": false
+      },
+      "errors": []
+    },
+    {
+      "mode": "mobile-fast3g",
+      "sample": 2,
+      "landing": {
+        "metrics": {
+          "lcp": 1168,
+          "cls": 0,
+          "heroSources": [
+            {
+              "src": "/optimized/9c34a34e240a7dc2-800.webp",
+              "at": 580.5999999940395
+            }
+          ],
+          "firstSection": 1106.5,
+          "playing": [],
+          "posters": [],
+          "errors": []
+        },
+        "navigation": {
+          "name": "http://127.0.0.1:3108/",
+          "entryType": "navigation",
+          "startTime": 0,
+          "duration": 3501.800000011921,
+          "navigationId": 1271,
+          "initiatorType": "navigation",
+          "deliveryType": "",
+          "nextHopProtocol": "http/1.1",
+          "renderBlockingStatus": "non-blocking",
+          "contentType": "text/html",
+          "contentEncoding": "gzip",
+          "workerStart": 0,
+          "workerRouterEvaluationStart": 0,
+          "workerCacheLookupStart": 0,
+          "workerMatchedSourceType": "",
+          "workerFinalSourceType": "",
+          "redirectStart": 0,
+          "redirectEnd": 0,
+          "fetchStart": 0.9000000059604645,
+          "domainLookupStart": 0.9000000059604645,
+          "domainLookupEnd": 0.9000000059604645,
+          "connectStart": 0.9000000059604645,
+          "secureConnectionStart": 0,
+          "connectEnd": 0.9000000059604645,
+          "requestStart": 2,
+          "responseStart": 37.69999998807907,
+          "firstInterimResponseStart": 0,
+          "finalResponseHeadersStart": 37.69999998807907,
+          "responseEnd": 229.69999998807907,
+          "transferSize": 15112,
+          "encodedBodySize": 14812,
+          "decodedBodySize": 121435,
+          "responseStatus": 200,
+          "serverTiming": [],
+          "unloadEventStart": 0,
+          "unloadEventEnd": 0,
+          "domInteractive": 648.5999999940395,
+          "domContentLoadedEventStart": 648.6999999880791,
+          "domContentLoadedEventEnd": 648.6999999880791,
+          "domComplete": 3501.800000011921,
+          "loadEventStart": 3501.800000011921,
+          "loadEventEnd": 3501.800000011921,
+          "type": "navigate",
+          "redirectCount": 0,
+          "activationStart": 0,
+          "criticalCHRestart": 0,
+          "notRestoredReasons": null,
+          "confidence": {
+            "randomizedTriggerRate": 0.4994798,
+            "value": "low"
+          }
+        },
+        "fcp": 580,
+        "resources": [
+          {
+            "name": "/_next/static/css/b0fbcacf720193d7.css",
+            "start": 187.80000001192093,
+            "end": 537.4000000059605,
+            "duration": 349.59999999403954,
+            "bytes": 13942,
+            "initiator": "link"
+          },
+          {
+            "name": "/singh-academy-logo-clean.png",
+            "start": 204.19999998807907,
+            "end": 1152.4000000059605,
+            "duration": 948.2000000178814,
+            "bytes": 55621,
+            "initiator": "link"
+          },
+          {
+            "name": "/optimized/a97ce5db60a034d1-240.webp",
+            "start": 205.40000000596046,
+            "end": 627.5999999940395,
+            "duration": 422.19999998807907,
+            "bytes": 3434,
+            "initiator": "link"
+          },
+          {
+            "name": "/optimized/9c34a34e240a7dc2-480.webp",
+            "start": 205.40000000596046,
+            "end": 747.0999999940395,
+            "duration": 541.6999999880791,
+            "bytes": 18964,
+            "initiator": "link"
+          },
+          {
+            "name": "/optimized/c7d3ae1455dd2e3d-240.webp",
+            "start": 205.5,
+            "end": 732.4000000059605,
+            "duration": 526.9000000059605,
+            "bytes": 5690,
+            "initiator": "link"
+          },
+          {
+            "name": "/optimized/f03e702faeb36387-240.webp",
+            "start": 205.5,
+            "end": 754.8000000119209,
+            "duration": 549.3000000119209,
+            "bytes": 6012,
+            "initiator": "link"
+          },
+          {
+            "name": "/optimized/c0f77440330c1fc6-240.webp",
+            "start": 205.59999999403954,
+            "end": 776.6999999880791,
+            "duration": 571.0999999940395,
+            "bytes": 3044,
+            "initiator": "link"
+          },
+          {
+            "name": "/optimized/8285e7b5e6daba8d-240.webp",
+            "start": 205.59999999403954,
+            "end": 837,
+            "duration": 631.4000000059605,
+            "bytes": 5340,
+            "initiator": "link"
+          },
+          {
+            "name": "/optimized/218ac50924ec0449-240.webp",
+            "start": 205.59999999403954,
+            "end": 1016.5,
+            "duration": 810.9000000059605,
+            "bytes": 6252,
+            "initiator": "link"
+          },
+          {
+            "name": "/optimized/159093844148271c-240.webp",
+            "start": 205.69999998807907,
+            "end": 1032.199999988079,
+            "duration": 826.5,
+            "bytes": 4802,
+            "initiator": "link"
+          },
+          {
+            "name": "/_next/static/css/5695babccd524f26.css",
+            "start": 205.80000001192093,
+            "end": 417.09999999403954,
+            "duration": 211.2999999821186,
+            "bytes": 2207,
+            "initiator": "link"
+          },
+          {
+            "name": "/_next/static/css/38d485da94015b92.css",
+            "start": 205.80000001192093,
+            "end": 431.80000001192093,
+            "duration": 226,
+            "bytes": 1231,
+            "initiator": "link"
+          },
+          {
+            "name": "/optimized/e68935fd0b33a39b-240.webp",
+            "start": 205.80000001192093,
+            "end": 1009.6999999880791,
+            "duration": 803.8999999761581,
+            "bytes": 3782,
+            "initiator": "link"
+          },
+          {
+            "name": "/_next/static/css/9948d50dd0c2f555.css",
+            "start": 205.90000000596046,
+            "end": 394.09999999403954,
+            "duration": 188.19999998807907,
+            "bytes": 743,
+            "initiator": "link"
+          },
+          {
+            "name": "/_next/static/chunks/webpack-faac3c6bfbd0791b.js",
+            "start": 209,
+            "end": 1047.5999999940395,
+            "duration": 838.5999999940395,
+            "bytes": 2811,
+            "initiator": "link"
+          },
+          {
+            "name": "/_next/static/chunks/main-app-8054e35eb3fa5ffb.js",
+            "start": 209.19999998807907,
+            "end": 1183.0999999940395,
+            "duration": 973.9000000059605,
+            "bytes": 560,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/2619-3c9e02e22d10480a.js",
+            "start": 209.19999998807907,
+            "end": 1264.9000000059605,
+            "duration": 1055.7000000178814,
+            "bytes": 3388,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/4bd1b696-f785427dddbba9fb.js",
+            "start": 209.19999998807907,
+            "end": 1909.0999999940395,
+            "duration": 1699.9000000059605,
+            "bytes": 54359,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/1255-b84741b894bb9354.js",
+            "start": 209.19999998807907,
+            "end": 1939.800000011921,
+            "duration": 1730.6000000238419,
+            "bytes": 46708,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/4104-5baf32942e4cbd52.js",
+            "start": 209.30000001192093,
+            "end": 1309.800000011921,
+            "duration": 1100.5,
+            "bytes": 4340,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/1362-094dc1d9327d299f.js",
+            "start": 209.30000001192093,
+            "end": 1519.699999988079,
+            "duration": 1310.3999999761581,
+            "bytes": 8572,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/3068-4875d81ad21e609b.js",
+            "start": 209.59999999403954,
+            "end": 1459.5999999940395,
+            "duration": 1250,
+            "bytes": 5197,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/1372-ee9fef3f7ff9cc13.js",
+            "start": 209.69999998807907,
+            "end": 1557.0999999940395,
+            "duration": 1347.4000000059605,
+            "bytes": 4805,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/9807-31983b693d71cbab.js",
+            "start": 209.80000001192093,
+            "end": 1632.199999988079,
+            "duration": 1422.3999999761581,
+            "bytes": 7077,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/8578-79ec2432efaa185f.js",
+            "start": 209.80000001192093,
+            "end": 1685,
+            "duration": 1475.199999988079,
+            "bytes": 3696,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/app/page-866ed4da39965e94.js",
+            "start": 210,
+            "end": 1811.5999999940395,
+            "duration": 1601.5999999940395,
+            "bytes": 6813,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/app/layout-ffa3527ff7262ce9.js",
+            "start": 210.09999999403954,
+            "end": 1834.699999988079,
+            "duration": 1624.5999999940395,
+            "bytes": 4472,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/app/error-d58b36beab2ea5f1.js",
+            "start": 210.09999999403954,
+            "end": 1850.0999999940395,
+            "duration": 1640,
+            "bytes": 974,
+            "initiator": "script"
+          },
+          {
+            "name": "/_next/static/chunks/app/not-found-39d43097f419a748.js",
+            "start": 210.09999999403954,
+            "end": 1864.800000011921,
+            "duration": 1654.7000000178814,
+            "bytes": 188,
+            "initiator": "script"
+          },
+          {
+            "name": "/optimized/b5a9cd0f62e99d39-240.webp",
+            "start": 210.19999998807907,
+            "end": 1992.199999988079,
+            "duration": 1782,
+            "bytes": 5102,
+            "initiator": "link"
+          },
+          {
+            "name": "/optimized/03c6128422f457c4-240.webp",
+            "start": 210.19999998807907,
+            "end": 2045.0999999940395,
+            "duration": 1834.9000000059605,
+            "bytes": 4294,
+            "initiator": "link"
+          },
+          {
+            "name": "/optimized/a32069f7c78dfaf8-240.webp",
+            "start": 213.59999999403954,
+            "end": 2066.699999988079,
+            "duration": 1853.0999999940395,
+            "bytes": 4246,
+            "initiator": "link"
+          },
+          {
+            "name": "/optimized/293c83498da3edb7-240.webp",
+            "start": 214.59999999403954,
+            "end": 2089.9000000059605,
+            "duration": 1875.300000011921,
+            "bytes": 4162,
+            "initiator": "link"
+          },
+          {
+            "name": "/optimized/44c02b794427b1b9-240.webp",
+            "start": 215.19999998807907,
+            "end": 2112,
+            "duration": 1896.800000011921,
+            "bytes": 3264,
+            "initiator": "link"
+          },
+          {
+            "name": "/optimized/575a66ca7c5efc40-240.webp",
+            "start": 215.30000001192093,
+            "end": 2134,
+            "duration": 1918.699999988079,
+            "bytes": 4766,
+            "initiator": "link"
+          },
+          {
+            "name": "/optimized/286432a191091959-240.webp",
+            "start": 215.90000000596046,
+            "end": 2171.699999988079,
+            "duration": 1955.7999999821186,
+            "bytes": 4364,
+            "initiator": "link"
+          },
+          {
+            "name": "/optimized/ccf3e820b21d0ded-240.webp",
+            "start": 215.90000000596046,
+            "end": 2224.300000011921,
+            "duration": 2008.4000000059605,
+            "bytes": 4038,
+            "initiator": "link"
+          },
+          {
+            "name": "/optimized/1a9115411a6e8871-240.webp",
+            "start": 216.30000001192093,
+            "end": 2292.300000011921,
+            "duration": 2076,
+            "bytes": 7506,
+            "initiator": "link"
+          },
+          {
+            "name": "/images/founder/dr-sukhsimranjit-singh.png",
+            "start": 1150.199999988079,
+            "end": 3469.0999999940395,
+            "duration": 2318.9000000059605,
+            "bytes": 220256,
+            "initiator": "img"
+          },
+          {
+            "name": "/api/content/site",
+            "start": 2295.5,
+            "end": 2456.800000011921,
+            "duration": 161.30000001192093,
+            "bytes": 272,
+            "initiator": "fetch"
+          },
+          {
+            "name": "/api/page-sections/landing",
+            "start": 2539.5,
+            "end": 2705.300000011921,
+            "duration": 165.80000001192093,
+            "bytes": 28,
+            "initiator": "fetch"
+          },
+          {
+            "name": "/api/video-reviews",
+            "start": 2553.300000011921,
+            "end": 2787.300000011921,
+            "duration": 234,
+            "bytes": 4542,
+            "initiator": "fetch"
+          },
+          {
+            "name": "/api/content/landing",
+            "start": 2557.699999988079,
+            "end": 2824.5999999940395,
+            "duration": 266.90000000596046,
+            "bytes": 8330,
+            "initiator": "fetch"
+          },
+          {
+            "name": "/api/content/team",
+            "start": 3499.0999999940395,
+            "end": 3716.5,
+            "duration": 217.40000000596046,
+            "bytes": 6007,
+            "initiator": "fetch"
+          },
+          {
+            "name": "/api/content/events",
+            "start": 3501,
+            "end": 3664.800000011921,
+            "duration": 163.80000001192093,
+            "bytes": 28,
+            "initiator": "fetch"
+          },
+          {
+            "name": "/favicon.ico",
+            "start": 3508.699999988079,
+            "end": 3731.800000011921,
+            "duration": 223.10000002384186,
+            "bytes": 6382,
+            "initiator": "other"
+          },
+          {
+            "name": "/optimized/a97ce5db60a034d1-480.webp",
+            "start": 3724,
+            "end": 3971.9000000059605,
+            "duration": 247.90000000596046,
+            "bytes": 8610,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/c7d3ae1455dd2e3d-480.webp",
+            "start": 3724.5,
+            "end": 4032.5999999940395,
+            "duration": 308.09999999403954,
+            "bytes": 19108,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/f03e702faeb36387-480.webp",
+            "start": 3983.300000011921,
+            "end": 4249.0999999940395,
+            "duration": 265.7999999821186,
+            "bytes": 18216,
+            "initiator": "img"
+          },
+          {
+            "name": "/optimized/c0f77440330c1fc6-480.webp",
+            "start": 4047,
+            "end": 4271.699999988079,
+            "duration": 224.69999998807907,
+            "bytes": 7202,
+            "initiator": "img"
+          }
+        ],
+        "visibleImages": [
+          {
+            "src": "http://127.0.0.1:3108/singh-academy-logo-clean.png",
+            "complete": true
+          },
+          {
+            "src": "http://127.0.0.1:3108/optimized/9c34a34e240a7dc2-480.webp",
+            "complete": true
+          }
+        ],
+        "overflow": false
+      },
+      "videos": {
+        "metrics": {
+          "lcp": 936,
+          "cls": 0.0024780563301228056,
+          "heroSources": [],
+          "firstSection": null,
+          "playing": [
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f4?preview=1&rendition=0000000000000000000001f4",
+              "at": 2411.9000000059605
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f4?preview=1&rendition=0000000000000000000001f4",
+              "at": 2419
+            }
+          ],
+          "posters": [
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f4?poster=1",
+              "at": 590
+            },
+            {
+              "src": "http://127.0.0.1:3108/api/media/0000000000000000000001f5?poster=1",
+              "at": 2209.5
+            }
+          ],
+          "errors": []
+        },
+        "posterElements": 1,
+        "videoElements": 2,
+        "posterRequests": 3,
+        "videoResources": [
+          {
+            "name": "http://127.0.0.1:3108/api/media/0000000000000000000001f4?preview=1&rendition=0000000000000000000001f4",
+            "start": 2069.5,
+            "end": 2397.300000011921,
+            "bytes": 18112
+          },
+          {
+            "name": "http://127.0.0.1:3108/api/media/0000000000000000000001f5?preview=1&rendition=0000000000000000000001f5",
+            "start": 2076.4000000059605,
+            "end": 2412.2000000178814,
+            "bytes": 18112
+          }
+        ],
+        "visibleVideos": [
+          {
+            "paused": false,
+            "time": 0.714252,
+            "muted": true
+          },
+          {
+            "paused": true,
+            "time": 0,
+            "muted": true
+          }
+        ],
+        "overflow": false
+      },
+      "errors": []
+    }
+  ]
+}

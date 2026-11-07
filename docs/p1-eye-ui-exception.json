@@ -1,0 +1,22 @@
+{
+  "patch": "PAYMENTS-P1-MEMBERSHIP-EYE-RELEASE",
+  "reason": "User-authorized inline borderless password eye and enrollment-only My Courses. All other UI assets unchanged.",
+  "files": [
+    {
+      "path": "frontend/components/auth/PasswordField.tsx",
+      "beforeSha256": "6cc4b1f57cef8b18d6ea0b1392b5441620db52f58477ad6a7321ba29e6d12e18",
+      "afterSha256": "50c712aa9197ab1b285f10ba40b9eafa1508b6b029d7179e0389016a427a16e2"
+    },
+    {
+      "path": "frontend/app/my-course/page.tsx",
+      "beforeSha256": "5682b9e0e068c5f8a8221c1dffbfc7334002cab4acd2f94187ae5532e0ca5160",
+      "afterSha256": "616c47d6a5f3764b276c6f9f4e5d6f3a3ec75058b35950d1bb71947bb570719f"
+    }
+  ],
+  "generatedArtifacts": [
+    "frontend/.ui-stack.lock",
+    "frontend/qa/ui-report/index.html",
+    "frontend/qa/ui-results.json"
+  ],
+  "generatedArtifactsNote": "Historical browser results/ephemeral process lock are not application UI. Original baseline is retained unchanged; these exact generated paths must not determine source preservation."
+}

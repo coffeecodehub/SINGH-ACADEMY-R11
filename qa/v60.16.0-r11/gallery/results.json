@@ -1,0 +1,59 @@
+{
+  "status": "passed",
+  "rows": [
+    {
+      "width": 390,
+      "before": {
+        "width": 240,
+        "height": 238,
+        "imgWidth": 240,
+        "imgHeight": 180,
+        "gap": "20px",
+        "padding": "12px",
+        "frameAspect": "4 / 3",
+        "viewport": 310,
+        "maxHeight": "720px"
+      },
+      "after": {
+        "width": 240,
+        "height": 238,
+        "imgWidth": 240,
+        "imgHeight": 180,
+        "gap": "20px",
+        "padding": "12px",
+        "frameAspect": "4 / 3",
+        "viewport": 310,
+        "maxHeight": "720px"
+      },
+      "step": 260,
+      "motion": "one-card advance; hover pause; final-to-first passed"
+    },
+    {
+      "width": 1440,
+      "before": {
+        "width": 700,
+        "height": 594.890625,
+        "imgWidth": 700,
+        "imgHeight": 525,
+        "gap": "20px",
+        "padding": "12px",
+        "frameAspect": "4 / 3",
+        "viewport": 1112,
+        "maxHeight": "720px"
+      },
+      "after": {
+        "width": 700,
+        "height": 594.890625,
+        "imgWidth": 700,
+        "imgHeight": 525,
+        "gap": "20px",
+        "padding": "12px",
+        "frameAspect": "4 / 3",
+        "viewport": 1112,
+        "maxHeight": "720px"
+      },
+      "step": 720,
+      "motion": "one-card advance; hover pause; final-to-first passed"
+    }
+  ]
+}

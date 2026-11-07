@@ -1,0 +1,6 @@
+desktop 0 LCP=620ms content=656ms posters=7 videoStart=279ms
+desktop 1 LCP=364ms content=432ms posters=7 videoStart=247ms
+desktop 2 LCP=364ms content=428ms posters=7 videoStart=278ms
+mobile-fast3g 0 LCP=1120ms content=1061ms posters=3 videoStart=2573ms
+mobile-fast3g 1 LCP=1076ms content=1031ms posters=3 videoStart=2586ms
+mobile-fast3g 2 LCP=1108ms content=1068ms posters=3 videoStart=2365ms

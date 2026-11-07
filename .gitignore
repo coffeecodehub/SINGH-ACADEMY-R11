@@ -1,0 +1,19 @@
+node_modules/
+.next/
+.env
+.env.*
+!.env.example
+!.env.deploy.example
+*.tsbuildinfo
+backend/src/.tmp-uploads/
+playwright-report/
+test-results/
+qa/fixtures-private/
+backups/
+*.archive.gz
+
+.next-ui-tests/
+.ui-stack.lock
+
+# Payment readiness output is local evidence, never a production credential store.
+qa/payment-live-readiness.json

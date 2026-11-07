@@ -1,0 +1,50 @@
+/** Synthetic regression tests only. No external providers or real database. */
+import test from 'node:test';import assert from 'node:assert/strict';import crypto from 'node:crypto';import fs from 'node:fs';
+import {load} from './testLoader.js';import {harness} from './inMemoryModels.js';import * as business from '../src/utils/business.js';
+import {paypalClientSecret} from '../src/utils/commerce.js';
+const oid='200000000000000000000001',remoteId='PAYPALFIXTUREORDER';
+function gateway({status='pending',captureAttempted=false,reconciled='pending'}={}){
+ const h=harness({CheckoutOrder:[{_id:oid,provider:'paypal',providerOrderId:remoteId,environment:'live',status,...(captureAttempted?{captureAttemptedAt:new Date()}:{})}],Notification:[],GatewayEvent:[]}),calls=[];
+ const api=load('../src/services/gatewayWebhooks.js',{CheckoutOrder:h.model('CheckoutOrder'),GatewayEvent:h.model('GatewayEvent'),Notification:h.model('Notification'),businessError:business.businessError,paymentEnvironment:()=> 'live',syncCheckout:async(id,opts)=>{calls.push({id,opts});h.state.data.CheckoutOrder[0].status=reconciled;return {status:reconciled};},refundEvidence:async()=>null,recordGatewayRefund:async()=>{}},'({applyGatewayEvent})');
+ return {...h,api,calls,event:{id:'WH-SYNTHETIC-REVERSAL',event_type:'CHECKOUT.PAYMENT-APPROVAL.REVERSED',resource:{order_id:remoteId,purchase_units:[{custom_id:oid}]}}};
+}
+test('approval reversal durably blocks later capture, not only the displayed status',async()=>{const f=gateway();await f.api.applyGatewayEvent('paypal',f.event);assert.equal(f.state.data.CheckoutOrder[0].status,'cancelled');assert.ok(f.state.data.CheckoutOrder[0].cancelRequestedAt instanceof Date);assert.equal(f.calls.length,0);assert.equal(f.state.data.GatewayEvent.length,1);});
+test('reversal of a paid order cannot cancel paid access or request capture',async()=>{const f=gateway({status:'paid'});await f.api.applyGatewayEvent('paypal',f.event);assert.equal(f.state.data.CheckoutOrder[0].status,'paid');assert.equal(f.state.data.CheckoutOrder[0].cancelRequestedAt,undefined);assert.equal(f.calls.length,0);});
+test('reversal overlapping an uncertain capture stays retryable, not safe for a second purchase',async()=>{const f=gateway({captureAttempted:true});await assert.rejects(()=>f.api.applyGatewayEvent('paypal',f.event),{status:503});assert.equal(f.state.data.CheckoutOrder[0].status,'pending');assert.ok(f.state.data.CheckoutOrder[0].cancelRequestedAt);assert.equal(f.state.data.GatewayEvent.length,0);assert.equal(f.calls[0].opts.capture,false);});
+for(const settled of ['paid','failed','cancelled'])test('uncertain reversal accepts only a terminal reconciled '+settled+' status',async()=>{const f=gateway({captureAttempted:true,reconciled:settled});await f.api.applyGatewayEvent('paypal',f.event);assert.equal(f.state.data.CheckoutOrder[0].status,settled);assert.equal(f.state.data.GatewayEvent.length,1);assert.equal(f.calls[0].opts.capture,false);});
+test('duplicate reversal does not apply twice',async()=>{const f=gateway();await f.api.applyGatewayEvent('paypal',f.event);const when=f.state.data.CheckoutOrder[0].cancelRequestedAt;const result=await f.api.applyGatewayEvent('paypal',f.event);assert.equal(result.replayed,true);assert.equal(f.state.data.GatewayEvent.length,1);assert.equal(f.state.data.CheckoutOrder[0].cancelRequestedAt,when);});
+function providerFixture({verification='SUCCESS',oauthError=false,noContent=false,remoteOrder=null}={}){
+ const calls=[],env={PAYPAL_MODE:'live',PAYPAL_CLIENT_ID:'SyntheticClientOnly',PAYPAL_CLIENT_SECRET:'SyntheticSecretOnly',PAYPAL_WEBHOOK_ID:'SyntheticWebhookOnly'};
+ const fetch=async(url,options)=>{calls.push({url,options});assert.ok(url.startsWith('https://api-m.paypal.com/'));
+  const isToken=url.endsWith('/v1/oauth2/token'),data=isToken?(oauthError?{error:'invalid_client',debug_id:'DebugFixture123'}:{access_token:'SyntheticBearerOnly',expires_in:3600}):{verification_status:verification};
+  const responseData=remoteOrder&&url.includes('/v2/checkout/orders/')?remoteOrder:data;
+  return {ok:!oauthError,status:oauthError?401:noContent&&!isToken?204:200,text:async()=>noContent&&!isToken?'':JSON.stringify(responseData)};
+ };
+ const api=load('../src/services/paymentProviders.js',{crypto,...business,paypalClientSecret,fetch,process:{env},paymentEnvironment:()=> 'live',frontendOrigin:()=> 'https://academy.test',moneyString:()=> '1.00',approvedRedirect:x=>x},'({verifyPayPalEvent,paypalApi,paypalEvidence})');
+ const headers={'paypal-auth-algo':'SHA256withRSA','paypal-cert-url':'https://api-m.paypal.com/v1/notifications/certs/FIXTURE','paypal-transmission-id':'T-FIXTURE','paypal-transmission-sig':'SignatureFixture','paypal-transmission-time':'2026-10-16T00:00:00Z'};
+ return {api,calls,headers};
+}
+test('PayPal postback retains original raw JSON whitespace and numeric representation',async()=>{const f=providerFixture(),raw=' { "id" : "WH-FIXTURE", "event_type":"PAYMENT.CAPTURE.COMPLETED", "resource":{"amount":1.00,"large":900719925474099345678} } ';const event=await f.api.verifyPayPalEvent(Buffer.from(raw),f.headers);assert.equal(event.id,'WH-FIXTURE');const posted=f.calls.at(-1).options.body;assert.ok(posted.includes('"webhook_event":'+raw+'}'));assert.equal(JSON.parse(posted).webhook_id,'SyntheticWebhookOnly');assert.equal(f.calls.length,2);});
+test('malformed raw PayPal JSON never requests an OAuth token',async()=>{const f=providerFixture();await assert.rejects(()=>f.api.verifyPayPalEvent(Buffer.from('{'),f.headers),{status:400});assert.equal(f.calls.length,0);});
+test('missing PayPal signature fields are rejected before network access',async()=>{const f=providerFixture();await assert.rejects(()=>f.api.verifyPayPalEvent(Buffer.from('{"id":"WH-FIXTURE"}'),{}),{status:400});assert.equal(f.calls.length,0);});
+test('PayPal verification FAILURE never returns a trusted event',async()=>{const f=providerFixture({verification:'FAILURE'});await assert.rejects(()=>f.api.verifyPayPalEvent(Buffer.from('{"id":"WH-FIXTURE"}'),f.headers),{status:400});});
+test('PayPal byte-order mark is rejected rather than silently stripping signed bytes',async()=>{const f=providerFixture();await assert.rejects(()=>f.api.verifyPayPalEvent(Buffer.concat([Buffer.from([0xef,0xbb,0xbf]),Buffer.from('{\"id\":\"WH-FIXTURE\"}')]),f.headers),{status:400});assert.equal(f.calls.length,0);});
+test('invalid UTF-8 in a PayPal message fails before postback',async()=>{const f=providerFixture();await assert.rejects(()=>f.api.verifyPayPalEvent(Buffer.from([0xff]),f.headers),{status:400});assert.equal(f.calls.length,0);});
+test('signature envelope cannot be used as a raw order-creation bypass',async()=>{const f=providerFixture();await assert.rejects(()=>f.api.paypalApi('/v2/checkout/orders',{method:'POST',serializedBody:'{}'}),{status:500});assert.equal(f.calls.length,0);});
+test('PayPal no-content response is handled for webhook PATCH',async()=>{const f=providerFixture({noContent:true});assert.deepEqual(await f.api.paypalApi('/v1/notifications/webhooks/fixture',{method:'PATCH',body:[]}),{});});
+test('OAuth error exposes only safe provider status/code, not secrets/raw responses',async()=>{const f=providerFixture({oauthError:true});await assert.rejects(()=>f.api.paypalApi('/v1/notifications/webhooks'),e=>e.providerStatus===401&&e.providerCode==='invalid_client'&&e.providerDebugId==='DebugFixture123'&&!e.message.includes('SyntheticSecretOnly'));});
+test('PayPal HTTP route uses raw bytes instead of parsed JSON for signature verification',()=>{const source=fs.readFileSync(new URL('../src/routes/gatewayWebhookRoutes.js',import.meta.url),'utf8');assert.match(source,/post\('\/paypal',express\.raw/);});
+test('a cancellation marker prevents a delayed approved order from invoking PayPal capture',async()=>{
+ const remoteOrder={id:remoteId,status:'APPROVED',purchase_units:[{custom_id:oid,amount:{currency_code:'USD',value:'1.00'}}]};
+ const f=providerFixture({remoteOrder});let beforeCapture=0;
+ const result=await f.api.paypalEvidence({_id:oid,providerOrderId:remoteId,environment:'live',currency:'USD',amountMinor:100,cancelRequestedAt:new Date()},{capture:true,onBeforeCapture:async()=>{beforeCapture++;}});
+ assert.equal(result.state,'pending');assert.equal(beforeCapture,0);
+ assert.equal(f.calls.filter(x=>x.url.includes('/v2/checkout/orders/')).length,1);
+ assert.equal(f.calls.filter(x=>x.url.endsWith('/capture')).length,0);
+});
+test('read-only reconciliation of an approved order cannot invoke capture',async()=>{
+ const f=providerFixture({remoteOrder:{id:remoteId,status:'APPROVED',purchase_units:[{custom_id:oid,amount:{currency_code:'USD',value:'1.00'}}]}});
+ const result=await f.api.paypalEvidence({_id:oid,providerOrderId:remoteId,environment:'live',currency:'USD',amountMinor:100},{capture:false});
+ assert.equal(result.state,'pending');assert.equal(f.calls.filter(x=>x.url.endsWith('/capture')).length,0);
+});
+test('Webhook policy retains checkout, failures and recurring lifecycle without refund subscriptions',async()=>{const {stripeEvents,paypalEvents}=await import('../src/utils/paymentWebhookPolicy.js');for(const event of ['checkout.session.completed','checkout.session.async_payment_succeeded','checkout.session.async_payment_failed','checkout.session.expired','charge.dispute.created','charge.dispute.closed','invoice.paid','invoice.payment_failed','customer.subscription.updated','customer.subscription.deleted'])assert.ok(stripeEvents.includes(event));for(const event of ['CHECKOUT.ORDER.APPROVED','CHECKOUT.PAYMENT-APPROVAL.REVERSED','PAYMENT.CAPTURE.COMPLETED','PAYMENT.CAPTURE.DENIED','PAYMENT.CAPTURE.PENDING','PAYMENT.CAPTURE.REVERSED','CUSTOMER.DISPUTE.CREATED','CUSTOMER.DISPUTE.RESOLVED','BILLING.SUBSCRIPTION.CREATED','BILLING.SUBSCRIPTION.ACTIVATED','BILLING.SUBSCRIPTION.UPDATED','BILLING.SUBSCRIPTION.SUSPENDED','BILLING.SUBSCRIPTION.CANCELLED','BILLING.SUBSCRIPTION.EXPIRED','BILLING.SUBSCRIPTION.PAYMENT.FAILED','PAYMENT.SALE.COMPLETED','PAYMENT.SALE.REVERSED'])assert.ok(paypalEvents.includes(event));});

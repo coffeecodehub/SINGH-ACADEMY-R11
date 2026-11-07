@@ -1,0 +1,64 @@
+{
+  "review": "R9",
+  "status": "local_validation_passed",
+  "finishedAt": "2026-11-06T19:21:24.013923+00:00",
+  "node": "22.23.4",
+  "testTotal": 2991,
+  "testCounts": {
+    "contracts": 18,
+    "runtime": 178,
+    "frontend": 939,
+    "backend": 1374,
+    "mongoHttp": 254,
+    "browserUI": 158,
+    "browserDatabase": 70,
+    "finalBillingRetest": 9
+  },
+  "checks": {
+    "productionBuild": "passed",
+    "sourceIntegrity": "passed",
+    "sourceSyntax": "passed",
+    "localInstalledSecurity": "passed",
+    "finalBillingVisual": "passed"
+  },
+  "scope": {
+    "changed": 83,
+    "deleted": [],
+    "unexpected": [],
+    "originalSourceCount": 1149,
+    "currentSourceCount": 1170,
+    "checkedAt": "2026-11-06T19:20:22.577Z"
+  },
+  "protectedOriginalAssets": 268,
+  "originalUploadProvenanceFiles": 5,
+  "retainedHeroSha256": {
+    "landing": "993d85b15e13dd3a1ea56936fe9ca3dcf0b1e67f68239f8bc67754f94348108e",
+    "home": "d377a545d0e83447474ea28ff34d16650d0bd6d49b3e1d34ff6455d137672969"
+  },
+  "releaseBaselineSha256": "a0fd1adfa763321c2106ab2fc2ecfd6f3549933b9a806823739c237d1e0e31c2",
+  "publicImageBatchCheck": {
+    "realMongoDistinctImages": 14,
+    "queries": 6,
+    "previousQueries": 84
+  },
+  "validationNotes": [
+    "Full frontend, backend, contract, runtime, local Mongo HTTP, UI and database-browser suites passed.",
+    "Final visual inspection found three native cancellation button classes. Only those classes changed; frontend939 and final production build passed again, and all9 affected billing UI cases passed on the final build.",
+    "Initial stale offscreen-copy/no-public-prefetch expectations were corrected while retaining image, login and protected API assertions. A CSS test now explicitly controls and asserts hover state. No application changes were made for those fixture corrections."
+  ],
+  "onlineNpmAudit": {
+    "status": "blocked_auto_review",
+    "reason": "The automatic approval review rejected exporting dependency metadata to the external audit service. No workaround or fresh audit-pass claim was made. Lockfiles and dependency manifests are unchanged."
+  },
+  "externalAcceptance": {
+    "liveProviderTransaction": "not_performed",
+    "deployedWebhookDelivery": "not_verified",
+    "HostingerDeployment": "not_performed",
+    "actualOwnerScannerQuota": "not_verified"
+  },
+  "limits": [
+    "Cold network latency cannot be guaranteed zero.",
+    "FFmpeg capability is optional; original full videos remain unchanged.",
+    "Browser and social-provider autoplay/privacy policy still applies."
+  ]
+}

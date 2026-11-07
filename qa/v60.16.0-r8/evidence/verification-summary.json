@@ -1,0 +1,29 @@
+{
+  "review": "R8",
+  "version": "60.16.0",
+  "status": "Actual original photos directly embedded; source/build/browser checks passed",
+  "contracts": 18,
+  "runtime": 178,
+  "frontend": 891,
+  "backend": 1353,
+  "httpMongo": 240,
+  "controlledBrowsers": 148,
+  "databaseBrowsers": 70,
+  "failures": 0,
+  "skips": 0,
+  "browserRetries": 0,
+  "productionBuildTypesImports": "passed",
+  "knownDependencyAudits": "4 completed full/production audits report zero known vulnerabilities",
+  "actualVisualCapturesInspected": 8,
+  "actualHeroPhotos": {
+    "landing": "DOP_269.JPG",
+    "home": "DOP_86.JPG",
+    "sourceArchiveSha256": "f8b4662165caac3ee96583f0215a354adbb5b7a49a0a135ace12b4d3a5a4835c",
+    "originalBytesUnchanged": true
+  },
+  "responsiveDisplayCopies": 4,
+  "canonicalImagesEmbedded": true,
+  "retiredPickerImportWorkflow": "absent",
+  "postSeal": "See accompanying archive/updater/clean-extraction delivery manifest; ZIP cannot include its own future evidence/hash.",
+  "realProviderSmtpDeployment": "not executed"
+}

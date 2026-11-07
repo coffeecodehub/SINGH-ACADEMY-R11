@@ -1,0 +1,149 @@
+{
+  "source": "User-provided original image archives",
+  "uploadedDate": "2026-11-04",
+  "images": [
+    {
+      "collection": "ukraine-delegation",
+      "originalArchive": "Ukraine Delegation-20261104T102843Z-1-001.zip",
+      "originalEntry": "Ukraine Delegation/Judge Danny gp.JPG",
+      "src": "/images/global-learning/ukraine-delegation-1.jpg",
+      "width": 4464,
+      "height": 2976,
+      "bytes": 1714312,
+      "sha256": "3dfec2db35cfffcd0b879846bdb177eea022c888aab5763748284f741e661fab",
+      "processing": "Original uploaded bytes retained; no recompression, resizing or metadata removal.",
+      "verifiedReuploadArchive": "Ukraine Delegation-20261104T100902Z-1-001.zip",
+      "displayWidth": 4464,
+      "displayHeight": 2976,
+      "exifOrientation": 1,
+      "placement": {
+        "page": "home",
+        "slot": "event"
+      },
+      "presentation": {
+        "fit": "cover",
+        "objectPosition": "46% 38%",
+        "processing": "CSS presentation only; original uploaded bytes and HD dimensions unchanged."
+      }
+    },
+    {
+      "collection": "ukraine-delegation",
+      "originalArchive": "Ukraine Delegation-20261104T102843Z-1-001.zip",
+      "originalEntry": "Ukraine Delegation/Gp Main.JPG",
+      "src": "/images/global-learning/ukraine-delegation-2.jpg",
+      "width": 4464,
+      "height": 2976,
+      "bytes": 1962267,
+      "sha256": "b961632700d6bd9a7ee9cb92ca66048921f26f7579a71bc676656fd49741ebb6",
+      "processing": "Original uploaded bytes retained; no recompression, resizing or metadata removal.",
+      "verifiedReuploadArchive": "Ukraine Delegation-20261104T100902Z-1-001.zip",
+      "displayWidth": 4464,
+      "displayHeight": 2976,
+      "exifOrientation": 1,
+      "placement": {
+        "page": "landing",
+        "slot": "hero"
+      },
+      "presentation": {
+        "fit": "cover",
+        "objectPosition": "50% 42%",
+        "processing": "CSS presentation only; original uploaded bytes and HD dimensions unchanged."
+      }
+    },
+    {
+      "collection": "brazil",
+      "originalArchive": "Brazil-20261104T102853Z-1-001.zip",
+      "originalEntry": "Brazil/group.JPG",
+      "src": "/images/global-learning/brazil-1.jpg",
+      "width": 4464,
+      "height": 2976,
+      "bytes": 1732282,
+      "sha256": "9c34a34e240a7dc25a4072ead4ac2fe1ab43c17ef6e471d0bb5ab479f713159e",
+      "processing": "Original uploaded bytes retained; no recompression, resizing or metadata removal.",
+      "verifiedReuploadArchive": "Brazil-20261104T102853Z-1-001.zip",
+      "displayWidth": 4464,
+      "displayHeight": 2976,
+      "exifOrientation": 1,
+      "placement": {
+        "page": "landing",
+        "slot": "story"
+      },
+      "presentation": {
+        "fit": "cover",
+        "objectPosition": "50% 38%",
+        "processing": "CSS presentation only; original uploaded bytes and HD dimensions unchanged."
+      }
+    },
+    {
+      "collection": "brazil",
+      "originalArchive": "Brazil-20261104T102853Z-1-001.zip",
+      "originalEntry": "Brazil/ellen and sukh.JPG",
+      "src": "/images/global-learning/brazil-2.jpg",
+      "width": 4464,
+      "height": 2976,
+      "bytes": 1654385,
+      "sha256": "7b21fe6340064384d2357fcfa4301d838e88013cc0252c9f3acf65d9d0c0bdea",
+      "processing": "Original uploaded bytes retained; no recompression, resizing or metadata removal.",
+      "verifiedReuploadArchive": "Brazil-20261104T102853Z-1-001.zip",
+      "displayWidth": 2976,
+      "displayHeight": 4464,
+      "exifOrientation": 8,
+      "placement": {
+        "page": "home",
+        "slot": "hero"
+      },
+      "presentation": {
+        "fit": "cover",
+        "objectPosition": "50% 10%",
+        "processing": "CSS presentation only; original uploaded bytes and HD dimensions unchanged."
+      }
+    },
+    {
+      "collection": "brazil",
+      "originalArchive": "Brazil-20261104T102853Z-1-001.zip",
+      "originalEntry": "Brazil/mariama.JPG",
+      "src": "/images/global-learning/brazil-3.jpg",
+      "width": 4464,
+      "height": 2976,
+      "bytes": 2089492,
+      "sha256": "75c89fdb67e8610c4a503e69531fe3fc9ccdf5907e54f886e0d97d3fd5a62c91",
+      "processing": "Original uploaded bytes retained; no recompression, resizing or metadata removal.",
+      "verifiedReuploadArchive": "Brazil-20261104T102853Z-1-001.zip",
+      "displayWidth": 4464,
+      "displayHeight": 2976,
+      "exifOrientation": 1,
+      "placement": {
+        "page": "about",
+        "slot": "gallery"
+      },
+      "presentation": {
+        "fit": "cover",
+        "objectPosition": "62% 42%",
+        "processing": "CSS presentation only; original uploaded bytes and HD dimensions unchanged."
+      }
+    }
+  ],
+  "reuploadVerification": {
+    "verifiedDate": "2026-11-05",
+    "archives": [
+      {
+        "archive": "Ukraine Delegation-20261104T100902Z-1-001.zip",
+        "bytes": 3677654,
+        "sha256": "b6cff454ac3508d00294e014bea98d67bbec9c5736d5d3e1ee30fe745b89f672",
+        "independentPhotographs": 2
+      },
+      {
+        "archive": "Brazil-20261104T102853Z-1-001.zip",
+        "bytes": 5477587,
+        "sha256": "6efb4f900629b80d6501cf28c9cbd1dd427e6e8d797af2c6c6157ab807119a7f",
+        "independentPhotographs": 3
+      }
+    ],
+    "independentPhotographs": 5,
+    "additionalIndependentPhotographsBeyondExistingFive": 0,
+    "soloPortraits": 0,
+    "embeddedImages": "Two Brazil MPO files contain smaller embedded renderings of the same scenes, not additional independent photographs.",
+    "unavailableCollection": "IndiaKigali archive could not be transferred because it exceeds the upload transfer limit; its contents are not included or inspected."
+  },
+  "presentationReviewedDate": "2026-11-06"
+}

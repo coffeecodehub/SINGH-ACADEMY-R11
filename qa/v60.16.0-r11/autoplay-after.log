@@ -1,0 +1,82 @@
+TAP version 13
+# Subtest: only an explicitly prioritized review poster is present before JavaScript hydration
+ok 1 - only an explicitly prioritized review poster is present before JavaScript hydration
+  ---
+  duration_ms: 100.297954
+  type: 'test'
+  ...
+# Subtest: offscreen review defers its poster and media until the existing viewport preparation margin: /api/media/aaaaaaaaaaaaaaaaaaaaaaaa
+ok 2 - offscreen review defers its poster and media until the existing viewport preparation margin: /api/media/aaaaaaaaaaaaaaaaaaaaaaaa
+  ---
+  duration_ms: 26.683851
+  type: 'test'
+  ...
+# Subtest: offscreen review defers its poster and media until the existing viewport preparation margin: https://youtu.be/abcdefghijk
+ok 3 - offscreen review defers its poster and media until the existing viewport preparation margin: https://youtu.be/abcdefghijk
+  ---
+  duration_ms: 36.421576
+  type: 'test'
+  ...
+# Subtest: a default native player is a muted inline teaser and legacy ten-second values loop at fifteen seconds
+ok 4 - a default native player is a muted inline teaser and legacy ten-second values loop at fifteen seconds
+  ---
+  duration_ms: 24.414721
+  type: 'test'
+  ...
+# Subtest: native review exposes poster + optimized preview and pauses/resumes across viewport and tab changes
+ok 5 - native review exposes poster + optimized preview and pauses/resumes across viewport and tab changes
+  ---
+  duration_ms: 23.590552
+  type: 'test'
+  ...
+# Subtest: a prepared review uses its DTO-selected rendition without changing the original URL or player settings
+ok 6 - a prepared review uses its DTO-selected rendition without changing the original URL or player settings
+  ---
+  duration_ms: 23.334943
+  type: 'test'
+  ...
+# Subtest: a refreshed native rendition clears a stale startup failure without playing while its document is hidden
+ok 7 - a refreshed native rendition clears a stale startup failure without playing while its document is hidden
+  ---
+  duration_ms: 16.84705
+  type: 'test'
+  ...
+# Subtest: a ready provider honors offscreen pause without replacing its iframe
+ok 8 - a ready provider honors offscreen pause without replacing its iframe
+  ---
+  duration_ms: 18.497692
+  type: 'test'
+  ...
+# Subtest: an unready provider starts from a visible autoplay URL and detaches offscreen without accepting stale readiness
+ok 9 - an unready provider starts from a visible autoplay URL and detaches offscreen without accepting stale readiness
+  ---
+  duration_ms: 35.604446
+  type: 'test'
+  ...
+# Subtest: playback helper accepts only canonical uploaded media and retains portal authorization
+ok 10 - playback helper accepts only canonical uploaded media and retains portal authorization
+  ---
+  duration_ms: 0.388525
+  type: 'test'
+  ...
+# Subtest: visible reviews autoplay even when the OS reduces animation: /media/review.mp4
+ok 11 - visible reviews autoplay even when the OS reduces animation: /media/review.mp4
+  ---
+  duration_ms: 22.642129
+  type: 'test'
+  ...
+# Subtest: visible reviews autoplay even when the OS reduces animation: https://youtu.be/abcdefghijk
+ok 12 - visible reviews autoplay even when the OS reduces animation: https://youtu.be/abcdefghijk
+  ---
+  duration_ms: 19.515298
+  type: 'test'
+  ...
+1..12
+# tests 12
+# suites 0
+# pass 12
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 361.636973

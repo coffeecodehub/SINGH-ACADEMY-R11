@@ -1,0 +1,2871 @@
+{
+  "startedAt": "2026-11-06T22:51:35.621Z",
+  "kind": "local_loopback_pre_change_api_baseline",
+  "repository": "/workspace/SINGH-ACADEMY-V60.15.3-P1-EYE-LOADING-REVIEW",
+  "node": "v24.22.1",
+  "methodology": {
+    "application": "real createApp Express routes and Mongoose models; no server.js worker startup",
+    "database": "generated default-prefix isolatedDatabase() only, schema indexes created in fixture database, then removed",
+    "cold": "catalogCache.clear() before each sample; MongoDB and operating-system caches are not cleared",
+    "warm": "one untimed priming request then sequential full-body reads with persistent HTTP connection reuse",
+    "samples": {
+      "cold": 20,
+      "warm": 60
+    },
+    "auth": "public endpoints anonymous; gated catalog endpoints use actual login of synthetic fixture user; no auth bypass",
+    "latency": "milliseconds from fetch start through complete response body; loopback only, no deployed DNS/TLS/internet distance",
+    "queryCounts": "Mongo commandStarted events find/aggregate/getMore/findAndModify/insert/update/delete/count/distinct; authentication and persistent rate limiter included",
+    "compression": "direct Express has no proxy compression; gzipBytes is offline gzip estimate, not observed deployed transfer",
+    "fixtureDescriptions": "synthetic content, 700-byte course descriptions, 400-byte section descriptions, 500-byte team bios, 1000-byte team editor-original metadata, 700-byte event descriptions, 250-byte reviews, 400-byte video descriptions",
+    "externalNetwork": "no external requests; online providers disabled and mail/provider credentials removed by testEnvironment()"
+  },
+  "scenarios": [
+    {
+      "name": "small_synthetic_catalog",
+      "courses": 24,
+      "sections": 6,
+      "team": 13,
+      "events": 24,
+      "reviews": 40,
+      "videos": 12,
+      "database": "sa_v46_test_a5ef9f0a4e001df6",
+      "endpoints": [
+        {
+          "path": "/api/content/landing",
+          "authenticated": false,
+          "status": 200,
+          "responseCount": {
+            "courses": 24,
+            "sections": 6,
+            "team": 13,
+            "reviews": 20
+          },
+          "bodyBytes": 49872,
+          "gzipBytes": 2027,
+          "contentEncoding": null,
+          "cacheControl": "private, no-store",
+          "cold": {
+            "latencyMs": {
+              "samples": 20,
+              "min": 7,
+              "p50": 10.582,
+              "p95": 23.939,
+              "max": 35.871,
+              "mean": 13.884
+            },
+            "mongoCommands": {
+              "samples": 20,
+              "min": 5,
+              "p50": 5,
+              "p95": 5,
+              "max": 5,
+              "mean": 5
+            },
+            "commandsPerRequest": {
+              "ratelimits.findAndModify": 1,
+              "courses.find": 1,
+              "reviews.find": 1,
+              "sections.find": 1,
+              "teammembers.find": 1
+            },
+            "rawLatencyMs": [
+              23.305,
+              23.939,
+              16.675,
+              13.243,
+              11.843,
+              11.717,
+              10.54,
+              9.213,
+              35.871,
+              23.726,
+              11.699,
+              9.638,
+              9.449,
+              10.582,
+              8.937,
+              10.937,
+              10.03,
+              7,
+              9.513,
+              9.82
+            ]
+          },
+          "warm": {
+            "latencyMs": {
+              "samples": 60,
+              "min": 2.831,
+              "p50": 3.998,
+              "p95": 6.456,
+              "max": 9.942,
+              "mean": 4.37
+            },
+            "mongoCommands": {
+              "samples": 60,
+              "min": 1,
+              "p50": 1,
+              "p95": 1,
+              "max": 1,
+              "mean": 1
+            },
+            "commandsPerRequest": {
+              "ratelimits.findAndModify": 1
+            },
+            "rawLatencyMs": [
+              4.646,
+              4.516,
+              3.333,
+              3.769,
+              3.537,
+              4.349,
+              9.439,
+              6.456,
+              9.942,
+              6.458,
+              4.839,
+              5.098,
+              3.998,
+              3.946,
+              4.368,
+              3.498,
+              3.06,
+              4.371,
+              3.733,
+              3.379,
+              3.49,
+              3.684,
+              2.831,
+              3.699,
+              5.72,
+              4.936,
+              4.055,
+              3.464,
+              4.408,
+              3.236,
+              2.94,
+              4.286,
+              3.536,
+              5.389,
+              5.175,
+              5.179,
+              4.298,
+              6.273,
+              4.839,
+              4.625,
+              3.937,
+              4.379,
+              3.872,
+              3.852,
+              3.555,
+              3.174,
+              3.688,
+              3.339,
+              3.692,
+              3.867,
+              4.697,
+              3.915,
+              4.502,
+              3.475,
+              3.73,
+              4.094,
+              5.077,
+              4.94,
+              3.439,
+              4.191
+            ]
+          }
+        },
+        {
+          "path": "/api/content/team",
+          "authenticated": true,
+          "status": 200,
+          "responseCount": 13,
+          "bodyBytes": 10889,
+          "gzipBytes": 544,
+          "contentEncoding": null,
+          "cacheControl": "private, no-store",
+          "cold": {
+            "latencyMs": {
+              "samples": 20,
+              "min": 7.23,
+              "p50": 8.343,
+              "p95": 11.009,
+              "max": 13.434,
+              "mean": 8.953
+            },
+            "mongoCommands": {
+              "samples": 20,
+              "min": 4,
+              "p50": 4,
+              "p95": 4,
+              "max": 4,
+              "mean": 4
+            },
+            "commandsPerRequest": {
+              "authsessions.find": 1,
+              "users.find": 1,
+              "ratelimits.findAndModify": 1,
+              "teammembers.find": 1
+            },
+            "rawLatencyMs": [
+              10.696,
+              13.434,
+              8.958,
+              9.754,
+              8.093,
+              8.343,
+              7.826,
+              9.349,
+              7.311,
+              7.842,
+              7.23,
+              7.66,
+              7.922,
+              7.791,
+              10.884,
+              9.143,
+              9.05,
+              8.49,
+              8.273,
+              11.009
+            ]
+          },
+          "warm": {
+            "latencyMs": {
+              "samples": 60,
+              "min": 4.379,
+              "p50": 5.87,
+              "p95": 7.906,
+              "max": 8.961,
+              "mean": 5.942
+            },
+            "mongoCommands": {
+              "samples": 60,
+              "min": 3,
+              "p50": 3,
+              "p95": 3,
+              "max": 3,
+              "mean": 3
+            },
+            "commandsPerRequest": {
+              "authsessions.find": 1,
+              "users.find": 1,
+              "ratelimits.findAndModify": 1
+            },
+            "rawLatencyMs": [
+              6.284,
+              8.123,
+              5.238,
+              5.87,
+              4.954,
+              5.14,
+              6.008,
+              6.304,
+              6.252,
+              5.977,
+              8.253,
+              7.056,
+              6.832,
+              6.205,
+              6.394,
+              5.52,
+              5.583,
+              4.701,
+              6.48,
+              6.56,
+              5.625,
+              6.401,
+              5.268,
+              7.906,
+              7.216,
+              6.896,
+              5.958,
+              6.613,
+              6.772,
+              4.676,
+              5.921,
+              5.749,
+              5.965,
+              6.516,
+              4.822,
+              5.769,
+              7.144,
+              5.764,
+              5.477,
+              6.034,
+              5.838,
+              4.665,
+              5.983,
+              5.007,
+              4.488,
+              4.506,
+              5.571,
+              4.703,
+              5.549,
+              4.597,
+              6.559,
+              8.961,
+              5.766,
+              4.379,
+              4.585,
+              5.423,
+              6.042,
+              5.69,
+              6.223,
+              5.736
+            ]
+          }
+        },
+        {
+          "path": "/api/content/events",
+          "authenticated": true,
+          "status": 200,
+          "responseCount": 24,
+          "bodyBytes": 24727,
+          "gzipBytes": 832,
+          "contentEncoding": null,
+          "cacheControl": "private, no-store",
+          "cold": {
+            "latencyMs": {
+              "samples": 20,
+              "min": 6.209,
+              "p50": 8.18,
+              "p95": 9.783,
+              "max": 9.943,
+              "mean": 8.23
+            },
+            "mongoCommands": {
+              "samples": 20,
+              "min": 4,
+              "p50": 4,
+              "p95": 4,
+              "max": 4,
+              "mean": 4
+            },
+            "commandsPerRequest": {
+              "authsessions.find": 1,
+              "users.find": 1,
+              "ratelimits.findAndModify": 1,
+              "events.find": 1
+            },
+            "rawLatencyMs": [
+              8.644,
+              7.792,
+              8.427,
+              6.209,
+              7.327,
+              9.72,
+              8.509,
+              9.783,
+              8.296,
+              8.168,
+              7.29,
+              9.408,
+              8.583,
+              6.956,
+              8.18,
+              7.883,
+              9.155,
+              9.943,
+              7.624,
+              6.693
+            ]
+          },
+          "warm": {
+            "latencyMs": {
+              "samples": 60,
+              "min": 4.155,
+              "p50": 5.363,
+              "p95": 8.102,
+              "max": 10.759,
+              "mean": 5.719
+            },
+            "mongoCommands": {
+              "samples": 60,
+              "min": 3,
+              "p50": 3,
+              "p95": 3,
+              "max": 3,
+              "mean": 3
+            },
+            "commandsPerRequest": {
+              "authsessions.find": 1,
+              "users.find": 1,
+              "ratelimits.findAndModify": 1
+            },
+            "rawLatencyMs": [
+              6.223,
+              5.366,
+              5.803,
+              5.224,
+              5.089,
+              5.798,
+              5.101,
+              4.268,
+              5,
+              6.067,
+              5.909,
+              5.55,
+              5.289,
+              5.363,
+              6.063,
+              5.459,
+              5.37,
+              4.886,
+              4.966,
+              8.087,
+              5.256,
+              6.102,
+              9.44,
+              7.206,
+              10.759,
+              10.604,
+              7.383,
+              5.736,
+              4.785,
+              4.753,
+              4.746,
+              4.725,
+              5.515,
+              5.122,
+              5.464,
+              5.16,
+              4.155,
+              4.823,
+              4.388,
+              5.669,
+              5.062,
+              4.533,
+              5.134,
+              4.852,
+              6.06,
+              5.456,
+              4.791,
+              7.872,
+              5.406,
+              4.726,
+              8.102,
+              5.672,
+              5.979,
+              5.072,
+              6.202,
+              4.66,
+              6.567,
+              5.167,
+              4.695,
+              4.441
+            ]
+          }
+        },
+        {
+          "path": "/api/reviews",
+          "authenticated": true,
+          "status": 200,
+          "responseCount": 40,
+          "bodyBytes": 16738,
+          "gzipBytes": 914,
+          "contentEncoding": null,
+          "cacheControl": "no-store",
+          "cold": {
+            "latencyMs": {
+              "samples": 20,
+              "min": 5.347,
+              "p50": 7.847,
+              "p95": 11.892,
+              "max": 12.968,
+              "mean": 8.374
+            },
+            "mongoCommands": {
+              "samples": 20,
+              "min": 4,
+              "p50": 4,
+              "p95": 4,
+              "max": 4,
+              "mean": 4
+            },
+            "commandsPerRequest": {
+              "authsessions.find": 1,
+              "users.find": 1,
+              "ratelimits.findAndModify": 1,
+              "reviews.find": 1
+            },
+            "rawLatencyMs": [
+              7.271,
+              8.247,
+              5.788,
+              5.347,
+              6.313,
+              11.892,
+              10.129,
+              10.699,
+              12.968,
+              10.645,
+              7.175,
+              9.121,
+              7.878,
+              6.977,
+              7.697,
+              8.329,
+              7.688,
+              6.993,
+              8.475,
+              7.847
+            ]
+          },
+          "warm": {
+            "latencyMs": {
+              "samples": 60,
+              "min": 5.813,
+              "p50": 8.607,
+              "p95": 11.045,
+              "max": 12.614,
+              "mean": 8.661
+            },
+            "mongoCommands": {
+              "samples": 60,
+              "min": 4,
+              "p50": 4,
+              "p95": 4,
+              "max": 4,
+              "mean": 4
+            },
+            "commandsPerRequest": {
+              "authsessions.find": 1,
+              "users.find": 1,
+              "ratelimits.findAndModify": 1,
+              "reviews.find": 1
+            },
+            "rawLatencyMs": [
+              7.202,
+              6.479,
+              6.48,
+              7.034,
+              7.956,
+              9.135,
+              10.102,
+              7.751,
+              6.941,
+              7.969,
+              11.699,
+              10.689,
+              10.628,
+              6.971,
+              8.607,
+              6.876,
+              10.737,
+              9.71,
+              9.127,
+              9.733,
+              9.386,
+              9.065,
+              11.99,
+              8.777,
+              6.61,
+              6.944,
+              7.906,
+              9.201,
+              9.384,
+              9.596,
+              8.502,
+              8.964,
+              9.111,
+              11.045,
+              8.781,
+              7.743,
+              7.12,
+              6.996,
+              7.183,
+              7.964,
+              9.749,
+              8.121,
+              8.802,
+              7.406,
+              10.807,
+              8.579,
+              8.701,
+              9.122,
+              8.486,
+              9.795,
+              10.415,
+              7.457,
+              12.614,
+              7.937,
+              7.263,
+              7.985,
+              8.997,
+              8.014,
+              5.813,
+              9.504
+            ]
+          }
+        },
+        {
+          "path": "/api/video-reviews",
+          "authenticated": false,
+          "status": 200,
+          "responseCount": 12,
+          "bodyBytes": 6656,
+          "gzipBytes": 420,
+          "contentEncoding": null,
+          "cacheControl": "private, no-store",
+          "cold": {
+            "latencyMs": {
+              "samples": 20,
+              "min": 3.343,
+              "p50": 4.995,
+              "p95": 6.978,
+              "max": 8.197,
+              "mean": 5.292
+            },
+            "mongoCommands": {
+              "samples": 20,
+              "min": 2,
+              "p50": 2,
+              "p95": 2,
+              "max": 2,
+              "mean": 2
+            },
+            "commandsPerRequest": {
+              "ratelimits.findAndModify": 1,
+              "videoreviews.find": 1
+            },
+            "rawLatencyMs": [
+              8.197,
+              6.553,
+              4.794,
+              5.912,
+              6.067,
+              5.352,
+              4.693,
+              5.459,
+              4.995,
+              5.196,
+              6.08,
+              6.41,
+              4.873,
+              4.789,
+              3.967,
+              6.978,
+              4.018,
+              3.343,
+              4.12,
+              4.046
+            ]
+          },
+          "warm": {
+            "latencyMs": {
+              "samples": 60,
+              "min": 2.004,
+              "p50": 2.916,
+              "p95": 6.598,
+              "max": 9.004,
+              "mean": 3.4
+            },
+            "mongoCommands": {
+              "samples": 60,
+              "min": 1,
+              "p50": 1,
+              "p95": 1,
+              "max": 1,
+              "mean": 1
+            },
+            "commandsPerRequest": {
+              "ratelimits.findAndModify": 1
+            },
+            "rawLatencyMs": [
+              4.373,
+              3.139,
+              2.112,
+              2.106,
+              2.406,
+              6.123,
+              3.187,
+              6.762,
+              6.03,
+              9.004,
+              6.598,
+              5.053,
+              3.916,
+              3.103,
+              2.96,
+              2.916,
+              2.47,
+              2.095,
+              2.16,
+              2.162,
+              2.466,
+              2.004,
+              2.37,
+              2.609,
+              2.24,
+              4.741,
+              3.196,
+              4.114,
+              2.458,
+              4.018,
+              2.766,
+              4.337,
+              2.237,
+              2.786,
+              3.305,
+              2.77,
+              2.949,
+              2.227,
+              2.672,
+              2.938,
+              2.745,
+              3.031,
+              3.66,
+              2.738,
+              2.5,
+              3.31,
+              2.697,
+              5.327,
+              2.518,
+              2.298,
+              2.656,
+              2.125,
+              7.951,
+              3.112,
+              2.549,
+              3.05,
+              3.573,
+              3.576,
+              3.806,
+              2.91
+            ]
+          }
+        },
+        {
+          "path": "/api/sections",
+          "authenticated": false,
+          "status": 200,
+          "responseCount": 6,
+          "bodyBytes": 5309,
+          "gzipBytes": 452,
+          "contentEncoding": null,
+          "cacheControl": "private, no-store",
+          "cold": {
+            "latencyMs": {
+              "samples": 20,
+              "min": 3.394,
+              "p50": 4.238,
+              "p95": 7.809,
+              "max": 8.718,
+              "mean": 5.042
+            },
+            "mongoCommands": {
+              "samples": 20,
+              "min": 2,
+              "p50": 2,
+              "p95": 2,
+              "max": 2,
+              "mean": 2
+            },
+            "commandsPerRequest": {
+              "ratelimits.findAndModify": 1,
+              "sections.find": 1
+            },
+            "rawLatencyMs": [
+              6.579,
+              5.989,
+              5.509,
+              5.568,
+              8.718,
+              7.809,
+              7.038,
+              4.504,
+              4.21,
+              3.917,
+              3.969,
+              3.394,
+              3.905,
+              3.809,
+              3.642,
+              3.653,
+              5.935,
+              3.68,
+              4.766,
+              4.238
+            ]
+          },
+          "warm": {
+            "latencyMs": {
+              "samples": 60,
+              "min": 1.895,
+              "p50": 2.554,
+              "p95": 4.644,
+              "max": 12.971,
+              "mean": 3.091
+            },
+            "mongoCommands": {
+              "samples": 60,
+              "min": 1,
+              "p50": 1,
+              "p95": 1,
+              "max": 1,
+              "mean": 1
+            },
+            "commandsPerRequest": {
+              "ratelimits.findAndModify": 1
+            },
+            "rawLatencyMs": [
+              3.318,
+              2.389,
+              2.667,
+              2.84,
+              3.424,
+              2.235,
+              2.263,
+              2.5,
+              2.168,
+              2.158,
+              2.747,
+              3.297,
+              2.506,
+              2.403,
+              2.048,
+              2.666,
+              3.709,
+              2.506,
+              3.24,
+              2.346,
+              2.419,
+              4.412,
+              3.367,
+              4.17,
+              3.214,
+              3.987,
+              4.644,
+              5.405,
+              3.642,
+              12.971,
+              9.233,
+              3.882,
+              4.251,
+              2.589,
+              2.195,
+              2.272,
+              2.035,
+              2.018,
+              2.271,
+              2.485,
+              3.053,
+              1.895,
+              2.99,
+              2.268,
+              2.124,
+              3.149,
+              2.195,
+              2.219,
+              2.802,
+              2.349,
+              2.554,
+              3.198,
+              2.372,
+              1.997,
+              3.14,
+              2.377,
+              2.305,
+              2.622,
+              2.919,
+              2.047
+            ]
+          }
+        },
+        {
+          "path": "/api/courses",
+          "authenticated": true,
+          "status": 200,
+          "responseCount": 24,
+          "bodyBytes": 39936,
+          "gzipBytes": 1477,
+          "contentEncoding": null,
+          "cacheControl": "private, no-store",
+          "cold": {
+            "latencyMs": {
+              "samples": 20,
+              "min": 6.127,
+              "p50": 7.866,
+              "p95": 13.4,
+              "max": 13.462,
+              "mean": 8.665
+            },
+            "mongoCommands": {
+              "samples": 20,
+              "min": 4,
+              "p50": 4,
+              "p95": 4,
+              "max": 4,
+              "mean": 4
+            },
+            "commandsPerRequest": {
+              "authsessions.find": 1,
+              "users.find": 1,
+              "ratelimits.findAndModify": 1,
+              "courses.find": 1
+            },
+            "rawLatencyMs": [
+              13.462,
+              9.174,
+              8.527,
+              7.808,
+              6.76,
+              6.615,
+              7.059,
+              6.127,
+              6.294,
+              8.133,
+              7.866,
+              7.221,
+              9.051,
+              7.048,
+              7.006,
+              13.4,
+              11.694,
+              11.699,
+              9.521,
+              8.828
+            ]
+          },
+          "warm": {
+            "latencyMs": {
+              "samples": 60,
+              "min": 4.386,
+              "p50": 5.35,
+              "p95": 9.454,
+              "max": 17.971,
+              "mean": 6.183
+            },
+            "mongoCommands": {
+              "samples": 60,
+              "min": 3,
+              "p50": 3,
+              "p95": 3,
+              "max": 3,
+              "mean": 3
+            },
+            "commandsPerRequest": {
+              "authsessions.find": 1,
+              "users.find": 1,
+              "ratelimits.findAndModify": 1
+            },
+            "rawLatencyMs": [
+              7.304,
+              7.087,
+              9.615,
+              9.454,
+              8.859,
+              8.137,
+              6.554,
+              4.819,
+              5.01,
+              6.384,
+              5.541,
+              4.774,
+              5.35,
+              6.172,
+              6.263,
+              6.139,
+              5.559,
+              4.927,
+              4.981,
+              4.775,
+              4.799,
+              4.736,
+              11.885,
+              17.971,
+              7.014,
+              5.534,
+              6.021,
+              5.337,
+              5.117,
+              4.876,
+              9.058,
+              5.934,
+              7.582,
+              5.811,
+              6.925,
+              7.926,
+              8.594,
+              4.466,
+              6.12,
+              4.59,
+              4.548,
+              5.116,
+              5.709,
+              5.245,
+              4.894,
+              4.597,
+              4.743,
+              4.622,
+              4.545,
+              6.601,
+              9.078,
+              4.858,
+              4.958,
+              4.55,
+              4.763,
+              4.478,
+              6.03,
+              4.781,
+              4.386,
+              4.478
+            ]
+          }
+        }
+      ],
+      "queryPlans": [
+        {
+          "name": "landing_reviews",
+          "nReturned": 20,
+          "totalKeysExamined": 40,
+          "totalDocsExamined": 40,
+          "executionTimeMillis": 0,
+          "winningPlan": {
+            "isCached": false,
+            "stage": "PROJECTION_SIMPLE",
+            "transformBy": {
+              "name": 1,
+              "rating": 1,
+              "message": 1,
+              "createdAt": 1,
+              "updatedAt": 1
+            },
+            "inputStage": {
+              "stage": "SORT",
+              "sortPattern": {
+                "updatedAt": -1,
+                "createdAt": -1
+              },
+              "memLimit": 104857600,
+              "limitAmount": 20,
+              "type": "simple",
+              "inputStage": {
+                "stage": "FETCH",
+                "filter": {
+                  "$and": [
+                    {
+                      "approvedAt": {
+                        "$type": [
+                          9
+                        ]
+                      }
+                    },
+                    {
+                      "approvedBy": {
+                        "$type": [
+                          7
+                        ]
+                      }
+                    }
+                  ]
+                },
+                "inputStage": {
+                  "stage": "IXSCAN",
+                  "keyPattern": {
+                    "status": 1,
+                    "createdAt": -1
+                  },
+                  "indexName": "status_1_createdAt_-1",
+                  "isMultiKey": false,
+                  "multiKeyPaths": {
+                    "status": [],
+                    "createdAt": []
+                  },
+                  "isUnique": false,
+                  "isSparse": false,
+                  "isPartial": false,
+                  "indexVersion": 2,
+                  "direction": "forward",
+                  "indexBounds": {
+                    "status": [
+                      "[\"approved\", \"approved\"]"
+                    ],
+                    "createdAt": [
+                      "[MaxKey, MinKey]"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "standalone_reviews",
+          "nReturned": 40,
+          "totalKeysExamined": 40,
+          "totalDocsExamined": 40,
+          "executionTimeMillis": 0,
+          "winningPlan": {
+            "isCached": false,
+            "stage": "PROJECTION_SIMPLE",
+            "transformBy": {
+              "name": 1,
+              "rating": 1,
+              "message": 1,
+              "createdAt": 1,
+              "updatedAt": 1
+            },
+            "inputStage": {
+              "stage": "SORT",
+              "sortPattern": {
+                "updatedAt": -1,
+                "createdAt": -1
+              },
+              "memLimit": 104857600,
+              "limitAmount": 100,
+              "type": "simple",
+              "inputStage": {
+                "stage": "FETCH",
+                "filter": {
+                  "$and": [
+                    {
+                      "approvedAt": {
+                        "$type": [
+                          9
+                        ]
+                      }
+                    },
+                    {
+                      "approvedBy": {
+                        "$type": [
+                          7
+                        ]
+                      }
+                    }
+                  ]
+                },
+                "inputStage": {
+                  "stage": "IXSCAN",
+                  "keyPattern": {
+                    "status": 1,
+                    "createdAt": -1
+                  },
+                  "indexName": "status_1_createdAt_-1",
+                  "isMultiKey": false,
+                  "multiKeyPaths": {
+                    "status": [],
+                    "createdAt": []
+                  },
+                  "isUnique": false,
+                  "isSparse": false,
+                  "isPartial": false,
+                  "indexVersion": 2,
+                  "direction": "forward",
+                  "indexBounds": {
+                    "status": [
+                      "[\"approved\", \"approved\"]"
+                    ],
+                    "createdAt": [
+                      "[MaxKey, MinKey]"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "sections",
+          "nReturned": 6,
+          "totalKeysExamined": 6,
+          "totalDocsExamined": 6,
+          "executionTimeMillis": 0,
+          "winningPlan": {
+            "isCached": false,
+            "stage": "SORT",
+            "sortPattern": {
+              "order": 1,
+              "title": 1
+            },
+            "memLimit": 104857600,
+            "type": "simple",
+            "inputStage": {
+              "stage": "FETCH",
+              "filter": {
+                "archivedAt": {
+                  "$eq": null
+                }
+              },
+              "inputStage": {
+                "stage": "IXSCAN",
+                "keyPattern": {
+                  "published": 1,
+                  "order": 1
+                },
+                "indexName": "published_1_order_1",
+                "isMultiKey": false,
+                "multiKeyPaths": {
+                  "published": [],
+                  "order": []
+                },
+                "isUnique": false,
+                "isSparse": false,
+                "isPartial": false,
+                "indexVersion": 2,
+                "direction": "forward",
+                "indexBounds": {
+                  "published": [
+                    "[true, true]"
+                  ],
+                  "order": [
+                    "[MinKey, MaxKey]"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "events",
+          "nReturned": 24,
+          "totalKeysExamined": 24,
+          "totalDocsExamined": 24,
+          "executionTimeMillis": 0,
+          "winningPlan": {
+            "isCached": false,
+            "stage": "SORT",
+            "sortPattern": {
+              "date": 1,
+              "createdAt": -1
+            },
+            "memLimit": 104857600,
+            "type": "simple",
+            "inputStage": {
+              "stage": "PROJECTION_SIMPLE",
+              "transformBy": {
+                "webinarAnnouncement": 0
+              },
+              "inputStage": {
+                "stage": "FETCH",
+                "inputStage": {
+                  "stage": "IXSCAN",
+                  "keyPattern": {
+                    "status": 1,
+                    "date": 1
+                  },
+                  "indexName": "status_1_date_1",
+                  "isMultiKey": false,
+                  "multiKeyPaths": {
+                    "status": [],
+                    "date": []
+                  },
+                  "isUnique": false,
+                  "isSparse": false,
+                  "isPartial": false,
+                  "indexVersion": 2,
+                  "direction": "forward",
+                  "indexBounds": {
+                    "status": [
+                      "[\"published\", \"published\"]"
+                    ],
+                    "date": [
+                      "[MinKey, MaxKey]"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "video_reviews",
+          "nReturned": 12,
+          "totalKeysExamined": 12,
+          "totalDocsExamined": 12,
+          "executionTimeMillis": 0,
+          "winningPlan": {
+            "isCached": false,
+            "stage": "SORT",
+            "sortPattern": {
+              "order": 1,
+              "createdAt": -1,
+              "_id": 1
+            },
+            "memLimit": 104857600,
+            "limitAmount": 100,
+            "type": "simple",
+            "inputStage": {
+              "stage": "FETCH",
+              "inputStage": {
+                "stage": "IXSCAN",
+                "keyPattern": {
+                  "published": 1,
+                  "order": 1,
+                  "createdAt": -1
+                },
+                "indexName": "published_1_order_1_createdAt_-1",
+                "isMultiKey": false,
+                "multiKeyPaths": {
+                  "published": [],
+                  "order": [],
+                  "createdAt": []
+                },
+                "isUnique": false,
+                "isSparse": false,
+                "isPartial": false,
+                "indexVersion": 2,
+                "direction": "forward",
+                "indexBounds": {
+                  "published": [
+                    "[true, true]"
+                  ],
+                  "order": [
+                    "[MinKey, MaxKey]"
+                  ],
+                  "createdAt": [
+                    "[MaxKey, MinKey]"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "courses",
+          "nReturned": 24,
+          "totalKeysExamined": 24,
+          "totalDocsExamined": 24,
+          "executionTimeMillis": 0,
+          "winningPlan": {
+            "isCached": false,
+            "stage": "FETCH",
+            "inputStage": {
+              "stage": "IXSCAN",
+              "keyPattern": {
+                "published": 1,
+                "featured": -1,
+                "createdAt": -1
+              },
+              "indexName": "published_1_featured_-1_createdAt_-1",
+              "isMultiKey": false,
+              "multiKeyPaths": {
+                "published": [],
+                "featured": [],
+                "createdAt": []
+              },
+              "isUnique": false,
+              "isSparse": false,
+              "isPartial": false,
+              "indexVersion": 2,
+              "direction": "forward",
+              "indexBounds": {
+                "published": [
+                  "[true, true]"
+                ],
+                "featured": [
+                  "[MaxKey, MinKey]"
+                ],
+                "createdAt": [
+                  "[MaxKey, MinKey]"
+                ]
+              }
+            }
+          }
+        }
+      ],
+      "connectMs": 23.17,
+      "collectionSizes": {
+        "users": {
+          "count": 1,
+          "dataBytes": 694,
+          "avgObjectBytes": 694,
+          "totalIndexBytes": 28672,
+          "indexes": 7
+        },
+        "authsessions": {
+          "count": 0,
+          "dataBytes": 0,
+          "avgObjectBytes": 0,
+          "totalIndexBytes": 16384,
+          "indexes": 4
+        },
+        "ratelimits": {
+          "count": 0,
+          "dataBytes": 0,
+          "avgObjectBytes": 0,
+          "totalIndexBytes": 8192,
+          "indexes": 2
+        },
+        "courses": {
+          "count": 24,
+          "dataBytes": 38860,
+          "avgObjectBytes": 1619,
+          "totalIndexBytes": 20480,
+          "indexes": 5
+        },
+        "sections": {
+          "count": 6,
+          "dataBytes": 5148,
+          "avgObjectBytes": 858,
+          "totalIndexBytes": 16384,
+          "indexes": 4
+        },
+        "teammembers": {
+          "count": 13,
+          "dataBytes": 25265,
+          "avgObjectBytes": 1943,
+          "totalIndexBytes": 24576,
+          "indexes": 6
+        },
+        "events": {
+          "count": 24,
+          "dataBytes": 23356,
+          "avgObjectBytes": 973,
+          "totalIndexBytes": 16384,
+          "indexes": 4
+        },
+        "reviews": {
+          "count": 40,
+          "dataBytes": 18950,
+          "avgObjectBytes": 473,
+          "totalIndexBytes": 12288,
+          "indexes": 3
+        },
+        "videoreviews": {
+          "count": 12,
+          "dataBytes": 7552,
+          "avgObjectBytes": 629,
+          "totalIndexBytes": 8192,
+          "indexes": 2
+        }
+      },
+      "teamProjection": {
+        "fullJsonBytes": 25802,
+        "withoutAlreadyDiscardedEditorFieldsJsonBytes": 10865
+      },
+      "cacheAfterMeasurements": {
+        "entries": 1,
+        "inFlight": 0,
+        "bytes": 40965
+      },
+      "fixtureDatabaseRemoved": true
+    },
+    {
+      "name": "expanded_synthetic_catalog",
+      "courses": 120,
+      "sections": 24,
+      "team": 60,
+      "events": 120,
+      "reviews": 200,
+      "videos": 40,
+      "database": "sa_v46_test_7d5bdc0654bf2b5e",
+      "endpoints": [
+        {
+          "path": "/api/content/landing",
+          "authenticated": false,
+          "status": 200,
+          "responseCount": {
+            "courses": 24,
+            "sections": 24,
+            "team": 60,
+            "reviews": 20
+          },
+          "bodyBytes": 93994,
+          "gzipBytes": 3495,
+          "contentEncoding": null,
+          "cacheControl": "private, no-store",
+          "cold": {
+            "latencyMs": {
+              "samples": 20,
+              "min": 7.818,
+              "p50": 9.791,
+              "p95": 17.028,
+              "max": 17.726,
+              "mean": 10.912
+            },
+            "mongoCommands": {
+              "samples": 20,
+              "min": 5,
+              "p50": 5,
+              "p95": 5,
+              "max": 5,
+              "mean": 5
+            },
+            "commandsPerRequest": {
+              "ratelimits.findAndModify": 1,
+              "courses.find": 1,
+              "reviews.find": 1,
+              "teammembers.find": 1,
+              "sections.find": 1
+            },
+            "rawLatencyMs": [
+              17.726,
+              17.028,
+              10.726,
+              9.791,
+              11.7,
+              11.106,
+              9.605,
+              10.453,
+              8.547,
+              7.818,
+              7.965,
+              8.509,
+              9.403,
+              12.427,
+              14.261,
+              13.001,
+              9.281,
+              7.942,
+              9.563,
+              11.384
+            ]
+          },
+          "warm": {
+            "latencyMs": {
+              "samples": 60,
+              "min": 2.741,
+              "p50": 3.848,
+              "p95": 5.429,
+              "max": 6.957,
+              "mean": 3.933
+            },
+            "mongoCommands": {
+              "samples": 60,
+              "min": 1,
+              "p50": 1,
+              "p95": 1,
+              "max": 1,
+              "mean": 1
+            },
+            "commandsPerRequest": {
+              "ratelimits.findAndModify": 1
+            },
+            "rawLatencyMs": [
+              5.559,
+              4.094,
+              5.034,
+              4.319,
+              5.318,
+              5.429,
+              4.431,
+              4.178,
+              3.882,
+              4.813,
+              4.171,
+              5.139,
+              4.555,
+              3.514,
+              3.444,
+              3.444,
+              3.88,
+              3.703,
+              4.468,
+              4.106,
+              4.091,
+              3.459,
+              4.269,
+              6.957,
+              4.095,
+              5.228,
+              3.973,
+              3.408,
+              3.231,
+              3.872,
+              3.744,
+              3.004,
+              3.088,
+              3.889,
+              2.959,
+              3.568,
+              2.945,
+              3.067,
+              3.011,
+              3.189,
+              3.308,
+              4.092,
+              3.459,
+              2.772,
+              2.741,
+              4.057,
+              3.288,
+              3.761,
+              3.227,
+              6.912,
+              4.519,
+              4.389,
+              4.133,
+              2.865,
+              3.827,
+              3.265,
+              3.289,
+              2.784,
+              3.848,
+              2.923
+            ]
+          }
+        },
+        {
+          "path": "/api/content/team",
+          "authenticated": true,
+          "status": 200,
+          "responseCount": 60,
+          "bodyBytes": 50275,
+          "gzipBytes": 1568,
+          "contentEncoding": null,
+          "cacheControl": "private, no-store",
+          "cold": {
+            "latencyMs": {
+              "samples": 20,
+              "min": 8.067,
+              "p50": 9.812,
+              "p95": 14.311,
+              "max": 16.869,
+              "mean": 10.51
+            },
+            "mongoCommands": {
+              "samples": 20,
+              "min": 4,
+              "p50": 4,
+              "p95": 4,
+              "max": 4,
+              "mean": 4
+            },
+            "commandsPerRequest": {
+              "authsessions.find": 1,
+              "users.find": 1,
+              "ratelimits.findAndModify": 1,
+              "teammembers.find": 1
+            },
+            "rawLatencyMs": [
+              10.726,
+              9.383,
+              11.631,
+              8.602,
+              8.465,
+              8.63,
+              8.499,
+              8.067,
+              8.23,
+              9.598,
+              12.012,
+              13.247,
+              9.812,
+              10.749,
+              16.869,
+              11.408,
+              14.311,
+              11.288,
+              10.076,
+              8.604
+            ]
+          },
+          "warm": {
+            "latencyMs": {
+              "samples": 60,
+              "min": 4.405,
+              "p50": 5.587,
+              "p95": 8.318,
+              "max": 9.887,
+              "mean": 5.844
+            },
+            "mongoCommands": {
+              "samples": 60,
+              "min": 3,
+              "p50": 3,
+              "p95": 3,
+              "max": 3,
+              "mean": 3
+            },
+            "commandsPerRequest": {
+              "authsessions.find": 1,
+              "users.find": 1,
+              "ratelimits.findAndModify": 1
+            },
+            "rawLatencyMs": [
+              4.845,
+              9.887,
+              7.754,
+              5.46,
+              5.452,
+              5.617,
+              4.739,
+              4.544,
+              5.889,
+              5.832,
+              5.797,
+              4.778,
+              4.97,
+              5.559,
+              6.712,
+              8.454,
+              5.64,
+              5.563,
+              6.152,
+              4.733,
+              4.888,
+              5.304,
+              5.368,
+              4.974,
+              8.318,
+              5.04,
+              5.004,
+              4.405,
+              5.255,
+              5.936,
+              6.08,
+              5.757,
+              5.427,
+              4.95,
+              5.756,
+              5.162,
+              4.959,
+              5.889,
+              5.651,
+              5.262,
+              5.107,
+              7.34,
+              6.826,
+              5.81,
+              5.482,
+              5.411,
+              5.736,
+              4.709,
+              5.587,
+              5.198,
+              6.799,
+              7.637,
+              5.482,
+              8.731,
+              5.613,
+              6.318,
+              6.116,
+              6.144,
+              6.411,
+              6.408
+            ]
+          }
+        },
+        {
+          "path": "/api/content/events",
+          "authenticated": true,
+          "status": 200,
+          "responseCount": 120,
+          "bodyBytes": 123647,
+          "gzipBytes": 3037,
+          "contentEncoding": null,
+          "cacheControl": "private, no-store",
+          "cold": {
+            "latencyMs": {
+              "samples": 20,
+              "min": 9.382,
+              "p50": 11.76,
+              "p95": 17.365,
+              "max": 20.335,
+              "mean": 12.464
+            },
+            "mongoCommands": {
+              "samples": 20,
+              "min": 5,
+              "p50": 5,
+              "p95": 5,
+              "max": 5,
+              "mean": 5
+            },
+            "commandsPerRequest": {
+              "authsessions.find": 1,
+              "users.find": 1,
+              "ratelimits.findAndModify": 1,
+              "events.find": 1,
+              "unknown.getMore": 1
+            },
+            "rawLatencyMs": [
+              12.6,
+              13.167,
+              12.681,
+              17.365,
+              20.335,
+              12.66,
+              10.34,
+              11.106,
+              11.76,
+              9.382,
+              11.328,
+              10.936,
+              14.595,
+              12.556,
+              10.661,
+              9.858,
+              13.546,
+              10.848,
+              12.389,
+              11.174
+            ]
+          },
+          "warm": {
+            "latencyMs": {
+              "samples": 60,
+              "min": 5.362,
+              "p50": 7.113,
+              "p95": 10.46,
+              "max": 11.966,
+              "mean": 7.393
+            },
+            "mongoCommands": {
+              "samples": 60,
+              "min": 3,
+              "p50": 3,
+              "p95": 3,
+              "max": 3,
+              "mean": 3
+            },
+            "commandsPerRequest": {
+              "authsessions.find": 1,
+              "users.find": 1,
+              "ratelimits.findAndModify": 1
+            },
+            "rawLatencyMs": [
+              7.472,
+              7.95,
+              6.968,
+              8.167,
+              8.079,
+              8.695,
+              7.445,
+              7.7,
+              10.493,
+              8.913,
+              6.871,
+              5.938,
+              6.461,
+              7.667,
+              5.893,
+              6.038,
+              6.408,
+              7.37,
+              6.344,
+              5.385,
+              11.213,
+              6.707,
+              6.439,
+              10.46,
+              9.606,
+              7.548,
+              7.169,
+              7.561,
+              9.88,
+              8.303,
+              6.871,
+              6.7,
+              8.914,
+              11.966,
+              9.925,
+              7.545,
+              7.688,
+              7.113,
+              6.776,
+              6.443,
+              8.648,
+              7.3,
+              8.164,
+              8.381,
+              6.955,
+              5.906,
+              6.051,
+              6.775,
+              6.632,
+              6.16,
+              5.509,
+              6.346,
+              8.651,
+              6.424,
+              7.245,
+              5.395,
+              5.383,
+              5.572,
+              5.362,
+              5.629
+            ]
+          }
+        },
+        {
+          "path": "/api/reviews",
+          "authenticated": true,
+          "status": 200,
+          "responseCount": 100,
+          "bodyBytes": 41818,
+          "gzipBytes": 2044,
+          "contentEncoding": null,
+          "cacheControl": "no-store",
+          "cold": {
+            "latencyMs": {
+              "samples": 20,
+              "min": 6.806,
+              "p50": 9.163,
+              "p95": 12.043,
+              "max": 13.021,
+              "mean": 9.469
+            },
+            "mongoCommands": {
+              "samples": 20,
+              "min": 4,
+              "p50": 4,
+              "p95": 4,
+              "max": 4,
+              "mean": 4
+            },
+            "commandsPerRequest": {
+              "authsessions.find": 1,
+              "users.find": 1,
+              "ratelimits.findAndModify": 1,
+              "reviews.find": 1
+            },
+            "rawLatencyMs": [
+              6.806,
+              8.702,
+              9.456,
+              8.155,
+              7.453,
+              7.682,
+              7.261,
+              8.368,
+              9.163,
+              9.904,
+              11.261,
+              8.354,
+              7.793,
+              13.021,
+              12.043,
+              11.326,
+              11.474,
+              10.945,
+              9.774,
+              10.428
+            ]
+          },
+          "warm": {
+            "latencyMs": {
+              "samples": 60,
+              "min": 6.238,
+              "p50": 8.669,
+              "p95": 12.395,
+              "max": 16.117,
+              "mean": 9.02
+            },
+            "mongoCommands": {
+              "samples": 60,
+              "min": 4,
+              "p50": 4,
+              "p95": 4,
+              "max": 4,
+              "mean": 4
+            },
+            "commandsPerRequest": {
+              "authsessions.find": 1,
+              "users.find": 1,
+              "ratelimits.findAndModify": 1,
+              "reviews.find": 1
+            },
+            "rawLatencyMs": [
+              10.244,
+              8.161,
+              9.397,
+              15.007,
+              11.731,
+              9.269,
+              10.072,
+              8.747,
+              10.277,
+              8.1,
+              8.655,
+              9.395,
+              8.669,
+              7.834,
+              8.493,
+              8.921,
+              9.16,
+              8.472,
+              8.94,
+              9.542,
+              10.579,
+              8.982,
+              10.79,
+              8.334,
+              8.141,
+              9.337,
+              8.3,
+              7.467,
+              16.117,
+              10.284,
+              9.383,
+              9.175,
+              9.96,
+              12.395,
+              10.157,
+              10.098,
+              11.062,
+              8.115,
+              12.493,
+              9.188,
+              7.552,
+              8.686,
+              8.224,
+              6.732,
+              8.306,
+              8.446,
+              7.736,
+              7.07,
+              7.59,
+              6.238,
+              6.296,
+              6.825,
+              6.688,
+              6.995,
+              7.534,
+              7.679,
+              8.166,
+              8.471,
+              9.006,
+              7.494
+            ]
+          }
+        },
+        {
+          "path": "/api/video-reviews",
+          "authenticated": false,
+          "status": 200,
+          "responseCount": 40,
+          "bodyBytes": 22196,
+          "gzipBytes": 976,
+          "contentEncoding": null,
+          "cacheControl": "private, no-store",
+          "cold": {
+            "latencyMs": {
+              "samples": 20,
+              "min": 3.875,
+              "p50": 5.41,
+              "p95": 7.847,
+              "max": 8.803,
+              "mean": 5.612
+            },
+            "mongoCommands": {
+              "samples": 20,
+              "min": 2,
+              "p50": 2,
+              "p95": 2,
+              "max": 2,
+              "mean": 2
+            },
+            "commandsPerRequest": {
+              "ratelimits.findAndModify": 1,
+              "videoreviews.find": 1
+            },
+            "rawLatencyMs": [
+              7.847,
+              5.481,
+              4.257,
+              7.583,
+              5.547,
+              5.41,
+              6.073,
+              6.916,
+              8.803,
+              5.037,
+              6.882,
+              6.019,
+              3.875,
+              4.127,
+              4.371,
+              4.977,
+              3.961,
+              4.342,
+              5.689,
+              5.035
+            ]
+          },
+          "warm": {
+            "latencyMs": {
+              "samples": 60,
+              "min": 1.839,
+              "p50": 2.252,
+              "p95": 2.975,
+              "max": 4.313,
+              "mean": 2.345
+            },
+            "mongoCommands": {
+              "samples": 60,
+              "min": 1,
+              "p50": 1,
+              "p95": 1,
+              "max": 1,
+              "mean": 1
+            },
+            "commandsPerRequest": {
+              "ratelimits.findAndModify": 1
+            },
+            "rawLatencyMs": [
+              2.569,
+              2.6,
+              2.29,
+              2.982,
+              2.413,
+              2.469,
+              2.793,
+              2.175,
+              1.981,
+              2.776,
+              2.478,
+              2.306,
+              2.964,
+              2.222,
+              2.127,
+              2.411,
+              2.507,
+              2.374,
+              2.361,
+              2.405,
+              2.148,
+              2.059,
+              1.916,
+              2.682,
+              2.106,
+              2.211,
+              2.448,
+              2.112,
+              1.839,
+              1.941,
+              1.918,
+              2.169,
+              2.305,
+              2.254,
+              2.052,
+              4.313,
+              2.536,
+              2.252,
+              2.091,
+              1.998,
+              2.799,
+              2.64,
+              2.22,
+              2.061,
+              2.307,
+              2.31,
+              2.129,
+              1.965,
+              1.958,
+              3.896,
+              2.295,
+              2.219,
+              2.438,
+              1.954,
+              2.03,
+              1.995,
+              1.958,
+              2.054,
+              2.975,
+              1.934
+            ]
+          }
+        },
+        {
+          "path": "/api/sections",
+          "authenticated": false,
+          "status": 200,
+          "responseCount": 24,
+          "bodyBytes": 21191,
+          "gzipBytes": 929,
+          "contentEncoding": null,
+          "cacheControl": "private, no-store",
+          "cold": {
+            "latencyMs": {
+              "samples": 20,
+              "min": 3.238,
+              "p50": 3.79,
+              "p95": 4.836,
+              "max": 4.842,
+              "mean": 3.972
+            },
+            "mongoCommands": {
+              "samples": 20,
+              "min": 2,
+              "p50": 2,
+              "p95": 2,
+              "max": 2,
+              "mean": 2
+            },
+            "commandsPerRequest": {
+              "ratelimits.findAndModify": 1,
+              "sections.find": 1
+            },
+            "rawLatencyMs": [
+              3.757,
+              4.727,
+              4.326,
+              4.836,
+              4.305,
+              4.186,
+              3.239,
+              3.545,
+              4.319,
+              4.726,
+              3.433,
+              4.842,
+              3.508,
+              3.238,
+              4.054,
+              3.624,
+              3.79,
+              3.932,
+              3.59,
+              3.471
+            ]
+          },
+          "warm": {
+            "latencyMs": {
+              "samples": 60,
+              "min": 1.986,
+              "p50": 2.85,
+              "p95": 5.926,
+              "max": 41.936,
+              "mean": 3.898
+            },
+            "mongoCommands": {
+              "samples": 60,
+              "min": 1,
+              "p50": 1,
+              "p95": 1,
+              "max": 1,
+              "mean": 1
+            },
+            "commandsPerRequest": {
+              "ratelimits.findAndModify": 1
+            },
+            "rawLatencyMs": [
+              2.299,
+              3.176,
+              2.307,
+              4.858,
+              41.936,
+              4.085,
+              2.982,
+              3.069,
+              2.916,
+              2.802,
+              3.018,
+              3.361,
+              2.378,
+              2.722,
+              3.491,
+              2.059,
+              2.549,
+              2.289,
+              2.063,
+              2.272,
+              2.349,
+              3.309,
+              2.46,
+              2.344,
+              2.528,
+              2.096,
+              3.196,
+              3.028,
+              2.352,
+              2.422,
+              2.044,
+              2.112,
+              1.986,
+              3.7,
+              2.58,
+              2.85,
+              6.084,
+              5.094,
+              8.74,
+              4.877,
+              2.812,
+              3.145,
+              2.616,
+              2.099,
+              2.715,
+              2.664,
+              2.415,
+              2.601,
+              4.077,
+              2.744,
+              3.657,
+              4.268,
+              4.028,
+              5.926,
+              5.065,
+              3.286,
+              3.076,
+              3.788,
+              5.484,
+              4.642
+            ]
+          }
+        },
+        {
+          "path": "/api/courses",
+          "authenticated": true,
+          "status": 200,
+          "responseCount": 120,
+          "bodyBytes": 199758,
+          "gzipBytes": 5395,
+          "contentEncoding": null,
+          "cacheControl": "private, no-store",
+          "cold": {
+            "latencyMs": {
+              "samples": 20,
+              "min": 13.935,
+              "p50": 15.99,
+              "p95": 20.625,
+              "max": 23.806,
+              "mean": 17.062
+            },
+            "mongoCommands": {
+              "samples": 20,
+              "min": 5,
+              "p50": 5,
+              "p95": 5,
+              "max": 5,
+              "mean": 5
+            },
+            "commandsPerRequest": {
+              "authsessions.find": 1,
+              "users.find": 1,
+              "ratelimits.findAndModify": 1,
+              "courses.find": 1,
+              "unknown.getMore": 1
+            },
+            "rawLatencyMs": [
+              15.408,
+              23.806,
+              16.412,
+              16.228,
+              18.953,
+              15.793,
+              13.935,
+              14.215,
+              14.667,
+              19.957,
+              19.581,
+              14.585,
+              20.625,
+              15.99,
+              15.078,
+              15.045,
+              18.016,
+              20.059,
+              17.581,
+              15.308
+            ]
+          },
+          "warm": {
+            "latencyMs": {
+              "samples": 60,
+              "min": 6.304,
+              "p50": 7.81,
+              "p95": 11.025,
+              "max": 28.435,
+              "mean": 8.638
+            },
+            "mongoCommands": {
+              "samples": 60,
+              "min": 3,
+              "p50": 3,
+              "p95": 3,
+              "max": 3,
+              "mean": 3
+            },
+            "commandsPerRequest": {
+              "authsessions.find": 1,
+              "users.find": 1,
+              "ratelimits.findAndModify": 1
+            },
+            "rawLatencyMs": [
+              10.269,
+              9.429,
+              11.025,
+              9.325,
+              10.313,
+              7.326,
+              8.94,
+              8.021,
+              8.44,
+              8.407,
+              7.81,
+              7.827,
+              7.393,
+              7.492,
+              6.98,
+              7.692,
+              7.878,
+              8.305,
+              9.083,
+              7.797,
+              8.703,
+              8.699,
+              28.435,
+              9.589,
+              7.648,
+              8.199,
+              8.822,
+              7.598,
+              7.358,
+              7.163,
+              6.624,
+              7.157,
+              7.009,
+              6.383,
+              6.304,
+              7.784,
+              8.035,
+              7.151,
+              10.798,
+              8.578,
+              6.727,
+              7.021,
+              7.281,
+              7.575,
+              7.343,
+              6.536,
+              6.931,
+              7.127,
+              13.545,
+              7.232,
+              8.513,
+              16.144,
+              9.745,
+              7.615,
+              7.052,
+              8.555,
+              7.745,
+              10.189,
+              9.226,
+              8.374
+            ]
+          }
+        }
+      ],
+      "queryPlans": [
+        {
+          "name": "landing_reviews",
+          "nReturned": 20,
+          "totalKeysExamined": 200,
+          "totalDocsExamined": 200,
+          "executionTimeMillis": 0,
+          "winningPlan": {
+            "isCached": false,
+            "stage": "PROJECTION_SIMPLE",
+            "transformBy": {
+              "name": 1,
+              "rating": 1,
+              "message": 1,
+              "createdAt": 1,
+              "updatedAt": 1
+            },
+            "inputStage": {
+              "stage": "SORT",
+              "sortPattern": {
+                "updatedAt": -1,
+                "createdAt": -1
+              },
+              "memLimit": 104857600,
+              "limitAmount": 20,
+              "type": "simple",
+              "inputStage": {
+                "stage": "FETCH",
+                "filter": {
+                  "$and": [
+                    {
+                      "approvedAt": {
+                        "$type": [
+                          9
+                        ]
+                      }
+                    },
+                    {
+                      "approvedBy": {
+                        "$type": [
+                          7
+                        ]
+                      }
+                    }
+                  ]
+                },
+                "inputStage": {
+                  "stage": "IXSCAN",
+                  "keyPattern": {
+                    "status": 1,
+                    "createdAt": -1
+                  },
+                  "indexName": "status_1_createdAt_-1",
+                  "isMultiKey": false,
+                  "multiKeyPaths": {
+                    "status": [],
+                    "createdAt": []
+                  },
+                  "isUnique": false,
+                  "isSparse": false,
+                  "isPartial": false,
+                  "indexVersion": 2,
+                  "direction": "forward",
+                  "indexBounds": {
+                    "status": [
+                      "[\"approved\", \"approved\"]"
+                    ],
+                    "createdAt": [
+                      "[MaxKey, MinKey]"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "standalone_reviews",
+          "nReturned": 100,
+          "totalKeysExamined": 200,
+          "totalDocsExamined": 200,
+          "executionTimeMillis": 0,
+          "winningPlan": {
+            "isCached": false,
+            "stage": "PROJECTION_SIMPLE",
+            "transformBy": {
+              "name": 1,
+              "rating": 1,
+              "message": 1,
+              "createdAt": 1,
+              "updatedAt": 1
+            },
+            "inputStage": {
+              "stage": "SORT",
+              "sortPattern": {
+                "updatedAt": -1,
+                "createdAt": -1
+              },
+              "memLimit": 104857600,
+              "limitAmount": 100,
+              "type": "simple",
+              "inputStage": {
+                "stage": "FETCH",
+                "filter": {
+                  "$and": [
+                    {
+                      "approvedAt": {
+                        "$type": [
+                          9
+                        ]
+                      }
+                    },
+                    {
+                      "approvedBy": {
+                        "$type": [
+                          7
+                        ]
+                      }
+                    }
+                  ]
+                },
+                "inputStage": {
+                  "stage": "IXSCAN",
+                  "keyPattern": {
+                    "status": 1,
+                    "createdAt": -1
+                  },
+                  "indexName": "status_1_createdAt_-1",
+                  "isMultiKey": false,
+                  "multiKeyPaths": {
+                    "status": [],
+                    "createdAt": []
+                  },
+                  "isUnique": false,
+                  "isSparse": false,
+                  "isPartial": false,
+                  "indexVersion": 2,
+                  "direction": "forward",
+                  "indexBounds": {
+                    "status": [
+                      "[\"approved\", \"approved\"]"
+                    ],
+                    "createdAt": [
+                      "[MaxKey, MinKey]"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "sections",
+          "nReturned": 24,
+          "totalKeysExamined": 24,
+          "totalDocsExamined": 24,
+          "executionTimeMillis": 0,
+          "winningPlan": {
+            "isCached": false,
+            "stage": "SORT",
+            "sortPattern": {
+              "order": 1,
+              "title": 1
+            },
+            "memLimit": 104857600,
+            "type": "simple",
+            "inputStage": {
+              "stage": "FETCH",
+              "filter": {
+                "archivedAt": {
+                  "$eq": null
+                }
+              },
+              "inputStage": {
+                "stage": "IXSCAN",
+                "keyPattern": {
+                  "published": 1,
+                  "order": 1
+                },
+                "indexName": "published_1_order_1",
+                "isMultiKey": false,
+                "multiKeyPaths": {
+                  "published": [],
+                  "order": []
+                },
+                "isUnique": false,
+                "isSparse": false,
+                "isPartial": false,
+                "indexVersion": 2,
+                "direction": "forward",
+                "indexBounds": {
+                  "published": [
+                    "[true, true]"
+                  ],
+                  "order": [
+                    "[MinKey, MaxKey]"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "events",
+          "nReturned": 120,
+          "totalKeysExamined": 120,
+          "totalDocsExamined": 120,
+          "executionTimeMillis": 0,
+          "winningPlan": {
+            "isCached": false,
+            "stage": "SORT",
+            "sortPattern": {
+              "date": 1,
+              "createdAt": -1
+            },
+            "memLimit": 104857600,
+            "type": "simple",
+            "inputStage": {
+              "stage": "PROJECTION_SIMPLE",
+              "transformBy": {
+                "webinarAnnouncement": 0
+              },
+              "inputStage": {
+                "stage": "FETCH",
+                "inputStage": {
+                  "stage": "IXSCAN",
+                  "keyPattern": {
+                    "status": 1,
+                    "date": 1
+                  },
+                  "indexName": "status_1_date_1",
+                  "isMultiKey": false,
+                  "multiKeyPaths": {
+                    "status": [],
+                    "date": []
+                  },
+                  "isUnique": false,
+                  "isSparse": false,
+                  "isPartial": false,
+                  "indexVersion": 2,
+                  "direction": "forward",
+                  "indexBounds": {
+                    "status": [
+                      "[\"published\", \"published\"]"
+                    ],
+                    "date": [
+                      "[MinKey, MaxKey]"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "video_reviews",
+          "nReturned": 40,
+          "totalKeysExamined": 40,
+          "totalDocsExamined": 40,
+          "executionTimeMillis": 0,
+          "winningPlan": {
+            "isCached": false,
+            "stage": "SORT",
+            "sortPattern": {
+              "order": 1,
+              "createdAt": -1,
+              "_id": 1
+            },
+            "memLimit": 104857600,
+            "limitAmount": 100,
+            "type": "simple",
+            "inputStage": {
+              "stage": "FETCH",
+              "inputStage": {
+                "stage": "IXSCAN",
+                "keyPattern": {
+                  "published": 1,
+                  "order": 1,
+                  "createdAt": -1
+                },
+                "indexName": "published_1_order_1_createdAt_-1",
+                "isMultiKey": false,
+                "multiKeyPaths": {
+                  "published": [],
+                  "order": [],
+                  "createdAt": []
+                },
+                "isUnique": false,
+                "isSparse": false,
+                "isPartial": false,
+                "indexVersion": 2,
+                "direction": "forward",
+                "indexBounds": {
+                  "published": [
+                    "[true, true]"
+                  ],
+                  "order": [
+                    "[MinKey, MaxKey]"
+                  ],
+                  "createdAt": [
+                    "[MaxKey, MinKey]"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "courses",
+          "nReturned": 120,
+          "totalKeysExamined": 120,
+          "totalDocsExamined": 120,
+          "executionTimeMillis": 0,
+          "winningPlan": {
+            "isCached": false,
+            "stage": "FETCH",
+            "inputStage": {
+              "stage": "IXSCAN",
+              "keyPattern": {
+                "published": 1,
+                "featured": -1,
+                "createdAt": -1
+              },
+              "indexName": "published_1_featured_-1_createdAt_-1",
+              "isMultiKey": false,
+              "multiKeyPaths": {
+                "published": [],
+                "featured": [],
+                "createdAt": []
+              },
+              "isUnique": false,
+              "isSparse": false,
+              "isPartial": false,
+              "indexVersion": 2,
+              "direction": "forward",
+              "indexBounds": {
+                "published": [
+                  "[true, true]"
+                ],
+                "featured": [
+                  "[MaxKey, MinKey]"
+                ],
+                "createdAt": [
+                  "[MaxKey, MinKey]"
+                ]
+              }
+            }
+          }
+        }
+      ],
+      "connectMs": 11.799,
+      "collectionSizes": {
+        "users": {
+          "count": 1,
+          "dataBytes": 694,
+          "avgObjectBytes": 694,
+          "totalIndexBytes": 28672,
+          "indexes": 7
+        },
+        "authsessions": {
+          "count": 0,
+          "dataBytes": 0,
+          "avgObjectBytes": 0,
+          "totalIndexBytes": 16384,
+          "indexes": 4
+        },
+        "ratelimits": {
+          "count": 0,
+          "dataBytes": 0,
+          "avgObjectBytes": 0,
+          "totalIndexBytes": 8192,
+          "indexes": 2
+        },
+        "courses": {
+          "count": 120,
+          "dataBytes": 194490,
+          "avgObjectBytes": 1620,
+          "totalIndexBytes": 20480,
+          "indexes": 5
+        },
+        "sections": {
+          "count": 24,
+          "dataBytes": 20620,
+          "avgObjectBytes": 859,
+          "totalIndexBytes": 16384,
+          "indexes": 4
+        },
+        "teammembers": {
+          "count": 60,
+          "dataBytes": 116680,
+          "avgObjectBytes": 1944,
+          "totalIndexBytes": 24576,
+          "indexes": 6
+        },
+        "events": {
+          "count": 120,
+          "dataBytes": 116900,
+          "avgObjectBytes": 974,
+          "totalIndexBytes": 16384,
+          "indexes": 4
+        },
+        "reviews": {
+          "count": 200,
+          "dataBytes": 94890,
+          "avgObjectBytes": 474,
+          "totalIndexBytes": 12288,
+          "indexes": 3
+        },
+        "videoreviews": {
+          "count": 40,
+          "dataBytes": 25220,
+          "avgObjectBytes": 630,
+          "totalIndexBytes": 8192,
+          "indexes": 2
+        }
+      },
+      "teamProjection": {
+        "fullJsonBytes": 119191,
+        "withoutAlreadyDiscardedEditorFieldsJsonBytes": 50251
+      },
+      "cacheAfterMeasurements": {
+        "entries": 1,
+        "inFlight": 0,
+        "bytes": 205011
+      },
+      "fixtureDatabaseRemoved": true
+    }
+  ],
+  "finishedAt": "2026-11-06T22:51:44.898Z"
+}

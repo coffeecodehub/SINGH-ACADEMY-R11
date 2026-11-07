@@ -1,0 +1,49 @@
+{
+  "run": 11,
+  "expected": 1,
+  "confirmedSsr": true,
+  "count": 0,
+  "retained": false,
+  "pageErrors": [],
+  "firstResourceCommit": {
+    "time": 153.59999999403954,
+    "fiberId": 2,
+    "hasAlternate": false,
+    "initialCapture": {
+      "index": 26,
+      "kind": "null"
+    },
+    "resource": {
+      "index": 28,
+      "kind": "resource",
+      "path": "/content/landing",
+      "scope": "student:0::/api/content/landing",
+      "field": "sections",
+      "loaded": false,
+      "loading": true,
+      "error": "",
+      "count": 0,
+      "names": []
+    },
+    "context": {
+      "kind": "initial-map",
+      "paths": [
+        "/content/landing",
+        "/video-reviews",
+        "/page-sections/landing"
+      ],
+      "sections": 1,
+      "sectionNames": [
+        "Published Learning Section"
+      ]
+    },
+    "hydration": {
+      "index": 24,
+      "kind": "boolean",
+      "value": true
+    }
+  },
+  "scopes": [
+    "student:0::/api/content/landing"
+  ]
+}

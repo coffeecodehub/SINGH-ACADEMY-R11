@@ -1,0 +1,1082 @@
+
+> singh-academy@60.16.0 test:runtime
+> node --test scripts/test/*.test.mjs
+
+TAP version 13
+# Subtest: profiler rejects unsafe origin https://example.com
+ok 1 - profiler rejects unsafe origin https://example.com
+  ---
+  duration_ms: 1.236351
+  type: 'test'
+  ...
+# Subtest: profiler rejects unsafe origin http://user:REDACTED@localhost:3000
+ok 2 - profiler rejects unsafe origin http://user:REDACTED@localhost:3000
+  ---
+  duration_ms: 0.172815
+  type: 'test'
+  ...
+# Subtest: profiler rejects unsafe origin http://localhost:3000/path
+ok 3 - profiler rejects unsafe origin http://localhost:3000/path
+  ---
+  duration_ms: 0.083905
+  type: 'test'
+  ...
+# Subtest: profiler rejects unsafe origin http://localhost:3000?token=REDACTED
+ok 4 - profiler rejects unsafe origin http://localhost:3000?token=REDACTED
+  ---
+  duration_ms: 0.180437
+  type: 'test'
+  ...
+# Subtest: profiler rejects unsafe origin http://localhost:3000\#token
+ok 5 - profiler rejects unsafe origin http://localhost:3000\#token
+  ---
+  duration_ms: 0.212555
+  type: 'test'
+  ...
+# Subtest: profiler rejects unsafe origin file:///tmp/local
+ok 6 - profiler rejects unsafe origin file:///tmp/local
+  ---
+  duration_ms: 0.132637
+  type: 'test'
+  ...
+# Subtest: profiler rejects unsafe origin http://127.0.0.1.evil.test
+ok 7 - profiler rejects unsafe origin http://127.0.0.1.evil.test
+  ---
+  duration_ms: 0.075351
+  type: 'test'
+  ...
+# Subtest: profiler accepts loopback only
+ok 8 - profiler accepts loopback only
+  ---
+  duration_ms: 0.137083
+  type: 'test'
+  ...
+# Subtest: profiler rejects invalid option --samples 0
+ok 9 - profiler rejects invalid option --samples 0
+  ---
+  duration_ms: 0.400403
+  type: 'test'
+  ...
+# Subtest: profiler rejects invalid option --samples 11
+ok 10 - profiler rejects invalid option --samples 11
+  ---
+  duration_ms: 0.358451
+  type: 'test'
+  ...
+# Subtest: profiler rejects invalid option --timeout 1
+ok 11 - profiler rejects invalid option --timeout 1
+  ---
+  duration_ms: 0.166366
+  type: 'test'
+  ...
+# Subtest: profiler rejects invalid option --mode live
+ok 12 - profiler rejects invalid option --mode live
+  ---
+  duration_ms: 0.137894
+  type: 'test'
+  ...
+# Subtest: profiler rejects invalid option --cookie private
+ok 13 - profiler rejects invalid option --cookie private
+  ---
+  duration_ms: 0.214558
+  type: 'test'
+  ...
+# Subtest: profiler rejects invalid option --front 
+ok 14 - profiler rejects invalid option --front 
+  ---
+  duration_ms: 0.06034
+  type: 'test'
+  ...
+# Subtest: profiler plans only known read-only pages and APIs, not checkout/capture/logout
+ok 15 - profiler plans only known read-only pages and APIs, not checkout/capture/logout
+  ---
+  duration_ms: 0.390268
+  type: 'test'
+  ...
+# Subtest: profiler does not send credentials or persist response content/headers
+ok 16 - profiler does not send credentials or persist response content/headers
+  ---
+  duration_ms: 6.236443
+  type: 'test'
+  ...
+# Subtest: profiler differentiates headers and delayed body using a real loopback HTTP server
+ok 17 - profiler differentiates headers and delayed body using a real loopback HTTP server
+  ---
+  duration_ms: 74.750041
+  type: 'test'
+  ...
+# Subtest: profiler reports a timed-out body as failure, not a successful HTTP benchmark
+ok 18 - profiler reports a timed-out body as failure, not a successful HTTP benchmark
+  ---
+  duration_ms: 123.676706
+  type: 'test'
+  ...
+# Subtest: profiler never calls first observed request a guaranteed cold compile or claims loading fixed
+ok 19 - profiler never calls first observed request a guaranteed cold compile or claims loading fixed
+  ---
+  duration_ms: 1.700357
+  type: 'test'
+  ...
+# Subtest: exact approved password and My Courses patch passes without a stale process lock
+ok 20 - exact approved password and My Courses patch passes without a stale process lock
+  ---
+  duration_ms: 6.287949
+  type: 'test'
+  ...
+# Subtest: unapproved CSS change is still rejected
+ok 21 - unapproved CSS change is still rejected
+  ---
+  duration_ms: 2.783411
+  type: 'test'
+  ...
+# Subtest: returning the original unpatched password file is rejected
+ok 22 - returning the original unpatched password file is rejected
+  ---
+  duration_ms: 3.423859
+  type: 'test'
+  ...
+# Subtest: different eye source is rejected
+ok 23 - different eye source is rejected
+  ---
+  duration_ms: 2.136823
+  type: 'test'
+  ...
+# Subtest: missing protected source is rejected
+ok 24 - missing protected source is rejected
+  ---
+  duration_ms: 2.072348
+  type: 'test'
+  ...
+# Subtest: adding an unrelated third UI exception is rejected
+ok 25 - adding an unrelated third UI exception is rejected
+  ---
+  duration_ms: 1.925641
+  type: 'test'
+  ...
+# Subtest: forging before hash is rejected against the retained original baseline
+ok 26 - forging before hash is rejected against the retained original baseline
+  ---
+  duration_ms: 1.110133
+  type: 'test'
+  ...
+# Subtest: a generated-file list cannot exempt CSS
+ok 27 - a generated-file list cannot exempt CSS
+  ---
+  duration_ms: 1.374656
+  type: 'test'
+  ...
+# Subtest: unapproved My Courses source revision is rejected
+ok 28 - unapproved My Courses source revision is rejected
+  ---
+  duration_ms: 1.655711
+  type: 'test'
+  ...
+# Subtest: explicit current-version snapshot accepts authorized source/CSS while checking every original binary asset
+ok 29 - explicit current-version snapshot accepts authorized source/CSS while checking every original binary asset
+  ---
+  duration_ms: 13.34656
+  type: 'test'
+  ...
+# Subtest: verification is read-only and never invents a missing reviewed snapshot
+ok 30 - verification is read-only and never invents a missing reviewed snapshot
+  ---
+  duration_ms: 2.105938
+  type: 'test'
+  ...
+# Subtest: changed and missing newly introduced application source both fail
+ok 31 - changed and missing newly introduced application source both fail
+  ---
+  duration_ms: 5.11981
+  type: 'test'
+  ...
+# Subtest: new unknown executable source cannot hide outside the reviewed file list
+ok 32 - new unknown executable source cannot hide outside the reviewed file list
+  ---
+  duration_ms: 4.58585
+  type: 'test'
+  ...
+# Subtest: hand-authored QA fixture source is protected even while generated QA output changes freely
+ok 33 - hand-authored QA fixture source is protected even while generated QA output changes freely
+  ---
+  duration_ms: 5.700469
+  type: 'test'
+  ...
+# Subtest: explicit regeneration still cannot approve destructive changes to existing public/certificate assets
+ok 34 - explicit regeneration still cannot approve destructive changes to existing public/certificate assets
+  ---
+  duration_ms: 3.649783
+  type: 'test'
+  ...
+# Subtest: uploaded photographs retain their supplied provenance bytes even during a reviewed regeneration
+ok 35 - uploaded photographs retain their supplied provenance bytes even during a reviewed regeneration
+  ---
+  duration_ms: 4.688862
+  type: 'test'
+  ...
+# Subtest: snapshot omissions and unsafe traversal entries fail before reading arbitrary paths
+ok 36 - snapshot omissions and unsafe traversal entries fail before reading arbitrary paths
+  ---
+  duration_ms: 4.13334
+  type: 'test'
+  ...
+# Subtest: replacing an existing reviewed baseline requires an explicit reviewed-update flag
+ok 37 - replacing an existing reviewed baseline requires an explicit reviewed-update flag
+  ---
+  duration_ms: 3.71482
+  type: 'test'
+  ...
+# Subtest: runtime policy accepts stable version string 22.0.0
+ok 38 - runtime policy accepts stable version string 22.0.0
+  ---
+  duration_ms: 1.717493
+  type: 'test'
+  ...
+# Subtest: runtime policy accepts stable version string 22.16.0
+ok 39 - runtime policy accepts stable version string 22.16.0
+  ---
+  duration_ms: 0.289359
+  type: 'test'
+  ...
+# Subtest: runtime policy accepts stable version string 22.23.3
+ok 40 - runtime policy accepts stable version string 22.23.3
+  ---
+  duration_ms: 0.127619
+  type: 'test'
+  ...
+# Subtest: runtime policy accepts stable version string 24.0.0
+ok 41 - runtime policy accepts stable version string 24.0.0
+  ---
+  duration_ms: 0.126498
+  type: 'test'
+  ...
+# Subtest: runtime policy accepts stable version string 24.18.0
+ok 42 - runtime policy accepts stable version string 24.18.0
+  ---
+  duration_ms: 1.224653
+  type: 'test'
+  ...
+# Subtest: runtime policy accepts stable version string v24.18.0
+ok 43 - runtime policy accepts stable version string v24.18.0
+  ---
+  duration_ms: 0.126186
+  type: 'test'
+  ...
+# Subtest: runtime policy accepts stable version string 24.21.0
+ok 44 - runtime policy accepts stable version string 24.21.0
+  ---
+  duration_ms: 0.095611
+  type: 'test'
+  ...
+# Subtest: runtime policy rejects unsupported/invalid input "18.20.0"
+ok 45 - runtime policy rejects unsupported/invalid input "18.20.0"
+  ---
+  duration_ms: 0.499299
+  type: 'test'
+  ...
+# Subtest: runtime policy rejects unsupported/invalid input "20.19.0"
+ok 46 - runtime policy rejects unsupported/invalid input "20.19.0"
+  ---
+  duration_ms: 0.426501
+  type: 'test'
+  ...
+# Subtest: runtime policy rejects unsupported/invalid input "21.7.3"
+ok 47 - runtime policy rejects unsupported/invalid input "21.7.3"
+  ---
+  duration_ms: 0.474733
+  type: 'test'
+  ...
+# Subtest: runtime policy rejects unsupported/invalid input "23.11.0"
+ok 48 - runtime policy rejects unsupported/invalid input "23.11.0"
+  ---
+  duration_ms: 0.191363
+  type: 'test'
+  ...
+# Subtest: runtime policy rejects unsupported/invalid input "25.0.0"
+ok 49 - runtime policy rejects unsupported/invalid input "25.0.0"
+  ---
+  duration_ms: 0.110554
+  type: 'test'
+  ...
+# Subtest: runtime policy rejects unsupported/invalid input "26.0.0"
+ok 50 - runtime policy rejects unsupported/invalid input "26.0.0"
+  ---
+  duration_ms: 0.127569
+  type: 'test'
+  ...
+# Subtest: runtime policy rejects unsupported/invalid input "24.18.0-nightly"
+ok 51 - runtime policy rejects unsupported/invalid input "24.18.0-nightly"
+  ---
+  duration_ms: 0.180096
+  type: 'test'
+  ...
+# Subtest: runtime policy rejects unsupported/invalid input "22.0.0-rc.1"
+ok 52 - runtime policy rejects unsupported/invalid input "22.0.0-rc.1"
+  ---
+  duration_ms: 0.092307
+  type: 'test'
+  ...
+# Subtest: runtime policy rejects unsupported/invalid input "22.x"
+ok 53 - runtime policy rejects unsupported/invalid input "22.x"
+  ---
+  duration_ms: 0.086558
+  type: 'test'
+  ...
+# Subtest: runtime policy rejects unsupported/invalid input "24"
+ok 54 - runtime policy rejects unsupported/invalid input "24"
+  ---
+  duration_ms: 0.09426
+  type: 'test'
+  ...
+# Subtest: runtime policy rejects unsupported/invalid input "024.18.0"
+ok 55 - runtime policy rejects unsupported/invalid input "024.18.0"
+  ---
+  duration_ms: 0.087059
+  type: 'test'
+  ...
+# Subtest: runtime policy rejects unsupported/invalid input "24.18.0 trailing"
+ok 56 - runtime policy rejects unsupported/invalid input "24.18.0 trailing"
+  ---
+  duration_ms: 0.083363
+  type: 'test'
+  ...
+# Subtest: runtime policy rejects unsupported/invalid input ""
+ok 57 - runtime policy rejects unsupported/invalid input ""
+  ---
+  duration_ms: 0.088751
+  type: 'test'
+  ...
+# Subtest: runtime policy rejects unsupported/invalid input null
+ok 58 - runtime policy rejects unsupported/invalid input null
+  ---
+  duration_ms: 0.087659
+  type: 'test'
+  ...
+# Subtest: runtime policy rejects unsupported/invalid input 24
+ok 59 - runtime policy rejects unsupported/invalid input 24
+  ---
+  duration_ms: 0.130283
+  type: 'test'
+  ...
+# Subtest: runtime policy rejects unsupported/invalid input {}
+ok 60 - runtime policy rejects unsupported/invalid input {}
+  ---
+  duration_ms: 0.100018
+  type: 'test'
+  ...
+# Subtest: runtime policy rejects unsupported/invalid input []
+ok 61 - runtime policy rejects unsupported/invalid input []
+  ---
+  duration_ms: 0.088331
+  type: 'test'
+  ...
+# Subtest: default policy reads the actually executing Node runtime, without an NVM check
+ok 62 - default policy reads the actually executing Node runtime, without an NVM check
+  ---
+  duration_ms: 0.1281
+  type: 'test'
+  ...
+# Subtest: actual root/backend/frontend declare exactly the same accepted engines and version
+ok 63 - actual root/backend/frontend declare exactly the same accepted engines and version
+  ---
+  duration_ms: 0.785513
+  type: 'test'
+  ...
+# Subtest: Node 24 summary distinguishes local policy acceptance from Hostinger Node 22 evidence
+ok 64 - Node 24 summary distinguishes local policy acceptance from Hostinger Node 22 evidence
+  ---
+  duration_ms: 2.736952
+  type: 'test'
+  ...
+# Subtest: an old Node-22-only manifest is identified: package.json
+ok 65 - an old Node-22-only manifest is identified: package.json
+  ---
+  duration_ms: 1.750442
+  type: 'test'
+  ...
+# Subtest: an old Node-22-only manifest is identified: backend/package.json
+ok 66 - an old Node-22-only manifest is identified: backend/package.json
+  ---
+  duration_ms: 2.06047
+  type: 'test'
+  ...
+# Subtest: an old Node-22-only manifest is identified: frontend/package.json
+ok 67 - an old Node-22-only manifest is identified: frontend/package.json
+  ---
+  duration_ms: 1.294226
+  type: 'test'
+  ...
+# Subtest: mixed patch versions are not accepted: backend/package.json
+ok 68 - mixed patch versions are not accepted: backend/package.json
+  ---
+  duration_ms: 1.664784
+  type: 'test'
+  ...
+# Subtest: mixed patch versions are not accepted: frontend/package.json
+ok 69 - mixed patch versions are not accepted: frontend/package.json
+  ---
+  duration_ms: 1.379092
+  type: 'test'
+  ...
+# Subtest: malformed or missing manifest produces an actionable message without echoing file contents
+ok 70 - malformed or missing manifest produces an actionable message without echoing file contents
+  ---
+  duration_ms: 1.421414
+  type: 'test'
+  ...
+# Subtest: local gate retains one four-scan security audit in verify, without redundant unstructured scans
+ok 71 - local gate retains one four-scan security audit in verify, without redundant unstructured scans
+  ---
+  duration_ms: 0.881394
+  type: 'test'
+  ...
+# Subtest: explicit remote option appends verification only, never a charge-creation command
+ok 72 - explicit remote option appends verification only, never a charge-creation command
+  ---
+  duration_ms: 0.213947
+  type: 'test'
+  ...
+# Subtest: simulated successful gate retains every check under 22.16.0
+ok 73 - simulated successful gate retains every check under 22.16.0
+  ---
+  duration_ms: 6.540894
+  type: 'test'
+  ...
+# Subtest: simulated successful gate retains every check under 24.18.0
+ok 74 - simulated successful gate retains every check under 24.18.0
+  ---
+  duration_ms: 9.972514
+  type: 'test'
+  ...
+# Subtest: simulated gate stops at command 1 and never marks later commands passed
+ok 75 - simulated gate stops at command 1 and never marks later commands passed
+  ---
+  duration_ms: 6.050497
+  type: 'test'
+  ...
+# Subtest: simulated gate stops at command 2 and never marks later commands passed
+ok 76 - simulated gate stops at command 2 and never marks later commands passed
+  ---
+  duration_ms: 2.7622
+  type: 'test'
+  ...
+# Subtest: simulated gate stops at command 3 and never marks later commands passed
+ok 77 - simulated gate stops at command 3 and never marks later commands passed
+  ---
+  duration_ms: 3.294578
+  type: 'test'
+  ...
+# Subtest: simulated gate stops at command 4 and never marks later commands passed
+ok 78 - simulated gate stops at command 4 and never marks later commands passed
+  ---
+  duration_ms: 3.309299
+  type: 'test'
+  ...
+# Subtest: simulated gate stops at command 5 and never marks later commands passed
+ok 79 - simulated gate stops at command 5 and never marks later commands passed
+  ---
+  duration_ms: 4.414435
+  type: 'test'
+  ...
+# Subtest: simulated gate stops at command 6 and never marks later commands passed
+ok 80 - simulated gate stops at command 6 and never marks later commands passed
+  ---
+  duration_ms: 4.283422
+  type: 'test'
+  ...
+# Subtest: simulated gate stops at command 7 and never marks later commands passed
+ok 81 - simulated gate stops at command 7 and never marks later commands passed
+  ---
+  duration_ms: 7.486354
+  type: 'test'
+  ...
+# Subtest: an early unsupported runtime replaces stale success with failed + not_run entries
+ok 82 - an early unsupported runtime replaces stale success with failed + not_run entries
+  ---
+  duration_ms: 1.781798
+  type: 'test'
+  ...
+# Subtest: incomplete patch writes a failure report before installation or any service call
+ok 83 - incomplete patch writes a failure report before installation or any service call
+  ---
+  duration_ms: 1.629042
+  type: 'test'
+  ...
+# Subtest: commands do not mutate environment settings, secrets or lockfiles
+ok 84 - commands do not mutate environment settings, secrets or lockfiles
+  ---
+  duration_ms: 3.926533
+  type: 'test'
+  ...
+# Subtest: check:runtime CLI uses the current runtime and succeeds from an unrelated cwd
+ok 85 - check:runtime CLI uses the current runtime and succeeds from an unrelated cwd
+  ---
+  duration_ms: 53.667163
+  type: 'test'
+  ...
+# Subtest: CI declares both release families, with no single-runtime or auto-deploy shortcut
+ok 86 - CI declares both release families, with no single-runtime or auto-deploy shortcut
+  ---
+  duration_ms: 2.520952
+  type: 'test'
+  ...
+# Subtest: stable security version "0.35.5"
+ok 87 - stable security version "0.35.5"
+  ---
+  duration_ms: 1.886393
+  type: 'test'
+  ...
+# Subtest: stable security version "0.35.4"
+ok 88 - stable security version "0.35.4"
+  ---
+  duration_ms: 0.273314
+  type: 'test'
+  ...
+# Subtest: stable security version "0.36.0"
+ok 89 - stable security version "0.36.0"
+  ---
+  duration_ms: 0.081841
+  type: 'test'
+  ...
+# Subtest: stable security version "2.63.2"
+ok 90 - stable security version "2.63.2"
+  ---
+  duration_ms: 0.117905
+  type: 'test'
+  ...
+# Subtest: stable security version "2.63.1"
+ok 91 - stable security version "2.63.1"
+  ---
+  duration_ms: 0.151123
+  type: 'test'
+  ...
+# Subtest: stable security version "8.18.7"
+ok 92 - stable security version "8.18.7"
+  ---
+  duration_ms: 0.097264
+  type: 'test'
+  ...
+# Subtest: stable security version "0.35.5-rc.1"
+ok 93 - stable security version "0.35.5-rc.1"
+  ---
+  duration_ms: 0.310159
+  type: 'test'
+  ...
+# Subtest: stable security version "^0.35.5"
+ok 94 - stable security version "^0.35.5"
+  ---
+  duration_ms: 0.081761
+  type: 'test'
+  ...
+# Subtest: stable security version "0.35"
+ok 95 - stable security version "0.35"
+  ---
+  duration_ms: 0.411849
+  type: 'test'
+  ...
+# Subtest: stable security version undefined
+ok 96 - stable security version undefined
+  ---
+  duration_ms: 0.305512
+  type: 'test'
+  ...
+# Subtest: stable security version null
+ok 97 - stable security version null
+  ---
+  duration_ms: 0.139857
+  type: 'test'
+  ...
+# Subtest: stable security version 24
+ok 98 - stable security version 24
+  ---
+  duration_ms: 0.050265
+  type: 'test'
+  ...
+# Subtest: actual backend and frontend pins both select the reviewed Sharp patch
+ok 99 - actual backend and frontend pins both select the reviewed Sharp patch
+  ---
+  duration_ms: 0.524217
+  type: 'test'
+  ...
+# Subtest: backend old locked Sharp is rejected; updated lock passes
+ok 100 - backend old locked Sharp is rejected; updated lock passes
+  ---
+  duration_ms: 2.347866
+  type: 'test'
+  ...
+# Subtest: backend stale or missing frontend/backend manifest pin cannot pass
+ok 101 - backend stale or missing frontend/backend manifest pin cannot pass
+  ---
+  duration_ms: 3.522475
+  type: 'test'
+  ...
+# Subtest: frontend old locked Sharp is rejected; updated lock passes
+ok 102 - frontend old locked Sharp is rejected; updated lock passes
+  ---
+  duration_ms: 0.233936
+  type: 'test'
+  ...
+# Subtest: frontend stale or missing frontend/backend manifest pin cannot pass
+ok 103 - frontend stale or missing frontend/backend manifest pin cannot pass
+  ---
+  duration_ms: 1.458199
+  type: 'test'
+  ...
+# Subtest: unresolved/incomplete lock is not a patched dependency tree null
+ok 104 - unresolved/incomplete lock is not a patched dependency tree null
+  ---
+  duration_ms: 0.184764
+  type: 'test'
+  ...
+# Subtest: unresolved/incomplete lock is not a patched dependency tree {}
+ok 105 - unresolved/incomplete lock is not a patched dependency tree {}
+  ---
+  duration_ms: 0.089312
+  type: 'test'
+  ...
+# Subtest: unresolved/incomplete lock is not a patched dependency tree {"lockfileVersion":1}
+ok 106 - unresolved/incomplete lock is not a patched dependency tree {"lockfileVersion":1}
+  ---
+  duration_ms: 0.093479
+  type: 'test'
+  ...
+# Subtest: unresolved/incomplete lock is not a patched dependency tree {"lockfileVersion":3,"packages":{}}
+ok 107 - unresolved/incomplete lock is not a patched dependency tree {"lockfileVersion":3,"packages":{}}
+  ---
+  duration_ms: 0.079497
+  type: 'test'
+  ...
+# Subtest: a nested vulnerable copy cannot hide behind patched hoisted Sharp
+ok 108 - a nested vulnerable copy cannot hide behind patched hoisted Sharp
+  ---
+  duration_ms: 0.244743
+  type: 'test'
+  ...
+# Subtest: old native libvips package is detected even with updated Sharp wrapper
+ok 109 - old native libvips package is detected even with updated Sharp wrapper
+  ---
+  duration_ms: 0.265393
+  type: 'test'
+  ...
+# Subtest: missing integrity or linked Sharp is not accepted as a security update
+ok 110 - missing integrity or linked Sharp is not accepted as a security update
+  ---
+  duration_ms: 0.281487
+  type: 'test'
+  ...
+# Subtest: both genuine original lock byte snapshots are backed up; env untouched
+ok 111 - both genuine original lock byte snapshots are backed up; env untouched
+  ---
+  duration_ms: 5.839175
+  type: 'test'
+  ...
+# Subtest: second invocation preserves patched locks byte-for-byte and performs no npm call
+ok 112 - second invocation preserves patched locks byte-for-byte and performs no npm call
+  ---
+  duration_ms: 2.011007
+  type: 'test'
+  ...
+# Subtest: npm failure at workspace 1 restores BOTH original locks
+ok 113 - npm failure at workspace 1 restores BOTH original locks
+  ---
+  duration_ms: 3.220628
+  type: 'test'
+  ...
+# Subtest: npm failure at workspace 2 restores BOTH original locks
+ok 114 - npm failure at workspace 2 restores BOTH original locks
+  ---
+  duration_ms: 3.011057
+  type: 'test'
+  ...
+# Subtest: npm resolving the old override is refused and old lock restored
+ok 115 - npm resolving the old override is refused and old lock restored
+  ---
+  duration_ms: 2.571878
+  type: 'test'
+  ...
+# Subtest: unrelated version drift is rejected and rolled back
+ok 116 - unrelated version drift is rejected and rolled back
+  ---
+  duration_ms: 3.148111
+  type: 'test'
+  ...
+# Subtest: existing unrelated direct dependency mismatch is never auto-repaired
+ok 117 - existing unrelated direct dependency mismatch is never auto-repaired
+  ---
+  duration_ms: 2.6409
+  type: 'test'
+  ...
+# Subtest: unexpected npm manifest edit is rejected and restored
+ok 118 - unexpected npm manifest edit is rejected and restored
+  ---
+  duration_ms: 5.20748
+  type: 'test'
+  ...
+# Subtest: fresh checkout obtains lockfiles through npm, never locally invented hashes
+ok 119 - fresh checkout obtains lockfiles through npm, never locally invented hashes
+  ---
+  duration_ms: 3.768633
+  type: 'test'
+  ...
+# Subtest: failure on fresh checkout removes incomplete locks, not env or manifests
+ok 120 - failure on fresh checkout removes incomplete locks, not env or manifests
+  ---
+  duration_ms: 1.34401
+  type: 'test'
+  ...
+# Subtest: CI refuses outdated lockfiles without mutating them
+ok 121 - CI refuses outdated lockfiles without mutating them
+  ---
+  duration_ms: 1.199516
+  type: 'test'
+  ...
+# Subtest: CI accepts already patched frozen locks without migration
+ok 122 - CI accepts already patched frozen locks without migration
+  ---
+  duration_ms: 1.184494
+  type: 'test'
+  ...
+# Subtest: shrinkwrap precedence is never overlooked
+ok 123 - shrinkwrap precedence is never overlooked
+  ---
+  duration_ms: 1.096002
+  type: 'test'
+  ...
+# Subtest: old/unknown native runtime refused sharp 0.35.4
+ok 124 - old/unknown native runtime refused sharp 0.35.4
+  ---
+  duration_ms: 0.383057
+  type: 'test'
+  ...
+# Subtest: old/unknown native runtime refused vips 8.18.6
+ok 125 - old/unknown native runtime refused vips 8.18.6
+  ---
+  duration_ms: 0.131765
+  type: 'test'
+  ...
+# Subtest: old/unknown native runtime refused rsvg 2.63.1
+ok 126 - old/unknown native runtime refused rsvg 2.63.1
+  ---
+  duration_ms: 0.064846
+  type: 'test'
+  ...
+# Subtest: old/unknown native runtime refused rsvg undefined
+ok 127 - old/unknown native runtime refused rsvg undefined
+  ---
+  duration_ms: 0.046529
+  type: 'test'
+  ...
+# Subtest: fully patched runtime identity is accepted, without claiming online audit
+ok 128 - fully patched runtime identity is accepted, without claiming online audit
+  ---
+  duration_ms: 0.202349
+  type: 'test'
+  ...
+# Subtest: no SVG decoder does not require a nonexistent librsvg library
+ok 129 - no SVG decoder does not require a nonexistent librsvg library
+  ---
+  duration_ms: 0.130132
+  type: 'test'
+  ...
+# Subtest: each installed workspace Sharp is checked before native smoke callbacks
+ok 130 - each installed workspace Sharp is checked before native smoke callbacks
+  ---
+  duration_ms: 1.767316
+  type: 'test'
+  ...
+# Subtest: stale installed Sharp despite patched lock cannot pass
+ok 131 - stale installed Sharp despite patched lock cannot pass
+  ---
+  duration_ms: 1.888887
+  type: 'test'
+  ...
+# Subtest: audit matrix includes production and full dependencies in both workspaces
+ok 132 - audit matrix includes production and full dependencies in both workspaces
+  ---
+  duration_ms: 0.124554
+  type: 'test'
+  ...
+# Subtest: only complete zero-count zero-exit audit is reported as pass
+ok 133 - only complete zero-count zero-exit audit is reported as pass
+  ---
+  duration_ms: 0.496354
+  type: 'test'
+  ...
+# Subtest: audit rejects info finding even with misleading zero exit
+ok 134 - audit rejects info finding even with misleading zero exit
+  ---
+  duration_ms: 0.116502
+  type: 'test'
+  ...
+# Subtest: audit rejects low finding even with misleading zero exit
+ok 135 - audit rejects low finding even with misleading zero exit
+  ---
+  duration_ms: 0.071196
+  type: 'test'
+  ...
+# Subtest: audit rejects moderate finding even with misleading zero exit
+ok 136 - audit rejects moderate finding even with misleading zero exit
+  ---
+  duration_ms: 0.109523
+  type: 'test'
+  ...
+# Subtest: audit rejects high finding even with misleading zero exit
+ok 137 - audit rejects high finding even with misleading zero exit
+  ---
+  duration_ms: 0.070494
+  type: 'test'
+  ...
+# Subtest: audit rejects critical finding even with misleading zero exit
+ok 138 - audit rejects critical finding even with misleading zero exit
+  ---
+  duration_ms: 0.055182
+  type: 'test'
+  ...
+# Subtest: incomplete/inconsistent audit cannot turn green {"status":1,"stdout":"","stderr":"EAI_AGAIN"}
+ok 139 - incomplete/inconsistent audit cannot turn green {"status":1,"stdout":"","stderr":"EAI_AGAIN"}
+  ---
+  duration_ms: 0.082582
+  type: 'test'
+  ...
+# Subtest: incomplete/inconsistent audit cannot turn green {"status":0,"stdout":"{}"}
+ok 140 - incomplete/inconsistent audit cannot turn green {"status":0,"stdout":"{}"}
+  ---
+  duration_ms: 0.045577
+  type: 'test'
+  ...
+# Subtest: incomplete/inconsistent audit cannot turn green {"status":null,"stdout":"{\\"metadata\\":{\\"vulnerabilities\\":{\\"info\\":0,\\"low\\":0,\\"moderate\\":0,\\"high\\":0,\\"critical\\":0,\\"total\\":0}},\\"vulnerabilities\\":{}}"}
+ok 141 - incomplete/inconsistent audit cannot turn green {"status":null,"stdout":"{\\"metadata\\":{\\"vulnerabilities\\":{\\"info\\":0,\\"low\\":0,\\"moderate\\":0,\\"high\\":0,\\"critical\\":0,\\"total\\":0}},\\"vulnerabilities\\":{}}"}
+  ---
+  duration_ms: 0.042744
+  type: 'test'
+  ...
+# Subtest: incomplete/inconsistent audit cannot turn green {"status":0,"stdout":"{\\"metadata\\":{\\"vulnerabilities\\":{\\"info\\":0,\\"low\\":0,\\"moderate\\":0,\\"high\\":0,\\"critical\\":0,\\"total\\":0}},\\"vulnerabilities\\":{}}","stderr":"","error":{}}
+ok 142 - incomplete/inconsistent audit cannot turn green {"status":0,"stdout":"{\\"metadata\\":{\\"vulnerabilities\\":{\\"info\\":0,\\"low\\":0,\\"moderate\\":0,\\"high\\":0,\\"critical\\":0,\\"total\\":0}},\\"vulnerabilities\\":{}}","stderr":"","error":{}}
+  ---
+  duration_ms: 0.10178
+  type: 'test'
+  ...
+# Subtest: incomplete/inconsistent audit cannot turn green {"status":0,"stdout":"{\\"metadata\\":{\\"vulnerabilities\\":{\\"info\\":0,\\"low\\":0,\\"moderate\\":0,\\"high\\":0,\\"critical\\":0,\\"total\\":0}},\\"vulnerabilities\\":{}}","stderr":"","signal":"SIGTERM"}
+ok 143 - incomplete/inconsistent audit cannot turn green {"status":0,"stdout":"{\\"metadata\\":{\\"vulnerabilities\\":{\\"info\\":0,\\"low\\":0,\\"moderate\\":0,\\"high\\":0,\\"critical\\":0,\\"total\\":0}},\\"vulnerabilities\\":{}}","stderr":"","signal":"SIGTERM"}
+  ---
+  duration_ms: 0.048632
+  type: 'test'
+  ...
+# Subtest: incomplete/inconsistent audit cannot turn green {"status":1,"stdout":"{\\"metadata\\":{\\"vulnerabilities\\":{\\"info\\":0,\\"low\\":0,\\"moderate\\":0,\\"high\\":0,\\"critical\\":0,\\"total\\":0}},\\"vulnerabilities\\":{}}","stderr":""}
+ok 144 - incomplete/inconsistent audit cannot turn green {"status":1,"stdout":"{\\"metadata\\":{\\"vulnerabilities\\":{\\"info\\":0,\\"low\\":0,\\"moderate\\":0,\\"high\\":0,\\"critical\\":0,\\"total\\":0}},\\"vulnerabilities\\":{}}","stderr":""}
+  ---
+  duration_ms: 0.045477
+  type: 'test'
+  ...
+# Subtest: incomplete/inconsistent audit cannot turn green {"status":0,"stdout":"not json"}
+ok 145 - incomplete/inconsistent audit cannot turn green {"status":0,"stdout":"not json"}
+  ---
+  duration_ms: 0.050224
+  type: 'test'
+  ...
+# Subtest: incomplete/inconsistent audit cannot turn green {"status":0,"stdout":"{\\"error\\":{\\"code\\":\\"EAI_AGAIN\\"},\\"metadata\\":{\\"vulnerabilities\\":{\\"info\\":0,\\"low\\":0,\\"moderate\\":0,\\"high\\":0,\\"critical\\":0,\\"total\\":0}}}"}
+ok 146 - incomplete/inconsistent audit cannot turn green {"status":0,"stdout":"{\\"error\\":{\\"code\\":\\"EAI_AGAIN\\"},\\"metadata\\":{\\"vulnerabilities\\":{\\"info\\":0,\\"low\\":0,\\"moderate\\":0,\\"high\\":0,\\"critical\\":0,\\"total\\":0}}}"}
+  ---
+  duration_ms: 0.052898
+  type: 'test'
+  ...
+# Subtest: incomplete/inconsistent audit cannot turn green {"status":0,"stdout":"{\\"metadata\\":{\\"vulnerabilities\\":{\\"total\\":0}}}"}
+ok 147 - incomplete/inconsistent audit cannot turn green {"status":0,"stdout":"{\\"metadata\\":{\\"vulnerabilities\\":{\\"total\\":0}}}"}
+  ---
+  duration_ms: 0.045858
+  type: 'test'
+  ...
+# Subtest: incomplete/inconsistent audit cannot turn green {"status":0,"stdout":"{\\"metadata\\":{\\"vulnerabilities\\":{\\"info\\":0,\\"low\\":0,\\"moderate\\":0,\\"high\\":0,\\"critical\\":0,\\"total\\":0}},\\"vulnerabilities\\":{\\"sharp\\":{\\"severity\\":\\"high\\"}}}"}
+ok 148 - incomplete/inconsistent audit cannot turn green {"status":0,"stdout":"{\\"metadata\\":{\\"vulnerabilities\\":{\\"info\\":0,\\"low\\":0,\\"moderate\\":0,\\"high\\":0,\\"critical\\":0,\\"total\\":0}},\\"vulnerabilities\\":{\\"sharp\\":{\\"severity\\":\\"high\\"}}}"}
+  ---
+  duration_ms: 0.050585
+  type: 'test'
+  ...
+# Subtest: audit saves fresh per-scope evidence and fingerprints actual locks
+ok 149 - audit saves fresh per-scope evidence and fingerprints actual locks
+  ---
+  duration_ms: 12.39779
+  type: 'test'
+  ...
+# Subtest: one audit failure keeps global status failed while recording other completed scans
+ok 150 - one audit failure keeps global status failed while recording other completed scans
+  ---
+  duration_ms: 33.737027
+  type: 'test'
+  ...
+# Subtest: new failed audit replaces stale passed report rather than reusing it
+ok 151 - new failed audit replaces stale passed report rather than reusing it
+  ---
+  duration_ms: 7.701832
+  type: 'test'
+  ...
+# Subtest: release verification invokes the strict native and online security gates
+ok 152 - release verification invokes the strict native and online security gates
+  ---
+  duration_ms: 0.211783
+  type: 'test'
+  ...
+# Subtest: a zombie PID does not retain the UI build lock, while a live process does
+ok 153 - a zombie PID does not retain the UI build lock, while a live process does
+  ---
+  duration_ms: 1.244382
+  type: 'test'
+  ...
+# Subtest: stale locks recover, live owners remain protected and release cannot erase a replacement owner
+ok 154 - stale locks recover, live owners remain protected and release cannot erase a replacement owner
+  ---
+  duration_ms: 17.043372
+  type: 'test'
+  ...
+# Subtest: owned child-group teardown stops its grandchild without terminating unrelated processes
+ok 155 - owned child-group teardown stops its grandchild without terminating unrelated processes
+  ---
+  duration_ms: 99.597136
+  type: 'test'
+  ...
+# Subtest: release verification includes actual financial schema contracts before the expensive build
+ok 156 - release verification includes actual financial schema contracts before the expensive build
+  ---
+  duration_ms: 24.705626
+  type: 'test'
+  ...
+# Subtest: integration gate checks schema contracts before any Docker operation
+ok 157 - integration gate checks schema contracts before any Docker operation
+  ---
+  duration_ms: 3.589555
+  type: 'test'
+  ...
+# Subtest: schema contract command imports real models, not adapters or a network service
+ok 158 - schema contract command imports real models, not adapters or a network service
+  ---
+  duration_ms: 0.6486
+  type: 'test'
+  ...
+# Subtest: standalone launcher uses generated server and copies both public/static assets
+ok 159 - standalone launcher uses generated server and copies both public/static assets
+  ---
+  duration_ms: 9.13201
+  type: 'test'
+  ...
+# Subtest: standalone asset copy can run twice without modifying source or build identity
+ok 160 - standalone asset copy can run twice without modifying source or build identity
+  ---
+  duration_ms: 7.753398
+  type: 'test'
+  ...
+# Subtest: missing .next/BUILD_ID fails before starting the isolated stack
+ok 161 - missing .next/BUILD_ID fails before starting the isolated stack
+  ---
+  duration_ms: 6.110196
+  type: 'test'
+  ...
+# Subtest: missing .next/standalone/server.js fails before starting the isolated stack
+ok 162 - missing .next/standalone/server.js fails before starting the isolated stack
+  ---
+  duration_ms: 1.735119
+  type: 'test'
+  ...
+# Subtest: missing .next/static fails before starting the isolated stack
+ok 163 - missing .next/static fails before starting the isolated stack
+  ---
+  duration_ms: 8.05195
+  type: 'test'
+  ...
+# Subtest: missing public fails before starting the isolated stack
+ok 164 - missing public fails before starting the isolated stack
+  ---
+  duration_ms: 6.36309
+  type: 'test'
+  ...
+# Subtest: DB browser stack no longer calls next start for standalone output
+ok 165 - DB browser stack no longer calls next start for standalone output
+  ---
+  duration_ms: 0.895977
+  type: 'test'
+  ...
+# Subtest: scanner account probes are opt-in and are not run by release/CI/startup
+ok 166 - scanner account probes are opt-in and are not run by release/CI/startup
+  ---
+  duration_ms: 1.608802
+  type: 'test'
+  ...
+# Subtest: integration fixtures strip external scanner key and default to the isolated legacy no-scan test configuration
+ok 167 - integration fixtures strip external scanner key and default to the isolated legacy no-scan test configuration
+  ---
+  duration_ms: 0.411088
+  type: 'test'
+  ...
+# Subtest: no scanner credential is added to frontend source or public environment example
+ok 168 - no scanner credential is added to frontend source or public environment example
+  ---
+  duration_ms: 14.959417
+  type: 'test'
+  ...
+# Subtest: user-approved main navigation locator stays exact and does not reintroduce broad duplicate click
+ok 169 - user-approved main navigation locator stays exact and does not reintroduce broad duplicate click
+  ---
+  duration_ms: 0.330609
+  type: 'test'
+  ...
+# Subtest: transient DNS failure retries same four scopes, succeeds only after actual complete reports
+ok 170 - transient DNS failure retries same four scopes, succeeds only after actual complete reports
+  ---
+  duration_ms: 13.70519
+  type: 'test'
+  ...
+# Subtest: persistent DNS never becomes zero; bounded attempts and every scope remains failed
+ok 171 - persistent DNS never becomes zero; bounded attempts and every scope remains failed
+  ---
+  duration_ms: 10.40885
+  type: 'test'
+  ...
+# Subtest: a complete info finding never triggers transport retry
+ok 172 - a complete info finding never triggers transport retry
+  ---
+  duration_ms: 16.836051
+  type: 'test'
+  ...
+# Subtest: a complete low finding never triggers transport retry
+ok 173 - a complete low finding never triggers transport retry
+  ---
+  duration_ms: 9.819868
+  type: 'test'
+  ...
+# Subtest: a complete moderate finding never triggers transport retry
+ok 174 - a complete moderate finding never triggers transport retry
+  ---
+  duration_ms: 5.531209
+  type: 'test'
+  ...
+# Subtest: a complete high finding never triggers transport retry
+ok 175 - a complete high finding never triggers transport retry
+  ---
+  duration_ms: 4.943188
+  type: 'test'
+  ...
+# Subtest: a complete critical finding never triggers transport retry
+ok 176 - a complete critical finding never triggers transport retry
+  ---
+  duration_ms: 5.32957
+  type: 'test'
+  ...
+# Subtest: malformed successful JSON without transport error fails once per scope
+ok 177 - malformed successful JSON without transport error fails once per scope
+  ---
+  duration_ms: 5.890041
+  type: 'test'
+  ...
+# Subtest: local command does not repeat raw audits and never claims real integration/handover
+ok 178 - local command does not repeat raw audits and never claims real integration/handover
+  ---
+  duration_ms: 7.141323
+  type: 'test'
+  ...
+1..178
+# tests 178
+# suites 0
+# pass 178
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 699.221198

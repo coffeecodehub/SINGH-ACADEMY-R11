@@ -1,0 +1,13 @@
+{$DOMAIN} {
+ encode zstd gzip
+ header -Server
+ # No token-bearing URL, request-body or access log is enabled here.
+ @api path /api /api/*
+ handle @api {
+  reverse_proxy backend:5000 {
+  }
+ }
+ handle {
+  reverse_proxy frontend:3000
+ }
+}

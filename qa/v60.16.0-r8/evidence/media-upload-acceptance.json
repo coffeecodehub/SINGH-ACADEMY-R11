@@ -1,0 +1,284 @@
+{
+  "originals": {
+    "review": "R8",
+    "sourceArchive": {
+      "fileName": "DOP_269.zip",
+      "sedimentFileId": "file_00000000d11882118ed27bbc8b9ad9c8",
+      "sha256": "f8b4662165caac3ee96583f0215a354adbb5b7a49a0a135ace12b4d3a5a4835c",
+      "bytes": 6014893
+    },
+    "images": [
+      {
+        "entry": "DOP_269.JPG",
+        "bytes": 3092008,
+        "sha256": "993d85b15e13dd3a1ea56936fe9ca3dcf0b1e67f68239f8bc67754f94348108e",
+        "width": 3308,
+        "height": 2205,
+        "orientation": 1,
+        "archiveEntry": "DOP_269.JPG",
+        "src": "/images/hero-overrides/993d85b15e13dd3a1ea56936fe9ca3dcf0b1e67f68239f8bc67754f94348108e.jpg",
+        "placement": {
+          "page": "landing",
+          "slot": "hero",
+          "cmsKey": "image-075"
+        },
+        "presentation": {
+          "fit": "cover",
+          "objectPosition": "50% 60%"
+        },
+        "originalBytesPreserved": true
+      },
+      {
+        "entry": "DOP_86.JPG",
+        "bytes": 3019858,
+        "sha256": "d377a545d0e83447474ea28ff34d16650d0bd6d49b3e1d34ff6455d137672969",
+        "width": 4864,
+        "height": 3648,
+        "orientation": 1,
+        "archiveEntry": "DOP_86.JPG",
+        "src": "/images/hero-overrides/d377a545d0e83447474ea28ff34d16650d0bd6d49b3e1d34ff6455d137672969.jpg",
+        "placement": {
+          "page": "home",
+          "slot": "hero",
+          "cmsKey": "image-077"
+        },
+        "presentation": {
+          "fit": "cover",
+          "objectPosition": "25% 42%"
+        },
+        "originalBytesPreserved": true
+      }
+    ],
+    "delivery": "Direct static source placement; no owner picker, import command, recompression or resampling."
+  },
+  "displayCopies": {
+    "method": "Developer-side Sharp 0.35.5 resize at 480/960 without enlargement, WebP quality 92, effort 4. Exact raw original JPEG remains the highest-width approved srcset choice. No retouch or image generation.",
+    "protectedExistingAssetFilesUnchanged": 268,
+    "previousManifestEntriesUnchanged": 72,
+    "images": [
+      {
+        "page": "landing",
+        "original": "/images/hero-overrides/993d85b15e13dd3a1ea56936fe9ca3dcf0b1e67f68239f8bc67754f94348108e.jpg",
+        "sha256": "993d85b15e13dd3a1ea56936fe9ca3dcf0b1e67f68239f8bc67754f94348108e",
+        "originalBytes": 3092008,
+        "originalWidth": 3308,
+        "originalHeight": 2205,
+        "quality": 92,
+        "primary": "/optimized/993d85b15e13dd3a-hero-q92-960.webp",
+        "variants": [
+          {
+            "src": "/optimized/993d85b15e13dd3a-hero-q92-480.webp",
+            "width": 480,
+            "height": 320,
+            "bytes": 61150,
+            "sha256": "d31894e0d54e89e4b5454517279e74d6350c7917a66ccd872c1346e9fc3d1137"
+          },
+          {
+            "src": "/optimized/993d85b15e13dd3a-hero-q92-960.webp",
+            "width": 960,
+            "height": 640,
+            "bytes": 206862,
+            "sha256": "c8e49a472f70bfc621ac49043a9feb9a9bc9d722f2e293dcdad837e68a42d2c3"
+          },
+          {
+            "src": "/images/hero-overrides/993d85b15e13dd3a1ea56936fe9ca3dcf0b1e67f68239f8bc67754f94348108e.jpg",
+            "width": 3308,
+            "height": 2205,
+            "bytes": 3092008,
+            "sha256": "993d85b15e13dd3a1ea56936fe9ca3dcf0b1e67f68239f8bc67754f94348108e"
+          }
+        ],
+        "reductionAt960Percent": 93.31
+      },
+      {
+        "page": "home",
+        "original": "/images/hero-overrides/d377a545d0e83447474ea28ff34d16650d0bd6d49b3e1d34ff6455d137672969.jpg",
+        "sha256": "d377a545d0e83447474ea28ff34d16650d0bd6d49b3e1d34ff6455d137672969",
+        "originalBytes": 3019858,
+        "originalWidth": 4864,
+        "originalHeight": 3648,
+        "quality": 92,
+        "primary": "/optimized/d377a545d0e83447-hero-q92-960.webp",
+        "variants": [
+          {
+            "src": "/optimized/d377a545d0e83447-hero-q92-480.webp",
+            "width": 480,
+            "height": 360,
+            "bytes": 31866,
+            "sha256": "d57ee90847c729b1fb93bbfb7bbbc49217b39a41ce8cce14990e2c6b677b4754"
+          },
+          {
+            "src": "/optimized/d377a545d0e83447-hero-q92-960.webp",
+            "width": 960,
+            "height": 720,
+            "bytes": 80266,
+            "sha256": "bbc40f65f6c165a34719fa0ef6cd29d073fb035f8689668dc9374357e98efe34"
+          },
+          {
+            "src": "/images/hero-overrides/d377a545d0e83447474ea28ff34d16650d0bd6d49b3e1d34ff6455d137672969.jpg",
+            "width": 4864,
+            "height": 3648,
+            "bytes": 3019858,
+            "sha256": "d377a545d0e83447474ea28ff34d16650d0bd6d49b3e1d34ff6455d137672969"
+          }
+        ],
+        "reductionAt960Percent": 97.34
+      }
+    ]
+  },
+  "visualAcceptance": {
+    "buildId": "0QgSgr93bVE86Yslhz6z9",
+    "status": "passed",
+    "scope": "Actual current R8 compiled UI; four untouched initial viewports and four unobstructed original-photo frames. Isolated 3158/5159, synthetic student session only, original/variant image HTTP never mocked.",
+    "captures": [
+      {
+        "file": "landing-initial-1440.png",
+        "page": "landing",
+        "width": 1440,
+        "height": 1000,
+        "kind": "initial viewport",
+        "scrollY": 0
+      },
+      {
+        "file": "landing-photo-1440.png",
+        "page": "landing",
+        "width": 1440,
+        "kind": "unobstructed photo frame"
+      },
+      {
+        "file": "home-initial-1440.png",
+        "page": "home",
+        "width": 1440,
+        "height": 1000,
+        "kind": "initial viewport",
+        "scrollY": 0
+      },
+      {
+        "file": "home-photo-1440.png",
+        "page": "home",
+        "width": 1440,
+        "kind": "unobstructed photo frame"
+      },
+      {
+        "file": "landing-initial-390.png",
+        "page": "landing",
+        "width": 390,
+        "height": 1000,
+        "kind": "initial viewport",
+        "scrollY": 0
+      },
+      {
+        "file": "landing-photo-390.png",
+        "page": "landing",
+        "width": 390,
+        "kind": "unobstructed photo frame"
+      },
+      {
+        "file": "home-initial-390.png",
+        "page": "home",
+        "width": 390,
+        "height": 1000,
+        "kind": "initial viewport",
+        "scrollY": 0
+      },
+      {
+        "file": "home-photo-390.png",
+        "page": "home",
+        "width": 390,
+        "kind": "unobstructed photo frame"
+      }
+    ],
+    "checks": [
+      {
+        "page": "landing",
+        "width": 581.390625,
+        "x": 786.59375,
+        "y": 96,
+        "height": 480,
+        "headerBottom": 72,
+        "currentSrc": "http://127.0.0.1:3158/optimized/993d85b15e13dd3a-hero-q92-960.webp",
+        "src": "/optimized/993d85b15e13dd3a-hero-q92-960.webp",
+        "fit": "cover",
+        "position": "50% 60%",
+        "state": "loaded",
+        "naturalWidth": 720,
+        "naturalHeight": 480,
+        "noHorizontalOverflow": true
+      },
+      {
+        "page": "home",
+        "width": 322.03125,
+        "x": 800.09375,
+        "y": 96.140625,
+        "height": 480,
+        "headerBottom": 72,
+        "currentSrc": "http://127.0.0.1:3158/optimized/d377a545d0e83447-hero-q92-960.webp",
+        "src": "/optimized/d377a545d0e83447-hero-q92-960.webp",
+        "fit": "cover",
+        "position": "25% 42%",
+        "state": "loaded",
+        "naturalWidth": 720,
+        "naturalHeight": 540,
+        "noHorizontalOverflow": true
+      },
+      {
+        "page": "landing",
+        "width": 351,
+        "x": 19.5,
+        "y": 100.3125,
+        "height": 350,
+        "headerBottom": 76,
+        "currentSrc": "http://127.0.0.1:3158/optimized/993d85b15e13dd3a-hero-q92-480.webp",
+        "src": "/optimized/993d85b15e13dd3a-hero-q92-960.webp",
+        "fit": "cover",
+        "position": "50% 60%",
+        "state": "loaded",
+        "naturalWidth": 389,
+        "naturalHeight": 259,
+        "noHorizontalOverflow": true
+      },
+      {
+        "page": "home",
+        "width": 334,
+        "x": 28,
+        "y": 99.890625,
+        "height": 280,
+        "headerBottom": 76,
+        "currentSrc": "http://127.0.0.1:3158/optimized/d377a545d0e83447-hero-q92-480.webp",
+        "src": "/optimized/d377a545d0e83447-hero-q92-960.webp",
+        "fit": "cover",
+        "position": "25% 42%",
+        "state": "loaded",
+        "naturalWidth": 389,
+        "naturalHeight": 292,
+        "noHorizontalOverflow": true
+      }
+    ],
+    "pageErrors": [],
+    "rawOriginals": [
+      {
+        "src": "/images/hero-overrides/993d85b15e13dd3a1ea56936fe9ca3dcf0b1e67f68239f8bc67754f94348108e.jpg",
+        "bytes": 3092008,
+        "sha256": "993d85b15e13dd3a1ea56936fe9ca3dcf0b1e67f68239f8bc67754f94348108e",
+        "unchanged": true
+      },
+      {
+        "src": "/images/hero-overrides/d377a545d0e83447474ea28ff34d16650d0bd6d49b3e1d34ff6455d137672969.jpg",
+        "bytes": 3019858,
+        "sha256": "d377a545d0e83447474ea28ff34d16650d0bd6d49b3e1d34ff6455d137672969",
+        "unchanged": true
+      }
+    ],
+    "personallyInspectedCaptures": 8,
+    "visualFindings": [
+      "All four initial screenshots are real viewport captures at scrollY0; desktop/mobile headers are correctly placed, with no capture-induced heading overlap.",
+      "Landing shows the supplied workshop group original with Dr. Singh visible; existing card/badge/frame remain.",
+      "Home shows the supplied whiteboard original; desktop cover crop focuses Dr. Singh, and mobile shows both participants.",
+      "Four separate photo crops are below the sticky header and fully inside the viewport; no distortion, empty bands or horizontal overflow was observed.",
+      "Image source/variants were never intercepted or replaced; raw original HTTP hashes and bytes match uploaded files."
+    ],
+    "sourceOrLayoutChanged": false,
+    "ownedServices": "Isolated3158/5159 stopped in finally; no shared build or root test ports touched."
+  },
+  "scope": "Actual provided photos. Fixture-auth browser only; image HTTP bytes were not mocked. Exact original JPEG bytes match DOP_269.zip. No owner image-selection/import operation."
+}

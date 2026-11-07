@@ -1,0 +1,36 @@
+{
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "test:browser": "playwright test",
+    "test:ui": "node ../scripts/run-ui-browser.mjs",
+    "test:auth-browser": "node ../scripts/run-ui-browser.mjs auth-hydration-v60-11.spec.ts",
+    "test:payments-browser": "node ../scripts/run-ui-browser.mjs payments-v60-12.spec.ts"
+  },
+  "dependencies": {
+    "next": "15.5.29",
+    "react": "19.1.5",
+    "react-dom": "19.1.5"
+  },
+  "devDependencies": {
+    "typescript": "~5.9.3",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@playwright/test": "^1.55.1"
+  },
+  "private": true,
+  "engines": {
+    "node": "22.x || 24.x"
+  },
+  "name": "singh-academy-frontend",
+  "version": "60.16.0",
+  "overrides": {
+    "sharp": "0.35.5",
+    "next": {
+      "postcss": "8.5.23"
+    }
+  }
+}

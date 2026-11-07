@@ -1,0 +1,20 @@
+[WebServer] (node:581574) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:581582) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 9 tests using 1 worker
+
+(node:581598) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 ui-tests/billing-action-confirmation.spec.ts:4:77 › stripe billing confirmation uses themed action colors, keyboard consent and one write at 1280px (2.4s)
+  ✓  2 ui-tests/billing-action-confirmation.spec.ts:4:77 › stripe billing confirmation uses themed action colors, keyboard consent and one write at 390px (2.1s)
+  ✓  3 ui-tests/billing-action-confirmation.spec.ts:4:77 › paypal billing confirmation uses themed action colors, keyboard consent and one write at 1280px (2.1s)
+  ✓  4 ui-tests/billing-action-confirmation.spec.ts:4:77 › paypal billing confirmation uses themed action colors, keyboard consent and one write at 390px (2.0s)
+  ✓  5 ui-tests/cancel-access.spec.ts:7:47 › stripe subscription cancellation requires explicit consent and ends selected access without a refund claim (1.4s)
+  ✓  6 ui-tests/cancel-access.spec.ts:7:47 › paypal subscription cancellation requires explicit consent and ends selected access without a refund claim (1.4s)
+  ✓  7 ui-tests/cancel-access.spec.ts:17:5 › one-time purchase cancellation uses its invoice and a missing provider confirmation is not shown as success (1.5s)
+  ✓  8 ui-tests/cancel-access.spec.ts:24:5 › invoice history keeps paid totals and shows actual cancellation time after cancelling its selected purchase (1.2s)
+  ✓  9 ui-tests/cancel-access.spec.ts:31:5 › legacy paid plan exposes immediate access cancellation beside its invoice without inventing a recurring agreement (1.2s)
+
+  9 passed (17.3s)

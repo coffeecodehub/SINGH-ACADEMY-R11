@@ -1,0 +1,119 @@
+{
+  "review": "R11",
+  "status": "passed",
+  "recordedAt": "2026-11-07T07:55:50.260666+00:00",
+  "scope": "Only the six requested upload,review,Carousel,label,section-offer,payment-verification tasks; original R10 preserved.",
+  "frontend": {
+    "tests": 1058,
+    "pass": 1058,
+    "fail": 0,
+    "skipped": 0
+  },
+  "backendRuntimeContracts": {
+    "tests": 1635,
+    "pass": 1635,
+    "fail": 0,
+    "skipped": 0
+  },
+  "actualMongoUpload": {
+    "tests": 7,
+    "pass": 7,
+    "fail": 0,
+    "skipped": 0
+  },
+  "isolatedMongoPayment": {
+    "tests": 108,
+    "pass": 108,
+    "fail": 0,
+    "skipped": 0
+  },
+  "productionUiBrowser": {
+    "startTime": "2026-11-07T07:51:12.051Z",
+    "duration": 273689.262,
+    "expected": 177,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "actualAdminMongoBrowser": {
+    "startTime": "2026-11-07T07:52:04.393Z",
+    "duration": 13068.961,
+    "expected": 2,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "typecheck": "passed",
+  "ordinaryStandaloneBuild": "passed",
+  "controlledProductionUiBuild": "passed",
+  "sourceSeal": {
+    "status": "passed",
+    "review": "R11",
+    "oldSourceCount": 1236,
+    "sourceCount": 1247,
+    "changed": [
+      "backend/.env.example",
+      "backend/src/scripts/setupLocal.js",
+      "backend/src/services/pageSectionUploads.js",
+      "backend/src/services/uploadScan.js",
+      "backend/src/services/uploads.js",
+      "backend/src/services/videoReviewUploads.js",
+      "backend/src/utils/uploadAvailability.js",
+      "backend/src/utils/uploadScanConfig.js",
+      "backend/test/v46-setup.test.js",
+      "frontend/app/checkout/page.tsx",
+      "frontend/components/cms/VideoReviewsEditor.tsx",
+      "frontend/components/content/PageGallery.tsx",
+      "frontend/components/content/page-sections.css",
+      "frontend/components/video-reviews/ReviewVideo.tsx",
+      "frontend/components/video-reviews/VideoReviews.tsx",
+      "frontend/lib/galleryMotion.ts",
+      "frontend/test/automatic-media-r6.test.mjs",
+      "frontend/test/checkout-retirement.test.mjs",
+      "frontend/test/gallery-step-motion-r10.test.mjs",
+      "frontend/test/paypal-recurring-ui.test.mjs",
+      "frontend/test/review-player-tiktok.test.mjs",
+      "frontend/test/task6-catalog-access.test.mjs",
+      "frontend/test/upload-recovery-r6.test.mjs",
+      "frontend/test/v60-10-reliability.test.mjs",
+      "frontend/test/v60-12-workflows.test.mjs",
+      "frontend/test/video-review-visible-r9.test.mjs",
+      "frontend/ui-tests/page-gallery-r5.spec.ts",
+      "frontend/ui-tests/video-reviews.spec.ts",
+      "scripts/release-baseline.mjs"
+    ],
+    "added": [
+      "backend/integration/local-uploads-r11.test.js",
+      "backend/src/utils/localUploadMode.js",
+      "backend/test/local-uploads-r11.test.js",
+      "docs/SIX-TASK-CHANGES-R11.md",
+      "docs/START-R11-WINDOWS.md",
+      "docs/WEBHOOK-EVENTS-R11.md",
+      "frontend/components/SectionPurchaseSuggestion.module.css",
+      "frontend/components/SectionPurchaseSuggestion.tsx",
+      "frontend/lib/sectionPurchaseSuggestion.ts",
+      "frontend/test/section-purchase-suggestion-r11.test.mjs",
+      "frontend/ui-tests/section-purchase-suggestion-r11.spec.ts"
+    ],
+    "deleted": [],
+    "allChangedFilesDocumented": true,
+    "allOriginalR10AssetsUnchanged": 304,
+    "protectedModelsConfigDependenciesDeployUnchanged": 51,
+    "releasePolicyOnlyPrependedAuthorization": true,
+    "baselineSha256": "26a06cc2e6d662269194fb7e1a7e4945f84a3a790591f85173892c154a07c3b4"
+  },
+  "findings": [
+    "503 is the selected scanner unavailable; ordinary local setup now adds guarded LOCAL_UPLOADS_UNSCANNED with actual loopback request checks. Hosted scanning unchanged.",
+    "OS reduced-animation preference vetoed requested review media autoplay; reproduced two failures before fix.",
+    "R10 Carousel full-width and zero-gap overrides restored to exact R9 dimensions; one-card auto movement retained.",
+    "Public preview explanation removed.",
+    "New full-section suggestion uses real regional offer and owned access; acceptance caught same-route client navigation retaining course mode, fixed by fresh same-origin navigation in new button only.",
+    "No new existing payment defect reproduced; handlers/config remain unchanged. Explicit refunds ignored after verification; reversal/dispute protections retained."
+  ],
+  "liveProviderOperation": false,
+  "realSandboxDeliveryVerified": false,
+  "deployed": false,
+  "customerRecordsModified": false,
+  "browserProviderEvidence": "Native browser playback plus intercepted provider fixtures; no real YouTube policy/network certification.",
+  "updaterVerification": "Recorded separately after package generation; native Windows execution is not claimed."
+}

@@ -1,0 +1,13 @@
+[WebServer] (node:738441) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:738440) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 2 tests using 1 worker
+
+(node:738636) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 e2e/review-moderation.spec.ts:13:5 › student feedback stays private until approval and edits return it to the queue (6.7s)
+  ✓  2 e2e/video-upload-local-r6.spec.ts:5:5 › Client Admin uploads its original gallery video in explicit local mode and saves a private review without trimming it (2.6s)
+
+  2 passed (13.1s)

@@ -1,0 +1,154 @@
+{
+  "buildId": "0QgSgr93bVE86Yslhz6z9",
+  "status": "passed",
+  "scope": "Actual current R8 compiled UI; four untouched initial viewports and four unobstructed original-photo frames. Isolated 3158/5159, synthetic student session only, original/variant image HTTP never mocked.",
+  "captures": [
+    {
+      "file": "landing-initial-1440.png",
+      "page": "landing",
+      "width": 1440,
+      "height": 1000,
+      "kind": "initial viewport",
+      "scrollY": 0
+    },
+    {
+      "file": "landing-photo-1440.png",
+      "page": "landing",
+      "width": 1440,
+      "kind": "unobstructed photo frame"
+    },
+    {
+      "file": "home-initial-1440.png",
+      "page": "home",
+      "width": 1440,
+      "height": 1000,
+      "kind": "initial viewport",
+      "scrollY": 0
+    },
+    {
+      "file": "home-photo-1440.png",
+      "page": "home",
+      "width": 1440,
+      "kind": "unobstructed photo frame"
+    },
+    {
+      "file": "landing-initial-390.png",
+      "page": "landing",
+      "width": 390,
+      "height": 1000,
+      "kind": "initial viewport",
+      "scrollY": 0
+    },
+    {
+      "file": "landing-photo-390.png",
+      "page": "landing",
+      "width": 390,
+      "kind": "unobstructed photo frame"
+    },
+    {
+      "file": "home-initial-390.png",
+      "page": "home",
+      "width": 390,
+      "height": 1000,
+      "kind": "initial viewport",
+      "scrollY": 0
+    },
+    {
+      "file": "home-photo-390.png",
+      "page": "home",
+      "width": 390,
+      "kind": "unobstructed photo frame"
+    }
+  ],
+  "checks": [
+    {
+      "page": "landing",
+      "width": 581.390625,
+      "x": 786.59375,
+      "y": 96,
+      "height": 480,
+      "headerBottom": 72,
+      "currentSrc": "http://127.0.0.1:3158/optimized/993d85b15e13dd3a-hero-q92-960.webp",
+      "src": "/optimized/993d85b15e13dd3a-hero-q92-960.webp",
+      "fit": "cover",
+      "position": "50% 60%",
+      "state": "loaded",
+      "naturalWidth": 720,
+      "naturalHeight": 480,
+      "noHorizontalOverflow": true
+    },
+    {
+      "page": "home",
+      "width": 322.03125,
+      "x": 800.09375,
+      "y": 96.140625,
+      "height": 480,
+      "headerBottom": 72,
+      "currentSrc": "http://127.0.0.1:3158/optimized/d377a545d0e83447-hero-q92-960.webp",
+      "src": "/optimized/d377a545d0e83447-hero-q92-960.webp",
+      "fit": "cover",
+      "position": "25% 42%",
+      "state": "loaded",
+      "naturalWidth": 720,
+      "naturalHeight": 540,
+      "noHorizontalOverflow": true
+    },
+    {
+      "page": "landing",
+      "width": 351,
+      "x": 19.5,
+      "y": 100.3125,
+      "height": 350,
+      "headerBottom": 76,
+      "currentSrc": "http://127.0.0.1:3158/optimized/993d85b15e13dd3a-hero-q92-480.webp",
+      "src": "/optimized/993d85b15e13dd3a-hero-q92-960.webp",
+      "fit": "cover",
+      "position": "50% 60%",
+      "state": "loaded",
+      "naturalWidth": 389,
+      "naturalHeight": 259,
+      "noHorizontalOverflow": true
+    },
+    {
+      "page": "home",
+      "width": 334,
+      "x": 28,
+      "y": 99.890625,
+      "height": 280,
+      "headerBottom": 76,
+      "currentSrc": "http://127.0.0.1:3158/optimized/d377a545d0e83447-hero-q92-480.webp",
+      "src": "/optimized/d377a545d0e83447-hero-q92-960.webp",
+      "fit": "cover",
+      "position": "25% 42%",
+      "state": "loaded",
+      "naturalWidth": 389,
+      "naturalHeight": 292,
+      "noHorizontalOverflow": true
+    }
+  ],
+  "pageErrors": [],
+  "rawOriginals": [
+    {
+      "src": "/images/hero-overrides/993d85b15e13dd3a1ea56936fe9ca3dcf0b1e67f68239f8bc67754f94348108e.jpg",
+      "bytes": 3092008,
+      "sha256": "993d85b15e13dd3a1ea56936fe9ca3dcf0b1e67f68239f8bc67754f94348108e",
+      "unchanged": true
+    },
+    {
+      "src": "/images/hero-overrides/d377a545d0e83447474ea28ff34d16650d0bd6d49b3e1d34ff6455d137672969.jpg",
+      "bytes": 3019858,
+      "sha256": "d377a545d0e83447474ea28ff34d16650d0bd6d49b3e1d34ff6455d137672969",
+      "unchanged": true
+    }
+  ],
+  "personallyInspectedCaptures": 8,
+  "visualFindings": [
+    "All four initial screenshots are real viewport captures at scrollY0; desktop/mobile headers are correctly placed, with no capture-induced heading overlap.",
+    "Landing shows the supplied workshop group original with Dr. Singh visible; existing card/badge/frame remain.",
+    "Home shows the supplied whiteboard original; desktop cover crop focuses Dr. Singh, and mobile shows both participants.",
+    "Four separate photo crops are below the sticky header and fully inside the viewport; no distortion, empty bands or horizontal overflow was observed.",
+    "Image source/variants were never intercepted or replaced; raw original HTTP hashes and bytes match uploaded files."
+  ],
+  "sourceOrLayoutChanged": false,
+  "ownedServices": "Isolated3158/5159 stopped in finally; no shared build or root test ports touched."
+}

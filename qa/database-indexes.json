@@ -1,0 +1,1004 @@
+{
+  "status": "passed",
+  "readOnly": true,
+  "startedAt": "2026-11-07T08:53:29.409Z",
+  "databaseName": "singh_academy",
+  "checkedAt": "2026-11-07T08:53:37.666Z",
+  "entries": [
+    {
+      "collection": "users",
+      "key": {
+        "email": 1
+      },
+      "options": {
+        "unique": true,
+        "background": true
+      },
+      "status": "present",
+      "conflicting": []
+    },
+    {
+      "collection": "users",
+      "key": {
+        "resetPasswordToken": 1
+      },
+      "options": {
+        "background": true
+      },
+      "status": "present",
+      "conflicting": []
+    },
+    {
+      "collection": "users",
+      "key": {
+        "role": 1
+      },
+      "options": {
+        "background": true
+      },
+      "status": "present",
+      "conflicting": []
+    },
+    {
+      "collection": "users",
+      "key": {
+        "status": 1
+      },
+      "options": {
+        "background": true
+      },
+      "status": "present",
+      "conflicting": []
+    },
+    {
+      "collection": "users",
+      "key": {
+        "deletedAt": 1
+      },
+      "options": {
+        "background": true
+      },
+      "status": "present",
+      "conflicting": []
+    },
+    {
+      "collection": "users",
+      "key": {
+        "role": 1,
+        "createdAt": -1
+      },
+      "options": {
+        "background": true
+      },
+      "status": "present",
+      "conflicting": []
+    },
+    {
+      "collection": "authsessions",
+      "key": {
+        "tokenHash": 1
+      },
+      "options": {
+        "unique": true,
+        "background": true
+      },
+      "status": "present",
+      "conflicting": []
+    },
+    {
+      "collection": "authsessions",
+      "key": {
+        "user": 1
+      },
+      "options": {
+        "background": true
+      },
+      "status": "present",
+      "conflicting": []
+    },
+    {
+      "collection": "authsessions",
+      "key": {
+        "expiresAt": 1
+      },
+      "options": {
+        "expireAfterSeconds": 0,
+        "background": true
+      },
+      "status": "present",
+      "conflicting": []
+    },
+    {
+      "collection": "ratelimits",
+      "key": {
+        "expiresAt": 1
+      },
+      "options": {
+        "expireAfterSeconds": 0,
+        "background": true
+      },
+      "status": "present",
+      "conflicting": []
+    },
+    {
+      "collection": "checkoutorders",
+      "key": {
+        "user": 1
+      },
+      "options": {
+        "background": true
+      },
+      "status": "present",
+      "conflicting": []
+    },
+    {
+      "collection": "checkoutorders",
+      "key": {
+        "status": 1
+      },
+      "options": {
+        "background": true
+      },
+      "status": "present",
+      "conflicting": []
+    },
+    {
+      "collection": "checkoutorders",
+      "key": {
+        "requestKey": 1
+      },
+      "options": {
+        "unique": true,
+        "background": true
+      },
+      "status": "present",
+      "conflicting": []
+    },
+    {
+      "collection": "checkoutorders",
+      "key": {
+        "provider": 1,
+        "environment": 1,
+        "providerOrderId": 1
+      },
+      "options": {
+        "unique": true,
+        "partialFilterExpression": {
+          "providerOrderId": {
+            "$type": "string"
+          }
+        },
+        "background": true
+      },
+      "status": "present",
+      "conflicting": []
+    },
+    {
+      "collection": "checkoutorders",
+      "key": {
+        "user": 1,
+        "createdAt": -1
+      },
+      "options": {
+        "background": true
+      },
+      "status": "present",
+      "conflicting": []
+    },
+    {
+      "collection": "invoices",
+      "key": {
+        "number": 1
+      },
+      "options": {
+        "unique": true,
+        "background": true
+      },
+      "status": "present",
+      "conflicting": []
+    },
+    {
+      "collection": "invoices",
+      "key": {
+        "user": 1
+      },
+      "options": {
+        "background": true
+      },
+      "status": "present",
+      "conflicting": []
+    },
+    {
+      "collection": "invoices",
+      "key": {
+        "dueAt": 1
+      },
+      "options": {
+        "background": true
+      },
+      "status": "present",
+      "conflicting": []
+    },
+    {
+      "collection": "invoices",
+      "key": {
+        "status": 1
+      },
+      "options": {
+        "background": true
+      },
+      "status": "present",
+      "conflicting": []
+    },
+    {
+      "collection": "invoices",
+      "key": {
+        "providerInvoiceKey": 1
+      },
+      "options": {
+        "unique": true,
+        "sparse": true,
+        "background": true
+      },
+      "status": "present",
+      "conflicting": []
+    },
+    {
+      "collection": "invoices",
+      "key": {
+        "requestKey": 1
+      },
+      "options": {
+        "unique": true,
+        "background": true
+      },
+      "status": "present",
+      "conflicting": []
+    },
+    {
+      "collection": "invoices",
+      "key": {
+        "user": 1,
+        "createdAt": -1
+      },
+      "options": {
+        "background": true
+      },
+      "status": "present",
+      "conflicting": []
+    },
+    {
+      "collection": "invoices",
+      "key": {
+        "user": 1,
+        "kind": 1,
+        "courseSlug": 1,
+        "paidAt": 1
+      },
+      "options": {
+        "background": true
+      },
+      "status": "present",
+      "conflicting": []
+    },
+    {
+      "collection": "invoices",
+      "key": {
+        "renewalOf": 1
+      },
+      "options": {
+        "unique": true,
+        "partialFilterExpression": {
+          "renewalOf": {
+            "$type": "objectId"
+          },
+          "status": "open"
+        },
+        "background": true
+      },
+      "status": "present",
+      "conflicting": []
+    },
+    {
+      "collection": "invoices",
+      "key": {
+        "status": 1,
+        "currency": 1,
+        "dueAt": 1
+      },
+      "options": {
+        "background": true
+      },
+      "status": "present",
+      "conflicting": []
+    },
+    {
+      "collection": "payments",
+      "key": {
+        "user": 1
+      },
+      "options": {
+        "background": true
+      },
+      "status": "present",
+      "conflicting": []
+    },
+    {
+      "collection": "payments",
+      "key": {
+        "courseSlug": 1
+      },
+      "options": {
+        "background": true
+      },
+      "status": "present",
+      "conflicting": []
+    },
+    {
+      "collection": "payments",
+      "key": {
+        "providerRecordKey": 1
+      },
+      "options": {
+        "unique": true,
+        "sparse": true,
+        "background": true
+      },
+      "status": "present",
+      "conflicting": []
+    },
+    {
+      "collection": "payments",
+      "key": {
+        "status": 1
+      },
+      "options": {
+        "background": true
+      },
+      "status": "present",
+      "conflicting": []
+    },
+    {
+      "collection": "payments",
+      "key": {
+        "referenceKey": 1
+      },
+      "options": {
+        "unique": true,
+        "sparse": true,
+        "background": true
+      },
+      "status": "present",
+      "conflicting": []
+    },
+    {
+      "collection": "payments",
+      "key": {
+        "requestKey": 1
+      },
+      "options": {
+        "unique": true,
+        "sparse": true,
+        "background": true
+      },
+      "status": "present",
+      "conflicting": []
+    },
+    {
+      "collection": "payments",
+      "key": {
+        "paidAt": -1,
+        "currency": 1
+      },
+      "options": {
+        "background": true
+      },
+      "status": "present",
+      "conflicting": []
+    },
+    {
+      "collection": "payments",
+      "key": {
+        "user": 1,
+        "createdAt": -1
+      },
+      "options": {
+        "background": true
+      },
+      "status": "present",
+      "conflicting": []
+    },
+    {
+      "collection": "payments",
+      "key": {
+        "invoice": 1,
+        "status": 1,
+        "paidAt": -1
+      },
+      "options": {
+        "background": true
+      },
+      "status": "present",
+      "conflicting": []
+    },
+    {
+      "collection": "refunds",
+      "key": {
+        "payment": 1
+      },
+      "options": {
+        "background": true
+      },
+      "status": "present",
+      "conflicting": []
+    },
+    {
+      "collection": "refunds",
+      "key": {
+        "user": 1
+      },
+      "options": {
+        "background": true
+      },
+      "status": "present",
+      "conflicting": []
+    },
+    {
+      "collection": "refunds",
+      "key": {
+        "referenceKey": 1
+      },
+      "options": {
+        "unique": true,
+        "background": true
+      },
+      "status": "present",
+      "conflicting": []
+    },
+    {
+      "collection": "refunds",
+      "key": {
+        "requestKey": 1
+      },
+      "options": {
+        "unique": true,
+        "background": true
+      },
+      "status": "present",
+      "conflicting": []
+    },
+    {
+      "collection": "refunds",
+      "key": {
+        "refundedAt": -1,
+        "currency": 1
+      },
+      "options": {
+        "background": true
+      },
+      "status": "present",
+      "conflicting": []
+    },
+    {
+      "collection": "subscriptions",
+      "key": {
+        "user": 1
+      },
+      "options": {
+        "background": true
+      },
+      "status": "present",
+      "conflicting": []
+    },
+    {
+      "collection": "subscriptions",
+      "key": {
+        "status": 1
+      },
+      "options": {
+        "background": true
+      },
+      "status": "present",
+      "conflicting": []
+    },
+    {
+      "collection": "subscriptions",
+      "key": {
+        "status": 1,
+        "endsAt": 1
+      },
+      "options": {
+        "background": true
+      },
+      "status": "present",
+      "conflicting": []
+    },
+    {
+      "collection": "subscriptions",
+      "key": {
+        "invoice": 1
+      },
+      "options": {
+        "unique": true,
+        "sparse": true,
+        "background": true
+      },
+      "status": "present",
+      "conflicting": []
+    },
+    {
+      "collection": "subscriptions",
+      "key": {
+        "user": 1,
+        "status": 1,
+        "startsAt": 1,
+        "endsAt": 1
+      },
+      "options": {
+        "background": true
+      },
+      "status": "present",
+      "conflicting": []
+    },
+    {
+      "collection": "enrollments",
+      "key": {
+        "user": 1
+      },
+      "options": {
+        "background": true
+      },
+      "status": "present",
+      "conflicting": []
+    },
+    {
+      "collection": "enrollments",
+      "key": {
+        "user": 1,
+        "courseSlug": 1
+      },
+      "options": {
+        "unique": true,
+        "background": true
+      },
+      "status": "present",
+      "conflicting": []
+    },
+    {
+      "collection": "enrollments",
+      "key": {
+        "user": 1,
+        "status": 1,
+        "accessExpiresAt": 1
+      },
+      "options": {
+        "background": true
+      },
+      "status": "present",
+      "conflicting": []
+    },
+    {
+      "collection": "gatewayevents",
+      "key": {
+        "key": 1
+      },
+      "options": {
+        "unique": true,
+        "background": true
+      },
+      "status": "present",
+      "conflicting": []
+    },
+    {
+      "collection": "studentnotifications",
+      "key": {
+        "user": 1
+      },
+      "options": {
+        "background": true
+      },
+      "status": "present",
+      "conflicting": []
+    },
+    {
+      "collection": "studentnotifications",
+      "key": {
+        "dedupeKey": 1
+      },
+      "options": {
+        "unique": true,
+        "background": true
+      },
+      "status": "present",
+      "conflicting": []
+    },
+    {
+      "collection": "studentnotifications",
+      "key": {
+        "user": 1,
+        "createdAt": -1,
+        "_id": -1
+      },
+      "options": {
+        "background": true
+      },
+      "status": "present",
+      "conflicting": []
+    },
+    {
+      "collection": "studentnotifications",
+      "key": {
+        "user": 1,
+        "readAt": 1
+      },
+      "options": {
+        "background": true
+      },
+      "status": "present",
+      "conflicting": []
+    },
+    {
+      "collection": "studentnotifications",
+      "key": {
+        "emailState": 1,
+        "nextAttemptAt": 1,
+        "leaseUntil": 1
+      },
+      "options": {
+        "background": true
+      },
+      "status": "present",
+      "conflicting": []
+    },
+    {
+      "collection": "courseattempts",
+      "key": {
+        "user": 1,
+        "course": 1,
+        "number": 1
+      },
+      "options": {
+        "unique": true,
+        "background": true
+      },
+      "status": "present",
+      "conflicting": []
+    },
+    {
+      "collection": "courseattempts",
+      "key": {
+        "course": 1,
+        "status": 1,
+        "completedAt": -1
+      },
+      "options": {
+        "background": true
+      },
+      "status": "present",
+      "conflicting": []
+    },
+    {
+      "collection": "lessonsubmissions",
+      "key": {
+        "user": 1,
+        "course": 1,
+        "lesson": 1,
+        "attemptNumber": 1,
+        "schemaVersion": 1
+      },
+      "options": {
+        "unique": true,
+        "background": true
+      },
+      "status": "present",
+      "conflicting": []
+    },
+    {
+      "collection": "lessonsubmissions",
+      "key": {
+        "user": 1,
+        "course": 1,
+        "attemptNumber": 1,
+        "updatedAt": -1
+      },
+      "options": {
+        "background": true
+      },
+      "status": "present",
+      "conflicting": []
+    },
+    {
+      "collection": "coursecompletions",
+      "key": {
+        "status": 1
+      },
+      "options": {
+        "background": true
+      },
+      "status": "present",
+      "conflicting": []
+    },
+    {
+      "collection": "coursecompletions",
+      "key": {
+        "certificateNumber": 1
+      },
+      "options": {
+        "unique": true,
+        "sparse": true,
+        "background": true
+      },
+      "status": "present",
+      "conflicting": []
+    },
+    {
+      "collection": "coursecompletions",
+      "key": {
+        "verificationToken": 1
+      },
+      "options": {
+        "unique": true,
+        "sparse": true,
+        "background": true
+      },
+      "status": "present",
+      "conflicting": []
+    },
+    {
+      "collection": "coursecompletions",
+      "key": {
+        "user": 1,
+        "course": 1
+      },
+      "options": {
+        "unique": true,
+        "background": true
+      },
+      "status": "present",
+      "conflicting": []
+    },
+    {
+      "collection": "coursecompletions",
+      "key": {
+        "status": 1,
+        "completedAt": -1
+      },
+      "options": {
+        "background": true
+      },
+      "status": "present",
+      "conflicting": []
+    },
+    {
+      "collection": "progresses",
+      "key": {
+        "user": 1
+      },
+      "options": {
+        "background": true
+      },
+      "status": "present",
+      "conflicting": []
+    },
+    {
+      "collection": "progresses",
+      "key": {
+        "course": 1
+      },
+      "options": {
+        "background": true
+      },
+      "status": "present",
+      "conflicting": []
+    },
+    {
+      "collection": "progresses",
+      "key": {
+        "user": 1,
+        "lesson": 1
+      },
+      "options": {
+        "unique": true,
+        "background": true
+      },
+      "status": "present",
+      "conflicting": []
+    },
+    {
+      "collection": "sections",
+      "key": {
+        "slug": 1
+      },
+      "options": {
+        "unique": true,
+        "background": true
+      },
+      "status": "present",
+      "conflicting": []
+    },
+    {
+      "collection": "sections",
+      "key": {
+        "published": 1,
+        "order": 1
+      },
+      "options": {
+        "background": true
+      },
+      "status": "present",
+      "conflicting": []
+    },
+    {
+      "collection": "sections",
+      "key": {
+        "thumbnailFileId": 1
+      },
+      "options": {
+        "background": true
+      },
+      "status": "present",
+      "conflicting": []
+    },
+    {
+      "collection": "coupons",
+      "key": {
+        "code": 1
+      },
+      "options": {
+        "unique": true,
+        "background": true
+      },
+      "status": "present",
+      "conflicting": []
+    },
+    {
+      "collection": "coupons",
+      "key": {
+        "kind": 1,
+        "productSlug": 1,
+        "active": 1
+      },
+      "options": {
+        "background": true
+      },
+      "status": "present",
+      "conflicting": []
+    },
+    {
+      "collection": "sectionaccesses",
+      "key": {
+        "user": 1,
+        "sectionSlug": 1,
+        "invoice": 1
+      },
+      "options": {
+        "unique": true,
+        "background": true
+      },
+      "status": "present",
+      "conflicting": []
+    },
+    {
+      "collection": "sectionaccesses",
+      "key": {
+        "user": 1,
+        "status": 1,
+        "sectionSlug": 1,
+        "startsAt": 1,
+        "endsAt": 1
+      },
+      "options": {
+        "background": true
+      },
+      "status": "present",
+      "conflicting": []
+    },
+    {
+      "collection": "billingagreements",
+      "key": {
+        "user": 1
+      },
+      "options": {
+        "background": true
+      },
+      "status": "present",
+      "conflicting": []
+    },
+    {
+      "collection": "billingagreements",
+      "key": {
+        "checkoutOrder": 1
+      },
+      "options": {
+        "unique": true,
+        "background": true
+      },
+      "status": "present",
+      "conflicting": []
+    },
+    {
+      "collection": "billingagreements",
+      "key": {
+        "activeKey": 1
+      },
+      "options": {
+        "unique": true,
+        "sparse": true,
+        "background": true
+      },
+      "status": "present",
+      "conflicting": []
+    },
+    {
+      "collection": "billingagreements",
+      "key": {
+        "provider": 1,
+        "environment": 1,
+        "providerSubscriptionId": 1
+      },
+      "options": {
+        "unique": true,
+        "partialFilterExpression": {
+          "providerSubscriptionId": {
+            "$type": "string"
+          }
+        },
+        "background": true
+      },
+      "status": "present",
+      "conflicting": []
+    },
+    {
+      "collection": "billingagreements",
+      "key": {
+        "user": 1,
+        "createdAt": -1
+      },
+      "options": {
+        "background": true
+      },
+      "status": "present",
+      "conflicting": []
+    },
+    {
+      "collection": "reviews",
+      "key": {
+        "status": 1,
+        "createdAt": -1
+      },
+      "options": {
+        "background": true
+      },
+      "status": "present",
+      "conflicting": []
+    },
+    {
+      "collection": "reviews",
+      "key": {
+        "user": 1
+      },
+      "options": {
+        "name": "one_review_per_student",
+        "unique": true,
+        "background": true
+      },
+      "status": "present",
+      "conflicting": [
+        "one_pending_review_per_student"
+      ]
+    },
+    {
+      "collection": "videoreviews",
+      "key": {
+        "published": 1,
+        "order": 1,
+        "createdAt": -1
+      },
+      "options": {
+        "background": true
+      },
+      "status": "present",
+      "conflicting": []
+    }
+  ]
+}

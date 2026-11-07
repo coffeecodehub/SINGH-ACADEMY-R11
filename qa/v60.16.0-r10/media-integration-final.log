@@ -1,0 +1,55 @@
+TAP version 13
+# {"event":"review_upload_complete","fileId":"6aee61de85c31a854d8d924d","bytes":11949,"durationMs":75}
+# Subtest: R9 actual FFmpeg/Mongo/HTTP: scanned upload, faststart preview, posters, authorization and failure cleanup
+    # Subtest: original upload returns 201 then background processing preserves full SHA and stores small independent media
+    ok 1 - original upload returns 201 then background processing preserves full SHA and stores small independent media
+      ---
+      duration_ms: 409.981373
+      type: 'test'
+      ...
+    # Subtest: unpublished original and both derived requests remain private; raw derivative IDs are never public
+    ok 2 - unpublished original and both derived requests remain private; raw derivative IDs are never public
+      ---
+      duration_ms: 33.634969
+      type: 'test'
+      ...
+    # Subtest: published poster is JPEG; teaser streams correct exact206/HEAD and original download is unchanged
+    ok 3 - published poster is JPEG; teaser streams correct exact206/HEAD and original download is unchanged
+      ---
+      duration_ms: 69.790854
+      type: 'test'
+      ...
+    # Subtest: legacy preview pins original byte ranges while background processing completes; new playback selects its derivative
+    ok 4 - legacy preview pins original byte ranges while background processing completes; new playback selects its derivative
+      ---
+      duration_ms: 252.05453
+      type: 'test'
+      ...
+    # Subtest: the public list selects ready renditions with one bounded metadata projection and keeps the full original URLs
+    ok 5 - the public list selects ready renditions with one bounded metadata projection and keeps the full original URLs
+      ---
+      duration_ms: 8.433686
+      type: 'test'
+      ...
+# {"event":"review_playback_fallback","fileId":"6aee61df85c31a854d8d928b","reason":"processing_failed"}
+    # Subtest: failure after derived files were uploaded removes every child metadata/chunk while retaining scanned original
+    ok 6 - failure after derived files were uploaded removes every child metadata/chunk while retaining scanned original
+      ---
+      duration_ms: 195.863789
+      type: 'test'
+      ...
+    1..6
+ok 1 - R9 actual FFmpeg/Mongo/HTTP: scanned upload, faststart preview, posters, authorization and failure cleanup
+  ---
+  duration_ms: 1303.839163
+  type: 'test'
+  ...
+1..1
+# tests 7
+# suites 0
+# pass 7
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1662.357069

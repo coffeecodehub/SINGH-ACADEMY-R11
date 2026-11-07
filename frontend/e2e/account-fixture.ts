@@ -1,0 +1,3 @@
+import {expect,type Page} from '@playwright/test';import {randomUUID} from 'node:crypto';
+/** Uses only the isolated TEST_MONGODB_URI browser stack. Never a real mailbox. */
+export async function browserStudent(page:Page){const password='BrowserFixture-Only-123456!';const response=await page.context().request.post('/api/auth/register',{headers:{Origin:'http://localhost:3000','X-SA-CSRF':'1','X-SA-Portal':'student'},data:{name:'Browser Learner',email:randomUUID()+'@browser-test.invalid',password,confirmPassword:password,country:'US'}});expect(response.ok()).toBe(true);const data=await response.json();expect(data.user?.role).toBe('student');expect(data.user?.country).toBe('US');return data.user;}

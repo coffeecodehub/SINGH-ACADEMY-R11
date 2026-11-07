@@ -1,0 +1,38 @@
+[
+  {
+    "file": "backend/src/services/paymentProviders.js",
+    "unchangedFromR10": true
+  },
+  {
+    "file": "backend/src/services/paymentReadiness.js",
+    "unchangedFromR10": true
+  },
+  {
+    "file": "backend/src/services/gatewayWebhooks.js",
+    "unchangedFromR10": true
+  },
+  {
+    "file": "backend/src/routes/gatewayWebhookRoutes.js",
+    "unchangedFromR10": true
+  },
+  {
+    "file": "backend/src/services/onlineCheckout.js",
+    "unchangedFromR10": true
+  },
+  {
+    "file": "backend/src/services/recurringBilling.js",
+    "unchangedFromR10": true
+  },
+  {
+    "file": "backend/src/services/catalogEntitlements.js",
+    "unchangedFromR10": true
+  },
+  {
+    "file": "backend/src/utils/commerce.js",
+    "unchangedFromR10": true
+  },
+  {
+    "file": "backend/src/utils/paymentWebhookPolicy.js",
+    "unchangedFromR10": true
+  }
+]

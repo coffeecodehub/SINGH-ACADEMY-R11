@@ -1,0 +1,48 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import mongoose from 'mongoose';
+import {once} from 'node:events';
+import express from 'express';
+import sharp from 'sharp';
+import {isolatedDatabase,testEnvironment} from './isolation.js';
+import {createPublicImageReferenceService,isPublicImageReference} from '../src/services/publicImageReferences.js';
+import {createContentCache,catalogCache} from '../src/services/catalogCache.js';
+import {catalogInvalidation} from '../src/middleware/catalogInvalidation.js';
+import Course from '../src/models/Course.js';
+import TeamMember from '../src/models/TeamMember.js';
+import Event from '../src/models/Event.js';
+import SiteContent from '../src/models/SiteContent.js';
+import Section from '../src/models/Section.js';
+import PageSection from '../src/models/PageSection.js';
+import mediaRoutes from '../src/routes/mediaRoutes.js';
+
+test('real Mongo publication batching preserves exact public/private images and immediate CMS revocation',async t=>{
+ const isolated=isolatedDatabase();testEnvironment();await mongoose.connect(isolated.uri,{dbName:isolated.dbName,autoIndex:true,serverSelectionTimeoutMS:10000});
+ t.after(async()=>{catalogCache.clear();await isolated.cleanup(mongoose);await mongoose.disconnect();});
+ const makeId=()=>new mongoose.Types.ObjectId(),ids=Array.from({length:14},makeId);
+ await Course.collection.insertMany([{slug:'public',published:true,thumbnailFileId:ids[0],gallery:[{fileId:ids[1]}]},{slug:'draft',published:false,thumbnailFileId:ids[8]}]);
+ await TeamMember.collection.insertMany([{slug:'active',active:true,imageFileId:String(ids[2])},{slug:'inactive',active:false,imageFileId:String(ids[9])}]);
+ await Event.collection.insertMany([{slug:'published',status:'published',imageFileId:String(ids[3])},{slug:'draft',status:'draft',imageFileId:String(ids[10])}]);
+ await SiteContent.collection.insertOne({key:'websiteContent',value:{images:[{fileId:String(ids[4])}]}});
+ await Section.collection.insertMany([{slug:'public',published:true,archivedAt:null,thumbnailFileId:ids[5]},{slug:'archived',published:true,archivedAt:new Date(),thumbnailFileId:ids[11]}]);
+ await PageSection.collection.insertOne({_id:'about',pageKey:'about',blocks:[{published:true,imageFileId:String(ids[6]),gallery:[{imageFileId:String(ids[7]),imageUrl:'/api/media/'+ids[7]},{imageFileId:String(ids[12]),imageUrl:'/api/media/'+ids[13]}]},{published:false,imageFileId:String(ids[13])}]});
+ const names={Course,TeamMember,Event,SiteContent,Section,PageSection},counts=new Map();
+ const models=Object.fromEntries(Object.entries(names).map(([name,model])=>[name,{find(filter){counts.set(name,(counts.get(name)||0)+1);return model.find(filter);},exists:filter=>model.exists(filter)}]));
+ const read=createPublicImageReferenceService({models,cache:createContentCache()});
+ assert.deepEqual(await Promise.all(ids.map(read)),[true,true,true,true,true,true,true,true,false,false,false,false,false,false]);
+ assert.equal([...counts.values()].reduce((a,b)=>a+b,0),6,'fourteen images share six real Mongo reads rather than 84');
+ await Promise.all(ids.slice(0,8).map(read));assert.equal([...counts.values()].reduce((a,b)=>a+b,0),6);
+ const bytes=await sharp({create:{width:480,height:270,channels:3,background:'#986543'}}).png().toBuffer();
+ const bucket=new mongoose.mongo.GridFSBucket(mongoose.connection.db,{bucketName:'academyMedia'});
+ for(const id of [ids[6],ids[12],ids[13]]){const upload=bucket.openUploadStreamWithId(id,'gallery.png',{contentType:'image/png',metadata:{purpose:'cms-page-section'}});upload.end(bytes);await once(upload,'finish');}
+ const app=express();app.use((req,res,next)=>{req.cookies={};next();});app.use(catalogInvalidation);app.use('/api/media',mediaRoutes);
+ app.put('/api/admin/unpublish',async(req,res)=>{await PageSection.collection.updateOne({_id:'about'},{$set:{blocks:[]}});res.json({success:true});});
+ app.use((error,req,res,next)=>res.status(error.status||500).json({success:false,message:error.message}));
+ const server=app.listen(0,'127.0.0.1');await once(server,'listening');t.after(()=>{server.closeAllConnections();server.close();});const origin='http://127.0.0.1:'+server.address().port;
+ assert.equal((await fetch(origin+'/api/media/'+ids[6]+'?w=480')).status,200);
+ assert.equal((await fetch(origin+'/api/media/'+ids[12])).status,401,'mismatched published gallery references do not grant image access');
+ assert.equal((await fetch(origin+'/api/media/'+ids[13])).status,401,'draft image remains private');
+ assert.equal(await isPublicImageReference(ids[6]),true);assert.equal((await fetch(origin+'/api/admin/unpublish',{method:'PUT'})).status,200);
+ assert.equal(await isPublicImageReference(ids[6]),false,'successful CMS write clears publication cache');
+ assert.equal((await fetch(origin+'/api/media/'+ids[6]+'?w=480')).status,401,'a cached responsive image cannot bypass revoked publication');
+});

@@ -1,0 +1,14 @@
+{
+  "nativeDialogCalls": [],
+  "count": 0,
+  "scannedRoots": [
+    "frontend/app",
+    "frontend/components",
+    "frontend/lib"
+  ],
+  "nativeBeforeUnloadRetained": [
+    "frontend/lib/leaveGuard.ts",
+    "frontend/components/cms/Fields.tsx",
+    "frontend/components/business/BusinessPortal.tsx"
+  ]
+}

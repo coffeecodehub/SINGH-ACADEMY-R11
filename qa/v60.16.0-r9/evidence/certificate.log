@@ -1,0 +1,5 @@
+
+> singh-academy-backend@60.16.0 test:certificate
+> node src/scripts/sampleCertificate.js
+
+Sample certificate PDF created at /workspace/SINGH-ACADEMY-V60.15.3-P1-EYE-LOADING-REVIEW/backend/qa/certificate-sample.pdf

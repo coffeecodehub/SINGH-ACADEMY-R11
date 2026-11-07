@@ -1,0 +1,18 @@
+{
+  "landing": {
+    "src": "/images/hero-overrides/993d85b15e13dd3a1ea56936fe9ca3dcf0b1e67f68239f8bc67754f94348108e.jpg",
+    "width": 3308,
+    "height": 2205,
+    "alt": "Dr. Singh with participants at an international dispute-resolution programme.",
+    "caption": "Singh Academy · A global learning community",
+    "objectPosition": "50% 60%"
+  },
+  "home": {
+    "src": "/images/hero-overrides/d377a545d0e83447474ea28ff34d16650d0bd6d49b3e1d34ff6455d137672969.jpg",
+    "width": 4864,
+    "height": 3648,
+    "alt": "Dr. Singh in a collaborative whiteboard discussion.",
+    "caption": "Singh Academy · Learning through practice",
+    "objectPosition": "25% 42%"
+  }
+}

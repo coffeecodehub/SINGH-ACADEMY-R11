@@ -1,0 +1,5 @@
+
+> singh-academy-backend@60.16.0 test:images
+> node src/scripts/checkImages.js
+
+Installed Sharp image smoke test passed: {"sharp":"0.35.5","vips":"8.18.7","width":480,"height":270,"bytes":310}

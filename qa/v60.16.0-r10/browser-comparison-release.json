@@ -1,0 +1,75 @@
+{
+  "methodology": "Three cold-cache samples/mode; medians; production Next + identical synthetic public API, mobile390x844/150ms/1.6Mbps down/0.75Mbps up/4xCPU. No deployed-host/provider latency claim.",
+  "before": [
+    {
+      "label": "before-r9",
+      "mode": "desktop",
+      "lcp": 300,
+      "fcp": 232,
+      "content": 401.2000000178814,
+      "ttfb": 34.400000005960464,
+      "heroComplete": 353.2000000178814,
+      "landingLoad": 282.80000001192093,
+      "landingCLS": 0,
+      "reviewCLS": 0.31151851851851853,
+      "videoPlay": 293.5,
+      "firstPoster": 218.90000000596046,
+      "posters": 24,
+      "pageErrors": [],
+      "overflows": false
+    },
+    {
+      "label": "before-r9",
+      "mode": "mobile-fast3g",
+      "lcp": 1804,
+      "fcp": 680,
+      "content": 2805.5999999940395,
+      "ttfb": 32.19999998807907,
+      "heroComplete": 12749,
+      "landingLoad": 12755.09999999404,
+      "landingCLS": 0,
+      "reviewCLS": 0.34015578144860625,
+      "videoPlay": 3283.100000023842,
+      "firstPoster": 2463.5,
+      "posters": 24,
+      "pageErrors": [],
+      "overflows": false
+    }
+  ],
+  "after": [
+    {
+      "label": "after-r10",
+      "mode": "desktop",
+      "lcp": 364,
+      "fcp": 144,
+      "content": 431.7999999821186,
+      "ttfb": 51.89999997615814,
+      "heroComplete": 101.59999999403954,
+      "landingLoad": 218.7999999821186,
+      "landingCLS": 0,
+      "reviewCLS": 0.00050908203125,
+      "videoPlay": 277.80000001192093,
+      "firstPoster": 59.70000001788139,
+      "posters": 7,
+      "pageErrors": [],
+      "overflows": false
+    },
+    {
+      "label": "after-r10",
+      "mode": "mobile-fast3g",
+      "lcp": 1108,
+      "fcp": 564,
+      "content": 1061.1000000238419,
+      "ttfb": 43.400000005960464,
+      "heroComplete": 640.7000000178814,
+      "landingLoad": 3552.5,
+      "landingCLS": 0,
+      "reviewCLS": 0.0024780563301228056,
+      "videoPlay": 2573,
+      "firstPoster": 574.5,
+      "posters": 3,
+      "pageErrors": [],
+      "overflows": false
+    }
+  ]
+}

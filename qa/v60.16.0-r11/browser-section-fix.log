@@ -1,0 +1,11 @@
+
+Running 4 tests using 1 worker
+
+(node:736758) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 ui-tests/section-purchase-suggestion-r11.spec.ts:6:5 › course checkout suggests its whole section with current count/price, preserving course option and using section flow (1.3s)
+  ✓  2 ui-tests/section-purchase-suggestion-r11.spec.ts:13:5 › unrelated standalone course and section checkout show no extra suggestion (817ms)
+  ✓  3 ui-tests/section-purchase-suggestion-r11.spec.ts:16:5 › active whole-section access hides purchase suggestion and original checkout buttons (564ms)
+  ✓  4 ui-tests/section-purchase-suggestion-r11.spec.ts:20:5 › optional section lookup failure preserves individual purchase and creates no order (613ms)
+
+  4 passed (3.9s)

@@ -1,0 +1,2 @@
+import SiteHeader from '../SiteHeader';import SiteFooter from './SiteFooter';import BackButton from './BackButton';
+export default function PageShell({kicker,title,intro,children,beforeHero,backLabel='Back'}:{kicker:string,title:string,intro:string,children:React.ReactNode;beforeHero?:React.ReactNode;backLabel?:string}){return <main><SiteHeader/>{beforeHero}<section className="innerHero"><BackButton label={backLabel}/><span className="kicker">{kicker}</span><h1>{title}</h1><p>{intro}</p></section>{children}<SiteFooter/></main>}

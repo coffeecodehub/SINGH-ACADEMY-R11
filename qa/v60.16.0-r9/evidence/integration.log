@@ -1,0 +1,1633 @@
+
+> singh-academy-backend@60.16.0 test:integration
+> node --test integration/*.test.js
+
+TAP version 13
+# Subtest: webinar publication, moderated reviews, safe all-student export and base regional terms
+    # Subtest: both admin roles create webinars with HTTPS Zoom joins, while drafts and bad hosts never appear
+    ok 1 - both admin roles create webinars with HTTPS Zoom joins, while drafts and bad hosts never appear
+      ---
+      duration_ms: 382.322453
+      type: 'test'
+      ...
+    # Subtest: new/edited reviews remain hidden, both admins can moderate, and same-millisecond stale approvals fail
+    ok 2 - new/edited reviews remain hidden, both admins can moderate, and same-millisecond stale approvals fail
+      ---
+      duration_ms: 985.866235
+      type: 'test'
+      ...
+    # Subtest: legacy reviews with no revision can be approved once using explicit zero and cannot replay that decision
+    ok 3 - legacy reviews with no revision can be approved once using explicit zero and cannot replay that decision
+      ---
+      duration_ms: 207.081256
+      type: 'test'
+      ...
+    # Subtest: CSV export includes every nonremoved student beyond one page, protects formulas and rejects guests/students
+    ok 4 - CSV export includes every nonremoved student beyond one page, protects formulas and rejects guests/students
+      ---
+      duration_ms: 284.712232
+      type: 'test'
+      ...
+    # Subtest: base and additional regional terms persist via admin API and appear as separate safe student offers
+    ok 5 - base and additional regional terms persist via admin API and appear as separate safe student offers
+      ---
+      duration_ms: 297.847387
+      type: 'test'
+      ...
+    1..5
+ok 1 - webinar publication, moderated reviews, safe all-student export and base regional terms
+  ---
+  duration_ms: 7782.65529
+  type: 'test'
+  ...
+# Subtest: R5 authorized filtered CSV downloads cover operational leads without page limits or private fields
+    # Subtest: guests, students and builder finance attempts are denied; both administrators may export reviews
+    ok 1 - guests, students and builder finance attempts are denied; both administrators may export reviews
+      ---
+      duration_ms: 125.006851
+      type: 'test'
+      ...
+    # Subtest: forms CSV includes all matching pages and safe Unicode/formula cells with no private account fields
+    ok 2 - forms CSV includes all matching pages and safe Unicode/formula cells with no private account fields
+      ---
+      duration_ms: 107.992126
+      type: 'test'
+      ...
+    # Subtest: every operational dataset exports protected explicit columns and correct filters
+    ok 3 - every operational dataset exports protected explicit columns and correct filters
+      ---
+      duration_ms: 825.14081
+      type: 'test'
+      ...
+    # Subtest: unknown datasets and malformed filters fail before sending a download
+    ok 4 - unknown datasets and malformed filters fail before sending a download
+      ---
+      duration_ms: 304.780891
+      type: 'test'
+      ...
+    1..4
+ok 2 - R5 authorized filtered CSV downloads cover operational leads without page limits or private fields
+  ---
+  duration_ms: 6865.151741
+  type: 'test'
+  ...
+# Subtest: country registration, admin-only updates, and concurrent published review uniqueness
+    # Subtest: country list is public and registration rejects missing/invalid codes
+    ok 1 - country list is public and registration rejects missing/invalid codes
+      ---
+      duration_ms: 82.34202
+      type: 'test'
+      ...
+    # Subtest: registration persists country and login ignores a browser country override
+    ok 2 - registration persists country and login ignores a browser country override
+      ---
+      duration_ms: 966.41034
+      type: 'test'
+      ...
+    # Subtest: country changes require an operational admin and current password
+    ok 3 - country changes require an operational admin and current password
+      ---
+      duration_ms: 1235.180089
+      type: 'test'
+      ...
+    # Subtest: concurrent first reviews produce one pending persisted review
+    ok 4 - concurrent first reviews produce one pending persisted review
+      ---
+      duration_ms: 44.747975
+      type: 'test'
+      ...
+    # Subtest: legacy index preparation blocks duplicates and adds uniqueness without dropping history
+    ok 5 - legacy index preparation blocks duplicates and adds uniqueness without dropping history
+      ---
+      duration_ms: 92.039336
+      type: 'test'
+      ...
+    1..5
+ok 3 - country registration, admin-only updates, and concurrent published review uniqueness
+  ---
+  duration_ms: 5430.615453
+  type: 'test'
+  ...
+# Subtest: paid purchase renewal setup defers the first real charge and never grants from a zero trial invoice
+    # Subtest: paid records expose owned actionable setup cards at the current account price
+    ok 1 - paid records expose owned actionable setup cards at the current account price
+      ---
+      duration_ms: 252.450882
+      type: 'test'
+      ...
+    # Subtest: the charge date unions future section and Academy contributions without bridging unpaid gaps
+    ok 2 - the charge date unions future section and Academy contributions without bridging unpaid gaps
+      ---
+      duration_ms: 399.51383
+      type: 'test'
+      ...
+    # Subtest: changed prepaid coverage invalidates the consenting quote before any provider mutation
+    ok 3 - changed prepaid coverage invalidates the consenting quote before any provider mutation
+      ---
+      duration_ms: 225.85499
+      type: 'test'
+      ...
+    # Subtest: setup forbids coupons, missing consent and unconfigured providers
+    ok 4 - setup forbids coupons, missing consent and unconfigured providers
+      ---
+      duration_ms: 269.341371
+      type: 'test'
+      ...
+    # Subtest: an unresolved normal checkout must be safely closed before deferred setup can start
+    ok 5 - an unresolved normal checkout must be safely closed before deferred setup can start
+      ---
+      duration_ms: 353.81368
+      type: 'test'
+      ...
+    # Subtest: new consented Checkout saves a payment method and schedules the provider first charge after all paid coverage
+    ok 6 - new consented Checkout saves a payment method and schedules the provider first charge after all paid coverage
+      ---
+      duration_ms: 447.908429
+      type: 'test'
+      ...
+    # Subtest: approved zero trial invoice records a scheduled agreement and no fake payment or access grant
+    ok 7 - approved zero trial invoice records a scheduled agreement and no fake payment or access grant
+      ---
+      duration_ms: 426.786602
+      type: 'test'
+      ...
+    # Subtest: zero invoice and browser replays remain idempotent and do not manufacture receipts
+    ok 8 - zero invoice and browser replays remain idempotent and do not manufacture receipts
+      ---
+      duration_ms: 260.354302
+      type: 'test'
+      ...
+    # Subtest: trialing agreements have working provider-confirmed disable and consented enable controls
+    ok 9 - trialing agreements have working provider-confirmed disable and consented enable controls
+      ---
+      duration_ms: 920.779164
+      type: 'test'
+      ...
+    # Subtest: 48-hour and 730-day provider limits are explicit and never become immediate setup charges
+    ok 10 - 48-hour and 730-day provider limits are explicit and never become immediate setup charges
+      ---
+      duration_ms: 298.785884
+      type: 'test'
+      ...
+    # Subtest: exact 48-hour/730-day limits use the saved paid end without rounding into an overlap
+    ok 11 - exact 48-hour/730-day limits use the saved paid end without rounding into an overlap
+      ---
+      duration_ms: 93.950148
+      type: 'test'
+      ...
+    # Subtest: an early collected invoice or an unrelated zero invoice never grants the future term
+    ok 12 - an early collected invoice or an unrelated zero invoice never grants the future term
+      ---
+      duration_ms: 110.580302
+      type: 'test'
+      ...
+    # Subtest: the first actual settled future invoice alone creates its exact paid term
+    ok 13 - the first actual settled future invoice alone creates its exact paid term
+      ---
+      duration_ms: 322.883677
+      type: 'test'
+      ...
+    # Subtest: expired paid purchases link to a normal priced checkout and owner isolation remains enforced
+    ok 14 - expired paid purchases link to a normal priced checkout and owner isolation remains enforced
+      ---
+      duration_ms: 95.089404
+      type: 'test'
+      ...
+    1..14
+ok 4 - paid purchase renewal setup defers the first real charge and never grants from a zero trial invoice
+  ---
+  duration_ms: 9606.739736
+  type: 'test'
+  ...
+# Subtest: immediate cancellation confirms providers, preserves money and revokes only selected rights
+    # Subtest: stripe immediate cancellation needs owner/consent and preserves financial history
+    ok 1 - stripe immediate cancellation needs owner/consent and preserves financial history
+      ---
+      duration_ms: 647.5259
+      type: 'test'
+      ...
+    # Subtest: paypal immediate cancellation needs owner/consent and preserves financial history
+    ok 2 - paypal immediate cancellation needs owner/consent and preserves financial history
+      ---
+      duration_ms: 354.379533
+      type: 'test'
+      ...
+    # Subtest: same-product independent paid invoices, complimentary rights and other environments remain valid
+    ok 3 - same-product independent paid invoices, complimentary rights and other environments remain valid
+      ---
+      duration_ms: 250.060383
+      type: 'test'
+      ...
+    # Subtest: deferred cancellation revokes its bound original section contribution, preserving another source
+    ok 4 - deferred cancellation revokes its bound original section contribution, preserving another source
+      ---
+      duration_ms: 270.744419
+      type: 'test'
+      ...
+    # Subtest: legacy membership cancellation stops only terms linked to the selected financial contribution
+    ok 5 - legacy membership cancellation stops only terms linked to the selected financial contribution
+      ---
+      duration_ms: 288.060054
+      type: 'test'
+      ...
+    # Subtest: one-time purchase cancellation is exact, owned and refuses a newly linked recurring mandate
+    ok 6 - one-time purchase cancellation is exact, owned and refuses a newly linked recurring mandate
+      ---
+      duration_ms: 271.216503
+      type: 'test'
+      ...
+# {"event":"api_error","requestId":"6d9fdd8f-533d-4b58-b3b8-bfdf4ab9a3a5","type":"Error","code":"PAYMENT_PROVIDER_UNAVAILABLE","paymentProvider":"stripe","providerStatus":503,"providerType":"StripeAPIError"}
+# {"event":"http","requestId":"6d9fdd8f-533d-4b58-b3b8-bfdf4ab9a3a5","method":"POST","route":"/mine/agreements/:id/cancel-now","status":503,"durationMs":533}
+    # Subtest: provider failures retain durable cancellation and block enabling or new checkout until retry confirms closure
+    ok 7 - provider failures retain durable cancellation and block enabling or new checkout until retry confirms closure
+      ---
+      duration_ms: 675.880685
+      type: 'test'
+      ...
+# {"event":"api_error","requestId":"3d515edc-c425-4c29-b1e6-d5ce8feaf4bc","type":"Error"}
+# {"event":"http","requestId":"3d515edc-c425-4c29-b1e6-d5ce8feaf4bc","method":"POST","route":"/mine/agreements/:id/cancel-now","status":503,"durationMs":41}
+# {"event":"api_error","requestId":"54a08a91-a2af-42c1-b5f6-71ca6ada7512","type":"Error"}
+# {"event":"http","requestId":"54a08a91-a2af-42c1-b5f6-71ca6ada7512","method":"POST","route":"/mine/agreements/:id/cancel-now","status":503,"durationMs":21}
+    # Subtest: unresolved Stripe invoices and PayPal collections retain the billing key and access until reconciled
+    ok 8 - unresolved Stripe invoices and PayPal collections retain the billing key and access until reconciled
+      ---
+      duration_ms: 349.970097
+      type: 'test'
+      ...
+    # Subtest: a late verified recurring sale records money once without restoring cancelled course access
+    ok 9 - a late verified recurring sale records money once without restoring cancelled course access
+      ---
+      duration_ms: 176.697303
+      type: 'test'
+      ...
+    # Subtest: cancellation is serialized against simultaneous enable and paid purchase actions
+    ok 10 - cancellation is serialized against simultaneous enable and paid purchase actions
+      ---
+      duration_ms: 177.193247
+      type: 'test'
+      ...
+    # Subtest: a deferred setup that wins the owner lock prevents a racing purchase-only cancellation
+    ok 11 - a deferred setup that wins the owner lock prevents a racing purchase-only cancellation
+      ---
+      duration_ms: 265.220443
+      type: 'test'
+      ...
+# {"event":"api_error","requestId":"1d7ea4f6-7bf0-4d6f-9c64-bda1bca96680","type":"Error","code":"PAYMENT_PROVIDER_UNAVAILABLE","paymentProvider":"stripe","providerStatus":503,"providerType":"StripeAPIError"}
+# {"event":"http","requestId":"1d7ea4f6-7bf0-4d6f-9c64-bda1bca96680","method":"POST","route":"/mine/agreements/:id/resume","status":503,"durationMs":526}
+# {"event":"api_error","requestId":"030e8570-7293-464d-8440-f7860d397ecd","type":"Error"}
+# {"event":"http","requestId":"030e8570-7293-464d-8440-f7860d397ecd","method":"POST","route":"/mine/agreements/:id/cancel-now","status":503,"durationMs":31}
+# {"event":"api_error","requestId":"09a59a86-1a85-4466-913f-d2931d17affe","type":"Error","code":"PAYMENT_PROVIDER_UNAVAILABLE","paymentProvider":"stripe","providerStatus":503,"providerType":"StripeAPIError"}
+# {"event":"http","requestId":"09a59a86-1a85-4466-913f-d2931d17affe","method":"POST","route":"/mine/agreements/:id/cancel","status":503,"durationMs":553}
+# {"event":"api_error","requestId":"64db9e11-3209-40e3-82ed-3200e48b5c32","type":"Error"}
+# {"event":"http","requestId":"64db9e11-3209-40e3-82ed-3200e48b5c32","method":"POST","route":"/mine/agreements/:id/cancel-now","status":503,"durationMs":54}
+# {"event":"api_error","requestId":"9ab596f9-7144-450b-953e-693fb705f74b","type":"Error","code":"PAYMENT_PROVIDER_UNAVAILABLE","paymentProvider":"paypal","providerStatus":503,"providerCode":"SYNTHETIC_CANCEL_OUTAGE"}
+# {"event":"http","requestId":"9ab596f9-7144-450b-953e-693fb705f74b","method":"POST","route":"/mine/agreements/:id/end","status":503,"durationMs":124}
+# {"event":"api_error","requestId":"91beb3a6-8cc3-43dc-a05c-0ecb73b85783","type":"Error"}
+# {"event":"http","requestId":"91beb3a6-8cc3-43dc-a05c-0ecb73b85783","method":"POST","route":"/mine/agreements/:id/cancel-now","status":503,"durationMs":32}
+    # Subtest: admin removal takes over lost enable, disable and end operations only after blocking the owner
+    ok 12 - admin removal takes over lost enable, disable and end operations only after blocking the owner
+      ---
+      duration_ms: 5584.526772
+      type: 'test'
+      ...
+    # Subtest: an older in-flight enable response cannot clear removal cancellation or restore renewal
+    ok 13 - an older in-flight enable response cannot clear removal cancellation or restore renewal
+      ---
+      duration_ms: 2545.057443
+      type: 'test'
+      ...
+    # Subtest: takeover retains pending removal for an in-flight checkout with unknown provider identity and never recreates it
+    ok 14 - takeover retains pending removal for an in-flight checkout with unknown provider identity and never recreates it
+      ---
+      duration_ms: 3563.559483
+      type: 'test'
+      ...
+    # Subtest: account removal confirms both providers and rejects stale authenticated new checkouts and enable
+    ok 15 - account removal confirms both providers and rejects stale authenticated new checkouts and enable
+      ---
+      duration_ms: 1380.528595
+      type: 'test'
+      ...
+    1..15
+ok 5 - immediate cancellation confirms providers, preserves money and revokes only selected rights
+  ---
+  duration_ms: 23110.766888
+  type: 'test'
+  ...
+# Subtest: R5 galleries: actual Mongo persistence, optional slots and exact published-image access
+    # Subtest: original image above the former 10 MiB limit uploads and keeps its exact bytes
+    ok 1 - original image above the former 10 MiB limit uploads and keeps its exact bytes
+      ---
+      duration_ms: 1175.217768
+      type: 'test'
+      ...
+    # Subtest: gallery data round-trips through real model; optional empty slot does not prevent publication
+    ok 2 - gallery data round-trips through real model; optional empty slot does not prevent publication
+      ---
+      duration_ms: 74.308648
+      type: 'test'
+      ...
+    # Subtest: guest can read only published exact gallery display image; originals and draft items stay private
+    ok 3 - guest can read only published exact gallery display image; originals and draft items stay private
+      ---
+      duration_ms: 106.353567
+      type: 'test'
+      ...
+    # Subtest: published original gallery images get responsive WebP without exposing their private crop sources
+    ok 4 - published original gallery images get responsive WebP without exposing their private crop sources
+      ---
+      duration_ms: 135.345186
+      type: 'test'
+      ...
+    # Subtest: private assessment media cannot be attached as a gallery display or crop original
+    ok 5 - private assessment media cannot be attached as a gallery display or crop original
+      ---
+      duration_ms: 55.688282
+      type: 'test'
+      ...
+    # Subtest: unpublishing/deleting gallery removes its guest access after successful CMS invalidation
+    ok 6 - unpublishing/deleting gallery removes its guest access after successful CMS invalidation
+      ---
+      duration_ms: 199.971536
+      type: 'test'
+      ...
+    1..6
+ok 6 - R5 galleries: actual Mongo persistence, optional slots and exact published-image access
+  ---
+  duration_ms: 1946.224501
+  type: 'test'
+  ...
+# Subtest: page sections: real Mongo publication, original HD bytes, private-media rejection and revision races
+    # Subtest: scanner-gated CMS uploader retains original format, dimensions and every byte
+    ok 1 - scanner-gated CMS uploader retains original format, dimensions and every byte
+      ---
+      duration_ms: 305.921866
+      type: 'test'
+      ...
+    # Subtest: draft media stays private; publication makes only that referenced media readable
+    ok 2 - draft media stays private; publication makes only that referenced media readable
+      ---
+      duration_ms: 324.45392
+      type: 'test'
+      ...
+    # Subtest: learner-private GridFS identifiers cannot be attached to public CMS content
+    ok 3 - learner-private GridFS identifiers cannot be attached to public CMS content
+      ---
+      duration_ms: 93.238522
+      type: 'test'
+      ...
+    # Subtest: the real Mongo primary key and revision guard reject concurrent and stale saves
+    ok 4 - the real Mongo primary key and revision guard reject concurrent and stale saves
+      ---
+      duration_ms: 98.432571
+      type: 'test'
+      ...
+    1..4
+ok 7 - page sections: real Mongo publication, original HD bytes, private-media rejection and revision races
+  ---
+  duration_ms: 1109.844398
+  type: 'test'
+  ...
+# {"event":"http","requestId":"6ef64084-8c1c-4065-8f30-a77a738851e5","method":"POST","route":"/checkout","status":502,"durationMs":73}
+# Subtest: provider checkout failures retain safe diagnostics and one immutable pending order
+    # Subtest: real SDK 400 stays on the same checkout
+    ok 1 - real SDK 400 stays on the same checkout
+      ---
+      duration_ms: 86.077315
+      type: 'test'
+      ...
+# {"event":"http","requestId":"07992503-9290-461f-b73e-9d2fadb7c4e8","method":"POST","route":"/checkout","status":503,"durationMs":54}
+    # Subtest: real SDK 401 stays on the same checkout
+    ok 2 - real SDK 401 stays on the same checkout
+      ---
+      duration_ms: 64.192112
+      type: 'test'
+      ...
+# {"event":"http","requestId":"ee9143ba-0f8b-421b-a68b-19bbb5961173","method":"POST","route":"/checkout","status":503,"durationMs":70}
+    # Subtest: real SDK 429 stays on the same checkout
+    ok 3 - real SDK 429 stays on the same checkout
+      ---
+      duration_ms: 84.491468
+      type: 'test'
+      ...
+# {"event":"http","requestId":"09de5374-c9c1-4a9f-a8be-9fa25e502dbc","method":"POST","route":"/checkout","status":503,"durationMs":37}
+    # Subtest: real SDK 500 stays on the same checkout
+    ok 4 - real SDK 500 stays on the same checkout
+      ---
+      duration_ms: 47.250066
+      type: 'test'
+      ...
+# {"event":"http","requestId":"23b0840e-3acc-4e95-ac58-c0f61547e5fc","method":"POST","route":"/checkout","status":503,"durationMs":538}
+    # Subtest: real SDK connection failure stays on the same checkout
+    ok 5 - real SDK connection failure stays on the same checkout
+      ---
+      duration_ms: 547.068917
+      type: 'test'
+      ...
+    # Subtest: explicit same-order retry succeeds, signed webhook grants once and repeated delivery is idempotent
+    ok 6 - explicit same-order retry succeeds, signed webhook grants once and repeated delivery is idempotent
+      ---
+      duration_ms: 161.882445
+      type: 'test'
+      ...
+    1..6
+ok 8 - provider checkout failures retain safe diagnostics and one immutable pending order
+  ---
+  duration_ms: 4110.769714
+  type: 'test'
+  ...
+# Subtest: PayPal recurring course/section purchases, deferred setup and confirmed renewal controls
+    # Subtest: country prices and PayPal 1–12 month recurring capability are authoritative
+    ok 1 - country prices and PayPal 1–12 month recurring capability are authoritative
+      ---
+      duration_ms: 91.239333
+      type: 'test'
+      ...
+    # Subtest: different request keys cannot create duplicate PayPal subscriptions or competing Stripe billing
+    ok 2 - different request keys cannot create duplicate PayPal subscriptions or competing Stripe billing
+      ---
+      duration_ms: 439.252552
+      type: 'test'
+      ...
+    # Subtest: approval and ACTIVE without collection never create financial records or access
+    ok 3 - approval and ACTIVE without collection never create financial records or access
+      ---
+      duration_ms: 245.219485
+      type: 'test'
+      ...
+    # Subtest: a verified first paid sale grants only its discounted provider period once
+    ok 4 - a verified first paid sale grants only its discounted provider period once
+      ---
+      duration_ms: 403.489388
+      type: 'test'
+      ...
+    # Subtest: renewals use the undiscounted price and exact current calendar cycle
+    ok 5 - renewals use the undiscounted price and exact current calendar cycle
+      ---
+      duration_ms: 149.83153
+      type: 'test'
+      ...
+    # Subtest: plan changes, arrears and unrecorded historical sales do not create guessed grants
+    ok 6 - plan changes, arrears and unrecorded historical sales do not create guessed grants
+      ---
+      duration_ms: 43.071464
+      type: 'test'
+      ...
+    # Subtest: owner controls suspend immediately, preserve paid grants and safely reactivate only an unchanged future schedule
+    ok 7 - owner controls suspend immediately, preserve paid grants and safely reactivate only an unchanged future schedule
+      ---
+      duration_ms: 321.064719
+      type: 'test'
+      ...
+    # Subtest: deferred PayPal setup approves a future start without a fake charge, invoice, or new section grant
+    ok 8 - deferred PayPal setup approves a future start without a fake charge, invoice, or new section grant
+      ---
+      duration_ms: 526.73178
+      type: 'test'
+      ...
+    # Subtest: a deferred setup grants its new paid section period only after the future collection
+    ok 9 - a deferred setup grants its new paid section period only after the future collection
+      ---
+      duration_ms: 251.151733
+      type: 'test'
+      ...
+# {"event":"api_error","requestId":"6b253d12-1868-4ac6-ad2f-f68f6dc3f99d","type":"Error","code":"PAYMENT_PROVIDER_UNAVAILABLE","paymentProvider":"paypal","providerStatus":503,"providerCode":"SYNTHETIC_LOST_CREATION_RESPONSE"}
+# {"event":"http","requestId":"6b253d12-1868-4ac6-ad2f-f68f6dc3f99d","method":"POST","route":"/checkout","status":503,"durationMs":114}
+    # Subtest: unapproved subscription release retains its key and never creates a competing purchase
+    ok 10 - unapproved subscription release retains its key and never creates a competing purchase
+      ---
+      duration_ms: 1171.723609
+      type: 'test'
+      ...
+    # Subtest: sale-era partial refund and full reversal credit only the linked invoice once
+    ok 11 - sale-era partial refund and full reversal credit only the linked invoice once
+      ---
+      duration_ms: 342.409994
+      type: 'test'
+      ...
+# {"event":"api_error","requestId":"4a52ea4c-6b6c-483c-a263-af7cd3c85575","type":"Error","code":"PAYMENT_PROVIDER_UNAVAILABLE","paymentProvider":"paypal","providerStatus":503,"providerCode":"SYNTHETIC_READ_OUTAGE"}
+# {"event":"http","requestId":"4a52ea4c-6b6c-483c-a263-af7cd3c85575","method":"POST","route":"/mine/agreements/:id/end","status":503,"durationMs":180}
+    # Subtest: ending a disabled expired PayPal agreement is serialized, retryable and frees only its billing key
+    ok 12 - ending a disabled expired PayPal agreement is serialized, retryable and frees only its billing key
+      ---
+      duration_ms: 940.358126
+      type: 'test'
+      ...
+    # Subtest: ending first records a collected sale whose webhook was delayed, before freeing its billing key
+    ok 13 - ending first records a collected sale whose webhook was delayed, before freeing its billing key
+      ---
+      duration_ms: 1223.37337
+      type: 'test'
+      ...
+# {"event":"api_error","requestId":"4c4ac780-4f44-43c1-aa05-1ed6aa6fa0d6","type":"Error"}
+# {"event":"http","requestId":"4c4ac780-4f44-43c1-aa05-1ed6aa6fa0d6","method":"POST","route":"/paypal","status":503,"durationMs":31}
+# {"event":"api_error","requestId":"dfd2860b-a002-40a0-942a-243a98bdb139","type":"Error"}
+# {"event":"http","requestId":"dfd2860b-a002-40a0-942a-243a98bdb139","method":"POST","route":"/mine/agreements/:id/cancel","status":503,"durationMs":106}
+# {"event":"api_error","requestId":"459aceb4-898a-4f90-80be-2fd52ef31bcd","type":"Error"}
+# {"event":"http","requestId":"459aceb4-898a-4f90-80be-2fd52ef31bcd","method":"POST","route":"/paypal","status":503,"durationMs":46}
+# {"event":"api_error","requestId":"c0c962f4-f171-4b35-9802-b8722a98dd7c","type":"Error"}
+# {"event":"http","requestId":"c0c962f4-f171-4b35-9802-b8722a98dd7c","method":"POST","route":"/mine/agreements/:id/cancel","status":503,"durationMs":80}
+# {"event":"api_error","requestId":"eedbd72f-b27a-4d6f-9ca4-4961c67ef648","type":"Error"}
+# {"event":"http","requestId":"eedbd72f-b27a-4d6f-9ca4-4961c67ef648","method":"POST","route":"/paypal","status":503,"durationMs":34}
+# {"event":"api_error","requestId":"03406b8c-369e-405e-ad2c-143a238a09a4","type":"Error"}
+# {"event":"http","requestId":"03406b8c-369e-405e-ad2c-143a238a09a4","method":"POST","route":"/mine/agreements/:id/cancel","status":503,"durationMs":85}
+# {"event":"api_error","requestId":"456dc1a0-71b0-4b6f-a46b-4808bb9a3621","type":"Error"}
+# {"event":"http","requestId":"456dc1a0-71b0-4b6f-a46b-4808bb9a3621","method":"POST","route":"/paypal","status":503,"durationMs":67}
+# {"event":"api_error","requestId":"77edf80e-cc9d-4e18-a2db-ab67365edf9e","type":"Error"}
+# {"event":"http","requestId":"77edf80e-cc9d-4e18-a2db-ab67365edf9e","method":"POST","route":"/mine/agreements/:id/cancel","status":503,"durationMs":113}
+    # Subtest: terminal provider status with pending or ambiguous collections retains the original billing key
+    ok 14 - terminal provider status with pending or ambiguous collections retains the original billing key
+      ---
+      duration_ms: 2004.205865
+      type: 'test'
+      ...
+    1..14
+ok 9 - PayPal recurring course/section purchases, deferred setup and confirmed renewal controls
+  ---
+  duration_ms: 11157.830159
+  type: 'test'
+  ...
+# Subtest: pending billing checkout continuation/cancellation retains provider truth and paid history
+    # Subtest: owned pending view exposes actions; another owner cannot cause provider traffic
+    ok 1 - owned pending view exposes actions; another owner cannot cause provider traffic
+      ---
+      duration_ms: 119.074
+      type: 'test'
+      ...
+    # Subtest: Continue reads existing provider session and returns the same whitelisted URL without a create or capture
+    ok 2 - Continue reads existing provider session and returns the same whitelisted URL without a create or capture
+      ---
+      duration_ms: 66.10922
+      type: 'test'
+      ...
+    # Subtest: Continue rejects an invalid persisted redirect and cannot continue a cancellation-requested checkout
+    ok 3 - Continue rejects an invalid persisted redirect and cannot continue a cancellation-requested checkout
+      ---
+      duration_ms: 200.352688
+      type: 'test'
+      ...
+    # Subtest: unpaid provider-confirmed cancellation releases only its key and preserves a paid original purchase
+    ok 4 - unpaid provider-confirmed cancellation releases only its key and preserves a paid original purchase
+      ---
+      duration_ms: 377.109644
+      type: 'test'
+      ...
+    # Subtest: late verified collection is recorded without reactivating a cancelled pending mandate or revoking its original purchase
+    ok 5 - late verified collection is recorded without reactivating a cancelled pending mandate or revoking its original purchase
+      ---
+      duration_ms: 126.416486
+      type: 'test'
+      ...
+    # Subtest: never-sent local pending creation closes without any external create replay
+    ok 6 - never-sent local pending creation closes without any external create replay
+      ---
+      duration_ms: 183.78749
+      type: 'test'
+      ...
+    # Subtest: a provider-closed checkout with a stale creating agreement exposes safe dismissal and releases the old key
+    ok 7 - a provider-closed checkout with a stale creating agreement exposes safe dismissal and releases the old key
+      ---
+      duration_ms: 113.415263
+      type: 'test'
+      ...
+# {"event":"api_error","requestId":"be92190a-1de7-4fab-ad5c-63a0df066590","type":"Error"}
+# {"event":"http","requestId":"be92190a-1de7-4fab-ad5c-63a0df066590","method":"POST","route":"/mine/agreements/:id/cancel-pending","status":503,"durationMs":30}
+    # Subtest: an old failed attempt with unknown provider identity never claims cancellation or releases its key
+    ok 8 - an old failed attempt with unknown provider identity never claims cancellation or releases its key
+      ---
+      duration_ms: 61.57659
+      type: 'test'
+      ...
+# {"event":"api_error","requestId":"4f34ca3d-9ce1-4d3c-b28d-2df14e87e2c7","type":"Error"}
+# {"event":"http","requestId":"4f34ca3d-9ce1-4d3c-b28d-2df14e87e2c7","method":"POST","route":"/mine/agreements/:id/cancel-pending","status":503,"durationMs":37}
+    # Subtest: a live creation lease prevents local cancellation; an expired lease is atomically fenced before key release
+    ok 9 - a live creation lease prevents local cancellation; an expired lease is atomically fenced before key release
+      ---
+      duration_ms: 152.03057
+      type: 'test'
+      ...
+    # Subtest: a paused creator cannot mark or send after a concurrent cancellation marker
+    ok 10 - a paused creator cannot mark or send after a concurrent cancellation marker
+      ---
+      duration_ms: 78.313858
+      type: 'test'
+      ...
+    # Subtest: older active controls survive more than one hundred newer cancelled attempts
+    ok 11 - older active controls survive more than one hundred newer cancelled attempts
+      ---
+      duration_ms: 309.208407
+      type: 'test'
+      ...
+    # Subtest: a verified completion racing expiration remains visible instead of pretending cancellation
+    ok 12 - a verified completion racing expiration remains visible instead of pretending cancellation
+      ---
+      duration_ms: 212.158566
+      type: 'test'
+      ...
+    1..12
+ok 10 - pending billing checkout continuation/cancellation retains provider truth and paid history
+  ---
+  duration_ms: 3990.78494
+  type: 'test'
+  ...
+# Subtest: real Mongo publication batching preserves exact public/private images and immediate CMS revocation
+ok 11 - real Mongo publication batching preserves exact public/private images and immediate CMS revocation
+  ---
+  duration_ms: 1133.890955
+  type: 'test'
+  ...
+# Subtest: country-authoritative catalog, scoped sections, single-use coupons and atomic course seeds
+    # Subtest: the same raw cache returns country-specific prices without leaking maps or changing public metadata
+    ok 1 - the same raw cache returns country-specific prices without leaking maps or changing public metadata
+      ---
+      duration_ms: 625.930343
+      type: 'test'
+      ...
+    # Subtest: published landing sections refresh after admin writes and exclude draft or archived sections
+    ok 2 - published landing sections refresh after admin writes and exclude draft or archived sections
+      ---
+      duration_ms: 404.696741
+      type: 'test'
+      ...
+    # Subtest: section covers preserve original HD bytes and are public only when referenced by a published section
+    ok 3 - section covers preserve original HD bytes and are public only when referenced by a published section
+      ---
+      duration_ms: 446.339555
+      type: 'test'
+      ...
+    # Subtest: both admin roles manage sections/coupons; students cannot and section slugs stay locked
+    ok 4 - both admin roles manage sections/coupons; students cannot and section slugs stay locked
+      ---
+      duration_ms: 286.546551
+      type: 'test'
+      ...
+    # Subtest: quote trusts stored country/product totals and ignores browser amounts, dates and country
+    ok 5 - quote trusts stored country/product totals and ignores browser amounts, dates and country
+      ---
+      duration_ms: 166.44044
+      type: 'test'
+      ...
+    # Subtest: two concurrent real transactions cannot reserve or consume the same coupon for different orders
+    ok 6 - two concurrent real transactions cannot reserve or consume the same coupon for different orders
+      ---
+      duration_ms: 152.992862
+      type: 'test'
+      ...
+    # Subtest: only the owning safely closed order can release an unconsumed reservation
+    ok 7 - only the owning safely closed order can release an unconsumed reservation
+      ---
+      duration_ms: 107.665654
+      type: 'test'
+      ...
+    # Subtest: owned section purchase grants only that section, includes later courses and observes exact time/environment boundaries
+    ok 8 - owned section purchase grants only that section, includes later courses and observes exact time/environment boundaries
+      ---
+      duration_ms: 619.29181
+      type: 'test'
+      ...
+    # Subtest: full refund immediately revokes section access while individual and global membership grants remain independent
+    ok 9 - full refund immediately revokes section access while individual and global membership grants remain independent
+      ---
+      duration_ms: 179.145258
+      type: 'test'
+      ...
+    # Subtest: course seeds commit all authored lessons, preserve edits and explicitly repair missing legacy rows
+    ok 10 - course seeds commit all authored lessons, preserve edits and explicitly repair missing legacy rows
+      ---
+      duration_ms: 1104.65504
+      type: 'test'
+      ...
+    # Subtest: failure after an actual lesson insert rolls back its entire seed course
+    ok 11 - failure after an actual lesson insert rolls back its entire seed course
+      ---
+      duration_ms: 65.903233
+      type: 'test'
+      ...
+    1..11
+ok 12 - country-authoritative catalog, scoped sections, single-use coupons and atomic course seeds
+  ---
+  duration_ms: 13996.827097
+  type: 'test'
+  ...
+# Subtest: regional quotes, single-use discounts and provider-backed recurring periods
+    # Subtest: country and price are server-owned and country maps never leak
+    ok 1 - country and price are server-owned and country maps never leak
+      ---
+      duration_ms: 70.202778
+      type: 'test'
+      ...
+    # Subtest: full coupon atomically grants only its section with no fake payment
+    ok 2 - full coupon atomically grants only its section with no fake payment
+      ---
+      duration_ms: 177.270939
+      type: 'test'
+      ...
+    # Subtest: refunding an older section invoice preserves only the later independent interval
+    ok 3 - refunding an older section invoice preserves only the later independent interval
+      ---
+      duration_ms: 178.788425
+      type: 'test'
+      ...
+    # Subtest: provider connection state and unsupported recurring intervals are explicit
+    ok 4 - provider connection state and unsupported recurring intervals are explicit
+      ---
+      duration_ms: 51.624856
+      type: 'test'
+      ...
+    # Subtest: recurring checkout persists accepted snapshot and first-term discount
+    ok 5 - recurring checkout persists accepted snapshot and first-term discount
+      ---
+      duration_ms: 183.663983
+      type: 'test'
+      ...
+    # Subtest: first settled subscription invoice grants exact provider period once
+    ok 6 - first settled subscription invoice grants exact provider period once
+      ---
+      duration_ms: 75.813184
+      type: 'test'
+      ...
+    # Subtest: signed renewal invoices are undiscounted and webhook replay is idempotent
+    ok 7 - signed renewal invoices are undiscounted and webhook replay is idempotent
+      ---
+      duration_ms: 103.047272
+      type: 'test'
+      ...
+# {"event":"api_error","requestId":"ed33e36d-b21a-4226-b8f6-31da5a39c748","type":"Error"}
+# {"event":"http","requestId":"ed33e36d-b21a-4226-b8f6-31da5a39c748","method":"POST","route":"/stripe","status":503,"durationMs":28}
+    # Subtest: unpaid or mismatched renewal never grants access
+    ok 8 - unpaid or mismatched renewal never grants access
+      ---
+      duration_ms: 88.769375
+      type: 'test'
+      ...
+    # Subtest: a second active recurring agreement for the same product is refused
+    ok 9 - a second active recurring agreement for the same product is refused
+      ---
+      duration_ms: 161.641795
+      type: 'test'
+      ...
+    # Subtest: renewal cancellation is owner-scoped, provider-confirmed, replay-safe and preserves paid access
+    ok 10 - renewal cancellation is owner-scoped, provider-confirmed, replay-safe and preserves paid access
+      ---
+      duration_ms: 309.747067
+      type: 'test'
+      ...
+    1..10
+ok 13 - regional quotes, single-use discounts and provider-backed recurring periods
+  ---
+  duration_ms: 9831.293737
+  type: 'test'
+  ...
+# Subtest: owned renewal controls require consent and provider confirmation without changing paid access
+    # Subtest: owner sees a visible enabled state while foreign actions cannot contact the provider
+    ok 1 - owner sees a visible enabled state while foreign actions cannot contact the provider
+      ---
+      duration_ms: 126.157154
+      type: 'test'
+      ...
+    # Subtest: disable is confirmed remotely and leaves independent paid access and financial records unchanged
+    ok 2 - disable is confirmed remotely and leaves independent paid access and financial records unchanged
+      ---
+      duration_ms: 211.432857
+      type: 'test'
+      ...
+    # Subtest: enable requires explicit consent bound to the undiscounted recurring price
+    ok 3 - enable requires explicit consent bound to the undiscounted recurring price
+      ---
+      duration_ms: 336.892108
+      type: 'test'
+      ...
+    # Subtest: disable-enable-disable uses a fresh provider key for each actual toggle
+    ok 4 - disable-enable-disable uses a fresh provider key for each actual toggle
+      ---
+      duration_ms: 70.368008
+      type: 'test'
+      ...
+    # Subtest: a provider price change or an unconfirmed paid period cannot be enabled
+    ok 5 - a provider price change or an unconfirmed paid period cannot be enabled
+      ---
+      duration_ms: 147.105766
+      type: 'test'
+      ...
+# {"event":"api_error","requestId":"419e0bfd-09fe-4705-8e9f-2693fc6294a3","type":"Error","code":"PAYMENT_PROVIDER_UNAVAILABLE","paymentProvider":"stripe","providerStatus":503,"providerType":"StripeAPIError"}
+# {"event":"http","requestId":"419e0bfd-09fe-4705-8e9f-2693fc6294a3","method":"POST","route":"/mine/agreements/:id/resume","status":503,"durationMs":556}
+    # Subtest: uncertain provider changes retain a retry key and block opposing changes
+    ok 6 - uncertain provider changes retain a retry key and block opposing changes
+      ---
+      duration_ms: 1222.232654
+      type: 'test'
+      ...
+    # Subtest: simultaneous opposite changes cannot override an unconfirmed operation
+    ok 7 - simultaneous opposite changes cannot override an unconfirmed operation
+      ---
+      duration_ms: 145.561265
+      type: 'test'
+      ...
+    # Subtest: ended agreements and one-time purchases require a new consented checkout
+    ok 8 - ended agreements and one-time purchases require a new consented checkout
+      ---
+      duration_ms: 176.716903
+      type: 'test'
+      ...
+    # Subtest: retired blanket membership sales cannot create quotes/orders, while legacy paid order recovery remains owned
+    ok 9 - retired blanket membership sales cannot create quotes/orders, while legacy paid order recovery remains owned
+      ---
+      duration_ms: 274.769538
+      type: 'test'
+      ...
+    1..9
+ok 14 - owned renewal controls require consent and provider confirmation without changing paid access
+  ---
+  duration_ms: 8365.886184
+  type: 'test'
+  ...
+# Subtest: student removal preserves financial identity and blocks every authenticated path
+    # Subtest: both administrators can list students; students and guests cannot remove any account
+    ok 1 - both administrators can list students; students and guests cannot remove any account
+      ---
+      duration_ms: 253.082124
+      type: 'test'
+      ...
+    # Subtest: password, target confirmation and student-only targeting are enforced before mutation
+    ok 2 - password, target confirmation and student-only targeting are enforced before mutation
+      ---
+      duration_ms: 2931.912199
+      type: 'test'
+      ...
+    # Subtest: client-admin removal revokes all sessions and retains User, Invoice and Payment records
+    ok 3 - client-admin removal revokes all sessions and retains User, Invoice and Payment records
+      ---
+      duration_ms: 534.944385
+      type: 'test'
+      ...
+    # Subtest: old cookies, correct password, alternate portals and password reset cannot restore removed access
+    ok 4 - old cookies, correct password, alternate portals and password reset cannot restore removed access
+      ---
+      duration_ms: 3420.4344
+      type: 'test'
+      ...
+    # Subtest: removal is idempotent and Super Admin can remove a separate student
+    ok 5 - removal is idempotent and Super Admin can remove a separate student
+      ---
+      duration_ms: 940.264851
+      type: 'test'
+      ...
+    # Subtest: an uncertain provider creation leaves an immediately blocked, retryable pending account
+    ok 6 - an uncertain provider creation leaves an immediately blocked, retryable pending account
+      ---
+      duration_ms: 1697.236282
+      type: 'test'
+      ...
+    1..6
+ok 15 - student removal preserves financial identity and blocks every authenticated path
+  ---
+  duration_ms: 16344.311925
+  type: 'test'
+  ...
+# Subtest: R6 original review upload exposes actual scanner503 and explicit local configuration restores the original stream
+    # Subtest: guest cannot reach configuration diagnostics or upload
+    ok 1 - guest cannot reach configuration diagnostics or upload
+      ---
+      duration_ms: 74.347715
+      type: 'test'
+      ...
+    # Subtest: missing hosted scanner is rejected before accepting media; diagnostics never suggest local mode
+    ok 2 - missing hosted scanner is rejected before accepting media; diagnostics never suggest local mode
+      ---
+      duration_ms: 58.321159
+      type: 'test'
+      ...
+# {"event":"review_upload_failed","phase":"scan","durationMs":14,"code":"UPLOAD_SCAN_UNAVAILABLE"}
+    # Subtest: unreachable actual ClamAV produces honest503 and stores no original
+    ok 3 - unreachable actual ClamAV produces honest503 and stores no original
+      ---
+      duration_ms: 104.051374
+      type: 'test'
+      ...
+# {"event":"review_upload_failed","phase":"scan","durationMs":44,"code":"UPLOAD_SCAN_SIZE"}
+    # Subtest: a reachable scanner size rejection is distinguished from an outage and never stored
+    ok 4 - a reachable scanner size rejection is distinguished from an outage and never stored
+      ---
+      duration_ms: 80.646319
+      type: 'test'
+      ...
+# {"event":"review_upload_complete","fileId":"6aee2455fa7b145e64f10fd4","bytes":18112,"durationMs":418}
+    # Subtest: explicit guarded local helper settings applied on restart allow full original upload and exact stored SHA
+    ok 5 - explicit guarded local helper settings applied on restart allow full original upload and exact stored SHA
+      ---
+      duration_ms: 482.367381
+      type: 'test'
+      ...
+# {"event":"review_upload_complete","fileId":"6aee2455fa7b145e64f10fe7","bytes":9455296,"durationMs":135}
+    # Subtest: large original uses bounded larger chunks and preserves exact full/range bytes and legacy files
+    ok 6 - large original uses bounded larger chunks and preserves exact full/range bytes and legacy files
+      ---
+      duration_ms: 286.91069
+      type: 'test'
+      ...
+    1..6
+ok 16 - R6 original review upload exposes actual scanner503 and explicit local configuration restores the original stream
+  ---
+  duration_ms: 1713.108317
+  type: 'test'
+  ...
+# Subtest: V47 database settlement, student completion and admin certificate lifecycle
+    # Subtest: new checkout has no invoice, receipt or entitlement before settlement
+    ok 1 - new checkout has no invoice, receipt or entitlement before settlement
+      ---
+      duration_ms: 78.294873
+      type: 'test'
+      ...
+# {"event":"api_error","requestId":"1a6543c7-7d53-43cf-a787-8fbfcb0d4a09","type":"Error"}
+# {"event":"http","requestId":"1a6543c7-7d53-43cf-a787-8fbfcb0d4a09","method":"POST","route":"/checkout","status":503,"durationMs":29}
+    # Subtest: unknown/disabled methods refuse starting a new provider checkout
+    ok 2 - unknown/disabled methods refuse starting a new provider checkout
+      ---
+      duration_ms: 33.313177
+      type: 'test'
+      ...
+    # Subtest: wrong amount fails before any business mutation
+    ok 3 - wrong amount fails before any business mutation
+      ---
+      duration_ms: 21.806572
+      type: 'test'
+      ...
+    # Subtest: concurrent duplicate fixture settlement creates one receipt, invoice and enrollment
+    ok 4 - concurrent duplicate fixture settlement creates one receipt, invoice and enrollment
+      ---
+      duration_ms: 134.09859
+      type: 'test'
+      ...
+    # Subtest: student order polling cannot read another student order
+    ok 5 - student order polling cannot read another student order
+      ---
+      duration_ms: 48.90549
+      type: 'test'
+      ...
+    # Subtest: admin and builder cannot mark student lessons complete
+    ok 6 - admin and builder cannot mark student lessons complete
+      ---
+      duration_ms: 41.38096
+      type: 'test'
+      ...
+    # Subtest: sequential final lesson cannot complete before the first
+    ok 7 - sequential final lesson cannot complete before the first
+      ---
+      duration_ms: 126.005719
+      type: 'test'
+      ...
+    # Subtest: required lesson completion creates one pending certificate and business notification
+    ok 8 - required lesson completion creates one pending certificate and business notification
+      ---
+      duration_ms: 668.706176
+      type: 'test'
+      ...
+    # Subtest: pending PDF is not downloadable and issuer is Client Admin only
+    ok 9 - pending PDF is not downloadable and issuer is Client Admin only
+      ---
+      duration_ms: 35.887097
+      type: 'test'
+      ...
+    # Subtest: incorrect current admin password cannot issue
+    ok 10 - incorrect current admin password cannot issue
+      ---
+      duration_ms: 516.889792
+      type: 'test'
+      ...
+    # Subtest: admin issues actual persisted PDF, with no token or PDF in list responses
+    ok 11 - admin issues actual persisted PDF, with no token or PDF in list responses
+      ---
+      duration_ms: 660.333148
+      type: 'test'
+      ...
+    # Subtest: owner can download PDF; another student and builder cannot
+    ok 12 - owner can download PDF; another student and builder cannot
+      ---
+      duration_ms: 91.888213
+      type: 'test'
+      ...
+    # Subtest: random verification token returns certificate information, never customer contact or payment
+    ok 13 - random verification token returns certificate information, never customer contact or payment
+      ---
+      duration_ms: 18.327181
+      type: 'test'
+      ...
+    # Subtest: reissued request keeps original serial and PDF snapshot
+    ok 14 - reissued request keeps original serial and PDF snapshot
+      ---
+      duration_ms: 383.931347
+      type: 'test'
+      ...
+    # Subtest: revocation changes verification and prevents further downloads
+    ok 15 - revocation changes verification and prevents further downloads
+      ---
+      duration_ms: 732.173465
+      type: 'test'
+      ...
+    # Subtest: lightweight certificate status is immediately updated and scoped to its learner
+    ok 16 - lightweight certificate status is immediately updated and scoped to its learner
+      ---
+      duration_ms: 22.5036
+      type: 'test'
+      ...
+    # Subtest: verified refund fixture creates one credit and revokes linked access only once
+    ok 17 - verified refund fixture creates one credit and revokes linked access only once
+      ---
+      duration_ms: 75.110905
+      type: 'test'
+      ...
+    # Subtest: tampered Stripe webhook is not accepted as payment evidence
+    ok 18 - tampered Stripe webhook is not accepted as payment evidence
+      ---
+      duration_ms: 10.80503
+      type: 'test'
+      ...
+    1..18
+ok 17 - V47 database settlement, student completion and admin certificate lifecycle
+  ---
+  duration_ms: 8775.64725
+  type: 'test'
+  ...
+# Subtest: V48 saved assessments, Client Admin review, restart and student billing
+    # Subtest: required answer blocks completion without saving progress
+    ok 1 - required answer blocks completion without saving progress
+      ---
+      duration_ms: 168.698181
+      type: 'test'
+      ...
+    # Subtest: draft answers survive reload and remain private
+    ok 2 - draft answers survive reload and remain private
+      ---
+      duration_ms: 409.77311
+      type: 'test'
+      ...
+    # Subtest: concurrent identical saves do not overwrite newer revision
+    ok 3 - concurrent identical saves do not overwrite newer revision
+      ---
+      duration_ms: 240.372879
+      type: 'test'
+      ...
+    # Subtest: first lesson submits real answers before proceeding
+    ok 4 - first lesson submits real answers before proceeding
+      ---
+      duration_ms: 132.731787
+      type: 'test'
+      ...
+    # Subtest: assignment file is stored privately, owner/admin can read and builder cannot
+    ok 5 - assignment file is stored privately, owner/admin can read and builder cannot
+      ---
+      duration_ms: 212.837901
+      type: 'test'
+      ...
+    # Subtest: last lesson creates pending certificate and one completion notification
+    ok 6 - last lesson creates pending certificate and one completion notification
+      ---
+      duration_ms: 133.663817
+      type: 'test'
+      ...
+    # Subtest: only client admin can review stored answers
+    ok 7 - only client admin can review stored answers
+      ---
+      duration_ms: 220.041943
+      type: 'test'
+      ...
+    # Subtest: Try Again resets one course, archives first attempt and preserves subscription
+    ok 8 - Try Again resets one course, archives first attempt and preserves subscription
+      ---
+      duration_ms: 686.99324
+      type: 'test'
+      ...
+    # Subtest: stale tab cannot write old attempt; new attempt starts blank
+    ok 9 - stale tab cannot write old attempt; new attempt starts blank
+      ---
+      duration_ms: 60.376502
+      type: 'test'
+      ...
+    # Subtest: new attempt cannot reuse file from another attempt
+    ok 10 - new attempt cannot reuse file from another attempt
+      ---
+      duration_ms: 151.142349
+      type: 'test'
+      ...
+    # Subtest: second completion creates a new review notification and retains both histories
+    ok 11 - second completion creates a new review notification and retains both histories
+      ---
+      duration_ms: 117.469513
+      type: 'test'
+      ...
+    # Subtest: stale attempt and wrong admin password cannot issue or change the pending certificate
+    ok 12 - stale attempt and wrong admin password cannot issue or change the pending certificate
+      ---
+      duration_ms: 1114.784403
+      type: 'test'
+      ...
+    # Subtest: approved second attempt issues protected PDF without the retired review checkbox
+    ok 13 - approved second attempt issues protected PDF without the retired review checkbox
+      ---
+      duration_ms: 705.806145
+      type: 'test'
+      ...
+    # Subtest: billing plan dates and days remaining belong to signed-in student only
+    ok 14 - billing plan dates and days remaining belong to signed-in student only
+      ---
+      duration_ms: 79.469503
+      type: 'test'
+      ...
+    1..14
+ok 18 - V48 saved assessments, Client Admin review, restart and student billing
+  ---
+  duration_ms: 9540.075919
+  type: 'test'
+  ...
+# Subtest: V48 real HTTP authentication and Academy/CMS role boundaries
+    # Subtest: anonymous and malicious-origin requests are rejected
+    ok 1 - anonymous and malicious-origin requests are rejected
+      ---
+      duration_ms: 33.121714
+      type: 'test'
+      ...
+    # Subtest: guest content APIs require login while session discovery stays public
+    ok 2 - guest content APIs require login while session discovery stays public
+      ---
+      duration_ms: 49.569709
+      type: 'test'
+      ...
+    # Subtest: student login rejects both admin roles
+    ok 3 - student login rejects both admin roles
+      ---
+      duration_ms: 1146.771226
+      type: 'test'
+      ...
+    # Subtest: valid students get independent HttpOnly sessions
+    ok 4 - valid students get independent HttpOnly sessions
+      ---
+      duration_ms: 1242.330433
+      type: 'test'
+      ...
+    # Subtest: administrators receive normal isolated sessions; MFA routes stay retired
+    ok 5 - administrators receive normal isolated sessions; MFA routes stay retired
+      ---
+      duration_ms: 1868.955611
+      type: 'test'
+      ...
+    # Subtest: builder can manage content, never the client ledger
+    ok 6 - builder can manage content, never the client ledger
+      ---
+      duration_ms: 59.197813
+      type: 'test'
+      ...
+    # Subtest: removed Business Admin APIs do not expose ledger pages
+    ok 7 - removed Business Admin APIs do not expose ledger pages
+      ---
+      duration_ms: 44.178112
+      type: 'test'
+      ...
+    # Subtest: V50 client can edit plan definitions but not reviews, website copy or social links
+    ok 8 - V50 client can edit plan definitions but not reviews, website copy or social links
+      ---
+      duration_ms: 342.917522
+      type: 'test'
+      ...
+    # Subtest: client can create and edit team and events without financial permissions
+    ok 9 - client can create and edit team and events without financial permissions
+      ---
+      duration_ms: 156.240927
+      type: 'test'
+      ...
+    # Subtest: team member multiple categories persist, filter independently and remain one All record
+    ok 10 - team member multiple categories persist, filter independently and remain one All record
+      ---
+      duration_ms: 297.21687
+      type: 'test'
+      ...
+    # Subtest: builder can update plans, social links and plain website copy with optimistic version check
+    ok 11 - builder can update plans, social links and plain website copy with optimistic version check
+      ---
+      duration_ms: 102.16975
+      type: 'test'
+      ...
+    # Subtest: manual enrollment request no longer creates work or records
+    ok 12 - manual enrollment request no longer creates work or records
+      ---
+      duration_ms: 19.640596
+      type: 'test'
+      ...
+    # Subtest: student never gains either CMS or certificate review permission
+    ok 13 - student never gains either CMS or certificate review permission
+      ---
+      duration_ms: 112.345143
+      type: 'test'
+      ...
+    # Subtest: builder cannot review student answers or view course-completion notifications
+    ok 14 - builder cannot review student answers or view course-completion notifications
+      ---
+      duration_ms: 44.012883
+      type: 'test'
+      ...
+    # Subtest: forced real transaction exception rolls back a write
+    ok 15 - forced real transaction exception rolls back a write
+      ---
+      duration_ms: 15.161685
+      type: 'test'
+      ...
+    # Subtest: V50 student subscription notices remain private and are deduplicated
+    ok 16 - V50 student subscription notices remain private and are deduplicated
+      ---
+      duration_ms: 383.467232
+      type: 'test'
+      ...
+    # Subtest: V50 receipt screenshot uses real upload/ownership checks without changing payment value
+    ok 17 - V50 receipt screenshot uses real upload/ownership checks without changing payment value
+      ---
+      duration_ms: 493.577521
+      type: 'test'
+      ...
+    1..17
+ok 19 - V48 real HTTP authentication and Academy/CMS role boundaries
+  ---
+  duration_ms: 9701.028588
+  type: 'test'
+  ...
+# Subtest: V60.14 provider switch persists closure, capture exclusion and owned replacement identity
+    # Subtest: stripe/course closes unpaid order before replacement eligibility is checked
+    ok 1 - stripe/course closes unpaid order before replacement eligibility is checked
+      ---
+      duration_ms: 379.814277
+      type: 'test'
+      ...
+    # Subtest: stripe/membership closes unpaid order before replacement eligibility is checked
+    ok 2 - stripe/membership closes unpaid order before replacement eligibility is checked
+      ---
+      duration_ms: 168.718619
+      type: 'test'
+      ...
+    # Subtest: paypal/course closes unpaid order before replacement eligibility is checked
+    ok 3 - paypal/course closes unpaid order before replacement eligibility is checked
+      ---
+      duration_ms: 172.576574
+      type: 'test'
+      ...
+    # Subtest: paypal/membership closes unpaid order before replacement eligibility is checked
+    ok 4 - paypal/membership closes unpaid order before replacement eligibility is checked
+      ---
+      duration_ms: 199.241781
+      type: 'test'
+      ...
+    # Subtest: foreign owner release is denied without disclosing the order or its replacement key
+    ok 5 - foreign owner release is denied without disclosing the order or its replacement key
+      ---
+      duration_ms: 38.112002
+      type: 'test'
+      ...
+    # Subtest: database lease excludes a simultaneous capture/switch and does not clear another operation
+    ok 6 - database lease excludes a simultaneous capture/switch and does not clear another operation
+      ---
+      duration_ms: 36.664699
+      type: 'test'
+      ...
+    # Subtest: expired lease does not make an uncertain earlier capture safe to replace
+    ok 7 - expired lease does not make an uncertain earlier capture safe to replace
+      ---
+      duration_ms: 45.032377
+      type: 'test'
+      ...
+    # Subtest: two release requests share one replacement identity rather than authorize two new checkouts
+    ok 8 - two release requests share one replacement identity rather than authorize two new checkouts
+      ---
+      duration_ms: 175.252121
+      type: 'test'
+      ...
+    # Subtest: normal PayPal approved checkout still captures once and fulfills a real database invoice
+    ok 9 - normal PayPal approved checkout still captures once and fulfills a real database invoice
+      ---
+      duration_ms: 583.880705
+      type: 'test'
+      ...
+    1..9
+ok 20 - V60.14 provider switch persists closure, capture exclusion and owned replacement identity
+  ---
+  duration_ms: 5582.515205
+  type: 'test'
+  ...
+# Subtest: V60.15.3 real upload quarantine, scanner verdict and GridFS ownership
+    # Subtest: clean image gets scanned before actual Sharp/GridFS storage and preserves owner metadata
+    ok 1 - clean image gets scanned before actual Sharp/GridFS storage and preserves owner metadata
+      ---
+      duration_ms: 225.660177
+      type: 'test'
+      ...
+# {"event":"review_upload_complete","fileId":"6aee2469d62abb8193714fcf","bytes":4212416,"durationMs":105}
+    # Subtest: a complete original review video larger than the copied 3.5MB hint is actually scanned and stored unchanged
+    ok 2 - a complete original review video larger than the copied 3.5MB hint is actually scanned and stored unchanged
+      ---
+      duration_ms: 851.516437
+      type: 'test'
+      ...
+    # Subtest: infected leaves no new GridFS metadata or quarantined file
+    ok 3 - infected leaves no new GridFS metadata or quarantined file
+      ---
+      duration_ms: 90.375113
+      type: 'test'
+      ...
+# {"event":"api_error","requestId":"7341488e-7d66-43bd-9b58-48586dc19365","type":"Error","code":"UPLOAD_SCAN_UNAVAILABLE"}
+# {"event":"http","requestId":"7341488e-7d66-43bd-9b58-48586dc19365","method":"POST","route":"/upload","status":503,"durationMs":43}
+    # Subtest: unavailable leaves no new GridFS metadata or quarantined file
+    ok 4 - unavailable leaves no new GridFS metadata or quarantined file
+      ---
+      duration_ms: 58.102226
+      type: 'test'
+      ...
+# {"event":"api_error","requestId":"f67fc1b3-ed8a-4d14-9575-06633095263c","type":"Error","code":"UPLOAD_SCAN_BUSY"}
+# {"event":"http","requestId":"f67fc1b3-ed8a-4d14-9575-06633095263c","method":"POST","route":"/upload","status":503,"durationMs":126}
+    # Subtest: quota leaves no new GridFS metadata or quarantined file
+    ok 5 - quota leaves no new GridFS metadata or quarantined file
+      ---
+      duration_ms: 138.391353
+      type: 'test'
+      ...
+# {"event":"api_error","requestId":"74563d9b-47c9-4ef6-b51b-5249e67d63aa","type":"Error","code":"UPLOAD_SCAN_AUTH"}
+# {"event":"http","requestId":"74563d9b-47c9-4ef6-b51b-5249e67d63aa","method":"POST","route":"/upload","status":503,"durationMs":108}
+    # Subtest: auth leaves no new GridFS metadata or quarantined file
+    ok 6 - auth leaves no new GridFS metadata or quarantined file
+      ---
+      duration_ms: 122.016421
+      type: 'test'
+      ...
+# {"event":"api_error","requestId":"f9c35eef-a465-48f2-a181-644849747bb7","type":"Error","code":"UPLOAD_SCAN_UNAVAILABLE"}
+# {"event":"http","requestId":"f9c35eef-a465-48f2-a181-644849747bb7","method":"POST","route":"/upload","status":503,"durationMs":72}
+    # Subtest: malformed leaves no new GridFS metadata or quarantined file
+    ok 7 - malformed leaves no new GridFS metadata or quarantined file
+      ---
+      duration_ms: 92.294504
+      type: 'test'
+      ...
+    # Subtest: oversize leaves no new GridFS metadata or quarantined file
+    ok 8 - oversize leaves no new GridFS metadata or quarantined file
+      ---
+      duration_ms: 81.356763
+      type: 'test'
+      ...
+    # Subtest: an explicit operator admin cap retains the configured scanner precheck
+    ok 9 - an explicit operator admin cap retains the configured scanner precheck
+      ---
+      duration_ms: 50.719946
+      type: 'test'
+      ...
+    # Subtest: invalid file signature is rejected BEFORE scanner or storage
+    ok 10 - invalid file signature is rejected BEFORE scanner or storage
+      ---
+      duration_ms: 29.973088
+      type: 'test'
+      ...
+    # Subtest: unauthenticated upload cannot use scanner quota
+    ok 11 - unauthenticated upload cannot use scanner quota
+      ---
+      duration_ms: 7.135604
+      type: 'test'
+      ...
+# {"event":"http","requestId":"22b482cf-e8a8-43e2-a93c-4e8494ff0117","method":"POST","route":"/upload","status":503,"durationMs":20}
+    # Subtest: explicit uploads OFF still blocks safely without external call
+    ok 12 - explicit uploads OFF still blocks safely without external call
+      ---
+      duration_ms: 25.312753
+      type: 'test'
+      ...
+    1..12
+ok 21 - V60.15.3 real upload quarantine, scanner verdict and GridFS ownership
+  ---
+  duration_ms: 5438.797318
+  type: 'test'
+  ...
+# Subtest: V60.15 invoice-source access, refunds, index inventory and trusted proxy HTTP
+    # Subtest: critical and noncritical model indexes are semantically present, inventory is read-only
+    ok 1 - critical and noncritical model indexes are semantically present, inventory is read-only
+      ---
+      duration_ms: 156.291247
+      type: 'test'
+      ...
+    # Subtest: invalid verification source rolls back settlement; the production enum remains enforced
+    ok 2 - invalid verification source rolls back settlement; the production enum remains enforced
+      ---
+      duration_ms: 200.338445
+      type: 'test'
+      ...
+    # Subtest: test membership never changes live invoice or enrollment expiry
+    ok 3 - test membership never changes live invoice or enrollment expiry
+      ---
+      duration_ms: 490.792845
+      type: 'test'
+      ...
+    # Subtest: full membership refund removes membership without extending an expired original course
+    ok 4 - full membership refund removes membership without extending an expired original course
+      ---
+      duration_ms: 257.128533
+      type: 'test'
+      ...
+    # Subtest: refunding an older individual invoice preserves its independent paid renewal only
+    ok 5 - refunding an older individual invoice preserves its independent paid renewal only
+      ---
+      duration_ms: 317.613991
+      type: 'test'
+      ...
+    # Subtest: refunding the newest invoice does not revoke the original independently paid course period
+    ok 6 - refunding the newest invoice does not revoke the original independently paid course period
+      ---
+      duration_ms: 324.973272
+      type: 'test'
+      ...
+    # Subtest: partial provider refund preserves the purchased course interval
+    ok 7 - partial provider refund preserves the purchased course interval
+      ---
+      duration_ms: 130.815912
+      type: 'test'
+      ...
+    # Subtest: concurrent duplicate settlement records only one interval, payment and invoice
+    ok 8 - concurrent duplicate settlement records only one interval, payment and invoice
+      ---
+      duration_ms: 240.950382
+      type: 'test'
+      ...
+    # Subtest: legacy merged membership enrollment does not override authoritative old course invoice dates
+    ok 9 - legacy merged membership enrollment does not override authoritative old course invoice dates
+      ---
+      duration_ms: 167.859508
+      type: 'test'
+      ...
+    # Subtest: foreign student cannot inherit another student paid grants
+    ok 10 - foreign student cannot inherit another student paid grants
+      ---
+      duration_ms: 93.160166
+      type: 'test'
+      ...
+# {"event":"http","requestId":"42abd890-d2af-4133-8620-e5a40a304c9c","method":"POST","route":"api","status":503,"durationMs":4}
+    # Subtest: unsigned write cannot bypass required trusted proxy attribution
+    ok 11 - unsigned write cannot bypass required trusted proxy attribution
+      ---
+      duration_ms: 24.460281
+      type: 'test'
+      ...
+    # Subtest: tampered proof is rejected before login
+    ok 12 - tampered proof is rejected before login
+      ---
+      duration_ms: 8.001224
+      type: 'test'
+      ...
+    # Subtest: signed proof still requires a real password and gets owner-scoped HttpOnly session
+    ok 13 - signed proof still requires a real password and gets owner-scoped HttpOnly session
+      ---
+      duration_ms: 1131.657893
+      type: 'test'
+      ...
+    # Subtest: a proof for another path cannot sign a registration request
+    ok 14 - a proof for another path cannot sign a registration request
+      ---
+      duration_ms: 17.419659
+      type: 'test'
+      ...
+    1..14
+ok 22 - V60.15 invoice-source access, refunds, index inventory and trusted proxy HTTP
+  ---
+  duration_ms: 6894.587854
+  type: 'test'
+  ...
+# {"event":"review_upload_complete","fileId":"6aee246aed43e0dc7b91334d","bytes":11949,"durationMs":139}
+# Subtest: R9 actual FFmpeg/Mongo/HTTP: scanned upload, faststart preview, posters, authorization and failure cleanup
+    # Subtest: original upload returns 201 then background processing preserves full SHA and stores small independent media
+    ok 1 - original upload returns 201 then background processing preserves full SHA and stores small independent media
+      ---
+      duration_ms: 857.8444
+      type: 'test'
+      ...
+    # Subtest: unpublished original and both derived requests remain private; raw derivative IDs are never public
+    ok 2 - unpublished original and both derived requests remain private; raw derivative IDs are never public
+      ---
+      duration_ms: 128.410561
+      type: 'test'
+      ...
+    # Subtest: published poster is JPEG; teaser streams correct exact206/HEAD and original download is unchanged
+    ok 3 - published poster is JPEG; teaser streams correct exact206/HEAD and original download is unchanged
+      ---
+      duration_ms: 222.395218
+      type: 'test'
+      ...
+    # Subtest: legacy original works immediately; lazy optional teaser never blocks the original range
+    ok 4 - legacy original works immediately; lazy optional teaser never blocks the original range
+      ---
+      duration_ms: 453.7091
+      type: 'test'
+      ...
+# {"event":"review_playback_fallback","fileId":"6aee246bed43e0dc7b91337d","reason":"processing_failed"}
+    # Subtest: failure after derived files were uploaded removes every child metadata/chunk while retaining scanned original
+    ok 5 - failure after derived files were uploaded removes every child metadata/chunk while retaining scanned original
+      ---
+      duration_ms: 330.063918
+      type: 'test'
+      ...
+    1..5
+ok 23 - R9 actual FFmpeg/Mongo/HTTP: scanned upload, faststart preview, posters, authorization and failure cleanup
+  ---
+  duration_ms: 2508.749456
+  type: 'test'
+  ...
+# {"event":"review_upload_complete","fileId":"6aee246bd1ae6849885d1fd5","bytes":18112,"durationMs":330}
+# Subtest: video reviews: exact scanned original, guest ranges, draft revocation and paid-course isolation
+    # Subtest: purpose-specific uploader stores every original byte without transcoding
+    ok 1 - purpose-specific uploader stores every original byte without transcoding
+      ---
+      duration_ms: 442.408991
+      type: 'test'
+      ...
+    # Subtest: draft bytes remain private, then publishing enables full anonymous range playback
+    ok 2 - draft bytes remain private, then publishing enables full anonymous range playback
+      ---
+      duration_ms: 214.510485
+      type: 'test'
+      ...
+    # Subtest: course/CMS videos cannot be republished by supplying their IDs
+    ok 3 - course/CMS videos cannot be republished by supplying their IDs
+      ---
+      duration_ms: 44.771221
+      type: 'test'
+      ...
+    # Subtest: unpublish and delete immediately remove guest playback without broadening other media access
+    ok 4 - unpublish and delete immediately remove guest playback without broadening other media access
+      ---
+      duration_ms: 43.002461
+      type: 'test'
+      ...
+    1..4
+ok 24 - video reviews: exact scanned original, guest ranges, draft revocation and paid-course isolation
+  ---
+  duration_ms: 1047.69317
+  type: 'test'
+  ...
+# Subtest: webinar publication queues only current paid members and delivers durable professional invitations
+    # Subtest: drafts do not enqueue; first publication atomically persists an outbox and only paid live eligibility qualifies
+    ok 1 - drafts do not enqueue; first publication atomically persists an outbox and only paid live eligibility qualifies
+      ---
+      duration_ms: 264.141595
+      type: 'test'
+      ...
+    # Subtest: publication retries, layout edits and unchanged unpublish/republish do not send duplicates
+    ok 2 - publication retries, layout edits and unchanged unpublish/republish do not send duplicates
+      ---
+      duration_ms: 226.416761
+      type: 'test'
+      ...
+    # Subtest: unexpired fan-out leases are respected, expired leases resume, and concurrent workers dedupe a checkpoint replay
+    ok 3 - unexpired fan-out leases are respected, expired leases resume, and concurrent workers dedupe a checkpoint replay
+      ---
+      duration_ms: 157.283215
+      type: 'test'
+      ...
+    # Subtest: mail uses account recipients, full escaped agenda, UTC date and deduped retryable SMTP acceptance
+    ok 4 - mail uses account recipients, full escaped agenda, UTC date and deduped retryable SMTP acceptance
+      ---
+      duration_ms: 104.957451
+      type: 'test'
+      ...
+    # Subtest: material details changes get a new revision; queued old revisions never send
+    ok 5 - material details changes get a new revision; queued old revisions never send
+      ---
+      duration_ms: 230.612398
+      type: 'test'
+      ...
+    # Subtest: removed/expired recipients and unpublished/deleted webinars are rechecked before send
+    ok 6 - removed/expired recipients and unpublished/deleted webinars are rechecked before send
+      ---
+      duration_ms: 156.070785
+      type: 'test'
+      ...
+    # Subtest: republishing re-arms only unsent eligible invitations skipped during a draft interval
+    ok 7 - republishing re-arms only unsent eligible invitations skipped during a draft interval
+      ---
+      duration_ms: 183.323275
+      type: 'test'
+      ...
+    # Subtest: stale concurrent event writers cannot overwrite the current publication and its outbox
+    ok 8 - stale concurrent event writers cannot overwrite the current publication and its outbox
+      ---
+      duration_ms: 12.534496
+      type: 'test'
+      ...
+    # Subtest: webinar publication requires date, and past webinars are never queued
+    ok 9 - webinar publication requires date, and past webinars are never queued
+      ---
+      duration_ms: 28.815974
+      type: 'test'
+      ...
+    1..9
+ok 25 - webinar publication queues only current paid members and delivers durable professional invitations
+  ---
+  duration_ms: 4240.644665
+  type: 'test'
+  ...
+1..25
+# tests 254
+# suites 0
+# pass 254
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 64836.131789

@@ -1,0 +1,32 @@
+{
+  "id": "singh-approved-gold-v608",
+  "width": 1491,
+  "height": 1055,
+  "referenceSha256": "93d03dce2f583c6b86d2567aaee01baf5c03860998be967be2f55e75dfd7b72f",
+  "artSha256": "9c89dc958ab60500526dfc0689d1de8ba5f92e1fa19a095ee8446605a06afd20",
+  "dynamicFields": [
+    "studentName",
+    "courseTitle",
+    "completedAt",
+    "issuedAt",
+    "number",
+    "verificationUrl"
+  ],
+  "fieldCoordinatesPixels": {
+    "studentBaseline": 426,
+    "courseBaseline": 579,
+    "completedDate": [
+      110,
+      789
+    ],
+    "issuedDate": [
+      591,
+      789
+    ],
+    "certificateNumber": [
+      111,
+      876
+    ]
+  },
+  "note": "Approved reference frame, paper, logo, side watermarks, embossed seal, signature and static lettering. Central watermark reconstructed from the original Academy emblem so no reference learner text remains. Text is overlaid as actual PDF text, not masked with rectangles."
+}

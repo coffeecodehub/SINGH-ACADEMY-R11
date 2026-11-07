@@ -1,0 +1,52 @@
+{
+  "review": "R8",
+  "sourceArchive": {
+    "fileName": "DOP_269.zip",
+    "sedimentFileId": "file_00000000d11882118ed27bbc8b9ad9c8",
+    "sha256": "f8b4662165caac3ee96583f0215a354adbb5b7a49a0a135ace12b4d3a5a4835c",
+    "bytes": 6014893
+  },
+  "images": [
+    {
+      "entry": "DOP_269.JPG",
+      "bytes": 3092008,
+      "sha256": "993d85b15e13dd3a1ea56936fe9ca3dcf0b1e67f68239f8bc67754f94348108e",
+      "width": 3308,
+      "height": 2205,
+      "orientation": 1,
+      "archiveEntry": "DOP_269.JPG",
+      "src": "/images/hero-overrides/993d85b15e13dd3a1ea56936fe9ca3dcf0b1e67f68239f8bc67754f94348108e.jpg",
+      "placement": {
+        "page": "landing",
+        "slot": "hero",
+        "cmsKey": "image-075"
+      },
+      "presentation": {
+        "fit": "cover",
+        "objectPosition": "50% 60%"
+      },
+      "originalBytesPreserved": true
+    },
+    {
+      "entry": "DOP_86.JPG",
+      "bytes": 3019858,
+      "sha256": "d377a545d0e83447474ea28ff34d16650d0bd6d49b3e1d34ff6455d137672969",
+      "width": 4864,
+      "height": 3648,
+      "orientation": 1,
+      "archiveEntry": "DOP_86.JPG",
+      "src": "/images/hero-overrides/d377a545d0e83447474ea28ff34d16650d0bd6d49b3e1d34ff6455d137672969.jpg",
+      "placement": {
+        "page": "home",
+        "slot": "hero",
+        "cmsKey": "image-077"
+      },
+      "presentation": {
+        "fit": "cover",
+        "objectPosition": "25% 42%"
+      },
+      "originalBytesPreserved": true
+    }
+  ],
+  "delivery": "Direct static source placement; no owner picker, import command, recompression or resampling."
+}

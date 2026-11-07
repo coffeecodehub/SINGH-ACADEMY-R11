@@ -1,0 +1,1086 @@
+{
+  "recordedAt": "2026-11-07T04:25:18.888Z",
+  "reference": "before-functional-source.json",
+  "unexplainedPaths": [],
+  "reviewedFiles": [
+    {
+      "path": "backend/integration/active-catalog-access.test.js",
+      "status": "added",
+      "sha256": "c9f2ef5f3130f411b74dc1c24cc95bdc7c2faa3e3760ed805146b314693698d4",
+      "tasks": "6",
+      "purpose": "Exercise real canonical grants, scoped catalog coverage, expiry and duplicate-purchase boundaries."
+    },
+    {
+      "path": "backend/integration/deferred-renewal-setup.test.js",
+      "status": "modified",
+      "sha256": "1da6b9dc66b398e76d023acf7dab784c2c0e65076327929f028c512903b5147c",
+      "tasks": "6",
+      "purpose": "Replace the superseded early ordinary-extension expectation; retain no-charge deferred-renewal coverage."
+    },
+    {
+      "path": "backend/integration/paid-access-display-r10.test.js",
+      "status": "added",
+      "sha256": "3bfe972c5f2ab839b9e0a2ce6f80253571fbd61de3eb24e5fe93fc77e1e0ad79",
+      "tasks": "4",
+      "purpose": "Verify date/owner/product/environment/source boundaries and unchanged stored records during reads."
+    },
+    {
+      "path": "backend/integration/paypal-recurring-payments.test.js",
+      "status": "modified",
+      "sha256": "cd53752af363fcdbeefa259f325219ce58adcf553f79c5d0a71559f867ee008a",
+      "tasks": "5",
+      "purpose": "Verify signed ignored refund events, retained reversal protections and the revised event contract."
+    },
+    {
+      "path": "backend/src/routes/paymentRoutes.js",
+      "status": "modified",
+      "sha256": "92f2b2ec24cddf27f0b099ff3d055c4b063b74f47fc6df94ab2431368bf88fd6",
+      "tasks": "4, 6",
+      "purpose": "Add read-only paid-access billing DTOs and private active catalog coverage; use canonical course/section access."
+    },
+    {
+      "path": "backend/src/services/billingAccessDisplay.js",
+      "status": "added",
+      "sha256": "61928e791e5f34e0cab116e936529560bdad68391486a51dc30d8274351a3966",
+      "tasks": "4",
+      "purpose": "Batch owner-scoped invoice evidence for agreement circles; no provider calls or writes."
+    },
+    {
+      "path": "backend/src/services/catalogEntitlements.js",
+      "status": "added",
+      "sha256": "870ee8a75fab4cbf42bc62398656e30c97cc2a4146aebef8c45f31688f7749fe",
+      "tasks": "6",
+      "purpose": "Read owner-scoped direct, section and membership access through existing grant readers."
+    },
+    {
+      "path": "backend/src/services/gatewayWebhooks.js",
+      "status": "modified",
+      "sha256": "36c5859c0d7497828550f4b808672cd8b2959c7896a66edeae2b55c3642a599d",
+      "tasks": "5",
+      "purpose": "Disable explicit refund webhook processing/required subscriptions while retaining verified reversal and dispute protections."
+    },
+    {
+      "path": "backend/src/services/onlineCheckout.js",
+      "status": "modified",
+      "sha256": "e78f40bce836b49a61ad1b5f37f0b1e616f9d77d99de9d00261b015092c61afc",
+      "tasks": "6",
+      "purpose": "Reject fresh ordinary purchases during active coverage; preserve original checkout replay and consented deferred setup."
+    },
+    {
+      "path": "backend/src/services/pendingBillingCheckout.js",
+      "status": "modified",
+      "sha256": "0a67d7d949a994dc6cbd2dd8c53dfb365764e6e31f187efef7d1ae60eefe5bd7",
+      "tasks": "4",
+      "purpose": "Attach paid-access snapshots to normal owned agreement reads without changing pending actions."
+    },
+    {
+      "path": "backend/src/services/renewalSetup.js",
+      "status": "modified",
+      "sha256": "ec8e8fec01e3308947728b2f33f5e0d99985f03c08510d324395304aaf311072",
+      "tasks": "4",
+      "purpose": "Attach the selected invoice-backed snapshot; retain all existing setup eligibility and timing rules."
+    },
+    {
+      "path": "backend/src/utils/paidAccessDisplay.js",
+      "status": "added",
+      "sha256": "b71b9b92bc1dc52c484e2e373b18a73cf4e77c4eca1cea001587f9a8c0c33c3f",
+      "tasks": "4",
+      "purpose": "Derive truthful paid-grant display dates, UTC counters, lifetime and cancellation states."
+    },
+    {
+      "path": "backend/src/utils/paymentWebhookPolicy.js",
+      "status": "modified",
+      "sha256": "e08f810ffb06f068fad892247093bef1b5c007d2fcd4d7900cad23e04bde04d6",
+      "tasks": "5",
+      "purpose": "Disable explicit refund webhook processing/required subscriptions while retaining verified reversal and dispute protections."
+    },
+    {
+      "path": "backend/test/catalogAccessHarness.js",
+      "status": "added",
+      "sha256": "0d067f1adaff0259df53fb2e56e3380b830a6e66b5d2936af87524d6a6ac3d0e",
+      "tasks": "6",
+      "purpose": "Exercise real canonical grants, scoped catalog coverage, expiry and duplicate-purchase boundaries."
+    },
+    {
+      "path": "backend/test/no-refund-webhooks-r10.test.js",
+      "status": "added",
+      "sha256": "27b848e9f530fddfe3f6e4df45a4a101e03e30029b9171cea6eb1ff3a5556569",
+      "tasks": "5",
+      "purpose": "Verify signed ignored refund events, retained reversal protections and the revised event contract."
+    },
+    {
+      "path": "backend/test/paid-access-display-r10.test.js",
+      "status": "added",
+      "sha256": "1adb5e50f110285d58d44f5c15030bb8356c6dd4c04ec2fe3a8f2e437b7dbd76",
+      "tasks": "4",
+      "purpose": "Verify date/owner/product/environment/source boundaries and unchanged stored records during reads."
+    },
+    {
+      "path": "backend/test/payments-live-readiness.test.js",
+      "status": "modified",
+      "sha256": "33590a96e0e6df4d00c50944f0eb6880d5cfb73cf61a6edbd75ef81db279cf1b",
+      "tasks": "5",
+      "purpose": "Verify signed ignored refund events, retained reversal protections and the revised event contract."
+    },
+    {
+      "path": "backend/test/payments-live-safety.test.js",
+      "status": "modified",
+      "sha256": "37cddb6461320d92e9fac31f06e6efc6a5530dd790e2c18c0ba91c331f29a1e6",
+      "tasks": "5",
+      "purpose": "Verify signed ignored refund events, retained reversal protections and the revised event contract."
+    },
+    {
+      "path": "backend/test/v47-workflows.test.js",
+      "status": "modified",
+      "sha256": "5a2f30927b7e0dcbe42e8dbfea66e24ef6505335c92fe22d514fd391f190e9eb",
+      "tasks": "6",
+      "purpose": "Use the actual canonical access harness for purchase eligibility assertions."
+    },
+    {
+      "path": "backend/test/v60-5-regressions.test.js",
+      "status": "modified",
+      "sha256": "b992fa1d21849b284495bfe45385380384ed2aa2ba5a7c038aca272e71722308",
+      "tasks": "6",
+      "purpose": "Replace stale membership-only source expectations with verified owned course/section/membership coverage assertions."
+    },
+    {
+      "path": "docs/ALERT-FEEDBACK-R10.md",
+      "status": "added",
+      "sha256": "0832e87f21ece5df52fc87eed51ac77ec3368dcef3bd328d9faa7e030e349fa0",
+      "tasks": "2",
+      "purpose": "Document shared feedback, queued decisions, scope fences, accessibility and retained beforeunload protection."
+    },
+    {
+      "path": "docs/PAYMENTS-LIVE-CHECKLIST-R9.md",
+      "status": "modified",
+      "sha256": "70a8b1c28beceed260fba3578bd62391576ff37603ae0c3b3001c42d3006c0fc",
+      "tasks": "5",
+      "purpose": "Document current destinations/event selections and deployment validation limits; no real provider settings changed."
+    },
+    {
+      "path": "docs/PERFORMANCE-R10.md",
+      "status": "modified",
+      "sha256": "12ba2a799475ba809fd0de0357841ec6072a1d9ad4d2dbefab74319e6e0d8d99",
+      "tasks": "P",
+      "purpose": "Clarify both scopes and the narrow late-first-mount SSR correction; keep earlier measurements separate from current acceptance."
+    },
+    {
+      "path": "docs/SIX-TASK-CHANGES-R10.md",
+      "status": "added",
+      "sha256": "6011b90706fb679f54938fc1b42d91975ae5894cc70fb1036693502676bcf684",
+      "tasks": "Release summary",
+      "purpose": "Summarize authorized feature behavior, file scope and final acceptance status; documentation only with no application effect."
+    },
+    {
+      "path": "docs/START-R10-WINDOWS.md",
+      "status": "added",
+      "sha256": "4f9f5f4d13af4bddfd78ecf8908426486de349c03c8ecb31ea562f19cb7927b8",
+      "tasks": "Delivery",
+      "purpose": "Document the separate complete R10 folder/ZIP updater, retained local settings, existing-database startup and deployment limits."
+    },
+    {
+      "path": "docs/WEBHOOK-EVENTS-R10.md",
+      "status": "added",
+      "sha256": "8d252c414b181282aa8508a543d4dcf74de2d80a33b3982403dce7f5e59790e1",
+      "tasks": "5",
+      "purpose": "Document current destinations/event selections and deployment validation limits; no real provider settings changed."
+    },
+    {
+      "path": "frontend/app/about/page.tsx",
+      "status": "modified",
+      "sha256": "fbe5cef811382685d756f2b1599e2a5bbdf1068017873fd972ae78760608e717",
+      "tasks": "2, 6",
+      "purpose": "Use shared feedback and suppress purchase offers only for verified owner-specific coverage on existing cards."
+    },
+    {
+      "path": "frontend/app/academy/page.tsx",
+      "status": "modified",
+      "sha256": "151577c5cc20793cfa6a79eb6b3454818a223552df54b3097c1bf837613b85e1",
+      "tasks": "2, 6",
+      "purpose": "Use shared feedback and suppress purchase offers only for verified owner-specific coverage on existing cards."
+    },
+    {
+      "path": "frontend/app/billing/page.tsx",
+      "status": "modified",
+      "sha256": "2e10fe8a42a30b6b921f49866b9a65c2f01ee0eb8ce2fbdb9ceae2103db297c7",
+      "tasks": "2, 4",
+      "purpose": "Use shared action feedback and add circles to legacy terms and confirmed paid invoice cards."
+    },
+    {
+      "path": "frontend/app/certificates/page.tsx",
+      "status": "modified",
+      "sha256": "02d74cf7d7be155530d50a4c4a3f6ed6a201f89d02de671f95316162fa90ca67",
+      "tasks": "2",
+      "purpose": "Present existing validation/action results through shared notices; retain loading, auth and business behavior."
+    },
+    {
+      "path": "frontend/app/certificates/verify/[token]/page.tsx",
+      "status": "modified",
+      "sha256": "f843d501817155c3da5eeaccd0fa35836e5c15264729c04ac031f7d9c57878f9",
+      "tasks": "2",
+      "purpose": "Present existing validation/action results through shared notices; retain loading, auth and business behavior."
+    },
+    {
+      "path": "frontend/app/checkout/page.tsx",
+      "status": "modified",
+      "sha256": "cd5347966c23ea768c776239e6ddce0d2491934dd87287ddb3019d456a15cb21",
+      "tasks": "2, 6",
+      "purpose": "Replace a fresh duplicate purchase with actual content entry; retain consented setup, replay/recovery and shared feedback."
+    },
+    {
+      "path": "frontend/app/checkout/return/page.tsx",
+      "status": "modified",
+      "sha256": "33a06ea58938c0decca6846e9d80233e009d5eae348a9b253122bdede6129f67",
+      "tasks": "2",
+      "purpose": "Present existing validation/action results through shared notices; retain loading, auth and business behavior."
+    },
+    {
+      "path": "frontend/app/contact/page.tsx",
+      "status": "modified",
+      "sha256": "efe1938bee6dbead83b2b38780ccb209fbc1ba9d8a3594c8b71d49601db55fad",
+      "tasks": "2",
+      "purpose": "Present existing validation/action results through shared notices; retain loading, auth and business behavior."
+    },
+    {
+      "path": "frontend/app/courses/[slug]/page.tsx",
+      "status": "modified",
+      "sha256": "3bef0340c1fd20886a6ebf4cc16db49a944838b536aca6476bfc2c848d9447ae",
+      "tasks": "2, 6",
+      "purpose": "Use verified Continue/Open actions for direct/parent-section/membership coverage; retain unrelated offers and feedback."
+    },
+    {
+      "path": "frontend/app/events/page.tsx",
+      "status": "modified",
+      "sha256": "e8d61da6f2f677aa6172712ac145a2c9243d0614f583f53f99e159bffb554752",
+      "tasks": "2",
+      "purpose": "Present existing validation/action results through shared notices; retain loading, auth and business behavior."
+    },
+    {
+      "path": "frontend/app/forgot-password/page.tsx",
+      "status": "modified",
+      "sha256": "b306ea8c1145d7d720baaff1adcbe5074ec0395a605bcf595cd0caa3866d12e2",
+      "tasks": "2",
+      "purpose": "Present existing validation/action results through shared notices; retain loading, auth and business behavior."
+    },
+    {
+      "path": "frontend/app/home/page.tsx",
+      "status": "modified",
+      "sha256": "e3545acbf29745263d4d25bebf2dad6a93315e7dc5e2c7237f3d31938e58c9b8",
+      "tasks": "2, 6",
+      "purpose": "Use shared feedback and suppress purchase offers only for verified owner-specific coverage on existing cards."
+    },
+    {
+      "path": "frontend/app/layout.tsx",
+      "status": "modified",
+      "sha256": "3ff841ef6f147b5a3f35769b480222364f167d8cb2816601cbbeb8c603d86d78",
+      "tasks": "2",
+      "purpose": "Mount the shared scoped feedback host while retaining the earlier public SSR prefetch/hydration work."
+    },
+    {
+      "path": "frontend/app/learn/[course]/page.tsx",
+      "status": "modified",
+      "sha256": "a1f774ec3c763a24d008e5eb57c87cdd8d70a51aef08c8feabdce07e5768721a",
+      "tasks": "2",
+      "purpose": "Present existing validation/action results through shared notices; retain loading, auth and business behavior."
+    },
+    {
+      "path": "frontend/app/login/page.tsx",
+      "status": "modified",
+      "sha256": "7000e7724720823ac35a10bd105a9d152daea9346168c2400d11abd2be86d75f",
+      "tasks": "2",
+      "purpose": "Present existing validation/action results through shared notices; retain loading, auth and business behavior."
+    },
+    {
+      "path": "frontend/app/register/page.tsx",
+      "status": "modified",
+      "sha256": "e80a28cd9fad2b7e91c0cf221a3e2ec9a4576b11de8ad5b5c6e811f49bfc42dc",
+      "tasks": "2",
+      "purpose": "Present existing validation/action results through shared notices; retain loading, auth and business behavior."
+    },
+    {
+      "path": "frontend/app/reset-password/page.tsx",
+      "status": "modified",
+      "sha256": "0f88ac8782c25f2f4d4cd14ac966696328232925426f78d4e6d25c86a6f3de74",
+      "tasks": "2",
+      "purpose": "Present existing validation/action results through shared notices; retain loading, auth and business behavior."
+    },
+    {
+      "path": "frontend/app/reviews/page.tsx",
+      "status": "modified",
+      "sha256": "458ba2ba62dac5cbf531a00a0fb4f7d5acca144ede0620fc591603e9542685cf",
+      "tasks": "2",
+      "purpose": "Present existing validation/action results through shared notices; retain loading, auth and business behavior."
+    },
+    {
+      "path": "frontend/app/sections/[slug]/page.tsx",
+      "status": "modified",
+      "sha256": "09fe227b4b49cf60bd1876bbef20601de68aa94fd4fd378980aa18f7d9371908",
+      "tasks": "2, 6",
+      "purpose": "Use verified Continue/Open actions for direct/parent-section/membership coverage; retain unrelated offers and feedback."
+    },
+    {
+      "path": "frontend/app/verify-otp/page.tsx",
+      "status": "modified",
+      "sha256": "6bd97d5135b11b3c4c6a6222534aa843d69824ef499270683adff75600dfc3d0",
+      "tasks": "2",
+      "purpose": "Present existing validation/action results through shared notices; retain loading, auth and business behavior."
+    },
+    {
+      "path": "frontend/components/ApiLoadError.tsx",
+      "status": "modified",
+      "sha256": "3995e4c52309217f6411c98dd8484d49e9eef96559ff8258aeaf2f768849d57d",
+      "tasks": "2",
+      "purpose": "Present existing validation/action results through shared notices; retain loading, auth and business behavior."
+    },
+    {
+      "path": "frontend/components/PublicInitialData.tsx",
+      "status": "modified",
+      "sha256": "5492b1d960d761cd151919f1969e04a79dfc280bf13f552452133f8d8974fa45",
+      "tasks": "P",
+      "purpose": "Keep the frozen document SSR seed for late first mounts; permanently retire it after navigation, account/public-scope or CMS changes."
+    },
+    {
+      "path": "frontend/components/SiteHeader.tsx",
+      "status": "modified",
+      "sha256": "2173adaecda470b168d2761f96ba41c405a786de6c86056069902f8af61e3248",
+      "tasks": "2",
+      "purpose": "Await the leave guard before Back/logout/navigation; preserve existing destinations and action owners."
+    },
+    {
+      "path": "frontend/components/admin/AdminLogin.tsx",
+      "status": "modified",
+      "sha256": "3ac3813a01f1f16c5a6f48a517f723dc3eb194e7133d49f50dc4e9e975d39bfa",
+      "tasks": "2",
+      "purpose": "Present existing validation/action results through shared notices; retain loading, auth and business behavior."
+    },
+    {
+      "path": "frontend/components/auth/AuthProvider.tsx",
+      "status": "modified",
+      "sha256": "3c520edd1634019a553876b8c36e05f6834d22f9faf6c9cc9655f711410f88d7",
+      "tasks": "2",
+      "purpose": "Present existing validation/action results through shared notices; retain loading, auth and business behavior."
+    },
+    {
+      "path": "frontend/components/billing/AutoRenewals.tsx",
+      "status": "modified",
+      "sha256": "f49d25edfb995d899a92d36afbe373cb7cae18e14e4847b21d5fec01cc676704",
+      "tasks": "2, 4",
+      "purpose": "Add modern agreement/purchase circles and shared feedback; preserve paid snapshots across renewal toggles."
+    },
+    {
+      "path": "frontend/components/billing/BillingActionConfirmation.tsx",
+      "status": "modified",
+      "sha256": "eb4531627149308191cb2718551404c2d651ad44c4d64885a2e61898a2441296",
+      "tasks": "2",
+      "purpose": "Delegate presentation to the shared dialog; retain billing-specific consent and two-step cancellation."
+    },
+    {
+      "path": "frontend/components/billing/BillingCancellationDialog.tsx",
+      "status": "modified",
+      "sha256": "36709e3a2703b6a4cdf3abd5e3248973235b5cf1804f1af35d913794f9fa0e48",
+      "tasks": "2",
+      "purpose": "Delegate presentation to the shared dialog; retain billing-specific consent and two-step cancellation."
+    },
+    {
+      "path": "frontend/components/billing/CancelPurchaseAccess.tsx",
+      "status": "modified",
+      "sha256": "fbffad066cde5836d0f235e24fa1384c1f34ce663348650885c5d6d02ebfd5d1",
+      "tasks": "2",
+      "purpose": "Use shared notices/decisions without changing financial action payloads or owner/in-flight checks."
+    },
+    {
+      "path": "frontend/components/billing/PaidAccessIndicator.tsx",
+      "status": "added",
+      "sha256": "c8956d4ac5282ba1a6dab859646047cf6237634f8289f8aa3b29e2b3cb38e8cb",
+      "tasks": "4",
+      "purpose": "Render the recreated teal calendar/count ring, UTC expiry, information control and existing eligible Renew target."
+    },
+    {
+      "path": "frontend/components/billing/PaymentReceiptCard.tsx",
+      "status": "modified",
+      "sha256": "9a83c844eda980793b3174ad01c24601d4da0ab54719e5e83a68e2a8b1ad3808",
+      "tasks": "2",
+      "purpose": "Use shared notices/decisions without changing financial action payloads or owner/in-flight checks."
+    },
+    {
+      "path": "frontend/components/billing/SubscriptionNotifications.tsx",
+      "status": "modified",
+      "sha256": "8b12b1fb45b9d6b181dc92e6d2d7db4c631d258b40d236eb87063c4dc87ab27d",
+      "tasks": "2",
+      "purpose": "Use shared notices/decisions without changing financial action payloads or owner/in-flight checks."
+    },
+    {
+      "path": "frontend/components/billing/paid-access-indicator.css",
+      "status": "added",
+      "sha256": "6bfd131d0a79efdc11810bdebd29a6da5269685a8fc8c4957d0f1080e953aa6f",
+      "tasks": "4",
+      "purpose": "Scope styling to the circle region, including compact legacy placement and reduced motion."
+    },
+    {
+      "path": "frontend/components/business/ActionDialog.tsx",
+      "status": "modified",
+      "sha256": "45882c438e9a889c9f39e25192d319215b8e5c3b32f2cf21d66f1e3068a78de1",
+      "tasks": "2",
+      "purpose": "Reuse shared notices/modal decisions; retain existing action owners, passwords, save acknowledgements and payloads."
+    },
+    {
+      "path": "frontend/components/business/AdminExportButton.tsx",
+      "status": "modified",
+      "sha256": "52228953e9fcaf8b02209b842d8e7a97ba7ea52b78f47a0ddc20e4ccc130ea9a",
+      "tasks": "2",
+      "purpose": "Reuse shared notices/modal decisions; retain existing action owners, passwords, save acknowledgements and payloads."
+    },
+    {
+      "path": "frontend/components/business/AdminReviews.tsx",
+      "status": "modified",
+      "sha256": "8e0b23fddd9b2c728b9f76af144932ac208721184700119d8e4c1db96f5bba8c",
+      "tasks": "2",
+      "purpose": "Reuse shared notices/modal decisions; retain existing action owners, passwords, save acknowledgements and payloads."
+    },
+    {
+      "path": "frontend/components/business/AdminSaveFeedback.tsx",
+      "status": "modified",
+      "sha256": "62e211c3179c29c8e84260fc7d57a2096a5f6d2caf41a177a4bc391710af041c",
+      "tasks": "2",
+      "purpose": "Reuse shared notices/modal decisions; retain existing action owners, passwords, save acknowledgements and payloads."
+    },
+    {
+      "path": "frontend/components/business/AdminStudents.tsx",
+      "status": "modified",
+      "sha256": "de1937a4c59d89d9fb795b89dd8f27a7fce2ca14e62330b229ea4c99f042b4e2",
+      "tasks": "2",
+      "purpose": "Reuse shared notices/modal decisions; retain existing action owners, passwords, save acknowledgements and payloads."
+    },
+    {
+      "path": "frontend/components/business/BusinessPortal.tsx",
+      "status": "modified",
+      "sha256": "1191264659bf6611dede86a06b53f5bb2f08ee05647dba702f6598e7e314a747",
+      "tasks": "2",
+      "purpose": "Reuse shared notices/modal decisions; retain existing action owners, passwords, save acknowledgements and payloads."
+    },
+    {
+      "path": "frontend/components/business/Certificates.tsx",
+      "status": "modified",
+      "sha256": "dfd1eef43ed28a77d502a16e562d4c0898082cfc1e4fee903253193c26ec4316",
+      "tasks": "2",
+      "purpose": "Reuse shared notices/modal decisions; retain existing action owners, passwords, save acknowledgements and payloads."
+    },
+    {
+      "path": "frontend/components/business/Requests.tsx",
+      "status": "modified",
+      "sha256": "7357dc37ed7c97f4467a6bc1efc88c3934d2711d27c4840fb810796080503bb4",
+      "tasks": "2",
+      "purpose": "Reuse shared notices/modal decisions; retain existing action owners, passwords, save acknowledgements and payloads."
+    },
+    {
+      "path": "frontend/components/business/SecurityPanel.tsx",
+      "status": "modified",
+      "sha256": "12a90711c4600ca0fc36c92f248da5f0c0d310c0f344f7baa17fae45c7fa3c07",
+      "tasks": "2",
+      "purpose": "Reuse shared notices/modal decisions; retain existing action owners, passwords, save acknowledgements and payloads."
+    },
+    {
+      "path": "frontend/components/business/StudentExportButton.tsx",
+      "status": "modified",
+      "sha256": "2c92d15e7ece67efc3100bf33054e134b153f181f2286e0c424ab29c08e2e9b7",
+      "tasks": "2",
+      "purpose": "Reuse shared notices/modal decisions; retain existing action owners, passwords, save acknowledgements and payloads."
+    },
+    {
+      "path": "frontend/components/business/ui.tsx",
+      "status": "modified",
+      "sha256": "42f010db428f185dbd87e8bfa0e0f9d652bf5ebe6076354206d008b927803482",
+      "tasks": "2",
+      "purpose": "Reuse shared notices/modal decisions; retain existing action owners, passwords, save acknowledgements and payloads."
+    },
+    {
+      "path": "frontend/components/catalog/CatalogCard.tsx",
+      "status": "modified",
+      "sha256": "7cbfb7335178696d015723f5900d76005e56e821f90fd45743efc908f30a74e2",
+      "tasks": "6",
+      "purpose": "Hide prices for scoped active coverage and link Continue/Open to existing content."
+    },
+    {
+      "path": "frontend/components/cms/AdminConfirm.tsx",
+      "status": "modified",
+      "sha256": "f180901aa58801fa3e9b4c901e0565788ea3cb4d895b897c5b0d73fbd911fbc2",
+      "tasks": "2",
+      "purpose": "Delegate save confirmation to the shared modal; retain single-submission/busy guards."
+    },
+    {
+      "path": "frontend/components/cms/ContentCollection.tsx",
+      "status": "modified",
+      "sha256": "9ce3a943412545db9add1e00e7c156e11d7d1201490eb74f78fa1432f10dca58",
+      "tasks": "2",
+      "purpose": "Await themed dirty-close/delete decisions and reject stale drafts, busy uploads or unmounted editors."
+    },
+    {
+      "path": "frontend/components/cms/CouponManager.tsx",
+      "status": "modified",
+      "sha256": "713aded69efec8e3498375051e0974183e63998da961ad1171ae05dc275ccd47",
+      "tasks": "2",
+      "purpose": "Migrate existing editor action feedback to the shared themed family without changing saved media/content identities."
+    },
+    {
+      "path": "frontend/components/cms/CourseEditor.tsx",
+      "status": "modified",
+      "sha256": "f2f3d442ba1a3650548b9b39a76bcccc8abbcf9bafc48239284ace4a2d0f55a5",
+      "tasks": "2",
+      "purpose": "Await themed dirty-close/delete decisions and reject stale drafts, busy uploads or unmounted editors."
+    },
+    {
+      "path": "frontend/components/cms/CropMediaField.tsx",
+      "status": "modified",
+      "sha256": "92e708a88e1c3f7e18855d62efa05dd33800d1c4911f95d2e0c14d586c6387c1",
+      "tasks": "2",
+      "purpose": "Migrate existing editor action feedback to the shared themed family without changing saved media/content identities."
+    },
+    {
+      "path": "frontend/components/cms/Fields.tsx",
+      "status": "modified",
+      "sha256": "1aa88585e228ad1e9c0dd1266811ff17a5e8390896bd9dba32037017082836af",
+      "tasks": "2",
+      "purpose": "Use shared upload errors and asynchronous dirty-close confirmation with fresh-draft/upload checks."
+    },
+    {
+      "path": "frontend/components/cms/ImageCropEditor.tsx",
+      "status": "modified",
+      "sha256": "70dfc4a28a81b615b03a46a37d09ca76dbc117bba5f32a3297073899a9eafd5b",
+      "tasks": "2",
+      "purpose": "Migrate existing editor action feedback to the shared themed family without changing saved media/content identities."
+    },
+    {
+      "path": "frontend/components/cms/LessonEditor.tsx",
+      "status": "modified",
+      "sha256": "8658af2daf1ab241662bd3c96b632dd0da1f24e67a75fcb08999e450f55a272a",
+      "tasks": "2",
+      "purpose": "Await themed dirty-close/delete decisions and reject stale drafts, busy uploads or unmounted editors."
+    },
+    {
+      "path": "frontend/components/cms/PageSectionsEditor.tsx",
+      "status": "modified",
+      "sha256": "acfdc9cd813b4b7ebf91bb3ba299061a9786d06cdbf591ba9e6444514792c97b",
+      "tasks": "2",
+      "purpose": "Await themed dirty-close/delete decisions and reject stale drafts, busy uploads or unmounted editors."
+    },
+    {
+      "path": "frontend/components/cms/RegionalPricingEditor.tsx",
+      "status": "modified",
+      "sha256": "208340a2d298e20bd79377a4c0fdae1bc28af2f3bd5ac609008687d59e49989d",
+      "tasks": "2",
+      "purpose": "Migrate existing editor action feedback to the shared themed family without changing saved media/content identities."
+    },
+    {
+      "path": "frontend/components/cms/SectionManager.tsx",
+      "status": "modified",
+      "sha256": "3bc645edc4ae1e40adda7ec78026ea0df18c8f955f5a331a951bc2558c4ab3cf",
+      "tasks": "2",
+      "purpose": "Await themed dirty-close/delete decisions and reject stale drafts, busy uploads or unmounted editors."
+    },
+    {
+      "path": "frontend/components/cms/SiteEditor.tsx",
+      "status": "modified",
+      "sha256": "686fd82ad209e9c27ca1d96c72070d0bfd19b785f7a322f142edb5cd379f5c30",
+      "tasks": "2",
+      "purpose": "Migrate existing editor action feedback to the shared themed family without changing saved media/content identities."
+    },
+    {
+      "path": "frontend/components/cms/VideoReviewsEditor.tsx",
+      "status": "modified",
+      "sha256": "e8ea633765843bcd4bc8c2488e2be2891e04c7fde681f03c0923db3bb8e1304d",
+      "tasks": "2",
+      "purpose": "Migrate existing editor action feedback to the shared themed family without changing saved media/content identities."
+    },
+    {
+      "path": "frontend/components/cms/WebsiteContentEditor.tsx",
+      "status": "modified",
+      "sha256": "2167be84ac7ce62be26a8f0d29d183a48a0b059c7bd233dc2e6c867ce9df84dd",
+      "tasks": "2",
+      "purpose": "Migrate existing editor action feedback to the shared themed family without changing saved media/content identities."
+    },
+    {
+      "path": "frontend/components/content/PageGallery.tsx",
+      "status": "modified",
+      "sha256": "baf7a7bacd21fb5c361b0f10f04d8e1444c33d7639f123f3c07af9cb3d38768e",
+      "tasks": "3",
+      "purpose": "Keep all gallery modes; size carousel slides to one viewport and retain responsive image identities."
+    },
+    {
+      "path": "frontend/components/content/PageSectionVideo.tsx",
+      "status": "modified",
+      "sha256": "baa6ea10ef5f71862e2d250fac9c857b310693f33ae731210ce4f2f5bd659c42",
+      "tasks": "1",
+      "purpose": "Use the common bounded preview/autoplay policy for CMS page video and preserve full-video opening."
+    },
+    {
+      "path": "frontend/components/content/page-sections.css",
+      "status": "modified",
+      "sha256": "638acb04515d8c510f0730ebd1b49feedfdf175b45e23f976abead7f355449d6",
+      "tasks": "3",
+      "purpose": "Scope full-width slides/no strip to carousel mode; retain other gallery and page layout rules."
+    },
+    {
+      "path": "frontend/components/feedback/AccountFeedback.tsx",
+      "status": "added",
+      "sha256": "de8978cc91b22a945b600b0ebf98c3c7c581de8d71b28f662af8bb930cda44e4",
+      "tasks": "2",
+      "purpose": "Bind queued decisions to the current portal, account epoch and route."
+    },
+    {
+      "path": "frontend/components/feedback/FeedbackDialog.tsx",
+      "status": "added",
+      "sha256": "0e1848592200b61304c1a5407cc71882d639a27e2a18f008bb5abddc525526e7",
+      "tasks": "2",
+      "purpose": "Release modality/focus/scroll immediately; retain only the same inert hidden presentation for a supported 180ms exit."
+    },
+    {
+      "path": "frontend/components/feedback/FeedbackNotice.tsx",
+      "status": "added",
+      "sha256": "b4b8b863c22a7a7179ff74235d46b539470fa866b0bcc16019b229513ddd53b8",
+      "tasks": "2",
+      "purpose": "Provide consistent success/error/warning/info notices with icons and accessible announcements."
+    },
+    {
+      "path": "frontend/components/feedback/FeedbackPresence.tsx",
+      "status": "added",
+      "sha256": "ab8269d1fb78130d5e9392ff9496cbce3f9187bfbaf81ec3b9c1c5572e6c7ce4",
+      "tasks": "2",
+      "purpose": "Retain the caller-owned fiber/context only during exit; hide/inert outgoing forms and drop them on scope change."
+    },
+    {
+      "path": "frontend/components/feedback/FeedbackProvider.tsx",
+      "status": "added",
+      "sha256": "cb31036a3a9304c8b324846dc0067fdaab8fd3527d2cf36a0a6c22a25014604a",
+      "tasks": "2",
+      "purpose": "Host scoped decisions and same-context exit presence; account/route changes synchronously discard outgoing content."
+    },
+    {
+      "path": "frontend/components/feedback/feedback.css",
+      "status": "added",
+      "sha256": "22df1f66daed6e48a8941de709a421d1e43a1bd9cbc228e10e35842724a0a0f1",
+      "tasks": "2",
+      "purpose": "Scope the notice/modal theme and 180ms discrete exit; reduced motion or unsupported transitions close immediately."
+    },
+    {
+      "path": "frontend/components/layout/BackButton.tsx",
+      "status": "modified",
+      "sha256": "cbeabce8026ecea609bb375ccbb62e7a369455c46d482f3f6742bb1a7ec0aa88",
+      "tasks": "2",
+      "purpose": "Await the leave guard before Back/logout/navigation; preserve existing destinations and action owners."
+    },
+    {
+      "path": "frontend/components/learning/AnswerSheet.tsx",
+      "status": "modified",
+      "sha256": "56ff171ccaa640c75179385389a30e619cea07d54d88cb4e4a06aec5f7cf95ec",
+      "tasks": "2",
+      "purpose": "Present existing validation/action results through shared notices; retain loading, auth and business behavior."
+    },
+    {
+      "path": "frontend/components/video-reviews/ReviewVideo.tsx",
+      "status": "modified",
+      "sha256": "3f2090f2b29795a1ac06100159e8f6d60fcb55f7f53ae32695ec07b94eeede82",
+      "tasks": "1, 2",
+      "purpose": "Autoplay muted bounded previews and controlled full playback; preserve viewport/policy handling and use shared warnings."
+    },
+    {
+      "path": "frontend/components/video-reviews/VideoReviews.tsx",
+      "status": "modified",
+      "sha256": "9c552662eb624c863ef120ccbccf60b1c97e845fb2de4a8924d63497890f383d",
+      "tasks": "1, 2",
+      "purpose": "Reuse the common preview player and themed retry notices without changing saved review media."
+    },
+    {
+      "path": "frontend/e2e/reliability.spec.ts",
+      "status": "modified",
+      "sha256": "eb7b613763f86bd5b6e779e9fe3d12a0a8ffa883d1569560294f3874514785ed",
+      "tasks": "6",
+      "purpose": "Add complete empty access arrays to successful-response fixtures; preserve original browser assertions."
+    },
+    {
+      "path": "frontend/e2e/review-moderation.spec.ts",
+      "status": "modified",
+      "sha256": "5026aec1d57528cdcc234bd03573077dbf591ea268e9e78847f7db6b6bb1b1ba",
+      "tasks": "2",
+      "purpose": "Adapt shared feedback/queued-decision fixtures while retaining action, consent, acknowledgement and error assertions."
+    },
+    {
+      "path": "frontend/e2e/video-upload-local-r6.spec.ts",
+      "status": "modified",
+      "sha256": "8c5516a93a30e3a427f4b8664d8678f023ef32c7062b52d125438ce59ed3b8a5",
+      "tasks": "2",
+      "purpose": "Adapt shared feedback/queued-decision fixtures while retaining action, consent, acknowledgement and error assertions."
+    },
+    {
+      "path": "frontend/lib/courseAccessPresentation.ts",
+      "status": "modified",
+      "sha256": "3999e764f12a6d353199472082ea456c2779cec671b316e8a1bb5874a5b6b1ce",
+      "tasks": "6",
+      "purpose": "Map proven direct/section/membership coverage to the existing content actions."
+    },
+    {
+      "path": "frontend/lib/feedback.ts",
+      "status": "added",
+      "sha256": "63eaef4fef5b55102a4f0224ab038108ef47a2f30c79f817d2e96461aafd7830",
+      "tasks": "2",
+      "purpose": "Queue confirm/prompt/alert decisions; fail closed on duplicate, abort, missing host and scope changes."
+    },
+    {
+      "path": "frontend/lib/feedbackPresence.ts",
+      "status": "added",
+      "sha256": "151d3a2c4639e9f1f480f9905f5c71d6c8c146559538c4e5a41ac7c1a700a1c2",
+      "tasks": "2",
+      "purpose": "Reconcile keyed same-scope presentation, 180ms exit support and authoritative account/route presentation scope."
+    },
+    {
+      "path": "frontend/lib/galleryMotion.ts",
+      "status": "modified",
+      "sha256": "0a35e6185f0a6a8bc61615096cbc7c978f127c6a0c76db489d474f76399eed35",
+      "tasks": "3",
+      "purpose": "Hold one image about three seconds, step forward smoothly, loop seamlessly and pause for inspection/reduced motion."
+    },
+    {
+      "path": "frontend/lib/leaveGuard.ts",
+      "status": "modified",
+      "sha256": "b81ed2da019409e7f40184c2f4073804560b3db63431d3113a88dae9ab03435b",
+      "tasks": "2",
+      "purpose": "Await themed lesson leave decisions; keep browser-native unload protection."
+    },
+    {
+      "path": "frontend/lib/paidAccessClock.ts",
+      "status": "added",
+      "sha256": "b35b511cb3d1bca04325ca292429644d8d390438a1d92cc1c207db197c2e20ca",
+      "tasks": "4",
+      "purpose": "Advance already-confirmed snapshots with the existing UTC calendar policy; never consume provider dates."
+    },
+    {
+      "path": "frontend/lib/useCatalogAccess.ts",
+      "status": "added",
+      "sha256": "14809014d09873dcbe7a42750f669954abaf8aac590a517307f99a689fe8a9a5",
+      "tasks": "6",
+      "purpose": "Read lightweight private coverage with account/country/epoch fences, server-clock expiry and safe refresh."
+    },
+    {
+      "path": "frontend/lib/videoReviews.ts",
+      "status": "modified",
+      "sha256": "62fb5fa84bd78f6bc79416ed9b67a2958d2c44bc0137a373069eef11acf5ce8d",
+      "tasks": "1",
+      "purpose": "Normalize previews to 15\u201320 seconds and explicitly request Vimeo inline playback; preserve source/full-video identities."
+    },
+    {
+      "path": "frontend/test/admin-exports.test.mjs",
+      "status": "modified",
+      "sha256": "75ae6c1f6b94d43192333718802a4a8cc582bb2e875b7447ebf09d55bb77f720",
+      "tasks": "2",
+      "purpose": "Update explicit shared-feedback test adapters; retain export, regional price, auth and admin catalog assertions."
+    },
+    {
+      "path": "frontend/test/admin-save-feedback-r6.test.mjs",
+      "status": "modified",
+      "sha256": "1abbe96c966b72e11b3d21bcfbf631896d0c9545bb9c3aef4c7fa4f8bb5d93ce",
+      "tasks": "2",
+      "purpose": "Adapt shared feedback/queued-decision fixtures while retaining action, consent, acknowledgement and error assertions."
+    },
+    {
+      "path": "frontend/test/answer-navigation.test.mjs",
+      "status": "modified",
+      "sha256": "40d846e182f4f2ddf5745eb9c4ed6b02eeebb94446c0fca8d484e0d156000ecd",
+      "tasks": "2",
+      "purpose": "Adapt shared feedback/queued-decision fixtures while retaining action, consent, acknowledgement and error assertions."
+    },
+    {
+      "path": "frontend/test/automatic-media-r6.test.mjs",
+      "status": "modified",
+      "sha256": "ca6d3af39892f4ecba46e663aafc25c2b805c160debb92cc36722bc1de5695e9",
+      "tasks": "1, 3",
+      "purpose": "Update actual player/gallery expectations for bounded autoplay and timed single-image motion."
+    },
+    {
+      "path": "frontend/test/billing-action-confirmation.test.mjs",
+      "status": "modified",
+      "sha256": "9127052bb6f1edbe070d9867b9e0e87709e47ae338ab8e109d9d1d1e31404f6f",
+      "tasks": "2",
+      "purpose": "Adapt shared feedback/queued-decision fixtures while retaining action, consent, acknowledgement and error assertions."
+    },
+    {
+      "path": "frontend/test/billing-cancellation-dialog.test.mjs",
+      "status": "modified",
+      "sha256": "0e10da3064df3af3e2c3564fb386f18638c800394d01dc9bf6a95eb367f50953",
+      "tasks": "2",
+      "purpose": "Adapt shared feedback/queued-decision fixtures while retaining action, consent, acknowledgement and error assertions."
+    },
+    {
+      "path": "frontend/test/checkout-retirement.test.mjs",
+      "status": "modified",
+      "sha256": "78bc9ae8924fdb6f80aa9626f507b75fb657b23b3113f416a713a46bb64cf9c9",
+      "tasks": "2, 6",
+      "purpose": "Supply the new access/feedback adapters and retain existing retirement, owner, recovery and payment assertions."
+    },
+    {
+      "path": "frontend/test/compile.mjs",
+      "status": "modified",
+      "sha256": "d27708a65892b037819a1bbff551ab4ddb24771d6938c4650fb8945f34f1d16d",
+      "tasks": "2",
+      "purpose": "Add explicit shared-provider doubles/materialization while retaining SSR and authentication boundary assertions."
+    },
+    {
+      "path": "frontend/test/events-student-export.test.mjs",
+      "status": "modified",
+      "sha256": "3725e360dc910c68a1a241d0ac5311bedd96431866f6e5014e68cd37f0267bad",
+      "tasks": "2",
+      "purpose": "Adapt shared feedback/queued-decision fixtures while retaining action, consent, acknowledgement and error assertions."
+    },
+    {
+      "path": "frontend/test/feedback-presence-r10.test.mjs",
+      "status": "added",
+      "sha256": "ed101c14b51890c1375f38498b29a86e2b26823f613f97ca62866052b82b80ad",
+      "tasks": "2",
+      "purpose": "Verify same presentation identity/context/form names, queued successors, reopen and synchronous privacy invalidation."
+    },
+    {
+      "path": "frontend/test/gallery-step-motion-r10.test.mjs",
+      "status": "added",
+      "sha256": "d402d92b1cfedad84dabf239e574b6383f95285e4822e8d83d36dbd9f5a7e1ea",
+      "tasks": "3",
+      "purpose": "Verify timed single-image steps, pause/resume, wrapping, resizing and reduced-motion boundaries."
+    },
+    {
+      "path": "frontend/test/page-section-catalog.test.mjs",
+      "status": "modified",
+      "sha256": "70b5ee43ce7b8569539119eeaa4625c9d999f4c91de92f0f3e396d88dca24261",
+      "tasks": "2, 6",
+      "purpose": "Supply the new access/feedback adapters and retain existing retirement, owner, recovery and payment assertions."
+    },
+    {
+      "path": "frontend/test/paid-access-indicator-r10.test.mjs",
+      "status": "added",
+      "sha256": "45ce5f4c090051dd70ebe23e4cbacba198b22767bba8815e3eaa4fcf11e5686c",
+      "tasks": "4",
+      "purpose": "Test UTC/API parity, honest states, calendar/date/Renew rendering and narrow desktop/mobile placement."
+    },
+    {
+      "path": "frontend/test/paypal-recurring-ui.test.mjs",
+      "status": "modified",
+      "sha256": "c217972503d64273a559d3e08bf8a7312abc83b33dd606753244b6eff7c9dd05",
+      "tasks": "2, 6",
+      "purpose": "Supply the new access/feedback adapters and retain existing retirement, owner, recovery and payment assertions."
+    },
+    {
+      "path": "frontend/test/public-summary-ssr-r10.test.mjs",
+      "status": "modified",
+      "sha256": "aae3c171a441dde7b0873d13ab50cb9375d9d905474c0d9754de0b0383de033c",
+      "tasks": "2, P",
+      "purpose": "Prove late hydrated first mounts retain known/empty SSR data on failure and never replay it across route/account/CMS boundaries."
+    },
+    {
+      "path": "frontend/test/renewal-controls.test.mjs",
+      "status": "modified",
+      "sha256": "3e9b12e69de6b2cb6354181f6e34f488025b4d578df3a1133d44922c913e8277",
+      "tasks": "2, 4",
+      "purpose": "Supply circle/shared-feedback adapters while retaining provider action and owned renewal assertions."
+    },
+    {
+      "path": "frontend/test/review-moderation.test.mjs",
+      "status": "modified",
+      "sha256": "ce6ac2e67dbeb290ee48e9dc92c6c61c0e652a3564858601252b878679862a11",
+      "tasks": "2",
+      "purpose": "Adapt shared feedback/queued-decision fixtures while retaining action, consent, acknowledgement and error assertions."
+    },
+    {
+      "path": "frontend/test/review-player-tiktok.test.mjs",
+      "status": "modified",
+      "sha256": "6e4e2ac34362828afa436a6098aa5d0a948e824469224e7873c2d37fa8fde31e",
+      "tasks": "1",
+      "purpose": "Verify visible autoplay startup, ready-frame stability, unready-frame detachment, stale readiness rejection and reduced-motion behavior across all three providers."
+    },
+    {
+      "path": "frontend/test/section-catalog.test.mjs",
+      "status": "modified",
+      "sha256": "9bc983c42838ec9adc9fdb7af9900030e020d184068296a6168a000230906c46",
+      "tasks": "2, 6",
+      "purpose": "Supply the new access/feedback adapters and retain existing retirement, owner, recovery and payment assertions."
+    },
+    {
+      "path": "frontend/test/simple-regional-pricing.test.mjs",
+      "status": "modified",
+      "sha256": "eb3b163b791f8823fd0b8c040c67745e055791dd3039b1f9118148b2e499e18b",
+      "tasks": "2",
+      "purpose": "Update explicit shared-feedback test adapters; retain export, regional price, auth and admin catalog assertions."
+    },
+    {
+      "path": "frontend/test/task6-catalog-access.test.mjs",
+      "status": "added",
+      "sha256": "a71362b55d3b0e2e96b233b81b06342195412d8409533d137c5c48fd05924629",
+      "tasks": "6",
+      "purpose": "Exercise real coverage hooks/cards/detail/checkout callbacks, exact expiry and stale-owner responses."
+    },
+    {
+      "path": "frontend/test/themed-cms-guards-r10.test.mjs",
+      "status": "added",
+      "sha256": "0f8b44953084ac87e0ab12fec74a6229a1a4504669d4fc0f5e0ed80906c514ae",
+      "tasks": "2",
+      "purpose": "Test actual queue/modal accessibility and fail-closed stale-scope/draft/busy/abort/duplicate decisions."
+    },
+    {
+      "path": "frontend/test/themed-feedback-r10.test.mjs",
+      "status": "added",
+      "sha256": "f3f0dac91af726748b7bd785fb4002a216c78974fa100bca9a612f8410a46b96",
+      "tasks": "2",
+      "purpose": "Test scoped decisions, safe initial focus, same-node inert exits, immediate cleanup and account/route privacy fences."
+    },
+    {
+      "path": "frontend/test/upload-recovery-r6.test.mjs",
+      "status": "modified",
+      "sha256": "4ade43b91d1c88c7897825e168a1455459ee73afee1b3f57dc50eb42f00b7d9c",
+      "tasks": "2",
+      "purpose": "Adapt shared feedback/queued-decision fixtures while retaining action, consent, acknowledgement and error assertions."
+    },
+    {
+      "path": "frontend/test/v60-10-reliability.test.mjs",
+      "status": "modified",
+      "sha256": "d549a3cc8e7494d919ed94485e24ad3ef0a3466a0c9ba7bb7a907975910188b7",
+      "tasks": "2, 6",
+      "purpose": "Supply the new access/feedback adapters and retain existing retirement, owner, recovery and payment assertions."
+    },
+    {
+      "path": "frontend/test/v60-11-1-auth-controls.test.mjs",
+      "status": "modified",
+      "sha256": "4bc93659634d641531f7121f2044242a3630d57b0e1a4846d10fb77866f06949",
+      "tasks": "2",
+      "purpose": "Update explicit shared-feedback test adapters; retain export, regional price, auth and admin catalog assertions."
+    },
+    {
+      "path": "frontend/test/v60-11-auth-hydration.test.mjs",
+      "status": "modified",
+      "sha256": "65c44f0fbee56eb7bb6a43abeb5a88027e651a8c585a3fca6b6f261e26499ac8",
+      "tasks": "2",
+      "purpose": "Add explicit shared-provider doubles/materialization while retaining SSR and authentication boundary assertions."
+    },
+    {
+      "path": "frontend/test/v60-12-fixture-api.test.mjs",
+      "status": "modified",
+      "sha256": "e6a48eb265181a03882ad74036ae89153725b476e9cd3fd08003e1cd0468c460",
+      "tasks": "6",
+      "purpose": "Add HTTP fixture contracts for direct/section/membership/free coverage and unchanged financial reads."
+    },
+    {
+      "path": "frontend/test/v60-12-workflows.test.mjs",
+      "status": "modified",
+      "sha256": "3dfd7af2fba8ff6396b1a63914a6239df1ccb7a0e8b7fa06df4690067f4290c5",
+      "tasks": "2, 6",
+      "purpose": "Supply the new access/feedback adapters and retain existing retirement, owner, recovery and payment assertions."
+    },
+    {
+      "path": "frontend/test/v60-14-team.test.mjs",
+      "status": "modified",
+      "sha256": "3f66a7279972fdde531125e868117049406370e108eb9b3e95a7491227df4db8",
+      "tasks": "2",
+      "purpose": "Adapt shared notice/provider fixture materialization while retaining team/admin behavior assertions."
+    },
+    {
+      "path": "frontend/test/v60-16-admin-catalog.test.mjs",
+      "status": "modified",
+      "sha256": "18cba42dc00515359df796fa908c6eed810fd9729f4022e9f34141cb4b3ddec5",
+      "tasks": "2",
+      "purpose": "Update explicit shared-feedback test adapters; retain export, regional price, auth and admin catalog assertions."
+    },
+    {
+      "path": "frontend/test/video-review-visible-r9.test.mjs",
+      "status": "modified",
+      "sha256": "042694c516cd9d5f6e6fb0f5d1009ce1d35fd2921ba02f2fa6b1ffdd37b12256",
+      "tasks": "1, 2",
+      "purpose": "Exercise updated preview/full playback and shared feedback while retaining provider/visibility assertions."
+    },
+    {
+      "path": "frontend/test/video-reviews.test.mjs",
+      "status": "modified",
+      "sha256": "d5899c616f6536755a48f1205602a51efadfb95b16cbbc76066895e6805fcd60",
+      "tasks": "1, 2",
+      "purpose": "Verify 15\u201320-second previews, explicit Vimeo playsinline, full-player controls and shared warning adapters."
+    },
+    {
+      "path": "frontend/ui-tests/cancel-access.spec.ts",
+      "status": "modified",
+      "sha256": "3f32ef8ca25a1e1ab2b43d6274da25f5bda66fd5ff9020de173fecf1c907ac10",
+      "tasks": "2",
+      "purpose": "Verify themed two-step cancellation, explicit safe initial focus and retained financial/confirmation assertions."
+    },
+    {
+      "path": "frontend/ui-tests/logout-free-tablet.spec.ts",
+      "status": "modified",
+      "sha256": "e8645c7f74d02b82169cc56103ef7a909d6d053050c0751a593b8275ad8997ff",
+      "tasks": "6",
+      "purpose": "Add complete empty access arrays to successful-response fixtures; preserve original browser assertions."
+    },
+    {
+      "path": "frontend/ui-tests/page-gallery-r5.spec.ts",
+      "status": "modified",
+      "sha256": "51ec61b76d8b2376f4faea2defce74d76b1f6931ef9ed54db3817f1a2851d182",
+      "tasks": "3",
+      "purpose": "Verify timed gallery behavior and exact responsive photograph decoding while retaining selection/navigation checks."
+    },
+    {
+      "path": "frontend/ui-tests/page-section-catalog.spec.ts",
+      "status": "modified",
+      "sha256": "a9e5ae96998f87ee5642fd0bf86fc0e0a039dc72ec05212dbc6907987debb1f8",
+      "tasks": "6",
+      "purpose": "Add complete empty access arrays to successful-response fixtures; preserve original browser assertions."
+    },
+    {
+      "path": "frontend/ui-tests/paid-access-indicator-r10.spec.ts",
+      "status": "added",
+      "sha256": "dee42a48644e859905b2c51642d9ad1aa02265a3f53496ac212fc81e6e675a23",
+      "tasks": "4",
+      "purpose": "Test UTC/API parity, honest states, calendar/date/Renew rendering and narrow desktop/mobile placement."
+    },
+    {
+      "path": "frontend/ui-tests/payment-errors-r9.spec.ts",
+      "status": "modified",
+      "sha256": "684287977b3e5c15a81262c265cc1c590be6485ec5c82babe95b8507cddb7a1d",
+      "tasks": "2",
+      "purpose": "Target the shared checkout error notice while retaining support-reference, original-key and single-purchase recovery assertions."
+    },
+    {
+      "path": "frontend/ui-tests/sections-answer-navigation.spec.ts",
+      "status": "modified",
+      "sha256": "d6cac38aa8e0d389062c27ff2f6edd0bb5a90ba50628470bfddca9df703bf18c",
+      "tasks": "2, 6",
+      "purpose": "Use complete access fixtures and themed leave-dialog keyboard/Cancel/Escape assertions."
+    },
+    {
+      "path": "frontend/ui-tests/task6-catalog-access-r10.spec.ts",
+      "status": "added",
+      "sha256": "61236cf86ca8a36ec90008a41a2d6816c7aa0455687ce1f97b21d67075a1bbab",
+      "tasks": "6",
+      "purpose": "Four browser cases cover section children, direct learning/duplicate checkout, expiry restoration and foreign-account isolation."
+    },
+    {
+      "path": "frontend/ui-tests/themed-feedback-exit-r10.spec.ts",
+      "status": "added",
+      "sha256": "8da241a3ed7efc3faa71a10045345c6258eb463896f668745c71bdb6b5a147ef",
+      "tasks": "2",
+      "purpose": "Observe real same-node close transitions, immediate single dispatch/focus/scroll release, reduced motion and owner/route changes."
+    },
+    {
+      "path": "frontend/ui-tests/video-reviews.spec.ts",
+      "status": "modified",
+      "sha256": "ae09ba7f77e41f0e62d1c8b0debc47a3e9a28a8b0ab72680a95c1939f1947a32",
+      "tasks": "1, 2",
+      "purpose": "Exercise updated preview/full playback and shared feedback while retaining provider/visibility assertions."
+    },
+    {
+      "path": "scripts/release-baseline.mjs",
+      "status": "modified",
+      "sha256": "d3899c22630cd993eacf140d5cfec4224f8136ee4ea5910052597d7b4e530dcc",
+      "tasks": "1\u20136 metadata",
+      "purpose": "Prepend the explicitly authorized R10 scope description only; retain all inventory/hash/original-asset guard code."
+    },
+    {
+      "path": "scripts/ui-fixture-api.mjs",
+      "status": "modified",
+      "sha256": "8bcb6996bacafd71ca316bc694b360a94980527aba8109a6649e2539d2e50d55",
+      "tasks": "4, 6",
+      "purpose": "Extend synthetic owner-scoped access/billing DTOs; keep fixture settlement and financial history assertions."
+    }
+  ],
+  "note": "File-level scope rationale, not a replacement release baseline or final browser/build acceptance."
+}

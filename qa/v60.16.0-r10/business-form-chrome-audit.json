@@ -1,0 +1,11 @@
+{
+  "archiveEntry": "SINGH-ACADEMY/frontend/components/business/business.css",
+  "businessCssByteIdentical": true,
+  "r9Sha256": "70c27557dbc15fec597ad36478785590cc4bdc602a0329e916e3a0523d1663fd",
+  "currentSha256": "70c27557dbc15fec597ad36478785590cc4bdc602a0329e916e3a0523d1663fd",
+  "productionCorrectionFiles": [
+    "frontend/components/feedback/FeedbackDialog.tsx",
+    "frontend/components/business/ui.tsx",
+    "frontend/components/feedback/feedback.css"
+  ]
+}

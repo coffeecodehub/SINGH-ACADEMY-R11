@@ -1,0 +1,170 @@
+{
+  "methodologyIdentical": true,
+  "measuredRequestsBefore": 1120,
+  "measuredRequestsAfter": 1120,
+  "sourceChange": "backend/src/routes/contentRoutes.js team loader only",
+  "scenarios": [
+    {
+      "name": "small_synthetic_catalog",
+      "teamCount": 13,
+      "endpointResponseBytesIdentical": true,
+      "fixtureDatabaseRemoved": true,
+      "teamPayload": {
+        "beforeDatabaseCacheJsonBytes": 25802,
+        "afterDatabaseCacheJsonBytes": 10865,
+        "reductionPercent": 57.9
+      },
+      "teamLatency": {
+        "cold": {
+          "before": {
+            "samples": 20,
+            "min": 7.23,
+            "p50": 8.343,
+            "p95": 11.009,
+            "max": 13.434,
+            "mean": 8.953
+          },
+          "after": {
+            "samples": 20,
+            "min": 5.429,
+            "p50": 6.811,
+            "p95": 8.442,
+            "max": 9.649,
+            "mean": 6.955
+          },
+          "mongoCommandsBefore": {
+            "samples": 20,
+            "min": 4,
+            "p50": 4,
+            "p95": 4,
+            "max": 4,
+            "mean": 4
+          },
+          "mongoCommandsAfter": {
+            "samples": 20,
+            "min": 4,
+            "p50": 4,
+            "p95": 4,
+            "max": 4,
+            "mean": 4
+          }
+        },
+        "warm": {
+          "before": {
+            "samples": 60,
+            "min": 4.379,
+            "p50": 5.87,
+            "p95": 7.906,
+            "max": 8.961,
+            "mean": 5.942
+          },
+          "after": {
+            "samples": 60,
+            "min": 4.049,
+            "p50": 4.793,
+            "p95": 6.362,
+            "max": 10.831,
+            "mean": 5.109
+          },
+          "mongoCommandsBefore": {
+            "samples": 60,
+            "min": 3,
+            "p50": 3,
+            "p95": 3,
+            "max": 3,
+            "mean": 3
+          },
+          "mongoCommandsAfter": {
+            "samples": 60,
+            "min": 3,
+            "p50": 3,
+            "p95": 3,
+            "max": 3,
+            "mean": 3
+          }
+        }
+      }
+    },
+    {
+      "name": "expanded_synthetic_catalog",
+      "teamCount": 60,
+      "endpointResponseBytesIdentical": true,
+      "fixtureDatabaseRemoved": true,
+      "teamPayload": {
+        "beforeDatabaseCacheJsonBytes": 119191,
+        "afterDatabaseCacheJsonBytes": 50251,
+        "reductionPercent": 57.8
+      },
+      "teamLatency": {
+        "cold": {
+          "before": {
+            "samples": 20,
+            "min": 8.067,
+            "p50": 9.812,
+            "p95": 14.311,
+            "max": 16.869,
+            "mean": 10.51
+          },
+          "after": {
+            "samples": 20,
+            "min": 6.409,
+            "p50": 7.568,
+            "p95": 8.446,
+            "max": 10.153,
+            "mean": 7.654
+          },
+          "mongoCommandsBefore": {
+            "samples": 20,
+            "min": 4,
+            "p50": 4,
+            "p95": 4,
+            "max": 4,
+            "mean": 4
+          },
+          "mongoCommandsAfter": {
+            "samples": 20,
+            "min": 4,
+            "p50": 4,
+            "p95": 4,
+            "max": 4,
+            "mean": 4
+          }
+        },
+        "warm": {
+          "before": {
+            "samples": 60,
+            "min": 4.405,
+            "p50": 5.587,
+            "p95": 8.318,
+            "max": 9.887,
+            "mean": 5.844
+          },
+          "after": {
+            "samples": 60,
+            "min": 4.298,
+            "p50": 5.176,
+            "p95": 7.809,
+            "max": 17.58,
+            "mean": 5.674
+          },
+          "mongoCommandsBefore": {
+            "samples": 60,
+            "min": 3,
+            "p50": 3,
+            "p95": 3,
+            "max": 3,
+            "mean": 3
+          },
+          "mongoCommandsAfter": {
+            "samples": 60,
+            "min": 3,
+            "p50": 3,
+            "p95": 3,
+            "max": 3,
+            "mean": 3
+          }
+        }
+      }
+    }
+  ]
+}

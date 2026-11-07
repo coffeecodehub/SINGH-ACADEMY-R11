@@ -1,0 +1,69 @@
+
+> singh-academy-frontend@60.16.0 build
+> next build
+
+   ▲ Next.js 15.5.29
+   - Environments: .env.local
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully in 3.5s
+   Linting and checking validity of types ...
+   Collecting page data ...
+   Generating static pages (0/2) ...
+ ✓ Generating static pages (2/2)
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                                 Size  First Load JS
+┌ ƒ /                                    6.79 kB         148 kB
+├ ƒ /_not-found                            172 B         104 kB
+├ ƒ /about                               2.41 kB         143 kB
+├ ƒ /academy                               195 B         141 kB
+├ ƒ /admin                                 255 B         125 kB
+├ ƒ /admin/login                         3.26 kB         123 kB
+├ ƒ /api/[...path]                         172 B         104 kB
+├ ƒ /api/app-build                         172 B         104 kB
+├ ƒ /billing                             14.1 kB         151 kB
+├ ƒ /book                                1.11 kB         138 kB
+├ ƒ /certificates                        3.39 kB         141 kB
+├ ƒ /certificates/verify/[token]         1.26 kB         138 kB
+├ ƒ /checkout                            8.64 kB         146 kB
+├ ƒ /checkout/return                     4.24 kB         141 kB
+├ ƒ /connection                          1.31 kB         110 kB
+├ ƒ /contact                             2.44 kB         140 kB
+├ ƒ /courses                               197 B         141 kB
+├ ƒ /courses/[slug]                      4.34 kB         141 kB
+├ ƒ /dashboard                             172 B         104 kB
+├ ƒ /events                              1.79 kB         139 kB
+├ ƒ /faculty                               172 B         104 kB
+├ ƒ /forgot-password                     2.66 kB         123 kB
+├ ƒ /free-resources/[[...retired]]         172 B         104 kB
+├ ƒ /home                                1.86 kB         143 kB
+├ ƒ /learn/[course]                      10.7 kB         148 kB
+├ ƒ /login                               3.62 kB         124 kB
+├ ƒ /my-course                           3.92 kB         141 kB
+├ ƒ /my-courses                            172 B         104 kB
+├ ƒ /pages/[slug]                          837 B         138 kB
+├ ƒ /privacy                               500 B         138 kB
+├ ƒ /register                            4.04 kB         124 kB
+├ ƒ /reset-password                      3.31 kB         123 kB
+├ ƒ /resources/[[...retired]]              172 B         104 kB
+├ ƒ /reviews                             2.24 kB         139 kB
+├ ƒ /robots.txt                            172 B         104 kB
+├ ƒ /sections                              197 B         141 kB
+├ ƒ /sections/[slug]                     4.22 kB         141 kB
+├ ƒ /sitemap.xml                           172 B         104 kB
+├ ƒ /super-admin                           260 B         125 kB
+├ ƒ /super-admin/login                   3.26 kB         123 kB
+├ ƒ /team                                1.69 kB         139 kB
+├ ƒ /terms                                 500 B         138 kB
+├ ƒ /verify-otp                          2.63 kB         119 kB
+└ ƒ /video-reviews                       1.81 kB         139 kB
++ First Load JS shared by all             104 kB
+  ├ chunks/1255-b84741b894bb9354.js      46.6 kB
+  ├ chunks/4bd1b696-f785427dddbba9fb.js  54.2 kB
+  └ other shared chunks (total)          3.04 kB
+
+
+ƒ  (Dynamic)  server-rendered on demand
+

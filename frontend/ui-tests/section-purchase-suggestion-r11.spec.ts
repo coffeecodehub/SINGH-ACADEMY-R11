@@ -1,0 +1,22 @@
+import {test,expect,type BrowserContext,type APIRequestContext} from '@playwright/test';
+const origin='http://127.0.0.1:3108',api='http://127.0.0.1:5109';
+async function control(request:APIRequestContext,path:string,body?:object){const options={headers:{'x-sa-ui-fixture':'local-synthetic-tests-only'}};const r=body?await request.post(api+'/__fixture/'+path,{...options,data:body}):await request.get(api+'/__fixture/'+path,options);expect(r.ok()).toBe(true);return r.json();}
+async function signIn(context:BrowserContext){const r=await context.request.post(origin+'/api/auth/login',{headers:{'X-SA-Portal':'student','X-SA-CSRF':'1'},data:{email:'learner@example.invalid',password:'TestPassword123!'}});expect(r.ok()).toBe(true);}
+test.beforeEach(async({context,request})=>{await control(request,'reset',{});await signIn(context);await context.route('**/*',route=>new URL(route.request().url()).origin===origin?route.continue():route.abort());});
+test('course checkout suggests its whole section with current count/price, preserving course option and using section flow',async({page,request})=>{
+ await page.goto('/checkout?course=section-course-demo');
+ const card=page.getByRole('complementary',{name:'Full section purchase',exact:true});await expect(card).toBeVisible();await expect(card.getByRole('heading',{name:'Published Learning Section',exact:true})).toBeVisible();await expect(card.getByText('1 course included',{exact:true})).toBeVisible();await expect(card.getByText('$299',{exact:true})).toBeVisible();
+ await expect(page.locator('.planChoice button.selected')).toHaveText('Individual courseYour selected course');await expect(page.locator('.orderSummary')).toContainText('Section Learning Test');await expect(page.locator('.orderSummary')).toContainText('$149');
+ expect((await control(request,'state')).orders).toHaveLength(0);
+ await card.getByRole('button',{name:'Buy Full Section',exact:true}).click();await expect(page).toHaveURL('/checkout?section=academy-section&option=annual');await expect(page.locator('.orderSummary')).toContainText('Published Learning Section');await expect(page.locator('.orderSummary')).toContainText('$299');await expect(page.getByRole('button',{name:'Buy Full Section',exact:true})).toHaveCount(0);expect((await control(request,'state')).orders).toHaveLength(0);
+});
+test('unrelated standalone course and section checkout show no extra suggestion',async({page})=>{
+ for(const url of ['/checkout?course=paid-demo','/checkout?section=academy-section']){await page.goto(url);await expect(page.locator('.orderSummary')).toBeVisible();await expect(page.getByRole('complementary',{name:'Full section purchase',exact:true})).toHaveCount(0);}
+});
+test('active whole-section access hides purchase suggestion and original checkout buttons',async({page,context,request})=>{
+ const made=await context.request.post(origin+'/api/payments/checkout',{headers:{'X-SA-Portal':'student','X-SA-CSRF':'1','Idempotency-Key':'section-suggestion-paid-1234567890'},data:{kind:'section',product:'academy-section',optionKey:'annual',provider:'stripe',autoRenew:false,termsAccepted:true}});expect(made.ok()).toBe(true);const {order}=await made.json();await control(request,'settle',{id:order._id});const before=await control(request,'state');
+ await page.goto('/checkout?course=section-course-demo');await expect(page.getByRole('heading',{name:'Your access is active.',exact:true})).toBeVisible();await expect(page.getByRole('button',{name:'Buy Full Section',exact:true})).toHaveCount(0);await expect(page.locator('button.paymentMethod')).toHaveCount(0);const after=await control(request,'state');for(const field of ['orders','invoices','payments','sectionTerms'])expect(after[field]).toEqual(before[field]);
+});
+test('optional section lookup failure preserves individual purchase and creates no order',async({page,context,request})=>{
+ await context.route('**/api/sections/academy-section',route=>route.fulfill({status:503,contentType:'application/json',body:JSON.stringify({success:false,message:'Controlled section outage'})}));await page.goto('/checkout?course=section-course-demo');await expect(page.locator('.orderSummary')).toContainText('$149');await expect(page.getByRole('button',{name:'Buy Full Section',exact:true})).toHaveCount(0);await expect(page.locator('button.paymentMethod.stripe')).toBeEnabled();expect((await control(request,'state')).orders).toHaveLength(0);
+});

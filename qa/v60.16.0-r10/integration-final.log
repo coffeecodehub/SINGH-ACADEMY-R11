@@ -1,0 +1,511 @@
+TAP version 13
+# Subtest: catalog access, course entry and fresh checkout share owned active grants
+    # Subtest: lightweight snapshot is owned, private, price-free and excludes expired or scheduled terms
+    ok 1 - lightweight snapshot is owned, private, price-free and excludes expired or scheduled terms
+      ---
+      duration_ms: 63.288736
+      type: 'test'
+      ...
+    # Subtest: course entry includes the parent section and all its published children without enrollment writes
+    ok 2 - course entry includes the parent section and all its published children without enrollment writes
+      ---
+      duration_ms: 546.298744
+      type: 'test'
+      ...
+    # Subtest: fresh purchases covered directly, by a section, or by membership fail before coupon claims or payment writes
+    ok 3 - fresh purchases covered directly, by a section, or by membership fail before coupon claims or payment writes
+      ---
+      duration_ms: 1207.284981
+      type: 'test'
+      ...
+    # Subtest: expiry uses an exact half-open boundary and independent refund evidence stays intact
+    ok 4 - expiry uses an exact half-open boundary and independent refund evidence stays intact
+      ---
+      duration_ms: 232.077614
+      type: 'test'
+      ...
+    # Subtest: live policy excludes sandbox evidence and grants never mix payment environments
+    ok 5 - live policy excludes sandbox evidence and grants never mix payment environments
+      ---
+      duration_ms: 61.653616
+      type: 'test'
+      ...
+    # Subtest: expired access can be purchased again while replay returns the same settled order and historical grants stay unchanged
+    ok 6 - expired access can be purchased again while replay returns the same settled order and historical grants stay unchanged
+      ---
+      duration_ms: 349.802707
+      type: 'test'
+      ...
+    1..6
+ok 1 - catalog access, course entry and fresh checkout share owned active grants
+  ---
+  duration_ms: 6651.177437
+  type: 'test'
+  ...
+# Subtest: paid purchase renewal setup defers the first real charge and never grants from a zero trial invoice
+    # Subtest: paid records expose owned actionable setup cards at the current account price
+    ok 1 - paid records expose owned actionable setup cards at the current account price
+      ---
+      duration_ms: 112.365543
+      type: 'test'
+      ...
+    # Subtest: the charge date unions future section and Academy contributions without bridging unpaid gaps
+    ok 2 - the charge date unions future section and Academy contributions without bridging unpaid gaps
+      ---
+      duration_ms: 110.616149
+      type: 'test'
+      ...
+    # Subtest: changed prepaid coverage invalidates the consenting quote before any provider mutation
+    ok 3 - changed prepaid coverage invalidates the consenting quote before any provider mutation
+      ---
+      duration_ms: 121.437044
+      type: 'test'
+      ...
+    # Subtest: setup forbids coupons, missing consent and unconfigured providers
+    ok 4 - setup forbids coupons, missing consent and unconfigured providers
+      ---
+      duration_ms: 166.43383
+      type: 'test'
+      ...
+    # Subtest: an unresolved normal checkout must be safely closed before deferred setup can start
+    ok 5 - an unresolved normal checkout must be safely closed before deferred setup can start
+      ---
+      duration_ms: 268.792018
+      type: 'test'
+      ...
+    # Subtest: new consented Checkout saves a payment method and schedules the provider first charge after all paid coverage
+    ok 6 - new consented Checkout saves a payment method and schedules the provider first charge after all paid coverage
+      ---
+      duration_ms: 317.935835
+      type: 'test'
+      ...
+    # Subtest: approved zero trial invoice records a scheduled agreement and no fake payment or access grant
+    ok 7 - approved zero trial invoice records a scheduled agreement and no fake payment or access grant
+      ---
+      duration_ms: 248.552995
+      type: 'test'
+      ...
+    # Subtest: zero invoice and browser replays remain idempotent and do not manufacture receipts
+    ok 8 - zero invoice and browser replays remain idempotent and do not manufacture receipts
+      ---
+      duration_ms: 156.289547
+      type: 'test'
+      ...
+    # Subtest: trialing agreements have working provider-confirmed disable and consented enable controls
+    ok 9 - trialing agreements have working provider-confirmed disable and consented enable controls
+      ---
+      duration_ms: 275.919791
+      type: 'test'
+      ...
+    # Subtest: 48-hour and 730-day provider limits are explicit and never become immediate setup charges
+    ok 10 - 48-hour and 730-day provider limits are explicit and never become immediate setup charges
+      ---
+      duration_ms: 232.910855
+      type: 'test'
+      ...
+    # Subtest: exact 48-hour/730-day limits use the saved paid end without rounding into an overlap
+    ok 11 - exact 48-hour/730-day limits use the saved paid end without rounding into an overlap
+      ---
+      duration_ms: 26.038069
+      type: 'test'
+      ...
+    # Subtest: an early collected invoice or an unrelated zero invoice never grants the future term
+    ok 12 - an early collected invoice or an unrelated zero invoice never grants the future term
+      ---
+      duration_ms: 44.576322
+      type: 'test'
+      ...
+    # Subtest: the first actual settled future invoice alone creates its exact paid term
+    ok 13 - the first actual settled future invoice alone creates its exact paid term
+      ---
+      duration_ms: 225.857855
+      type: 'test'
+      ...
+    # Subtest: expired paid purchases link to a normal priced checkout and owner isolation remains enforced
+    ok 14 - expired paid purchases link to a normal priced checkout and owner isolation remains enforced
+      ---
+      duration_ms: 100.604426
+      type: 'test'
+      ...
+    1..14
+ok 2 - paid purchase renewal setup defers the first real charge and never grants from a zero trial invoice
+  ---
+  duration_ms: 6054.057223
+  type: 'test'
+  ...
+# Subtest: owned billing DTOs display fulfilled invoice periods without modifying financial records
+ok 3 - owned billing DTOs display fulfilled invoice periods without modifying financial records
+  ---
+  duration_ms: 618.978628
+  type: 'test'
+  ...
+# Subtest: PayPal recurring course/section purchases, deferred setup and confirmed renewal controls
+    # Subtest: country prices and PayPal 1–12 month recurring capability are authoritative
+    ok 1 - country prices and PayPal 1–12 month recurring capability are authoritative
+      ---
+      duration_ms: 92.684143
+      type: 'test'
+      ...
+    # Subtest: different request keys cannot create duplicate PayPal subscriptions or competing Stripe billing
+    ok 2 - different request keys cannot create duplicate PayPal subscriptions or competing Stripe billing
+      ---
+      duration_ms: 287.368149
+      type: 'test'
+      ...
+    # Subtest: approval and ACTIVE without collection never create financial records or access
+    ok 3 - approval and ACTIVE without collection never create financial records or access
+      ---
+      duration_ms: 96.773043
+      type: 'test'
+      ...
+    # Subtest: a verified first paid sale grants only its discounted provider period once
+    ok 4 - a verified first paid sale grants only its discounted provider period once
+      ---
+      duration_ms: 126.51467
+      type: 'test'
+      ...
+    # Subtest: renewals use the undiscounted price and exact current calendar cycle
+    ok 5 - renewals use the undiscounted price and exact current calendar cycle
+      ---
+      duration_ms: 65.185464
+      type: 'test'
+      ...
+    # Subtest: plan changes, arrears and unrecorded historical sales do not create guessed grants
+    ok 6 - plan changes, arrears and unrecorded historical sales do not create guessed grants
+      ---
+      duration_ms: 46.436398
+      type: 'test'
+      ...
+    # Subtest: owner controls suspend immediately, preserve paid grants and safely reactivate only an unchanged future schedule
+    ok 7 - owner controls suspend immediately, preserve paid grants and safely reactivate only an unchanged future schedule
+      ---
+      duration_ms: 270.798555
+      type: 'test'
+      ...
+    # Subtest: deferred PayPal setup approves a future start without a fake charge, invoice, or new section grant
+    ok 8 - deferred PayPal setup approves a future start without a fake charge, invoice, or new section grant
+      ---
+      duration_ms: 222.484429
+      type: 'test'
+      ...
+    # Subtest: a deferred setup grants its new paid section period only after the future collection
+    ok 9 - a deferred setup grants its new paid section period only after the future collection
+      ---
+      duration_ms: 82.521569
+      type: 'test'
+      ...
+# {"event":"api_error","requestId":"0eaa7f6a-98d0-4cab-8e8d-ad3cde1cd425","type":"Error","code":"PAYMENT_PROVIDER_UNAVAILABLE","paymentProvider":"paypal","providerStatus":503,"providerCode":"SYNTHETIC_LOST_CREATION_RESPONSE"}
+# {"event":"http","requestId":"0eaa7f6a-98d0-4cab-8e8d-ad3cde1cd425","method":"POST","route":"/checkout","status":503,"durationMs":48}
+    # Subtest: unapproved subscription release retains its key and never creates a competing purchase
+    ok 10 - unapproved subscription release retains its key and never creates a competing purchase
+      ---
+      duration_ms: 299.801734
+      type: 'test'
+      ...
+    # Subtest: explicit refunds are ignored while a full involuntary reversal credits only its linked invoice once
+    ok 11 - explicit refunds are ignored while a full involuntary reversal credits only its linked invoice once
+      ---
+      duration_ms: 65.086046
+      type: 'test'
+      ...
+# {"event":"api_error","requestId":"ea13c13c-98df-48e9-97b8-4c10d6d94a2a","type":"Error","code":"PAYMENT_PROVIDER_UNAVAILABLE","paymentProvider":"paypal","providerStatus":503,"providerCode":"SYNTHETIC_READ_OUTAGE"}
+# {"event":"http","requestId":"ea13c13c-98df-48e9-97b8-4c10d6d94a2a","method":"POST","route":"/mine/agreements/:id/end","status":503,"durationMs":48}
+    # Subtest: ending a disabled expired PayPal agreement is serialized, retryable and frees only its billing key
+    ok 12 - ending a disabled expired PayPal agreement is serialized, retryable and frees only its billing key
+      ---
+      duration_ms: 229.619186
+      type: 'test'
+      ...
+    # Subtest: ending first records a collected sale whose webhook was delayed, before freeing its billing key
+    ok 13 - ending first records a collected sale whose webhook was delayed, before freeing its billing key
+      ---
+      duration_ms: 376.565463
+      type: 'test'
+      ...
+# {"event":"api_error","requestId":"4da5fc40-2e11-4d01-88f6-2b441ce8ed3c","type":"Error"}
+# {"event":"http","requestId":"4da5fc40-2e11-4d01-88f6-2b441ce8ed3c","method":"POST","route":"/paypal","status":503,"durationMs":14}
+# {"event":"api_error","requestId":"3c2bded9-8261-48d0-84a1-b990c00c2d68","type":"Error"}
+# {"event":"http","requestId":"3c2bded9-8261-48d0-84a1-b990c00c2d68","method":"POST","route":"/mine/agreements/:id/cancel","status":503,"durationMs":39}
+# {"event":"api_error","requestId":"ef8032ca-32b1-4cc9-b8ad-c4748dfad631","type":"Error"}
+# {"event":"http","requestId":"ef8032ca-32b1-4cc9-b8ad-c4748dfad631","method":"POST","route":"/paypal","status":503,"durationMs":15}
+# {"event":"api_error","requestId":"0ede58e1-e618-4344-8d8f-8da6255eba6e","type":"Error"}
+# {"event":"http","requestId":"0ede58e1-e618-4344-8d8f-8da6255eba6e","method":"POST","route":"/mine/agreements/:id/cancel","status":503,"durationMs":33}
+# {"event":"api_error","requestId":"22316843-7f49-42b9-b4f7-039da12579eb","type":"Error"}
+# {"event":"http","requestId":"22316843-7f49-42b9-b4f7-039da12579eb","method":"POST","route":"/paypal","status":503,"durationMs":22}
+# {"event":"api_error","requestId":"a86725a6-7076-4d2f-8a05-9a4d2ffcaa29","type":"Error"}
+# {"event":"http","requestId":"a86725a6-7076-4d2f-8a05-9a4d2ffcaa29","method":"POST","route":"/mine/agreements/:id/cancel","status":503,"durationMs":49}
+# {"event":"api_error","requestId":"89d76d08-bcb4-4be2-9975-40d51877c938","type":"Error"}
+# {"event":"http","requestId":"89d76d08-bcb4-4be2-9975-40d51877c938","method":"POST","route":"/paypal","status":503,"durationMs":15}
+# {"event":"api_error","requestId":"7c836021-9db8-4bfb-aa46-43a3ff066b52","type":"Error"}
+# {"event":"http","requestId":"7c836021-9db8-4bfb-aa46-43a3ff066b52","method":"POST","route":"/mine/agreements/:id/cancel","status":503,"durationMs":36}
+    # Subtest: terminal provider status with pending or ambiguous collections retains the original billing key
+    ok 14 - terminal provider status with pending or ambiguous collections retains the original billing key
+      ---
+      duration_ms: 844.223437
+      type: 'test'
+      ...
+    1..14
+ok 4 - PayPal recurring course/section purchases, deferred setup and confirmed renewal controls
+  ---
+  duration_ms: 5969.94078
+  type: 'test'
+  ...
+# Subtest: country-authoritative catalog, scoped sections, single-use coupons and atomic course seeds
+    # Subtest: the same raw cache returns country-specific prices without leaking maps or changing public metadata
+    ok 1 - the same raw cache returns country-specific prices without leaking maps or changing public metadata
+      ---
+      duration_ms: 146.175517
+      type: 'test'
+      ...
+    # Subtest: published landing sections refresh after admin writes and exclude draft or archived sections
+    ok 2 - published landing sections refresh after admin writes and exclude draft or archived sections
+      ---
+      duration_ms: 152.773519
+      type: 'test'
+      ...
+    # Subtest: section covers preserve original HD bytes and are public only when referenced by a published section
+    ok 3 - section covers preserve original HD bytes and are public only when referenced by a published section
+      ---
+      duration_ms: 287.925815
+      type: 'test'
+      ...
+    # Subtest: both admin roles manage sections/coupons; students cannot and section slugs stay locked
+    ok 4 - both admin roles manage sections/coupons; students cannot and section slugs stay locked
+      ---
+      duration_ms: 132.966544
+      type: 'test'
+      ...
+    # Subtest: quote trusts stored country/product totals and ignores browser amounts, dates and country
+    ok 5 - quote trusts stored country/product totals and ignores browser amounts, dates and country
+      ---
+      duration_ms: 68.585669
+      type: 'test'
+      ...
+    # Subtest: two concurrent real transactions cannot reserve or consume the same coupon for different orders
+    ok 6 - two concurrent real transactions cannot reserve or consume the same coupon for different orders
+      ---
+      duration_ms: 67.473161
+      type: 'test'
+      ...
+    # Subtest: only the owning safely closed order can release an unconsumed reservation
+    ok 7 - only the owning safely closed order can release an unconsumed reservation
+      ---
+      duration_ms: 25.27616
+      type: 'test'
+      ...
+    # Subtest: owned section purchase grants only that section, includes later courses and observes exact time/environment boundaries
+    ok 8 - owned section purchase grants only that section, includes later courses and observes exact time/environment boundaries
+      ---
+      duration_ms: 335.489431
+      type: 'test'
+      ...
+    # Subtest: full refund immediately revokes section access while individual and global membership grants remain independent
+    ok 9 - full refund immediately revokes section access while individual and global membership grants remain independent
+      ---
+      duration_ms: 114.542125
+      type: 'test'
+      ...
+    # Subtest: course seeds commit all authored lessons, preserve edits and explicitly repair missing legacy rows
+    ok 10 - course seeds commit all authored lessons, preserve edits and explicitly repair missing legacy rows
+      ---
+      duration_ms: 790.67578
+      type: 'test'
+      ...
+    # Subtest: failure after an actual lesson insert rolls back its entire seed course
+    ok 11 - failure after an actual lesson insert rolls back its entire seed course
+      ---
+      duration_ms: 13.363154
+      type: 'test'
+      ...
+    1..11
+ok 5 - country-authoritative catalog, scoped sections, single-use coupons and atomic course seeds
+  ---
+  duration_ms: 6259.393512
+  type: 'test'
+  ...
+# Subtest: regional quotes, single-use discounts and provider-backed recurring periods
+    # Subtest: country and price are server-owned and country maps never leak
+    ok 1 - country and price are server-owned and country maps never leak
+      ---
+      duration_ms: 34.351686
+      type: 'test'
+      ...
+    # Subtest: full coupon atomically grants only its section with no fake payment
+    ok 2 - full coupon atomically grants only its section with no fake payment
+      ---
+      duration_ms: 107.801601
+      type: 'test'
+      ...
+    # Subtest: refunding an older section invoice preserves only the later independent interval
+    ok 3 - refunding an older section invoice preserves only the later independent interval
+      ---
+      duration_ms: 107.33876
+      type: 'test'
+      ...
+    # Subtest: provider connection state and unsupported recurring intervals are explicit
+    ok 4 - provider connection state and unsupported recurring intervals are explicit
+      ---
+      duration_ms: 26.652438
+      type: 'test'
+      ...
+    # Subtest: recurring checkout persists accepted snapshot and first-term discount
+    ok 5 - recurring checkout persists accepted snapshot and first-term discount
+      ---
+      duration_ms: 132.167155
+      type: 'test'
+      ...
+    # Subtest: first settled subscription invoice grants exact provider period once
+    ok 6 - first settled subscription invoice grants exact provider period once
+      ---
+      duration_ms: 78.162416
+      type: 'test'
+      ...
+    # Subtest: signed renewal invoices are undiscounted and webhook replay is idempotent
+    ok 7 - signed renewal invoices are undiscounted and webhook replay is idempotent
+      ---
+      duration_ms: 126.383972
+      type: 'test'
+      ...
+# {"event":"api_error","requestId":"c094b0e6-942b-463a-bf7a-018fe3ab23df","type":"Error"}
+# {"event":"http","requestId":"c094b0e6-942b-463a-bf7a-018fe3ab23df","method":"POST","route":"/stripe","status":503,"durationMs":9}
+    # Subtest: unpaid or mismatched renewal never grants access
+    ok 8 - unpaid or mismatched renewal never grants access
+      ---
+      duration_ms: 64.429254
+      type: 'test'
+      ...
+    # Subtest: a second active recurring agreement for the same product is refused
+    ok 9 - a second active recurring agreement for the same product is refused
+      ---
+      duration_ms: 53.038317
+      type: 'test'
+      ...
+    # Subtest: renewal cancellation is owner-scoped, provider-confirmed, replay-safe and preserves paid access
+    ok 10 - renewal cancellation is owner-scoped, provider-confirmed, replay-safe and preserves paid access
+      ---
+      duration_ms: 105.972934
+      type: 'test'
+      ...
+    1..10
+ok 6 - regional quotes, single-use discounts and provider-backed recurring periods
+  ---
+  duration_ms: 4047.601051
+  type: 'test'
+  ...
+# Subtest: owned renewal controls require consent and provider confirmation without changing paid access
+    # Subtest: owner sees a visible enabled state while foreign actions cannot contact the provider
+    ok 1 - owner sees a visible enabled state while foreign actions cannot contact the provider
+      ---
+      duration_ms: 58.722022
+      type: 'test'
+      ...
+    # Subtest: disable is confirmed remotely and leaves independent paid access and financial records unchanged
+    ok 2 - disable is confirmed remotely and leaves independent paid access and financial records unchanged
+      ---
+      duration_ms: 80.206597
+      type: 'test'
+      ...
+    # Subtest: enable requires explicit consent bound to the undiscounted recurring price
+    ok 3 - enable requires explicit consent bound to the undiscounted recurring price
+      ---
+      duration_ms: 109.057164
+      type: 'test'
+      ...
+    # Subtest: disable-enable-disable uses a fresh provider key for each actual toggle
+    ok 4 - disable-enable-disable uses a fresh provider key for each actual toggle
+      ---
+      duration_ms: 27.808479
+      type: 'test'
+      ...
+    # Subtest: a provider price change or an unconfirmed paid period cannot be enabled
+    ok 5 - a provider price change or an unconfirmed paid period cannot be enabled
+      ---
+      duration_ms: 55.800926
+      type: 'test'
+      ...
+# {"event":"api_error","requestId":"91cfa1d3-729e-4cf0-ab2d-25ce9307717c","type":"Error","code":"PAYMENT_PROVIDER_UNAVAILABLE","paymentProvider":"stripe","providerStatus":503,"providerType":"StripeAPIError"}
+# {"event":"http","requestId":"91cfa1d3-729e-4cf0-ab2d-25ce9307717c","method":"POST","route":"/mine/agreements/:id/resume","status":503,"durationMs":524}
+    # Subtest: uncertain provider changes retain a retry key and block opposing changes
+    ok 6 - uncertain provider changes retain a retry key and block opposing changes
+      ---
+      duration_ms: 564.6112
+      type: 'test'
+      ...
+    # Subtest: simultaneous opposite changes cannot override an unconfirmed operation
+    ok 7 - simultaneous opposite changes cannot override an unconfirmed operation
+      ---
+      duration_ms: 53.448248
+      type: 'test'
+      ...
+    # Subtest: ended agreements and one-time purchases require a new consented checkout
+    ok 8 - ended agreements and one-time purchases require a new consented checkout
+      ---
+      duration_ms: 55.202545
+      type: 'test'
+      ...
+    # Subtest: retired blanket membership sales cannot create quotes/orders, while legacy paid order recovery remains owned
+    ok 9 - retired blanket membership sales cannot create quotes/orders, while legacy paid order recovery remains owned
+      ---
+      duration_ms: 117.444357
+      type: 'test'
+      ...
+    1..9
+ok 7 - owned renewal controls require consent and provider confirmation without changing paid access
+  ---
+  duration_ms: 3461.504096
+  type: 'test'
+  ...
+# {"event":"review_upload_complete","fileId":"6aee99ad7d44b0777e3c50a8","bytes":11949,"durationMs":152}
+# Subtest: R9 actual FFmpeg/Mongo/HTTP: scanned upload, faststart preview, posters, authorization and failure cleanup
+    # Subtest: original upload returns 201 then background processing preserves full SHA and stores small independent media
+    ok 1 - original upload returns 201 then background processing preserves full SHA and stores small independent media
+      ---
+      duration_ms: 891.626437
+      type: 'test'
+      ...
+    # Subtest: unpublished original and both derived requests remain private; raw derivative IDs are never public
+    ok 2 - unpublished original and both derived requests remain private; raw derivative IDs are never public
+      ---
+      duration_ms: 117.52371
+      type: 'test'
+      ...
+    # Subtest: published poster is JPEG; teaser streams correct exact206/HEAD and original download is unchanged
+    ok 3 - published poster is JPEG; teaser streams correct exact206/HEAD and original download is unchanged
+      ---
+      duration_ms: 218.34801
+      type: 'test'
+      ...
+    # Subtest: legacy preview pins original byte ranges while background processing completes; new playback selects its derivative
+    ok 4 - legacy preview pins original byte ranges while background processing completes; new playback selects its derivative
+      ---
+      duration_ms: 1151.575858
+      type: 'test'
+      ...
+    # Subtest: the public list selects ready renditions with one bounded metadata projection and keeps the full original URLs
+    ok 5 - the public list selects ready renditions with one bounded metadata projection and keeps the full original URLs
+      ---
+      duration_ms: 65.869432
+      type: 'test'
+      ...
+# {"event":"review_playback_fallback","fileId":"6aee99af7d44b0777e3c50ef","reason":"processing_failed"}
+    # Subtest: failure after derived files were uploaded removes every child metadata/chunk while retaining scanned original
+    ok 6 - failure after derived files were uploaded removes every child metadata/chunk while retaining scanned original
+      ---
+      duration_ms: 740.354761
+      type: 'test'
+      ...
+    1..6
+ok 8 - R9 actual FFmpeg/Mongo/HTTP: scanned upload, faststart preview, posters, authorization and failure cleanup
+  ---
+  duration_ms: 3558.095708
+  type: 'test'
+  ...
+1..8
+# tests 78
+# suites 0
+# pass 78
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 37709.415588

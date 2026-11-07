@@ -1,0 +1,118 @@
+TAP version 13
+# Subtest: Payment verification-source enum remains production-only and the fixture uses provider_api
+ok 1 - Payment verification-source enum remains production-only and the fixture uses provider_api
+  ---
+  duration_ms: 1.850879
+  type: 'test'
+  ...
+# Subtest: stripe/test/course: exact synthetic evidence validates against actual CheckoutOrder and Payment models
+ok 2 - stripe/test/course: exact synthetic evidence validates against actual CheckoutOrder and Payment models
+  ---
+  duration_ms: 10.051916
+  type: 'test'
+  ...
+# Subtest: stripe/test/membership: exact synthetic evidence validates against actual CheckoutOrder and Payment models
+ok 3 - stripe/test/membership: exact synthetic evidence validates against actual CheckoutOrder and Payment models
+  ---
+  duration_ms: 1.775518
+  type: 'test'
+  ...
+# Subtest: stripe/live/course: exact synthetic evidence validates against actual CheckoutOrder and Payment models
+ok 4 - stripe/live/course: exact synthetic evidence validates against actual CheckoutOrder and Payment models
+  ---
+  duration_ms: 1.180768
+  type: 'test'
+  ...
+# Subtest: stripe/live/membership: exact synthetic evidence validates against actual CheckoutOrder and Payment models
+ok 5 - stripe/live/membership: exact synthetic evidence validates against actual CheckoutOrder and Payment models
+  ---
+  duration_ms: 1.021902
+  type: 'test'
+  ...
+# Subtest: paypal/test/course: exact synthetic evidence validates against actual CheckoutOrder and Payment models
+ok 6 - paypal/test/course: exact synthetic evidence validates against actual CheckoutOrder and Payment models
+  ---
+  duration_ms: 1.060309
+  type: 'test'
+  ...
+# Subtest: paypal/test/membership: exact synthetic evidence validates against actual CheckoutOrder and Payment models
+ok 7 - paypal/test/membership: exact synthetic evidence validates against actual CheckoutOrder and Payment models
+  ---
+  duration_ms: 0.856648
+  type: 'test'
+  ...
+# Subtest: paypal/live/course: exact synthetic evidence validates against actual CheckoutOrder and Payment models
+ok 8 - paypal/live/course: exact synthetic evidence validates against actual CheckoutOrder and Payment models
+  ---
+  duration_ms: 0.801777
+  type: 'test'
+  ...
+# Subtest: paypal/live/membership: exact synthetic evidence validates against actual CheckoutOrder and Payment models
+ok 9 - paypal/live/membership: exact synthetic evidence validates against actual CheckoutOrder and Payment models
+  ---
+  duration_ms: 1.056644
+  type: 'test'
+  ...
+# Subtest: actual Payment validation rejects the reported integration_fixture value; no schema bypass
+ok 10 - actual Payment validation rejects the reported integration_fixture value; no schema bypass
+  ---
+  duration_ms: 1.248287
+  type: 'test'
+  ...
+# Subtest: actual Payment validation still rejects invalid money and missing owner
+ok 11 - actual Payment validation still rejects invalid money and missing owner
+  ---
+  duration_ms: 0.843969
+  type: 'test'
+  ...
+# Subtest: fixture creation and model validation open no database connection
+ok 12 - fixture creation and model validation open no database connection
+  ---
+  duration_ms: 0.112627
+  type: 'test'
+  ...
+# Subtest: actual Express/Stripe verifies a valid signed raw body and rejects tampering/unsigned payloads
+ok 13 - actual Express/Stripe verifies a valid signed raw body and rejects tampering/unsigned payloads
+  ---
+  duration_ms: 130.77239
+  type: 'test'
+  ...
+# Subtest: actual Express PayPal route preserves webhook bytes for postback and rejects failed verification
+ok 14 - actual Express PayPal route preserves webhook bytes for postback and rejects failed verification
+  ---
+  duration_ms: 10.451568
+  type: 'test'
+  ...
+# Subtest: zero charged orders fail model validation; reviewed coupon evidence has a separate provider identity
+ok 15 - zero charged orders fail model validation; reviewed coupon evidence has a separate provider identity
+  ---
+  duration_ms: 12.904908
+  type: 'test'
+  ...
+# Subtest: zero invoices require complete full-discount evidence rather than weakening ordinary invoice validation
+ok 16 - zero invoices require complete full-discount evidence rather than weakening ordinary invoice validation
+  ---
+  duration_ms: 4.997847
+  type: 'test'
+  ...
+# Subtest: automatic renewals have bounded provider-supported intervals and preserve accepted terms
+ok 17 - automatic renewals have bounded provider-supported intervals and preserve accepted terms
+  ---
+  duration_ms: 4.199274
+  type: 'test'
+  ...
+# Subtest: PayPal agreements enforce the documented maximum of twelve monthly intervals
+ok 18 - PayPal agreements enforce the documented maximum of twelve monthly intervals
+  ---
+  duration_ms: 2.193416
+  type: 'test'
+  ...
+1..18
+# tests 18
+# suites 0
+# pass 18
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 342.911787

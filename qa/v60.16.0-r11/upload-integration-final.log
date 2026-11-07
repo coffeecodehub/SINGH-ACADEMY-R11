@@ -1,0 +1,17 @@
+▶ R11 normal explicit local flag restores image, review video and course video uploads without changing scanner keys
+  ✔ image completes with decoded dimensions and unscanned-local provenance (260.163976ms)
+{"event":"review_upload_complete","fileId":"6aeed743f72d465daa368cbe","bytes":18112,"durationMs":18}
+  ✔ review video completes and preserves full original bytes (46.048683ms)
+  ✔ course video completes and preserves full original bytes (21.041574ms)
+  ✔ validation failure resolves promptly and next upload is not stuck (22.048164ms)
+  ✔ public browser or forwarded peer cannot use local flag even through loopback (41.104565ms)
+  ✔ hosted deployment ignores local flag and still refuses unavailable scanner (14.78935ms)
+✔ R11 normal explicit local flag restores image, review video and course video uploads without changing scanner keys (741.997131ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1130.878308

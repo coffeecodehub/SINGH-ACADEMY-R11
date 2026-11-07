@@ -1,0 +1,2132 @@
+{
+  "frames": [
+    {
+      "at": 539.6,
+      "loadingPresent": true,
+      "loadingVisible": true,
+      "loadingText": "Opening your page…",
+      "mainVisible": true,
+      "heroVisible": false,
+      "readyState": "loading",
+      "bodyText": "Opening your page…"
+    },
+    {
+      "at": 572.9,
+      "loadingPresent": true,
+      "loadingVisible": true,
+      "loadingText": "Opening your page…",
+      "mainVisible": true,
+      "heroVisible": false,
+      "readyState": "loading",
+      "bodyText": "Opening your page…"
+    },
+    {
+      "at": 589.6,
+      "loadingPresent": true,
+      "loadingVisible": true,
+      "loadingText": "Opening your page…",
+      "mainVisible": true,
+      "heroVisible": false,
+      "readyState": "loading",
+      "bodyText": "Opening your page…"
+    },
+    {
+      "at": 606.3,
+      "loadingPresent": true,
+      "loadingVisible": true,
+      "loadingText": "Opening your page…",
+      "mainVisible": true,
+      "heroVisible": false,
+      "readyState": "loading",
+      "bodyText": "Opening your page…"
+    },
+    {
+      "at": 622.9,
+      "loadingPresent": true,
+      "loadingVisible": true,
+      "loadingText": "Opening your page…",
+      "mainVisible": true,
+      "heroVisible": false,
+      "readyState": "loading",
+      "bodyText": "Opening your page…"
+    },
+    {
+      "at": 639.6,
+      "loadingPresent": true,
+      "loadingVisible": true,
+      "loadingText": "Opening your page…",
+      "mainVisible": true,
+      "heroVisible": false,
+      "readyState": "loading",
+      "bodyText": "Opening your page…"
+    },
+    {
+      "at": 656.3,
+      "loadingPresent": true,
+      "loadingVisible": true,
+      "loadingText": "Opening your page…",
+      "mainVisible": true,
+      "heroVisible": false,
+      "readyState": "loading",
+      "bodyText": "Opening your page…"
+    },
+    {
+      "at": 672.9,
+      "loadingPresent": true,
+      "loadingVisible": true,
+      "loadingText": "Opening your page…",
+      "mainVisible": true,
+      "heroVisible": false,
+      "readyState": "interactive",
+      "bodyText": "Opening your page…"
+    },
+    {
+      "at": 689.5,
+      "loadingPresent": true,
+      "loadingVisible": true,
+      "loadingText": "Opening your page…",
+      "mainVisible": true,
+      "heroVisible": false,
+      "readyState": "interactive",
+      "bodyText": "Opening your page…"
+    },
+    {
+      "at": 706.2,
+      "loadingPresent": true,
+      "loadingVisible": true,
+      "loadingText": "Opening your page…",
+      "mainVisible": true,
+      "heroVisible": false,
+      "readyState": "interactive",
+      "bodyText": "Opening your page…"
+    },
+    {
+      "at": 722.9,
+      "loadingPresent": true,
+      "loadingVisible": true,
+      "loadingText": "Opening your page…",
+      "mainVisible": true,
+      "heroVisible": false,
+      "readyState": "interactive",
+      "bodyText": "Opening your page…"
+    },
+    {
+      "at": 739.5,
+      "loadingPresent": true,
+      "loadingVisible": true,
+      "loadingText": "Opening your page…",
+      "mainVisible": true,
+      "heroVisible": false,
+      "readyState": "interactive",
+      "bodyText": "Opening your page…"
+    },
+    {
+      "at": 756.2,
+      "loadingPresent": true,
+      "loadingVisible": true,
+      "loadingText": "Opening your page…",
+      "mainVisible": true,
+      "heroVisible": false,
+      "readyState": "interactive",
+      "bodyText": "Opening your page…"
+    },
+    {
+      "at": 772.9,
+      "loadingPresent": true,
+      "loadingVisible": true,
+      "loadingText": "Opening your page…",
+      "mainVisible": true,
+      "heroVisible": false,
+      "readyState": "interactive",
+      "bodyText": "Opening your page…"
+    },
+    {
+      "at": 789.6,
+      "loadingPresent": true,
+      "loadingVisible": true,
+      "loadingText": "Opening your page…",
+      "mainVisible": true,
+      "heroVisible": false,
+      "readyState": "interactive",
+      "bodyText": "Opening your page…"
+    },
+    {
+      "at": 806.2,
+      "loadingPresent": true,
+      "loadingVisible": true,
+      "loadingText": "Opening your page…",
+      "mainVisible": true,
+      "heroVisible": false,
+      "readyState": "interactive",
+      "bodyText": "Opening your page…"
+    },
+    {
+      "at": 822.9,
+      "loadingPresent": true,
+      "loadingVisible": true,
+      "loadingText": "Opening your page…",
+      "mainVisible": true,
+      "heroVisible": false,
+      "readyState": "interactive",
+      "bodyText": "Opening your page…"
+    },
+    {
+      "at": 839.6,
+      "loadingPresent": true,
+      "loadingVisible": true,
+      "loadingText": "Opening your page…",
+      "mainVisible": true,
+      "heroVisible": false,
+      "readyState": "interactive",
+      "bodyText": "Opening your page…"
+    },
+    {
+      "at": 856.3,
+      "loadingPresent": true,
+      "loadingVisible": true,
+      "loadingText": "Opening your page…",
+      "mainVisible": true,
+      "heroVisible": false,
+      "readyState": "interactive",
+      "bodyText": "Opening your page…"
+    },
+    {
+      "at": 872.9,
+      "loadingPresent": true,
+      "loadingVisible": true,
+      "loadingText": "Opening your page…",
+      "mainVisible": true,
+      "heroVisible": false,
+      "readyState": "interactive",
+      "bodyText": "Opening your page…"
+    },
+    {
+      "at": 889.6,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 1106.2,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 1122.9,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 1139.5,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 1156.3,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 1172.9,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 1189.6,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 1206.2,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 1222.9,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 1239.6,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 1256.2,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 1272.9,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 1289.6,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 1306.3,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 1322.9,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 1339.6,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 1356.2,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 1372.9,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 1389.5,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 1406.3,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 1422.9,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 1439.6,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 1456.2,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 1472.9,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 1489.6,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 1506.2,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 1522.9,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 1539.6,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 1556.2,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 1572.9,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 1589.5,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 1606.2,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 1622.9,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 1639.5,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 1656.2,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 1672.9,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 1689.5,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 1706.2,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 1722.9,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 1739.5,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 1756.2,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 1772.8,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 1789.6,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 1806.2,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 1822.9,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 1839.5,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 1856.2,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 1872.8,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 1889.5,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 1906.2,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 1922.9,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 1939.5,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 1956.2,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 2189.6,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 2206.1,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 2222.9,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 2239.5,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 2256.2,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 2272.9,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 2289.5,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 2306.2,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 2322.8,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 2356.2,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 2406.2,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 2422.9,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 2439.5,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 2456.2,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 2472.8,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 2489.5,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 2506.1,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 2522.9,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 2539.5,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 2556.2,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 2572.9,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 2789.5,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 2839.5,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 2856.2,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 2872.8,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 2889.5,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 2906.2,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 2922.9,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 2939.5,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 2956.2,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 2972.9,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 2989.5,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 3006.2,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 3022.8,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 3039.5,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 3056.1,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 3072.8,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 3089.5,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 3106.2,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 3122.8,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 3139.5,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 3156.1,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 3172.8,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 3189.5,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 3206.1,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 3222.8,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 3239.5,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 3256.1,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 3272.8,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 3289.5,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 3306.2,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 3322.8,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 3339.5,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 3356.1,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 3372.8,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 3389.5,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 3406.2,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 3422.8,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 3439.4,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 3456.2,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 3472.8,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 3489.5,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 3506.1,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 3522.8,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 3539.4,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "complete",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 3556.1,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "complete",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 3572.8,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "complete",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 3589.4,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "complete",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 3606.1,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "complete",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 3622.8,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "complete",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 3639.5,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "complete",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 3656.1,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "complete",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 3672.8,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "complete",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 3689.4,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "complete",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 3706.1,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "complete",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 3722.8,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "complete",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 3739.4,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "complete",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 3756.1,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "complete",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 3772.8,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "complete",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 3789.5,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "complete",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 3806.1,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "complete",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 3822.8,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "complete",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 3839.5,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "complete",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 3856.1,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "complete",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 3872.8,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "complete",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 3889.5,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "complete",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 3906.1,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "complete",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 3922.8,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "complete",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 3939.5,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "complete",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 3956.1,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "complete",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 3972.8,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "complete",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 3989.5,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "complete",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 4006.1,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "complete",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 4022.8,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "complete",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 4039.5,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "complete",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 4056.1,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "complete",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 4072.8,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "complete",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 4089.5,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "complete",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 4106.1,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "complete",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 4122.8,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "complete",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 4139.4,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "complete",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 4156.1,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "complete",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 4172.7,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "complete",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 4189.4,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "complete",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 4206.1,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "complete",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 4222.8,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "complete",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 4239.4,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "complete",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 4256.1,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "complete",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 4272.8,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "complete",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 4289.4,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "complete",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 4306.1,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "complete",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 4322.7,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "complete",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 4339.4,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "complete",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 4356.1,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "complete",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 4372.7,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "complete",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 4389.4,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "complete",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 4406.1,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "complete",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 4422.8,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "complete",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 4439.4,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "complete",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 4456.1,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "complete",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    }
+  ],
+  "changes": [
+    {
+      "at": 539.6,
+      "loadingPresent": true,
+      "loadingVisible": true,
+      "loadingText": "Opening your page…",
+      "mainVisible": true,
+      "heroVisible": false,
+      "readyState": "loading",
+      "bodyText": "Opening your page…"
+    },
+    {
+      "at": 672.9,
+      "loadingPresent": true,
+      "loadingVisible": true,
+      "loadingText": "Opening your page…",
+      "mainVisible": true,
+      "heroVisible": false,
+      "readyState": "interactive",
+      "bodyText": "Opening your page…"
+    },
+    {
+      "at": 889.6,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "interactive",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    },
+    {
+      "at": 3539.4,
+      "loadingPresent": false,
+      "loadingVisible": false,
+      "loadingText": null,
+      "mainVisible": true,
+      "heroVisible": true,
+      "readyState": "complete",
+      "bodyText": "SINGH ACADEMY\nSign In\n☰\nEXECUTIVE EDUCATION • GLOBAL PERSPECTIVE\nMaster the art of resolution.\n\nTransform conflict into connection and negotiation into opportunity through practica"
+    }
+  ],
+  "paint": [
+    {
+      "name": "first-paint",
+      "time": 584
+    },
+    {
+      "name": "first-contentful-paint",
+      "time": 584
+    }
+  ],
+  "heroSources": [
+    {
+      "at": 595.6999999880791,
+      "src": "/optimized/9c34a34e240a7dc2-800.webp",
+      "currentSrc": "http://127.0.0.1:3108/optimized/9c34a34e240a7dc2-480.webp",
+      "visible": false,
+      "complete": false,
+      "naturalWidth": 389
+    },
+    {
+      "at": 705.5999999940395,
+      "src": "/optimized/9c34a34e240a7dc2-800.webp",
+      "currentSrc": "http://127.0.0.1:3108/optimized/9c34a34e240a7dc2-480.webp",
+      "visible": false,
+      "complete": true,
+      "naturalWidth": 389
+    },
+    {
+      "at": 1070.5,
+      "src": "/optimized/9c34a34e240a7dc2-800.webp",
+      "currentSrc": "http://127.0.0.1:3108/optimized/9c34a34e240a7dc2-480.webp",
+      "visible": true,
+      "complete": true,
+      "naturalWidth": 389
+    }
+  ],
+  "complete": true,
+  "navigation": {
+    "name": "http://127.0.0.1:3108/",
+    "entryType": "navigation",
+    "startTime": 0,
+    "duration": 3530.199999988079,
+    "navigationId": 2888,
+    "initiatorType": "navigation",
+    "deliveryType": "",
+    "nextHopProtocol": "http/1.1",
+    "renderBlockingStatus": "non-blocking",
+    "contentType": "text/html",
+    "contentEncoding": "gzip",
+    "workerStart": 0,
+    "workerRouterEvaluationStart": 0,
+    "workerCacheLookupStart": 0,
+    "workerMatchedSourceType": "",
+    "workerFinalSourceType": "",
+    "redirectStart": 0,
+    "redirectEnd": 0,
+    "fetchStart": 1,
+    "domainLookupStart": 1,
+    "domainLookupEnd": 1,
+    "connectStart": 1,
+    "secureConnectionStart": 0,
+    "connectEnd": 1,
+    "requestStart": 2.7999999821186066,
+    "responseStart": 51,
+    "firstInterimResponseStart": 0,
+    "finalResponseHeadersStart": 51,
+    "responseEnd": 232.59999999403954,
+    "transferSize": 15104,
+    "encodedBodySize": 14804,
+    "decodedBodySize": 121435,
+    "responseStatus": 200,
+    "serverTiming": [],
+    "unloadEventStart": 0,
+    "unloadEventEnd": 0,
+    "domInteractive": 662.0999999940395,
+    "domContentLoadedEventStart": 662.6999999880791,
+    "domContentLoadedEventEnd": 663.1999999880791,
+    "domComplete": 3530.199999988079,
+    "loadEventStart": 3530.199999988079,
+    "loadEventEnd": 3530.199999988079,
+    "type": "navigate",
+    "redirectCount": 0,
+    "activationStart": 0,
+    "criticalCHRestart": 0,
+    "notRestoredReasons": null,
+    "confidence": {
+      "randomizedTriggerRate": 0.4994798,
+      "value": "high"
+    }
+  },
+  "errors": [],
+  "screenshots": [
+    {
+      "target": 0,
+      "before": 282.69999998807907,
+      "after": 598.0999999940395,
+      "filename": "at-0ms.png"
+    },
+    {
+      "target": 100,
+      "before": 628.1999999880791,
+      "after": 658.8999999761581,
+      "filename": "at-100ms.png"
+    },
+    {
+      "target": 250,
+      "before": 668.5,
+      "after": 704.3999999761581,
+      "filename": "at-250ms.png"
+    },
+    {
+      "target": 500,
+      "before": 715.1999999880791,
+      "after": 750.5999999940395,
+      "filename": "at-500ms.png"
+    },
+    {
+      "target": 1000,
+      "before": 1113.199999988079,
+      "after": 1194.699999988079,
+      "filename": "at-1000ms.png"
+    },
+    {
+      "target": 2000,
+      "before": 2200.199999988079,
+      "after": 2293.199999988079,
+      "filename": "at-2000ms.png"
+    },
+    {
+      "target": 4000,
+      "before": 4002.2999999821186,
+      "after": 4063.5,
+      "filename": "at-4000ms.png"
+    }
+  ],
+  "configuration": {
+    "url": "http://127.0.0.1:3108/",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "latencyMs": 150,
+    "downloadBps": 200000,
+    "uploadBps": 93750,
+    "cpuThrottle": 4,
+    "cacheDisabled": true,
+    "contexts": 1
+  },
+  "summary": {
+    "firstPaint": 584,
+    "loadingVisibleFrames": 20,
+    "loadingVisibleAfterFirstPaintFrames": 18,
+    "firstLoadingAfterPaint": 589.6,
+    "lastLoadingAfterPaint": 872.9,
+    "firstHeroVisible": 889.6
+  }
+}

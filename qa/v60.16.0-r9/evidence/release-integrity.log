@@ -1,0 +1,5 @@
+
+> singh-academy@60.16.0 check:release-ui
+> node scripts/check-release-ui.mjs
+
+PASS 60.16.0: 1170 exact source/config/test/document/asset files; 268 original public/certificate assets and 5 original uploaded photographs retained.

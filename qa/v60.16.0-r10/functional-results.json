@@ -1,0 +1,165 @@
+{
+  "review": "R10",
+  "status": "passed",
+  "recordedAt": "2026-11-07T04:30:08.692779+00:00",
+  "authorization": "User explicitly requested both six functional tasks and performance work.",
+  "sourceFiles": 1236,
+  "sealedBaselineSha256": "13932a4858a80606f8abb3ff2608b23781b057d0fdeeaf05c55577837d055e0e",
+  "checks": {
+    "frontend": {
+      "passed": 1047,
+      "failed": 0,
+      "log": "frontend-tests-final.log"
+    },
+    "backendRuntimeContracts": {
+      "passed": 1611,
+      "failed": 0,
+      "backend": 1415,
+      "runtime": 178,
+      "contracts": 18,
+      "log": "backend-runtime-contracts-final.log"
+    },
+    "isolatedMongoMedia": {
+      "passed": 78,
+      "failed": 0,
+      "suites": 8,
+      "log": "integration-final.log"
+    },
+    "productionUiBrowser": {
+      "passed": 171,
+      "failed": 0,
+      "skipped": 0,
+      "json": "ui-results-release.json"
+    },
+    "actualExpressMongoBrowser": {
+      "passed": 2,
+      "failed": 0,
+      "json": "db-browser-results-release.json"
+    },
+    "ssrRetentionRepeats": {
+      "passed": 20,
+      "failed": 0,
+      "json": "ssr-retention-after.json"
+    },
+    "productionUiBuild": "passed",
+    "normalStandaloneBuild": "passed",
+    "sourceSyntaxImports": {
+      "frontendFiles": 219,
+      "backendFiles": 296,
+      "relativeImports": 566,
+      "errors": 0
+    }
+  },
+  "preservation": {
+    "canonicalR9SourceFilesMatched": 1170,
+    "originalR9AssetsUnchanged": 279,
+    "historicalProtectedAssets": 268,
+    "originalGlobalLearningPhotos": 5,
+    "priorImageManifestEntriesUnchanged": 74,
+    "sourceDeletions": 0,
+    "unexplainedChangedPaths": [],
+    "modelsEnvExamplesDependencyLocksDeployFilesUnchanged": true,
+    "releaseIntegrityEnforcementUnchanged": true,
+    "privateSettingsWrittenByThisCodeTask": false,
+    "realCustomerRecordsModified": false
+  },
+  "taskCoverage": {
+    "1": "Native/YouTube visible autoplay, muted bounded loops, full originals, ready and unready provider fallback; browser + actual private upload.",
+    "2": "Reusable notices/native dialogs, safe same-node exit, focus/scope/queue/single-write tests, original business form desktop/mobile chrome.",
+    "3": "One full Carousel image, timed infinite steps, hover/focus/touch pause, responsive public/admin usage.",
+    "4": "Confirmed invoice-backed UTC day/expiry circles, finite/lifetime/pending/cancelled/expired states, read-only record preservation.",
+    "5": "Explicit refund events ignored and deduplicated; required event lists10Stripe/17PayPal; verified involuntary reversal/dispute protections retained.",
+    "6": "Owned direct/section/member content access, parent/child boundaries, exact expiry, duplicate new checkout rejection, replay/deferred setup preserved.",
+    "performance": "Measured responsive images, public SSR/document seed retention, poster scheduling, stable Range bytes and smaller team projection/cache reads."
+  },
+  "performance": {
+    "methodology": "Three cold-cache samples/mode; medians; production Next + identical synthetic public API, mobile390x844/150ms/1.6Mbps down/0.75Mbps up/4xCPU. No deployed-host/provider latency claim.",
+    "before": [
+      {
+        "label": "before-r9",
+        "mode": "desktop",
+        "lcp": 300,
+        "fcp": 232,
+        "content": 401.2000000178814,
+        "ttfb": 34.400000005960464,
+        "heroComplete": 353.2000000178814,
+        "landingLoad": 282.80000001192093,
+        "landingCLS": 0,
+        "reviewCLS": 0.31151851851851853,
+        "videoPlay": 293.5,
+        "firstPoster": 218.90000000596046,
+        "posters": 24,
+        "pageErrors": [],
+        "overflows": false
+      },
+      {
+        "label": "before-r9",
+        "mode": "mobile-fast3g",
+        "lcp": 1804,
+        "fcp": 680,
+        "content": 2805.5999999940395,
+        "ttfb": 32.19999998807907,
+        "heroComplete": 12749,
+        "landingLoad": 12755.09999999404,
+        "landingCLS": 0,
+        "reviewCLS": 0.34015578144860625,
+        "videoPlay": 3283.100000023842,
+        "firstPoster": 2463.5,
+        "posters": 24,
+        "pageErrors": [],
+        "overflows": false
+      }
+    ],
+    "after": [
+      {
+        "label": "after-r10",
+        "mode": "desktop",
+        "lcp": 364,
+        "fcp": 144,
+        "content": 431.7999999821186,
+        "ttfb": 51.89999997615814,
+        "heroComplete": 101.59999999403954,
+        "landingLoad": 218.7999999821186,
+        "landingCLS": 0,
+        "reviewCLS": 0.00050908203125,
+        "videoPlay": 277.80000001192093,
+        "firstPoster": 59.70000001788139,
+        "posters": 7,
+        "pageErrors": [],
+        "overflows": false
+      },
+      {
+        "label": "after-r10",
+        "mode": "mobile-fast3g",
+        "lcp": 1108,
+        "fcp": 564,
+        "content": 1061.1000000238419,
+        "ttfb": 43.400000005960464,
+        "heroComplete": 640.7000000178814,
+        "landingLoad": 3552.5,
+        "landingCLS": 0,
+        "reviewCLS": 0.0024780563301228056,
+        "videoPlay": 2573,
+        "firstPoster": 574.5,
+        "posters": 3,
+        "pageErrors": [],
+        "overflows": false
+      }
+    ]
+  },
+  "hosting": [
+    "No new env variable, Redis service or CDN architecture is required. Existing memory cache and worker TTL/invalidation are retained.",
+    "Use the matching frontend/backend deployment; preserve current PUBLIC_SITE_URL, API_PROXY_TARGET, verified proxy settings and private secrets.",
+    "Provision FFmpeg on backend PATH for optimized H.264 faststart teasers/posters; existing Dockerfile does not install it.",
+    "Live-host latency, actual signed provider delivery and real live purchases remain deployment verification."
+  ],
+  "limits": [
+    "Literal zero loading, universal millisecond video starts and atomic all-section images are not guaranteed; measured desktop LCP increased64ms.",
+    "The existing route loading shell was not redesigned. Private cold pages were not converted to SSR.",
+    "YouTube/Vimeo/TikTok protocol tests use controlled cross-origin fixtures; actual provider policy/network availability is not proven. Instagram remains provider-controlled.",
+    "The screenshot circle was recreated because its original code was not found in Git/11 prior archives.",
+    "Native beforeunload remains because browsers cannot await a custom modal during document exit.",
+    "No deployment or real provider settings/order/capture/refund operation was performed.",
+    "Delivery tooling separately verifies portable PowerShell; native Windows PowerShell5.1 was not executed in this Linux environment."
+  ]
+}
