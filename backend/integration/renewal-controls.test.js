@@ -7,7 +7,7 @@ import http from 'node:http';
 import {isolatedDatabase,testEnvironment} from './isolation.js';
 
 test('owned renewal controls require consent and provider confirmation without changing paid access',{timeout:180000},async t=>{
- const isolated=isolatedDatabase();testEnvironment();Object.assign(process.env,{ONLINE_PAYMENTS_ENABLED:'true',STRIPE_SECRET_KEY:['sk','test',crypto.randomBytes(18).toString('hex')].join('_'),STRIPE_WEBHOOK_SECRET:'whsec_SyntheticRenewalControls'});
+ const isolated=isolatedDatabase();testEnvironment();Object.assign(process.env,{ONLINE_PAYMENTS_ENABLED:'true',STRIPE_SECRET_KEY:['sk','test',crypto.randomBytes(18).toString('hex')].join('_'),STRIPE_WEBHOOK_SECRET:['whsec',crypto.randomBytes(32).toString('hex')].join('_')});
  const mongoose=(await import('mongoose')).default,bcrypt=(await import('bcryptjs')).default,{createApp}=await import('../src/app.js'),{getStripe}=await import('../src/services/paymentProviders.js');
  const models={};for(const name of ['User','Course','CheckoutOrder','BillingAgreement','Invoice','Payment','Enrollment','AuditLog'])models[name]=(await import('../src/models/'+name+'.js')).default;
  await mongoose.connect(isolated.uri,{dbName:isolated.dbName,autoIndex:false,serverSelectionTimeoutMS:12000});

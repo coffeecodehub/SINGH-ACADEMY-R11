@@ -1,6 +1,6 @@
 {
   "version": "60.16.0",
-  "generatedAt": "2026-11-07T17:18:27.884Z",
+  "generatedAt": "2026-11-07T17:40:56.186Z",
   "authorization": [
     "Follow-up R11: only repair guarded localhost development image/review/course uploads with an explicit local-only flag and unchanged hosted scanner enforcement; restore automatic visible muted review previews and original Carousel image dimensions while retaining single-image timed motion; remove public technical preview labels; add an eligible full-section purchase suggestion using the existing regional offer and checkout flow; re-verify environment-driven non-refundable Stripe/PayPal payments without changing existing records, subscriptions, schemas, routes or unrelated UI. Preserve R10 and report actual provider verification limits.",
     "Follow-up R10, both scopes explicitly authorized: implement muted visible 15–20-second review previews, shared themed action feedback and confirmations, single-image timed Carousel motion, confirmed paid-access expiry circles, disabling explicit refund webhook handling while preserving involuntary reversal/dispute protections, and owned course/section access with duplicate-new-purchase prevention. Preserve explicit full playback, existing consented deferred renewal setup, historical records, schemas, env values and unrelated design/routes. Also apply measured public-data/media performance improvements, preserving cache invalidation, publication/privacy boundaries and original image bytes. Report actual test/measurement limits; no live deployment or provider readiness claim.",
@@ -28,7 +28,7 @@
     },
     {
       "path": ".github/workflows/quality.yml",
-      "sha256": "cd4b53da1be2903dc50c165b1ae7d8e2da8719b7ff86ed7b3e79cc50ed957845"
+      "sha256": "dd904a813642127c0116ffc12f531ff0584954512714e4c3711cabf1a9cef2bb"
     },
     {
       "path": ".gitignore",
@@ -756,7 +756,7 @@
     },
     {
       "path": "backend/integration/immediate-subscription-cancellation.test.js",
-      "sha256": "ca155b613840e2cc6dc820628413ad4b888377fe5b5e5019d78ac475afb220a2"
+      "sha256": "8e26e2a64a6ac1f5c1dfb504028a37eceacfab4abe572335f7319fefef0f0999"
     },
     {
       "path": "backend/integration/isolation.js",
@@ -784,7 +784,7 @@
     },
     {
       "path": "backend/integration/paypal-recurring-payments.test.js",
-      "sha256": "cd53752af363fcdbeefa259f325219ce58adcf553f79c5d0a71559f867ee008a"
+      "sha256": "065bc8ef624ad77b8c97e0d90323d5ec211780c081ac0bc37225d9a6479d8b30"
     },
     {
       "path": "backend/integration/pending-billing-checkout.test.js",
@@ -804,7 +804,7 @@
     },
     {
       "path": "backend/integration/renewal-controls.test.js",
-      "sha256": "efe29dd939cb050f382a3e4355f988f4f3b803dd7ec0edc143340b6a95027123"
+      "sha256": "aebc7606beb97c2290043bd985fe048dd02ab2e79e6d6383c37c8657559dbe35"
     },
     {
       "path": "backend/integration/student-removal.test.js",

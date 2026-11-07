@@ -9,7 +9,7 @@ jobs:
       fail-fast: false
       matrix:
         node: ['22', '24']
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-22.04
     timeout-minutes: 25
     env:
       TEST_MONGODB_URI: mongodb://127.0.0.1:27018/sa_test?replicaSet=rs0&directConnection=true
