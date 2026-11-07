@@ -1,6 +1,6 @@
 {
   "version": "60.16.0",
-  "generatedAt": "2026-11-07T15:47:23.734Z",
+  "generatedAt": "2026-11-07T17:18:27.884Z",
   "authorization": [
     "Follow-up R11: only repair guarded localhost development image/review/course uploads with an explicit local-only flag and unchanged hosted scanner enforcement; restore automatic visible muted review previews and original Carousel image dimensions while retaining single-image timed motion; remove public technical preview labels; add an eligible full-section purchase suggestion using the existing regional offer and checkout flow; re-verify environment-driven non-refundable Stripe/PayPal payments without changing existing records, subscriptions, schemas, routes or unrelated UI. Preserve R10 and report actual provider verification limits.",
     "Follow-up R10, both scopes explicitly authorized: implement muted visible 15–20-second review previews, shared themed action feedback and confirmations, single-image timed Carousel motion, confirmed paid-access expiry circles, disabling explicit refund webhook handling while preserving involuntary reversal/dispute protections, and owned course/section access with duplicate-new-purchase prevention. Preserve explicit full playback, existing consented deferred renewal setup, historical records, schemas, env values and unrelated design/routes. Also apply measured public-data/media performance improvements, preserving cache invalidation, publication/privacy boundaries and original image bytes. Report actual test/measurement limits; no live deployment or provider readiness claim.",
@@ -28,7 +28,7 @@
     },
     {
       "path": ".github/workflows/quality.yml",
-      "sha256": "f9bec952f58029cb2f73dbfd369d8f8e3caa119ecf8bbae72ce9bc92fe0158e5"
+      "sha256": "cd4b53da1be2903dc50c165b1ae7d8e2da8719b7ff86ed7b3e79cc50ed957845"
     },
     {
       "path": ".gitignore",

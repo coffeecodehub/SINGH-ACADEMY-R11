@@ -40,7 +40,13 @@ jobs:
         run: npm run verify
       - name: Start isolated test replica set
         run: |
-          docker compose -f dev/test-mongo-compose.yml up -d --wait
+          if ! docker compose -f dev/test-mongo-compose.yml up -d --wait; then
+            echo "::group::MongoDB startup diagnostics"
+            docker compose -f dev/test-mongo-compose.yml ps --all || true
+            docker compose -f dev/test-mongo-compose.yml logs --no-color --tail 200 mongo || true
+            echo "::endgroup::"
+            exit 1
+          fi
           docker compose -f dev/test-mongo-compose.yml exec -T mongo mongosh --eval "rs.initiate({_id:'rs0',members:[{_id:0,host:'localhost:27017'}]})"
           for i in $(seq 1 45); do
             docker compose -f dev/test-mongo-compose.yml exec -T mongo mongosh --quiet --eval 'if (!db.hello().isWritablePrimary) quit(2)' && break
@@ -68,7 +74,7 @@ jobs:
         run: npm run test:ui
       - name: Preserve failed-run evidence
         if: failure()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: verification-node-${{ matrix.node }}
           path: |
