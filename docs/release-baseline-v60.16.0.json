@@ -1,6 +1,6 @@
 {
   "version": "60.16.0",
-  "generatedAt": "2026-11-07T18:33:38.652Z",
+  "generatedAt": "2026-11-08T08:14:42.550Z",
   "authorization": [
     "Follow-up R11: only repair guarded localhost development image/review/course uploads with an explicit local-only flag and unchanged hosted scanner enforcement; restore automatic visible muted review previews and original Carousel image dimensions while retaining single-image timed motion; remove public technical preview labels; add an eligible full-section purchase suggestion using the existing regional offer and checkout flow; re-verify environment-driven non-refundable Stripe/PayPal payments without changing existing records, subscriptions, schemas, routes or unrelated UI. Preserve R10 and report actual provider verification limits.",
     "Follow-up R10, both scopes explicitly authorized: implement muted visible 15–20-second review previews, shared themed action feedback and confirmations, single-image timed Carousel motion, confirmed paid-access expiry circles, disabling explicit refund webhook handling while preserving involuntary reversal/dispute protections, and owned course/section access with duplicate-new-purchase prevention. Preserve explicit full playback, existing consented deferred renewal setup, historical records, schemas, env values and unrelated design/routes. Also apply measured public-data/media performance improvements, preserving cache invalidation, publication/privacy boundaries and original image bytes. Report actual test/measurement limits; no live deployment or provider readiness claim.",
@@ -2864,7 +2864,7 @@
     },
     {
       "path": "frontend/e2e/page-gallery-r5.spec.ts",
-      "sha256": "1faa64625d703476e6f2ff9c4f2707f64c5f6eec0ac21587a4c91b69c8334a97"
+      "sha256": "3598d264739b1f2cae7879ba3c3641b1cc5e04d8a47dc0a11682f77a0008c4b2"
     },
     {
       "path": "frontend/e2e/page-section-upload.spec.ts",
@@ -2896,7 +2896,7 @@
     },
     {
       "path": "frontend/e2e/webinars-export.spec.ts",
-      "sha256": "629707592b57f8de5b33d8ddc50d40d897192565f536497129dabcec0c5a67b8"
+      "sha256": "248cdf75830c601c7114e603ea01b415ffc33783569f644b328ecd72fdbeda90"
     },
     {
       "path": "frontend/lib/adminExport.ts",
