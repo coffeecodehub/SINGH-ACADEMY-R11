@@ -1,6 +1,6 @@
 {
   "version": "60.16.0",
-  "generatedAt": "2026-11-08T08:14:42.550Z",
+  "generatedAt": "2026-11-08T10:24:14.234Z",
   "authorization": [
     "Follow-up R11: only repair guarded localhost development image/review/course uploads with an explicit local-only flag and unchanged hosted scanner enforcement; restore automatic visible muted review previews and original Carousel image dimensions while retaining single-image timed motion; remove public technical preview labels; add an eligible full-section purchase suggestion using the existing regional offer and checkout flow; re-verify environment-driven non-refundable Stripe/PayPal payments without changing existing records, subscriptions, schemas, routes or unrelated UI. Preserve R10 and report actual provider verification limits.",
     "Follow-up R10, both scopes explicitly authorized: implement muted visible 15–20-second review previews, shared themed action feedback and confirmations, single-image timed Carousel motion, confirmed paid-access expiry circles, disabling explicit refund webhook handling while preserving involuntary reversal/dispute protections, and owned course/section access with duplicate-new-purchase prevention. Preserve explicit full playback, existing consented deferred renewal setup, historical records, schemas, env values and unrelated design/routes. Also apply measured public-data/media performance improvements, preserving cache invalidation, publication/privacy boundaries and original image bytes. Report actual test/measurement limits; no live deployment or provider readiness claim.",
@@ -2292,7 +2292,7 @@
     },
     {
       "path": "frontend/app/checkout/page.tsx",
-      "sha256": "a86cf431719e32dabfb378fc28a09cd73a00044af3fa1481461f966484ab4a39"
+      "sha256": "edce40b0009436ade2e5ae12652942cd144e52fe9d82d8a73ee9df80f7b8a11f"
     },
     {
       "path": "frontend/app/checkout/return/page.tsx",
@@ -2504,7 +2504,7 @@
     },
     {
       "path": "frontend/components/SectionPurchaseSuggestion.tsx",
-      "sha256": "938f82a8cf4adba99f2e96b98d5e919b22b742db6656a4ef41067b27a9da146f"
+      "sha256": "3cd802940b6137fd2a3cc0edba686788ede354e62e7d4cd97111f2160207cdaa"
     },
     {
       "path": "frontend/components/SiteHeader.tsx",
@@ -4704,7 +4704,7 @@
     },
     {
       "path": "frontend/ui-tests/section-purchase-suggestion-r11.spec.ts",
-      "sha256": "4b87f775600bec711ef3ab8cad2f33d709cfb1fa0ef4a6ad14511d40f5996b8a"
+      "sha256": "3073ddb711037753e3e74f233a94c1fffba455e507ab206ad9e2b265f8fe3f48"
     },
     {
       "path": "frontend/ui-tests/sections-answer-navigation.spec.ts",
