@@ -14,10 +14,13 @@ import {createStartupGate} from './utils/startupGate.js';
 
 let server;
 let startupGate;
+let startupPromise;
 let stopping = false;
+let shutdownCode = 0;
 let stopNotifications = async () => {};
 
 async function shutdown(signal, code = 0) {
+  shutdownCode = Math.max(shutdownCode, code);
   if (stopping) return;
   stopping = true;
 
@@ -36,12 +39,16 @@ async function shutdown(signal, code = 0) {
     await new Promise(resolve => server.close(resolve));
   }
 
+  // Let the current readiness operation settle before closing its MongoDB session.
+  // start() checks stopping between stages so shutdown cannot publish the app.
+  await startupPromise?.catch(() => {});
+
   await stopNotifications();
   closeMailer();
   await mongoose.disconnect();
 
   clearTimeout(deadline);
-  process.exit(code);
+  process.exit(shutdownCode);
 }
 
 async function start() {
@@ -78,6 +85,8 @@ async function start() {
     server.listen(port, '0.0.0.0');
   });
 
+  if (stopping) return;
+
   server.on('error', error => {
     console.error(
       error.code === 'EADDRINUSE'
@@ -95,9 +104,13 @@ async function start() {
   // Original database connection.
   await connectDB();
 
+  if (stopping) return;
+
   // Original enrollment index repair.
   const droppedEnrollmentIndexes =
     await ensureEnrollmentIndexes(Enrollment.collection);
+
+  if (stopping) return;
 
   if (droppedEnrollmentIndexes.length) {
     console.log(
@@ -109,6 +122,8 @@ async function start() {
   if (process.env.NODE_ENV === 'production') {
     const hello =
       await mongoose.connection.db.admin().command({hello: 1});
+
+    if (stopping) return;
 
     if (!hello.setName && hello.msg !== 'isdbgrid') {
       throw new Error(
@@ -122,12 +137,16 @@ async function start() {
     await assertCriticalIndexes();
   }
 
+  if (stopping) return;
+
   // Publish real application only after checks succeed.
   const app = createApp();
 
   if (stopping) return;
 
   stopNotifications = startStudentNotificationWorker();
+
+  if (stopping) return;
 
   startupGate.activate(app);
 
@@ -139,7 +158,8 @@ async function start() {
 process.on('SIGTERM', () => void shutdown('SIGTERM'));
 process.on('SIGINT', () => void shutdown('SIGINT'));
 
-start().catch(error => {
+startupPromise = start();
+startupPromise.catch(error => {
   console.error('Backend startup failed:', error.message);
   void shutdown('startup_error', 1);
 });

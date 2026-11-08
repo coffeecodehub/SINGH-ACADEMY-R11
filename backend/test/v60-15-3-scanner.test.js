@@ -7,7 +7,7 @@ import fs from 'node:fs/promises';
 import os from 'node:os';
 import path from 'node:path';
 import crypto from 'node:crypto';
-import {createCloudmersiveScanner} from '../src/services/uploadScanCloudmersive.js';
+import {createCloudmersiveScanner,cloudmersiveErrorLogFields} from '../src/services/uploadScanCloudmersive.js';
 import {uploadScanConfiguration,CLOUDMERSIVE_SCAN_URL} from '../src/utils/uploadScanConfig.js';
 import {checkEnvironment} from '../src/utils/deployment.js';
 const key='test-only-scanner-key-1234567890';
@@ -70,6 +70,14 @@ test('streamed multipart carries exact bytes and generic name, positive verdict 
   assert.ok(!JSON.stringify(result).includes(key));
 });
 test('provider null findings is a valid explicit clean result',async t=>{const f=await fixture(t,{payload:{CleanResult:true,FoundViruses:null}});assert.equal((await f.scan(f.file,{env:config()})).status,'clean');});
+// The published VirusScanResult contract marks FoundViruses optional. CleanResult must still explicitly be true.
+test('provider omitted optional findings accepts only its explicit clean verdict',async t=>{
+ const f=await fixture(t,{payload:{CleanResult:true}});const result=await f.scan(f.file,{env:config()});
+ assert.equal(result.status,'clean');assert.equal(result.sha256,crypto.createHash('sha256').update(f.bytes).digest('hex'));assert.equal(f.calls.length,1);
+});
+test('provider negative verdict without optional findings still rejects the file',async t=>{
+ const f=await fixture(t,{payload:{CleanResult:false}});await assert.rejects(()=>f.scan(f.file,{env:config()}),{status:400,code:'UPLOAD_INFECTED'});assert.equal(f.calls.length,1);
+});
 test('streamed multi-megabyte upload preserves complete SHA256 without truncation',async t=>{
  const f=await fixture(t,{bytes:crypto.randomBytes(3*1024*1024+123)});const result=await f.scan(f.file,{env:config()});
  assert.equal(result.sha256,crypto.createHash('sha256').update(f.bytes).digest('hex'));
@@ -79,21 +87,29 @@ for(const payload of [
  {CleanResult:false,FoundViruses:[{FileName:'hidden',VirusName:'synthetic-test-only'}]},
  {CleanResult:true,FoundViruses:[{VirusName:'contradictory-threat'}]},
  {CleanResult:false,FoundViruses:null},
- {CleanResult:true,FoundViruses:[],ContainsScript:true}
+ {CleanResult:true,FoundViruses:[],ContainsScript:true},
+ {CleanResult:true,ContainsScript:true}
 ])test('adverse verdict cannot store a file '+JSON.stringify(payload),async t=>{const f=await fixture(t,{payload});await assert.rejects(()=>f.scan(f.file,{env:config()}),{status:400,code:'UPLOAD_INFECTED'});});
-for(const payload of [{},[],null,{CleanResult:'true',FoundViruses:[]},{CleanResult:true},{CleanResult:true,FoundViruses:{}},{CleanResult:true,FoundViruses:[],ContainsScript:'false'}])test('malformed/incomplete JSON is not clean '+JSON.stringify(payload),async t=>{
+for(const payload of [{},[],null,{FoundViruses:[]},{CleanResult:'true',FoundViruses:[]},{CleanResult:true,FoundViruses:{}},{CleanResult:true,FoundViruses:false},{CleanResult:true,FoundViruses:''},{CleanResult:true,FoundViruses:[],ContainsScript:'false'},{CleanResult:true,ContainsScript:'false'}])test('malformed/incomplete JSON is not clean '+JSON.stringify(payload),async t=>{
  const f=await fixture(t,{raw:JSON.stringify(payload)});await assert.rejects(()=>f.scan(f.file,{env:config()}),{status:503,code:'UPLOAD_SCAN_UNAVAILABLE'});
 });
-for(const [status,code,resultStatus] of [[401,'UPLOAD_SCAN_AUTH',503],[403,'UPLOAD_SCAN_AUTH',503],[429,'UPLOAD_SCAN_BUSY',503],[413,'UPLOAD_SCAN_SIZE',413],[500,'UPLOAD_SCAN_UNAVAILABLE',503],[202,'UPLOAD_SCAN_UNAVAILABLE',503],[302,'UPLOAD_SCAN_UNAVAILABLE',503]])test('HTTP '+status+' fails closed without retry or raw secret leakage',async t=>{
+for(const [status,code,resultStatus] of [[401,'UPLOAD_SCAN_AUTH',503],[403,'UPLOAD_SCAN_AUTH',503],[429,'UPLOAD_SCAN_BUSY',503],[413,'UPLOAD_SCAN_SIZE',413],[400,'UPLOAD_SCAN_UNAVAILABLE',503],[404,'UPLOAD_SCAN_UNAVAILABLE',503],[408,'UPLOAD_SCAN_UNAVAILABLE',503],[500,'UPLOAD_SCAN_UNAVAILABLE',503],[502,'UPLOAD_SCAN_UNAVAILABLE',503],[503,'UPLOAD_SCAN_UNAVAILABLE',503],[202,'UPLOAD_SCAN_UNAVAILABLE',503],[302,'UPLOAD_SCAN_UNAVAILABLE',503]])test('HTTP '+status+' fails closed without retry or raw secret leakage',async t=>{
  const f=await fixture(t,{status,raw:'provider detail includes '+key,headers:{location:'https://evil.invalid/steal'}});
- await assert.rejects(()=>f.scan(f.file,{env:config()}),error=>error.status===resultStatus&&error.code===code&&!error.message.includes(key));
+ await assert.rejects(()=>f.scan(f.file,{env:config()}),error=>{
+  assert.deepEqual(cloudmersiveErrorLogFields(error),{scanProvider:'cloudmersive',scanReason:'provider_status',scanHttpStatus:status});
+  return error.status===resultStatus&&error.code===code&&!error.message.includes(key);
+ });
  assert.equal(f.calls.length,1);
 });
-test('HTML success page is not a scan result',async t=>{const f=await fixture(t,{type:'text/html',raw:'<html>ok</html>'});await assert.rejects(()=>f.scan(f.file,{env:config()}),{status:503});});
-test('invalid JSON fails closed',async t=>{const f=await fixture(t,{raw:'not json'});await assert.rejects(()=>f.scan(f.file,{env:config()}),{status:503});});
-test('oversized provider response is bounded',async t=>{const f=await fixture(t,{raw:JSON.stringify({...clean,detail:'x'.repeat(70000)})});await assert.rejects(()=>f.scan(f.file,{env:config()}),{status:503});});
+test('HTML success page is not a scan result',async t=>{const f=await fixture(t,{type:'text/html',raw:'<html>ok</html>'});await assert.rejects(()=>f.scan(f.file,{env:config()}),{status:503,scanReason:'content_type',scanHttpStatus:200});});
+test('invalid JSON fails closed',async t=>{const f=await fixture(t,{raw:'not json'});await assert.rejects(()=>f.scan(f.file,{env:config()}),{status:503,scanReason:'invalid_json',scanHttpStatus:200});});
+test('oversized provider response is bounded',async t=>{const f=await fixture(t,{raw:JSON.stringify({...clean,detail:'x'.repeat(70000)})});await assert.rejects(()=>f.scan(f.file,{env:config()}),{status:503,scanReason:'response_size',scanHttpStatus:200});});
 test('missing key fails before any HTTP call',async t=>{const f=await fixture(t);await assert.rejects(()=>f.scan(f.file,{env:config({CLOUDMERSIVE_API_KEY:''})}),{status:503});assert.equal(f.calls.length,0);});
-test('configured size cap fails before any bytes leave the server',async t=>{const f=await fixture(t);await assert.rejects(()=>f.scan(f.file,{env:config({CLOUDMERSIVE_MAX_FILE_BYTES:'4'})}),{status:413});assert.equal(f.calls.length,0);});
+test('configured size cap fails before any bytes leave the server',async t=>{
+ const f=await fixture(t);await assert.rejects(()=>f.scan(f.file,{env:config({CLOUDMERSIVE_MAX_FILE_BYTES:'4'})}),error=>{
+  assert.deepEqual(cloudmersiveErrorLogFields(error),{scanProvider:'cloudmersive',scanReason:'configured_size'});return error.status===413&&error.code==='UPLOAD_SCAN_SIZE';
+ });assert.equal(f.calls.length,0);
+});
 test('empty file rejected before metered call',async t=>{const f=await fixture(t,{bytes:Buffer.alloc(0)});await assert.rejects(()=>f.scan(f.file,{env:config()}),{status:400});assert.equal(f.calls.length,0);});
 test('missing quarantine file rejected without leaking path',async t=>{const f=await fixture(t);await assert.rejects(()=>f.scan(f.file+'-missing',{env:config()}),e=>e.status===503&&!e.message.includes(f.file));assert.equal(f.calls.length,0);});
 test('pre-aborted upload starts no network request',async t=>{const f=await fixture(t);const c=new AbortController();c.abort();await assert.rejects(()=>f.scan(f.file,{env:config(),signal:c.signal}),{name:'AbortError',status:499});assert.equal(f.calls.length,0);});
@@ -108,6 +124,26 @@ test('client disconnect aborts in-flight scanner instead of saving or retrying',
 });
 test('scanner deadline aborts whole response and does not report clean',async t=>{const f=await fixture(t,{neverReply:true});await assert.rejects(()=>f.scan(f.file,{env:config({UPLOAD_SCAN_TIMEOUT_MS:'5000'})}),{status:503,code:'UPLOAD_SCAN_TIMEOUT'});assert.equal(f.calls.length,1);});
 test('transport construction failure sanitized',async t=>{const f=await fixture(t);const scan=createCloudmersiveScanner(()=>{throw new Error(key+' untrusted provider message');});await assert.rejects(()=>scan(f.file,{env:config()}),e=>e.status===503&&!e.message.includes(key));});
+test('transport errors retain only an allowlisted code, never the provider message',async t=>{
+ const f=await fixture(t);const scan=createCloudmersiveScanner(()=>{throw Object.assign(new Error(key+' private file path'),{code:'ENOTFOUND'});});
+ await assert.rejects(()=>scan(f.file,{env:config()}),error=>{
+  assert.deepEqual(cloudmersiveErrorLogFields(error),{scanProvider:'cloudmersive',scanReason:'transport',scanTransportCode:'ENOTFOUND'});
+  assert.ok(!JSON.stringify(cloudmersiveErrorLogFields(error)).includes(key));return error.status===503&&error.code==='UPLOAD_SCAN_UNAVAILABLE';
+ });
+});
+test('scanner logging helper ignores non-cloud errors and never copies raw secret-bearing fields',()=>{
+ for(const error of [null,undefined,'private message',new Error(key),{scanProvider:'clamav',scanReason:key}])assert.deepEqual(cloudmersiveErrorLogFields(error),{});
+ const raw={scanProvider:'cloudmersive',scanReason:'provider_status',scanHttpStatus:503,scanTransportCode:'ECONNRESET',message:key,body:{Apikey:key},path:'/private/'+key,headers:{Apikey:key},arbitrary:key};
+ const before=JSON.stringify(raw);
+ assert.deepEqual(cloudmersiveErrorLogFields(raw),{scanProvider:'cloudmersive',scanReason:'provider_status',scanHttpStatus:503,scanTransportCode:'ECONNRESET'});
+ assert.equal(JSON.stringify(raw),before);assert.ok(!JSON.stringify(cloudmersiveErrorLogFields(raw)).includes(key));
+});
+test('scanner logging helper bounds reasons, upstream status and transport codes',()=>{
+ assert.deepEqual(cloudmersiveErrorLogFields({scanProvider:'cloudmersive',scanReason:key,scanHttpStatus:'503 '+key,scanTransportCode:'ECONNRESET '+key}),{scanProvider:'cloudmersive',scanReason:'unknown'});
+ for(const status of [100,200,599])assert.equal(cloudmersiveErrorLogFields({scanProvider:'cloudmersive',scanReason:'invalid_verdict',scanHttpStatus:status}).scanHttpStatus,status);
+ for(const status of [99,600,NaN,Infinity,500.5,'500',null,{},[500]])assert.equal(Object.hasOwn(cloudmersiveErrorLogFields({scanProvider:'cloudmersive',scanReason:'invalid_verdict',scanHttpStatus:status}),'scanHttpStatus'),false);
+ for(const code of ['private-code',key,null,{},['ECONNRESET']])assert.equal(Object.hasOwn(cloudmersiveErrorLogFields({scanProvider:'cloudmersive',scanReason:'transport',scanTransportCode:code}),'scanTransportCode'),false);
+});
 test('simultaneous scans retain independent byte hashes and do not share verdicts',async t=>{const f=await fixture(t);const second=path.join(f.directory,'second.pdf'),bytes=Buffer.from('separate document');await fs.writeFile(second,bytes);const [a,b]=await Promise.all([f.scan(f.file,{env:config()}),f.scan(second,{env:config()})]);assert.notEqual(a.sha256,b.sha256);assert.equal(f.calls.length,2);});
 
 test('live cloud config does not accept missing credentials even with uploads OFF',()=>assert.ok(checkEnvironment(review({DEPLOYMENT_STAGE:'production',UPLOADS_ENABLED:'false',CLOUDMERSIVE_API_KEY:''})).errors.some(x=>/CLOUDMERSIVE_API_KEY/.test(x))));

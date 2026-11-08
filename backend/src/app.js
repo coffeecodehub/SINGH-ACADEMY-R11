@@ -5,6 +5,7 @@ import sectionRoutes,{adminSections} from './routes/sectionRoutes.js';
 import couponRoutes from './routes/couponRoutes.js';
 import {publicPageSectionRouter,adminPageSectionRouter} from './routes/pageSectionRoutes.js';
 import {proxyIdentity} from './middleware/proxyIdentity.js';
+import {cloudmersiveErrorLogFields} from './services/uploadScanCloudmersive.js';
 import express from 'express';
 import cors from 'cors';
 import cookieParser from 'cookie-parser';
@@ -58,7 +59,7 @@ export function createApp(){
   if(err.name==='CastError'){status=400;message='Invalid record identifier or field value.';}
   if(err.code===11000){status=409;message='That record, reference or unique value already exists. Refresh before trying again.';}
   if(err.name==='MulterError'){status=400;message=err.code==='LIMIT_FILE_SIZE'?'File exceeds the upload limit.':'Upload one supported file at a time.';}
-  if(status>=500){console.error(JSON.stringify({event:'api_error',requestId:req.requestId,type:err.name||'Error',code:typeof err.code==='string'?err.code:undefined,...(err.paymentProvider?{paymentProvider:err.paymentProvider,providerStatus:err.providerStatus,providerType:err.providerType,providerCode:err.providerCode,providerParam:err.providerParam,providerIssue:err.providerIssue,providerRequestId:err.providerRequestId}:{})}));if(status!==503&&!err.paymentProvider)message='The request could not be completed. Contact support with the request ID.';}
+  if(status>=500){console.error(JSON.stringify({event:'api_error',requestId:req.requestId,type:err.name||'Error',code:typeof err.code==='string'?err.code:undefined,...cloudmersiveErrorLogFields(err),...(err.paymentProvider?{paymentProvider:err.paymentProvider,providerStatus:err.providerStatus,providerType:err.providerType,providerCode:err.providerCode,providerParam:err.providerParam,providerIssue:err.providerIssue,providerRequestId:err.providerRequestId}:{})}));if(status!==503&&!err.paymentProvider)message='The request could not be completed. Contact support with the request ID.';}
   if(err.paymentProvider&&req.requestId)message+=' Request ID: '+req.requestId+'.';
   res.status(status).json({success:false,message,requestId:req.requestId,code:err.code&&typeof err.code==='string'?err.code:undefined});
  });return app;

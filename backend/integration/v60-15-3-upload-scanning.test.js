@@ -21,7 +21,7 @@ test('V60.15.3 real upload quarantine, scanner verdict and GridFS ownership',{ti
   scanCalls++;lastHeaders=req.headers;lastBody=Buffer.concat(parts).toString('latin1');
   const status=mode==='unavailable'?503:mode==='quota'?429:mode==='auth'?401:mode==='oversize'?413:200;
   res.writeHead(status,{'Content-Type':'application/json'});
-  res.end(mode==='malformed'?'not-json':JSON.stringify({CleanResult:mode!=='infected',FoundViruses:mode==='infected'?[{VirusName:'synthetic-fixture-only'}]:[]}));
+  res.end(mode==='malformed'?'not-json':JSON.stringify(mode==='clean-optional'?{CleanResult:true}:{CleanResult:mode!=='infected',FoundViruses:mode==='infected'?[{VirusName:'synthetic-fixture-only'}]:[]}));
  });
  await new Promise(resolve=>scanner.listen(0,'127.0.0.1',resolve));
  mock.method(https,'request',(url,options,callback)=>{
@@ -57,6 +57,14 @@ test('V60.15.3 real upload quarantine, scanner verdict and GridFS ownership',{ti
  await t.test('a complete original review video larger than the copied 3.5MB hint is actually scanned and stored unchanged',async()=>{
   mode='clean';process.env.ADMIN_MEDIA_MAX_UPLOAD_MB='0';const source=await fs.readFile(new URL('../../frontend/ui-tests/fixtures/video-review.webm',import.meta.url));const content=Buffer.concat([source,Buffer.alloc(4*1024*1024)]),beforeCalls=scanCalls;
   const r=await upload({content,mime:'video/webm',endpoint:'/api/admin/video-reviews/upload'});assert.equal(r.status,201,JSON.stringify(r.data));assert.equal(scanCalls,beforeCalls+1);const saved=await mongoose.connection.db.collection('academyMedia.files').findOne({_id:new mongoose.Types.ObjectId(r.data.fileId)});assert.equal(saved.metadata.purpose,'video-review');assert.equal(saved.length,content.length);assert.equal(saved.metadata.scan.status,'clean');assert.equal(saved.metadata.scan.sha256,crypto.createHash('sha256').update(content).digest('hex'));await awaitVideoReviewPlayback();assert.equal((await fs.readdir(directory)).length,0);
+ });
+ await t.test('explicit clean verdict with optional findings omitted permits an image, review video and course video',async()=>{
+  mode='clean-optional';const video=await fs.readFile(new URL('../../frontend/ui-tests/fixtures/video-review.webm',import.meta.url));
+  for(const item of [{content:png,mime:'image/png',endpoint:'/api/admin/upload',purpose:'cms'},{content:video,mime:'video/webm',endpoint:'/api/admin/video-reviews/upload',purpose:'video-review'},{content:video,mime:'video/webm',endpoint:'/api/admin/upload',purpose:'cms'}]){
+   const beforeCalls=scanCalls,r=await upload(item);assert.equal(r.status,201,JSON.stringify(r.data));assert.equal(scanCalls,beforeCalls+1);
+   const saved=await mongoose.connection.db.collection('academyMedia.files').findOne({_id:new mongoose.Types.ObjectId(r.data.fileId)});assert.equal(saved.metadata.purpose,item.purpose);assert.equal(saved.metadata.uploadedBy,String(admin._id));assert.equal(saved.metadata.scan.status,'clean');assert.equal(saved.metadata.scan.engine,'cloudmersive');assert.equal(saved.metadata.scan.sha256,crypto.createHash('sha256').update(item.content).digest('hex'));
+  }
+  await awaitVideoReviewPlayback();assert.equal((await fs.readdir(directory)).length,0);mode='clean';
  });
  for(const [scenario,status,code] of [['infected',400,'UPLOAD_INFECTED'],['unavailable',503,'UPLOAD_SCAN_UNAVAILABLE'],['quota',503,'UPLOAD_SCAN_BUSY'],['auth',503,'UPLOAD_SCAN_AUTH'],['malformed',503,'UPLOAD_SCAN_UNAVAILABLE'],['oversize',413,'UPLOAD_SCAN_SIZE']])await t.test(scenario+' leaves no new GridFS metadata or quarantined file',async()=>{
   mode=scenario;const before=await files();const r=await upload();assert.equal(r.status,status);assert.equal(r.data.code,code);assert.equal(await files(),before);assert.equal((await fs.readdir(directory)).length,0);

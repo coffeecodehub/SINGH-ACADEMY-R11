@@ -1,6 +1,6 @@
 {
   "version": "60.16.0",
-  "generatedAt": "2026-11-08T10:24:14.234Z",
+  "generatedAt": "2026-11-08T12:38:12.849Z",
   "authorization": [
     "Follow-up R11: only repair guarded localhost development image/review/course uploads with an explicit local-only flag and unchanged hosted scanner enforcement; restore automatic visible muted review previews and original Carousel image dimensions while retaining single-image timed motion; remove public technical preview labels; add an eligible full-section purchase suggestion using the existing regional offer and checkout flow; re-verify environment-driven non-refundable Stripe/PayPal payments without changing existing records, subscriptions, schemas, routes or unrelated UI. Preserve R10 and report actual provider verification limits.",
     "Follow-up R10, both scopes explicitly authorized: implement muted visible 15–20-second review previews, shared themed action feedback and confirmations, single-image timed Carousel motion, confirmed paid-access expiry circles, disabling explicit refund webhook handling while preserving involuntary reversal/dispute protections, and owned course/section access with duplicate-new-purchase prevention. Preserve explicit full playback, existing consented deferred renewal setup, historical records, schemas, env values and unrelated design/routes. Also apply measured public-data/media performance improvements, preserving cache invalidation, publication/privacy boundaries and original image bytes. Report actual test/measurement limits; no live deployment or provider readiness claim.",
@@ -832,7 +832,7 @@
     },
     {
       "path": "backend/integration/v60-15-3-upload-scanning.test.js",
-      "sha256": "62f7c414f49fbd35344a2c478c22a438108207aaa4800a88a4ab9e91590f3fc2"
+      "sha256": "2d5b78fd58a97c710cd6c454f8e28eb9e2d815539aea333dfb2b910203adaec5"
     },
     {
       "path": "backend/integration/v60-15-security.test.js",
@@ -860,7 +860,7 @@
     },
     {
       "path": "backend/src/app.js",
-      "sha256": "18a724526d00c3cdab89c763bef5a582827c3c994c3a327e0e7abe2de3c32122"
+      "sha256": "1bb9461d4a52d3d12b96578e35d94001c92e6038381c110fe201b6d31ae3bba4"
     },
     {
       "path": "backend/src/assets/certificate-logo-original.alpha.deflate",
@@ -1356,7 +1356,7 @@
     },
     {
       "path": "backend/src/server.js",
-      "sha256": "06f3c3d34e611d005ac1c718ccf25bba79a20eda865e5d7b61b357e8645e49fc"
+      "sha256": "36ae2bd6c04a39e028a48ca61c23e4e1398f8a91b077b7c7492c228059e7ab1e"
     },
     {
       "path": "backend/src/services/academyOverview.js",
@@ -1536,7 +1536,7 @@
     },
     {
       "path": "backend/src/services/uploadScanCloudmersive.js",
-      "sha256": "c361de873a1169b3f26ce949a95dfc0bd2262b827518c2635cf069277fd30f19"
+      "sha256": "5f8aaac9689acc9fc645a21360facf86143569e137425987ca1831537ec56818"
     },
     {
       "path": "backend/src/services/uploads.js",
@@ -1823,6 +1823,10 @@
       "sha256": "8acfc734594880a912bd5fc9fb88e6a4de25836b86826581e7fdbe78b15c6603"
     },
     {
+      "path": "backend/test/startup-lifecycle.test.js",
+      "sha256": "d30574dcbdc70d86fc49bb2ed1ed89baeb46459665361cb23a43d73b11efe69f"
+    },
+    {
       "path": "backend/test/student-removal.test.js",
       "sha256": "502a05e7c6c0a3e312c6b3159fa076643cf2250f75eb4268f3a6768ea4834693"
     },
@@ -1920,7 +1924,7 @@
     },
     {
       "path": "backend/test/v60-15-3-scanner.test.js",
-      "sha256": "b242fc25f744f6de0d8f8bb97e14b043883257e60e2aa992ee9e22a4dec5a64a"
+      "sha256": "f931a953f04c18beef47581605725fa63679f045534f0ce8a02cda81ea2c70a3"
     },
     {
       "path": "backend/test/v60-15-3-upload-pipeline.test.js",
@@ -2292,7 +2296,7 @@
     },
     {
       "path": "frontend/app/checkout/page.tsx",
-      "sha256": "edce40b0009436ade2e5ae12652942cd144e52fe9d82d8a73ee9df80f7b8a11f"
+      "sha256": "f58c95566705815a04cbe93eb31e1ab1fb59d3ec11ba1eb4f28813609f97006a"
     },
     {
       "path": "frontend/app/checkout/return/page.tsx",
@@ -2504,7 +2508,7 @@
     },
     {
       "path": "frontend/components/SectionPurchaseSuggestion.tsx",
-      "sha256": "3cd802940b6137fd2a3cc0edba686788ede354e62e7d4cd97111f2160207cdaa"
+      "sha256": "50dacde1417872f72332163b1ba3102764974b80814ac67d16c58653b644f5fc"
     },
     {
       "path": "frontend/components/SiteHeader.tsx",
@@ -4335,6 +4339,10 @@
       "sha256": "b4f279f402e06544d4e157081f0c892b0180bb603a9a920235d657bcc63d2f3c"
     },
     {
+      "path": "frontend/test/checkout-selection-r11.test.mjs",
+      "sha256": "139a307af890cf67bdb948c6d78bfb800b14ed0b127a8402b52957ec1e047931"
+    },
+    {
       "path": "frontend/test/compile.mjs",
       "sha256": "d27708a65892b037819a1bbff551ab4ddb24771d6938c4650fb8945f34f1d16d"
     },
@@ -4704,7 +4712,7 @@
     },
     {
       "path": "frontend/ui-tests/section-purchase-suggestion-r11.spec.ts",
-      "sha256": "3073ddb711037753e3e74f233a94c1fffba455e507ab206ad9e2b265f8fe3f48"
+      "sha256": "9bfc565f7d80f6ff5dfc6976c15595928ceb72d8fc688262e0833ba6f855acd3"
     },
     {
       "path": "frontend/ui-tests/sections-answer-navigation.spec.ts",
