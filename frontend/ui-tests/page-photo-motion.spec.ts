@@ -45,6 +45,14 @@ async function trackState(track:Locator){
  return track.evaluate(element=>getComputedStyle(element).animationPlayState);
 }
 
+async function revealFaculty(page:Page){
+ await expect(async()=>{
+  const lane=page.locator('#faculty .teamMarquee').first();
+  await lane.scrollIntoViewIfNeeded({timeout:2000});
+  await expect(lane).toBeInViewport({timeout:2000});
+ }).toPass({timeout:10000});
+}
+
 test('faculty rows move in opposite directions and pause the hovered or focused lane',async({page,context})=>{
  await facultyFixture(context);await page.setViewportSize({width:1440,height:1000});
  await page.emulateMedia({reducedMotion:'no-preference'});await page.mouse.move(0,0);
@@ -54,7 +62,7 @@ test('faculty rows move in opposite directions and pause the hovered or focused 
  await expect(left.locator('.teamCard')).toHaveCount(24);await expect(right.locator('.teamCard')).toHaveCount(24);
  await expect(page.getByRole('button',{name:'Play faculty animation',exact:true})).toHaveCount(0);
  await expect(page.getByRole('button',{name:'Pause faculty animation',exact:true})).toHaveCount(0);
- await firstLane.scrollIntoViewIfNeeded();await page.mouse.move(0,0);
+ await revealFaculty(page);await page.mouse.move(0,0);
  await expect.poll(()=>trackState(left)).toBe('running');await expect.poll(()=>trackState(right)).toBe('running');
  await oppositeMotion(page);
 
@@ -73,7 +81,7 @@ test('reduced motion keeps both faculty rows automatic without Play/Pause contro
  await page.emulateMedia({reducedMotion:'reduce'});await page.mouse.move(0,0);await page.goto('/');
  const left=page.locator('#faculty .teamTrackLeft'),right=page.locator('#faculty .teamTrackRight');
  const firstLane=page.locator('#faculty .teamMarquee').first(),secondLane=page.locator('#faculty .teamMarquee.secondRow');
- await expect(left.locator('.teamCard')).toHaveCount(24);await expect(right.locator('.teamCard')).toHaveCount(24);await firstLane.scrollIntoViewIfNeeded();await page.mouse.move(0,0);
+ await expect(left.locator('.teamCard')).toHaveCount(24);await expect(right.locator('.teamCard')).toHaveCount(24);await revealFaculty(page);await page.mouse.move(0,0);
  await expect(firstLane).toBeVisible();await expect(secondLane).toBeVisible();await expect(secondLane).toHaveAttribute('aria-hidden','true');
  await expect(page.getByRole('button',{name:/^(Play|Pause) faculty animation$/})).toHaveCount(0);await expect(page.locator('.facultyMotionToggle')).toHaveCount(0);
  for(const track of [left,right]){await expect.poll(()=>trackState(track)).toBe('running');expect(await track.evaluate(element=>parseFloat(getComputedStyle(element).animationDuration))).toBeGreaterThan(36);}

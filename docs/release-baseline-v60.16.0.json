@@ -4688,7 +4688,7 @@
     },
     {
       "path": "frontend/ui-tests/page-photo-motion.spec.ts",
-      "sha256": "70a85f093dc588a7606f45f6b0779af9da98ac41c6c108c389f96ba432816425"
+      "sha256": "e2be90da8a14cf2c9073075914035065658479201d42b43a8fb3c0a001ae2077"
     },
     {
       "path": "frontend/ui-tests/page-photo-placement.spec.ts",
