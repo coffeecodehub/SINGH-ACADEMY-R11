@@ -85,7 +85,7 @@ function checkoutFixture({active=true,renewalSetup=false,retained=false,sectionC
   if(path==='/payments/checkout')return create?create(options):{order:{_id:'c'.repeat(24),provider:'stripe',kind:'course',product:'paid',status:'pending',renewalSetup,sourceInvoiceId:renewalSetup?'b'.repeat(24):null},url:'https://checkout.stripe.com/c/pay/existing'};
   throw Error(path);
  }}},globals:{...b,...h.globals,sessionStorage:storage,navigator:{onLine:true}}});
- h.mount(()=>mod.default());return {h,calls,routes,expire(){active=false;h.render();},changeCountry(){user.country='PK';h.render();},changeEpoch(){epoch++;h.render();}};
+ h.mount(()=>mod.default());return {h,calls,routes,storage,expire(){active=false;h.render();},changeCountry(){user.country='PK';h.render();},changeEpoch(){epoch++;h.render();}};
 }
 
 for(const sectionCovered of [false,true])test('active '+(sectionCovered?'section-covered':'direct')+' checkout offers content instead of a second payment',async()=>{
@@ -93,11 +93,13 @@ for(const sectionCovered of [false,true])test('active '+(sectionCovered?'section
  f.expire();await f.h.settle();assert.ok(nodes(f.h.tree).some(node=>node.props?.className==='paymentMethod stripe'));assert.ok(f.calls.some(call=>call.path==='/payments/quote'));f.h.cleanup();
 });
 
-test('active access retains existing checkout status and safe close controls',async()=>{
- const f=checkoutFixture({retained:true});await f.h.settle();const buttons=nodes(f.h.tree).filter(node=>node.type==='button');
- const check=buttons.find(node=>node.props.children==='Check existing checkout'),close=buttons.find(node=>node.props.children==='Close existing checkout');assert.ok(check);assert.ok(close);
- await check.props.onClick();await f.h.settle();assert.ok(f.routes.includes('/checkout/return?order='+'a'.repeat(24)));assert.equal(f.calls.some(call=>call.path==='/payments/checkout'),false);f.h.cleanup();
- const g=checkoutFixture({retained:true});await g.h.settle();await nodes(g.h.tree).find(node=>node.type==='button'&&node.props.children==='Close existing checkout').props.onClick();await g.h.settle();assert.ok(g.calls.some(call=>call.path==='/payments/checkout/release'&&call.headers['Idempotency-Key']==='existing-checkout-key-1234567890'));assert.equal(g.calls.some(call=>call.path==='/payments/checkout'),false);g.h.cleanup();
+test('active access offers content without a pending block while retaining the old recovery identity',async()=>{
+ const f=checkoutFixture({retained:true});await f.h.settle();
+ assert.ok(nodes(f.h.tree).some(node=>node.props?.href==='/learn/paid'));
+ for(const label of ['Check existing checkout','Close existing checkout'])assert.equal(nodes(f.h.tree).some(node=>node.type==='button'&&node.props.children===label),false);
+ assert.equal(nodes(f.h.tree).some(node=>String(node.props?.className||'').startsWith('paymentMethod ')),false);
+ const retained=safety.readCheckoutAttempt(f.storage,safety.checkoutScope('one','course','paid'));assert.equal(retained.key,'existing-checkout-key-1234567890');assert.equal(retained.orderId,'a'.repeat(24));
+ assert.equal(f.calls.some(call=>['/payments/checkout','/payments/checkout-status','/payments/checkout/release'].includes(call.path)),false);assert.deepEqual(f.routes,[]);f.h.cleanup();
 });
 
 test('noncharging deferred renewal setup remains available with fresh explicit consent',async()=>{
@@ -112,13 +114,20 @@ for(const change of ['changeCountry','changeEpoch'])test(change+' reloads catalo
  const pay=nodes(f.h.tree).find(node=>node.props?.className==='paymentMethod stripe').props.onClick();
  const beforeCatalog=f.calls.filter(call=>call.path.startsWith('/payments/catalog')).length,beforeQuotes=f.calls.filter(call=>call.path==='/payments/quote').length;
  f[change]();await f.h.settle();assert.equal(f.calls.filter(call=>call.path.startsWith('/payments/catalog')).length,beforeCatalog+1);assert.ok(f.calls.filter(call=>call.path==='/payments/quote').length>beforeQuotes);
- resolve({order:{_id:'c'.repeat(24),provider:'stripe',kind:'course',product:'paid',status:'pending'},url:'https://checkout.stripe.com/c/pay/stale'});await pay;await f.h.settle();assert.deepEqual(f.routes,[]);assert.ok(nodes(f.h.tree).some(node=>node.props?.children==='Check existing checkout'));f.h.cleanup();
+ const originalKey=f.calls.find(call=>call.path==='/payments/checkout').headers['Idempotency-Key'];
+ resolve({order:{_id:'c'.repeat(24),provider:'stripe',kind:'course',product:'paid',status:'pending'},url:'https://checkout.stripe.com/c/pay/stale'});await pay;await f.h.settle();assert.deepEqual(f.routes,[]);
+ const retained=safety.readCheckoutAttempt(f.storage,safety.checkoutScope('one','course','paid'));assert.equal(retained.key,originalKey);assert.equal(retained.orderId,undefined,'a stale response cannot replace the saved identity');
+ assert.equal(nodes(f.h.tree).some(node=>node.props?.children==='Check existing checkout'),false);assert.equal(f.calls.filter(call=>call.path==='/payments/checkout').length,1);assert.equal(f.calls.some(call=>call.path==='/payments/checkout/release'),false);f.h.cleanup();
 });
 
 test('country change rejects a stale close response and retains the existing checkout',async()=>{
- let resolve;const f=checkoutFixture({retained:true,release:()=>new Promise(done=>resolve=done)});await f.h.settle();
- const close=nodes(f.h.tree).find(node=>node.type==='button'&&node.props.children==='Close existing checkout').props.onClick();
- f.changeCountry();await f.h.settle();resolve({released:false,order:{_id:'a'.repeat(24),provider:'stripe',kind:'course',product:'paid',status:'paid'}});await close;await f.h.settle();assert.deepEqual(f.routes,[]);assert.ok(nodes(f.h.tree).some(node=>node.props?.children==='Check existing checkout'));f.h.cleanup();
+ let resolve;const f=checkoutFixture({active:false,retained:true,release:()=>new Promise(done=>resolve=done)});await f.h.settle();
+ const consent=nodes(f.h.tree).find(node=>node.props?.className==='checkoutConsent').props.children[0];consent.props.onChange({target:{checked:true}});await f.h.settle();
+ const close=nodes(f.h.tree).find(node=>node.props?.className==='paymentMethod stripe').props.onClick();await f.h.settle();
+ assert.equal(f.calls.filter(call=>call.path==='/payments/checkout/release').length,1);assert.equal(f.calls.find(call=>call.path==='/payments/checkout/release').headers['Idempotency-Key'],'existing-checkout-key-1234567890');assert.equal(f.calls.some(call=>call.path==='/payments/checkout'),false);
+ f.changeCountry();await f.h.settle();resolve({released:false,order:{_id:'a'.repeat(24),provider:'stripe',kind:'course',product:'paid',status:'paid'}});await close;await f.h.settle();assert.deepEqual(f.routes,[]);
+ const retained=safety.readCheckoutAttempt(f.storage,safety.checkoutScope('one','course','paid'));assert.equal(retained.key,'existing-checkout-key-1234567890');assert.equal(retained.orderId,'a'.repeat(24));assert.equal(retained.releaseRequested,true);
+ assert.equal(f.calls.some(call=>call.path==='/payments/checkout'),false);assert.equal(nodes(f.h.tree).some(node=>node.props?.children==='Check existing checkout'),false);assert.equal(nodes(f.h.tree).find(node=>node.props?.className==='paymentMethod stripe').props.disabled,false);assert.equal(nodes(f.h.tree).find(node=>node.props?.className==='checkoutConsent').props.children[0].props.checked,false);f.h.cleanup();
 });
 
 function detailFixture({kind='course',coverageType='course',accessLoad}={}){

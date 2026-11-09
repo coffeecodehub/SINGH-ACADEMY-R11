@@ -53,7 +53,7 @@ export function createApp(){
  // No testing-enrollment or unverified payment-success shortcut is mounted.
  app.use((req,res)=>res.status(404).json({success:false,message:'API route not found.'}));
  app.use((err,req,res,next)=>{
-  if(req.path.startsWith('/api/payments/'))err=paymentProviderError(err)||err;
+  if(req.path.startsWith('/api/payments/')){const restarting=err.code==='CHECKOUT_RESTART_REQUIRED';err=paymentProviderError(restarting?err.cause||err:err)||err;if(restarting)err.code='CHECKOUT_RESTART_REQUIRED';}
   if(res.headersSent)return next(err);res.set('Cache-Control','private, no-store');let status=err.status||500,message=err.message||'Internal server error.';
   if(err.name==='ValidationError'){status=400;message=Object.values(err.errors).map(e=>e.message).join(' ');}
   if(err.name==='CastError'){status=400;message='Invalid record identifier or field value.';}

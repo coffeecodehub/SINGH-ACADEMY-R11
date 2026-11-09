@@ -791,6 +791,10 @@
       "sha256": "edc73e39d2c6f0f835783e4a819781db42b53475612e51f2589e552735381ddf"
     },
     {
+      "path": "backend/integration/pending-repurchase-r11.test.js",
+      "sha256": "53fee1ea76271c67eb34c73ef23e3a02e8ca324fe6a504ccb341f1589bdcd6cc"
+    },
+    {
       "path": "backend/integration/public-image-references-r9.test.js",
       "sha256": "8c1c9c8ff1dedf3b156f580f74aceb4c6e2dc552de9ef42098d4f7a6f04dcbef"
     },
@@ -860,7 +864,7 @@
     },
     {
       "path": "backend/src/app.js",
-      "sha256": "1bb9461d4a52d3d12b96578e35d94001c92e6038381c110fe201b6d31ae3bba4"
+      "sha256": "1752a7399cce54545a802bb26850fdf8f8ed2f6766760d253e0572710de25757"
     },
     {
       "path": "backend/src/assets/certificate-logo-original.alpha.deflate",
@@ -1456,7 +1460,7 @@
     },
     {
       "path": "backend/src/services/onlineCheckout.js",
-      "sha256": "e78f40bce836b49a61ad1b5f37f0b1e616f9d77d99de9d00261b015092c61afc"
+      "sha256": "7f59f146e61f5e11c90cb5c0c97a61f82df7ecfdc8edc22f9db7c73b937cecbe"
     },
     {
       "path": "backend/src/services/pageSectionUploads.js",
@@ -1480,7 +1484,7 @@
     },
     {
       "path": "backend/src/services/pendingBillingCheckout.js",
-      "sha256": "0a67d7d949a994dc6cbd2dd8c53dfb365764e6e31f187efef7d1ae60eefe5bd7"
+      "sha256": "68117b57cab5d8592715ac9253488dc3adde1c1c81ea13a782837732bf04347f"
     },
     {
       "path": "backend/src/services/publicImageReferences.js",
@@ -1640,7 +1644,7 @@
     },
     {
       "path": "backend/src/utils/paymentProviderErrors.js",
-      "sha256": "09e30b927e7b86789cfa3570814ff598484d43111cb1634a11ea10aa579b62a7"
+      "sha256": "e29078d4e3b76226644dcda21335bf2ebe5fc1a935e1be58c3e7a0c0935eb841"
     },
     {
       "path": "backend/src/utils/paymentWebhookPolicy.js",
@@ -1792,7 +1796,7 @@
     },
     {
       "path": "backend/test/payment-checkout-errors.test.js",
-      "sha256": "280d051c06e5173a0182fb753cd16cc264e4de4af8fd5d12248474a477c317ed"
+      "sha256": "eeccca99201589847038d594d1d94b9644b65626d28d98e66fef7c9e1eaa1e37"
     },
     {
       "path": "backend/test/payments-live-readiness.test.js",
@@ -1809,6 +1813,14 @@
     {
       "path": "backend/test/paypal-sale-refunds.test.js",
       "sha256": "fb4ab24f645767dcb497fd863263036946225911c09e6ed07be7f1c935875706"
+    },
+    {
+      "path": "backend/test/pending-purchase-display-r11.test.js",
+      "sha256": "07e3d14a73ffda2f72d7b69de5344c85e5ded00b6aceabf1cdf92492dfe67aed"
+    },
+    {
+      "path": "backend/test/pending-repurchase-r11.test.js",
+      "sha256": "856a41b70f8a24abe55be77f466ed078e37f4137866793dec9d0d7f5c4d264db"
     },
     {
       "path": "backend/test/public-image-references-r9.test.js",
@@ -1856,7 +1868,7 @@
     },
     {
       "path": "backend/test/v47-workflows.test.js",
-      "sha256": "5a2f30927b7e0dcbe42e8dbfea66e24ef6505335c92fe22d514fd391f190e9eb"
+      "sha256": "4b14e4f5584e2dc9640170dc4ed6314107f78ced428dc7e85b71d1c0884095bf"
     },
     {
       "path": "backend/test/v48-boundaries.test.js",
@@ -1916,7 +1928,7 @@
     },
     {
       "path": "backend/test/v60-14-switch-team.test.js",
-      "sha256": "b7434dfee3ee1d424f845b2a180c13efedb8e631e89369ee5eaf2a2d4bce6747"
+      "sha256": "eaa005551ec60acc2dabd02987aeac3be85cf861054a3f2303011afd40b382f3"
     },
     {
       "path": "backend/test/v60-15-1-fixtures.test.js",
@@ -2296,7 +2308,7 @@
     },
     {
       "path": "frontend/app/checkout/page.tsx",
-      "sha256": "f58c95566705815a04cbe93eb31e1ab1fb59d3ec11ba1eb4f28813609f97006a"
+      "sha256": "d831583aa7d9a9b775c5410bec5cf9cddd1ec36450a80bc1d2aaddac4ddc26ac"
     },
     {
       "path": "frontend/app/checkout/return/page.tsx",
@@ -2540,7 +2552,7 @@
     },
     {
       "path": "frontend/components/billing/AutoRenewals.tsx",
-      "sha256": "f49d25edfb995d899a92d36afbe373cb7cae18e14e4847b21d5fec01cc676704"
+      "sha256": "6d045a1ee78e2f1d6544b24a55a21d7a5d2b35663fe478a81d3b8c1c725489b9"
     },
     {
       "path": "frontend/components/billing/BillingActionConfirmation.tsx",
@@ -4340,7 +4352,7 @@
     },
     {
       "path": "frontend/test/checkout-selection-r11.test.mjs",
-      "sha256": "139a307af890cf67bdb948c6d78bfb800b14ed0b127a8402b52957ec1e047931"
+      "sha256": "c4474c0e459c5407369cea77a616a63e1c10882e8160d2ec7d86bed9c04513cc"
     },
     {
       "path": "frontend/test/compile.mjs",
@@ -4452,7 +4464,7 @@
     },
     {
       "path": "frontend/test/renewal-controls.test.mjs",
-      "sha256": "3e9b12e69de6b2cb6354181f6e34f488025b4d578df3a1133d44922c913e8277"
+      "sha256": "ce4ce7e01b9f85241f1d174f471803eae6c67c447b727d7e060f4e759ce2c071"
     },
     {
       "path": "frontend/test/renewal-setup.test.mjs",
@@ -4488,7 +4500,7 @@
     },
     {
       "path": "frontend/test/task6-catalog-access.test.mjs",
-      "sha256": "73a85fee068b245efc8d61b78030cd7ee6a50aa6b94b16e629a3fb667ee2e854"
+      "sha256": "ac71a3cc3b36806eedb602ed79c3158f88098e34aa4e6d17cb57f57777d03040"
     },
     {
       "path": "frontend/test/themed-cms-guards-r10.test.mjs",
@@ -4504,7 +4516,7 @@
     },
     {
       "path": "frontend/test/v60-10-reliability.test.mjs",
-      "sha256": "12cfd85c4fe4da32ff8c6d15f41770b24be20d1abe506f55c9b110e9e5a3f454"
+      "sha256": "0fcf02df3eb96dc8370257ba4515f09f73c92d6969f2f40a15062dc7fc870e38"
     },
     {
       "path": "frontend/test/v60-11-1-auth-controls.test.mjs",
@@ -4696,11 +4708,11 @@
     },
     {
       "path": "frontend/ui-tests/payments-v60-12.spec.ts",
-      "sha256": "0d0f4d68f51411d400e1905bc1f1cb9d976c9dda40000af00d45a357bab32bcd"
+      "sha256": "ff022078bf536526daddbb41a48d44cc1e06c61278d42a827abb7e56c543fa5a"
     },
     {
       "path": "frontend/ui-tests/pending-billing-r6.spec.ts",
-      "sha256": "04089be09cedf5ceeed14cd1597adfe28331122e88bd3634a8ab8b1509bd5665"
+      "sha256": "1a0e44133466cdc541af09f4c435bb3b55d795cb054c13bcb884528c9a36c6dc"
     },
     {
       "path": "frontend/ui-tests/player-preview-v60-13-2.spec.ts",

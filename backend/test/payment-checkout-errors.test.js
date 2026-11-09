@@ -31,6 +31,29 @@ test('transport failure warns about checking the same order and never asks for a
  const error=paymentProviderError({type:'StripeConnectionError',message:'socket closed'});
  assert.match(error.message,/same order/);assert.equal(error.status,503);
 });
+for(const identity of [{type:'StripeInvalidRequestError'},{name:'StripeInvalidRequestError'}])test('Stripe missing reference explains the current account/mode without claiming settlement '+JSON.stringify(identity),()=>{
+ const original=Object.assign(new Error('PRIVATE merchant/customer response'),{...identity,statusCode:404,code:'resource_missing',param:'id',requestId:'req_SYNTHETIC_REFERENCE',raw:{customer:'PRIVATE'},headers:{Authorization:'PRIVATE'}}),before={...original};
+ const error=paymentProviderError(original);
+ assert.equal(error.status,502);assert.equal(error.code,'PAYMENT_PROVIDER_REFERENCE_MISSING');assert.equal(error.paymentProvider,'stripe');assert.equal(error.providerStatus,404);assert.equal(error.providerCode,'resource_missing');assert.equal(error.providerParam,'id');assert.equal(error.providerRequestId,'req_SYNTHETIC_REFERENCE');
+ assert.match(error.message,/current Stripe account or payment mode/);assert.match(error.message,/original reference can be verified before another payment/);assert.match(error.message,/request ID/);
+ assert.equal(error.status==='paid',false);assert.equal(error.checkoutCancelled,undefined);assert.equal(error.order,undefined);assert.equal(error.raw,undefined);assert.equal(error.headers,undefined);assert.equal(error.message.includes('PRIVATE'),false);assert.equal(JSON.stringify(error).includes('PRIVATE'),false);assert.deepEqual({...original},before);assert.equal(original.message,'PRIVATE merchant/customer response');
+});
+for(const details of [{statusCode:404,code:'parameter_missing'},{statusCode:400,code:'resource_missing'},{statusCode:'404',code:'resource_missing'},{code:'resource_missing'}])test('other Stripe failures retain the existing rejection contract '+JSON.stringify(details),()=>{
+ const error=paymentProviderError({type:'StripeInvalidRequestError',...details,message:'PRIVATE original provider failure'});
+ assert.equal(error.status,502);assert.equal(error.code,'PAYMENT_PROVIDER_REJECTED');assert.doesNotMatch(error.message,/current Stripe account or payment mode/);assert.equal(error.message.includes('PRIVATE'),false);
+});
+test('PayPal missing references do not enter the Stripe account/mode classification',()=>{
+ const error=paymentProviderError({paymentProvider:'paypal',providerStatus:404,providerCode:'resource_missing',message:'PRIVATE PayPal body'});
+ assert.equal(error.status,502);assert.equal(error.code,'PAYMENT_PROVIDER_REJECTED');assert.equal(error.paymentProvider,'paypal');assert.equal(error.providerCode,'resource_missing');assert.doesNotMatch(error.message,/Stripe account/);assert.equal(error.message.includes('PRIVATE'),false);
+});
+test('missing-reference errors keep only sanitized identifiers and preserve the original provider failure',()=>{
+ const prior=process.env.STRIPE_SECRET_KEY;process.env.STRIPE_SECRET_KEY='SyntheticReferenceCredentialOnly';
+ try{
+  const original={type:'StripeInvalidRequestError',statusCode:404,code:'resource_missing',param:'SyntheticReferenceCredentialOnly',requestId:'SyntheticReferenceCredentialOnly',providerIssue:'PRIVATE customer value',message:'PRIVATE original response with SyntheticReferenceCredentialOnly',raw:{secret:'SyntheticReferenceCredentialOnly'},headers:{Authorization:'PRIVATE'}},before=structuredClone(original);
+  const error=paymentProviderError(original);
+  assert.equal(error.code,'PAYMENT_PROVIDER_REFERENCE_MISSING');assert.equal(error.providerCode,'resource_missing');assert.equal(error.providerStatus,404);assert.equal(error.providerParam,undefined);assert.equal(error.providerRequestId,undefined);assert.equal(error.providerIssue,undefined);assert.equal(error.message.includes('PRIVATE'),false);assert.equal(JSON.stringify(error).includes('SyntheticReferenceCredentialOnly'),false);assert.deepEqual(original,before);
+ }finally{if(prior===undefined)delete process.env.STRIPE_SECRET_KEY;else process.env.STRIPE_SECRET_KEY=prior;}
+});
 test('unrelated validation and business errors are left to the original handler',()=>{
  for(const error of [new Error('unrelated'),{status:409,message:'Price changed'},{name:'ValidationError'},{code:11000}])assert.equal(paymentProviderError(error),null);
 });

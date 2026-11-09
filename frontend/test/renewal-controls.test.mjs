@@ -162,3 +162,43 @@ test('renewal-only provider reply preserves the confirmed paid access clock whil
  f.button('Enable automatic renewal').props.onClick();await f.confirmAction();assert.equal(f.changed,1);assert.equal(f.writes().length,1);assert.ok(f.button('Disable automatic renewal'));
  assert.deepEqual(JSON.parse(JSON.stringify(indicator().props.access)),paidAccess);assert.notEqual(indicator().props.access.endsAt,'2031-05-01T00:00:00Z');assert.ok(nodes(f.h.tree).some(node=>node.props?.role==='status'&&text(node).includes('Stripe confirmed automatic renewal is on')));
 });
+
+const pendingFailureMessage='The provider could not start or confirm checkout.';
+async function failPendingCancellation(f){f.button('Cancel pending checkout').props.onClick();await f.confirmAction();assert.match(text(f.h.tree),/The provider could not start or confirm checkout/);}
+test('a pending checkout error survives successful refreshes while its original attempt remains pending',async t=>{
+ const f=fixture({items:[pendingItem],mutate:async()=>{throw Error(pendingFailureMessage);}});t.after(()=>f.h.cleanup());await f.h.settle();await failPendingCancellation(f);
+ for(const refresh of [()=>f.button('Refresh renewal status').props.onClick(),()=>f.window.dispatchEvent(new Event('focus'))]){refresh();await f.h.settle();assert.match(text(f.h.tree),/The provider could not start or confirm checkout/);assert.ok(f.button('Continue checkout'));}
+});
+test('verified replacement removing only the original pending row clears its stale error on the same billing view',async t=>{
+ const other={...pendingItem,_id:'other-pending',checkoutOrderId:'c'.repeat(24),product:'another-product',title:'Another pending course'};let rows=[pendingItem,other];
+ const f=fixture({items:rows,mutate:async()=>{throw Error(pendingFailureMessage);},afterWriteRead:()=>({items:rows,setupItems:[]})});t.after(()=>f.h.cleanup());await f.h.settle();await failPendingCancellation(f);
+ rows=[other,{...base,_id:'verified-paid',status:'active',checkoutStatus:'paid',pendingCheckout:false}];f.window.dispatchEvent(new Event('focus'));await f.h.settle();
+ assert.doesNotMatch(text(f.h.tree),/The provider could not start or confirm checkout/);assert.match(text(f.h.tree),/Another pending course/);assert.ok(f.button('Continue checkout'));assert.ok(f.button('Enable automatic renewal'));assert.equal(f.writes().length,1);
+});
+for(const checkoutStatus of ['paid','renewal_ready'])test('a verified non-pending '+checkoutStatus+' result clears only its obsolete pending-action error',async t=>{
+ let rows=[pendingItem];const f=fixture({items:rows,mutate:async()=>{throw Error(pendingFailureMessage);},afterWriteRead:()=>({items:rows,setupItems:[]})});t.after(()=>f.h.cleanup());await f.h.settle();await failPendingCancellation(f);
+ rows=[{...pendingItem,status:'active',pendingCheckout:false,checkoutStatus,canContinueCheckout:false,canCancelPendingCheckout:false,canDisableRenewal:true}];f.window.dispatchEvent(new Event('focus'));await f.h.settle();
+ assert.doesNotMatch(text(f.h.tree),/The provider could not start or confirm checkout/);assert.ok(f.button('Disable automatic renewal'));
+});
+test('another pending row disappearing cannot clear the original pending action error',async t=>{
+ const other={...pendingItem,_id:'another',product:'another-product',checkoutOrderId:'d'.repeat(24)};let rows=[pendingItem,other];
+ const f=fixture({items:rows,mutate:async()=>{throw Error(pendingFailureMessage);},afterWriteRead:()=>({items:rows,setupItems:[]})});t.after(()=>f.h.cleanup());await f.h.settle();await failPendingCancellation(f);rows=[pendingItem];f.window.dispatchEvent(new Event('focus'));await f.h.settle();assert.match(text(f.h.tree),/The provider could not start or confirm checkout/);
+});
+test('an unverified non-pending DTO cannot silently clear a pending action error',async t=>{
+ let rows=[pendingItem];const f=fixture({items:rows,mutate:async()=>{throw Error(pendingFailureMessage);},afterWriteRead:()=>({items:rows,setupItems:[]})});t.after(()=>f.h.cleanup());await f.h.settle();await failPendingCancellation(f);rows=[{...pendingItem,status:'active',pendingCheckout:false,checkoutStatus:null}];f.window.dispatchEvent(new Event('focus'));await f.h.settle();assert.match(text(f.h.tree),/The provider could not start or confirm checkout/);
+});
+for(const action of ['renewal','access'])test('successful pending-list refresh preserves an unrelated '+action+' error even with the same provider message',async t=>{
+ const control={...cancelItem,_id:'paid-control',title:'Independent paid access',canEnableRenewal:false,canDisableRenewal:true};let rows=[pendingItem,control];
+ const f=fixture({items:rows,mutate:async()=>{throw Error(pendingFailureMessage);},afterWriteRead:()=>({items:rows,setupItems:[]})});t.after(()=>f.h.cleanup());await f.h.settle();await failPendingCancellation(f);
+ if(action==='renewal'){f.button('Disable automatic renewal').props.onClick();await f.confirmAction();}else{f.button('Cancel subscription now').props.onClick();await f.confirmCancellation();}
+ rows=[control];f.window.dispatchEvent(new Event('focus'));await f.h.settle();assert.match(text(f.h.tree),/The provider could not start or confirm checkout/);assert.equal(f.writes().length,2);
+});
+test('a delayed previous-owner refresh cannot clear the new owner pending error',async t=>{
+ let owner='first',defer=false,resolveOld;const late=new Promise(resolve=>resolveOld=resolve),second={...pendingItem,_id:'new-owner-pending',product:'new-owner-product',checkoutOrderId:'e'.repeat(24)};
+ const f=fixture({items:[pendingItem],mutate:async()=>{throw Error(owner==='first'?pendingFailureMessage:'New owner checkout is still pending');},afterWriteRead:()=>{if(defer){defer=false;return late;}return {items:[owner==='first'?pendingItem:second],setupItems:[]};}});t.after(()=>f.h.cleanup());await f.h.settle();await failPendingCancellation(f);
+ defer=true;f.window.dispatchEvent(new Event('focus'));await f.h.settle();owner='second';f.setOwner('second-owner');await f.h.settle();f.button('Cancel pending checkout').props.onClick();await f.confirmAction();assert.match(text(f.h.tree),/New owner checkout is still pending/);
+ resolveOld({items:[],setupItems:[]});await f.h.settle();assert.match(text(f.h.tree),/New owner checkout is still pending/);assert.ok(f.button('Continue checkout'));assert.equal(f.writes().length,2);
+});
+test('a malformed billing refresh does not dismiss a still-unresolved pending error',async t=>{
+ let malformed=false;const f=fixture({items:[pendingItem],mutate:async()=>{throw Error(pendingFailureMessage);},afterWriteRead:()=>({items:malformed?{}:[pendingItem],setupItems:[]})});t.after(()=>f.h.cleanup());await f.h.settle();await failPendingCancellation(f);malformed=true;f.window.dispatchEvent(new Event('focus'));await f.h.settle();assert.match(text(f.h.tree),/The provider could not start or confirm checkout/);assert.ok(f.button('Continue checkout'));
+});

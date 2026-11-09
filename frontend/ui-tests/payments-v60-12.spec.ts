@@ -69,14 +69,15 @@ test('lost creation response recovers with the original key and no second purcha
  const state=await control(request,'state'),posts=state.calls.filter((c:any)=>c.path==='/api/payments/checkout'&&c.method==='POST'),reads=state.calls.filter((c:any)=>c.path==='/api/payments/checkout-status');
  expect(posts).toHaveLength(1);expect(reads.length).toBeGreaterThan(0);expect(reads.every((x:any)=>x.key===posts[0].key)).toBe(true);expect(state.orders).toHaveLength(1);expect(state.payments).toHaveLength(0);
 });
-test('unknown checkout survives refresh and server refuses a new payment until the old checkout is identified',async({page,context,request})=>{
+test('unknown checkout survives refresh with normal choices but cannot create a new payment before safe closure',async({page,context,request})=>{
  await control(request,'config',{createMode:'creating'});await signIn(context);await page.goto('/checkout?course=paid-demo');await oneTimePurchase(page);await page.locator('button.paymentMethod.stripe').click();
  await expect(page.getByRole('button',{name:'Check existing checkout',exact:true})).toBeVisible();await expect(page.locator('button.paymentMethod.paypal')).toBeEnabled();
- await page.reload();await oneTimePurchase(page);await expect(page.getByRole('button',{name:'Check existing checkout',exact:true})).toBeVisible();await expect(page.locator('button.paymentMethod.paypal')).toBeEnabled();
+ const original=(await orders(request))[0];
+ await page.reload();await oneTimePurchase(page);await expect(page.getByRole('button',{name:'Check existing checkout',exact:true})).toHaveCount(0);await expect(page.locator('button.paymentMethod.paypal')).toBeEnabled();
  await page.locator('button.paymentMethod.paypal').click();
  await expect(page.locator('button.paymentMethod.paypal')).toBeEnabled();
- await page.getByRole('button',{name:'Check existing checkout',exact:true}).click();await expect(page.getByRole('button',{name:'Start a new checkout',exact:true})).toHaveCount(0);
- const state=await control(request,'state');expect(state.orders).toHaveLength(1);expect(state.payments).toHaveLength(0);expect(state.calls.filter((c:any)=>c.path==='/api/payments/checkout'&&c.method==='POST')).toHaveLength(1);
+ await expect(page.getByRole('alert').filter({hasText:'Earlier payment is still being prepared'})).toBeVisible();await expect(page.getByRole('button',{name:'Check existing checkout',exact:true})).toHaveCount(0);await expect(page.getByRole('button',{name:'Start a new checkout',exact:true})).toHaveCount(0);
+ const state=await control(request,'state');expect(state.orders).toHaveLength(1);expect(state.orders[0].key).toBe(original.key);expect(state.payments).toHaveLength(0);expect(state.calls.filter((c:any)=>c.path==='/api/payments/checkout'&&c.method==='POST')).toHaveLength(1);const releases=state.calls.filter((c:any)=>c.path==='/api/payments/checkout/release');expect(releases).toHaveLength(1);expect(releases[0].key).toBe(original.key);
 });
 test('only a server-confirmed closed checkout plus an explicit click permits a new key',async({page,context,request})=>{
  await control(request,'config',{createMode:'expired'});await signIn(context);await page.goto('/checkout?course=paid-demo');await oneTimePurchase(page);await page.locator('button.paymentMethod.stripe').click();
@@ -109,12 +110,13 @@ test('one student cannot read or confirm another students checkout or invoice',a
   const invoices=await second.request.get(origin+'/api/payments/mine/invoices',{headers:{'X-SA-Portal':'student'}});expect((await invoices.json()).items).toHaveLength(0);
  }finally{await second.close();}
 });
-test('provider Back preserves the original checkout and does not automatically create another order',async({page,context,request})=>{
+test('provider Back restores normal choices and only explicit payment releases the old checkout before a fresh one',async({page,context,request})=>{
  await signIn(context);await page.goto('/checkout?course=paid-demo');await oneTimePurchase(page);await page.locator('button.paymentMethod.stripe').click();await expect(page.getByRole('heading',{name:'Synthetic payment provider — no real money'})).toBeVisible();
  const original=(await orders(request))[0];await page.goBack();await expect(page).toHaveURL(origin+'/checkout?course=paid-demo');
- await expect(page.getByRole('button',{name:'Check existing checkout',exact:true})).toBeEnabled();await expect(page.locator('button.paymentMethod.paypal')).toBeEnabled();
- await page.getByRole('button',{name:'Check existing checkout',exact:true}).click();await expect(page.getByRole('heading',{name:'Synthetic payment provider — no real money'})).toBeVisible();
- const state=await control(request,'state');expect(state.orders).toHaveLength(1);expect(state.orders[0].key).toBe(original.key);expect(state.calls.filter((c:any)=>c.path==='/api/payments/checkout'&&c.method==='POST')).toHaveLength(1);
+ await expect(page.getByRole('button',{name:'Check existing checkout',exact:true})).toHaveCount(0);await expect(page.locator('button.paymentMethod.paypal')).toBeEnabled();
+ const before=await control(request,'state');expect(before.orders).toHaveLength(1);expect(before.orders[0].key).toBe(original.key);expect(before.calls.some((c:any)=>c.path==='/api/payments/checkout/release')).toBe(false);
+ await oneTimePurchase(page);await page.locator('button.paymentMethod.stripe').click();await expect(page.getByRole('heading',{name:'Synthetic payment provider — no real money'})).toBeVisible();
+ const state=await control(request,'state');expect(state.orders).toHaveLength(2);expect(state.orders[0].status).toBe('expired');expect(state.orders[1].key).not.toBe(original.key);expect(state.payments).toHaveLength(0);expect(state.calls.filter((c:any)=>c.path==='/api/payments/checkout'&&c.method==='POST')).toHaveLength(2);const releases=state.calls.filter((c:any)=>c.path==='/api/payments/checkout/release');expect(releases).toHaveLength(1);expect(releases[0].key).toBe(original.key);
 });
 test('paid return refresh reuses the settled order and cannot duplicate invoice, payment or notification',async({page,context,request})=>{
  await signIn(context);await page.goto('/checkout?section=academy-section');await oneTimePurchase(page);await page.locator('button.paymentMethod.paypal').click();await approve(page,request);await expect(page.getByRole('heading',{name:'You’re ready to learn.'})).toBeVisible();

@@ -18,10 +18,11 @@ export default function Checkout(){
  const [couponInput,setCouponInput]=useState(''),[couponCode,setCouponCode]=useState(''),[autoRenew,setAutoRenew]=useState(true),[termsAccepted,setTermsAccepted]=useState(false),[quote,setQuote]=useState<any>(null),[quoteError,setQuoteError]=useState(''),[quoteLoading,setQuoteLoading]=useState(false);
  const replacementKey=useRef('');
  const selectionRevision=useRef(0),renderSelectionRevision=selectionRevision.current;
- const keys=useRef<Record<string,string>>({}),paymentLock=useRef(false),alive=useRef(true),leaving=useRef(false),lastAttempt=useRef<CheckoutAttempt|null>(null),operation=useRef(0),currentScope=useRef('');
+ const keys=useRef<Record<string,string>>({}),paymentLock=useRef(false),alive=useRef(true),leaving=useRef(false),lastAttempt=useRef<CheckoutAttempt|null>(null),restoredAttempt=useRef<CheckoutAttempt|null>(null),restartable=useRef(false),operation=useRef(0),currentScope=useRef('');
+ restartable.current=!renewalSetup&&['course','section'].includes(mode);
  const [pendingAttempt,setPendingAttempt]=useState<CheckoutAttempt|null>(null);
  const [slow,setSlow]=useState(false),[recovering,setRecovering]=useState(false),[canStartNew,setCanStartNew]=useState(false);
- useEffect(()=>{alive.current=true;const restored=(event:PageTransitionEvent)=>{if(!event.persisted&&!leaving.current)return;operation.current++;paymentLock.current=false;leaving.current=false;setBusy('');setRecovering(false);};window.addEventListener('pageshow',restored);return()=>{alive.current=false;window.removeEventListener('pageshow',restored);};},[]);
+ useEffect(()=>{alive.current=true;const restored=(event:PageTransitionEvent)=>{if(!event.persisted&&!leaving.current)return;operation.current++;paymentLock.current=false;leaving.current=false;setBusy('');setRecovering(false);if(restartable.current&&lastAttempt.current){restoredAttempt.current=lastAttempt.current;lastAttempt.current=null;setPendingAttempt(null);setError('');setCanStartNew(false);setTermsAccepted(false);}};window.addEventListener('pageshow',restored);return()=>{alive.current=false;window.removeEventListener('pageshow',restored);};},[]);
  useEffect(()=>{setSlow(false);if(!busy)return;const timer=setTimeout(()=>setSlow(true),8000);return()=>clearTimeout(timer);},[busy]);
  const [bootstrapError,setBootstrapError]=useState(''),[bootstrapLoading,setBootstrapLoading]=useState(true),[bootstrapRevision,setBootstrapRevision]=useState(0),[priceRevision,setPriceRevision]=useState(0);
  useEffect(()=>{if(ready&&!user)router.replace('/login?next='+encodeURIComponent(safeStudentNext('/checkout?'+query.toString())));},[ready,user,router,query]);
@@ -35,11 +36,11 @@ export default function Checkout(){
   operation.current++;paymentLock.current=false;leaving.current=false;setBusy('');setRecovering(false);
   let previous:CheckoutAttempt|null=null;
   if(owner&&product)try{previous=readCheckoutAttempt(sessionStorage,scope);}catch{}
-  lastAttempt.current=previous;setPendingAttempt(previous);setCanStartNew(false);setTermsAccepted(false);if(renewalSetup){setAutoRenew(true);setCouponCode('');setCouponInput('');}
-  if(previous){setAutoRenew(previous.autoRenew===true);setCouponCode(previous.couponCode||'');setCouponInput(previous.couponCode||'');setOptionKey(previous.optionKey);setError('An existing checkout was found. Choose either payment method; the previous checkout will be checked and safely closed before a new one opens.');}
+  restoredAttempt.current=restartable.current?previous:null;lastAttempt.current=restartable.current?null:previous;setPendingAttempt(restartable.current?null:previous);setCanStartNew(false);setTermsAccepted(false);setError('');if(renewalSetup){setAutoRenew(true);setCouponCode('');setCouponInput('');}
+  if(previous){setAutoRenew(previous.autoRenew===true);setCouponCode(previous.couponCode||'');setCouponInput(previous.couponCode||'');if(!restartable.current){setOptionKey(previous.optionKey);setError('An existing checkout was found. Choose either payment method; the previous checkout will be checked and safely closed before a new one opens.');}}
  },[scope,catalog.scope]);
- function remember(a:CheckoutAttempt){lastAttempt.current=a;setPendingAttempt(a);try{saveCheckoutAttempt(sessionStorage,a);}catch{}}
- function forget(a:CheckoutAttempt){delete keys.current[checkoutLegacyKey(a)];try{forgetCheckoutAttempt(sessionStorage,a);}catch{}lastAttempt.current=null;setPendingAttempt(null);}
+ function remember(a:CheckoutAttempt){restoredAttempt.current=null;lastAttempt.current=a;setPendingAttempt(a);try{saveCheckoutAttempt(sessionStorage,a);}catch{}}
+ function forget(a:CheckoutAttempt){delete keys.current[checkoutLegacyKey(a)];try{forgetCheckoutAttempt(sessionStorage,a);}catch{}restoredAttempt.current=null;lastAttempt.current=null;setPendingAttempt(null);}
 
  useEffect(()=>{if(!product||mode==='membership'){setPurchase(null);setLoading(false);return;}const controller=new AbortController();setLoading(true);setError(lastAttempt.current?'An existing checkout was found. Choose either payment method; the previous checkout will be checked and safely closed before a new one opens.':'');setPurchase(null);apiFetch('/payments/catalog?'+new URLSearchParams({kind:mode,product}),{signal:controller.signal}).then(d=>{if(controller.signal.aborted||!selectionIsCurrent())return;if(!d.purchase||typeof d.purchase!=='object'||(d.purchase.offers!==undefined&&!Array.isArray(d.purchase.offers)))throw new Error('The price response was incomplete. Please retry loading prices.');setPurchase(d.purchase);if(mode==='course')setCourseSection({scope:choiceScope,slug:typeof d.purchase.sectionSlug==='string'?d.purchase.sectionSlug:''});const preferred=choice.scope===choiceScope?choice.optionKey:'';setOptionKey(lastAttempt.current?.optionKey||(preferred&&d.purchase.offers?.some((o:any)=>o.key===preferred)?preferred:null)||(d.purchase.offers?.some((o:any)=>o.key===query.get('option'))?query.get('option'):null)||d.purchase.offers?.[0]?.key||'');}).catch(e=>{if(!controller.signal.aborted&&selectionIsCurrent())setError(e.message);}).finally(()=>{if(!controller.signal.aborted&&selectionIsCurrent())setLoading(false);});return()=>controller.abort();},[mode,product,owner,catalog.scope,choiceScope,priceRevision]);
  const offer=purchase?.offers?.find((o:any)=>o.key===optionKey);
@@ -92,7 +93,7 @@ export default function Checkout(){
  async function pay(provider:string){
   if(currentScope.current!==requestScope||renderSelectionRevision!==selectionRevision.current||paymentLock.current||busy||covered||checkingAccess||!offer||!quote||quoteLoading||quoteError||!ready||!owner||bootstrapLoading||bootstrapError||loading||(!quote.noPaymentRequired&&(!methods[provider]?.enabled||!quote.availableProviders?.[provider])))return;
   if(!termsAccepted){setError('Please accept the purchase and renewal terms before continuing.');return;}
-  let retained=lastAttempt.current;
+  let retained=lastAttempt.current||restoredAttempt.current;
   if(!retained)try{retained=readCheckoutAttempt(sessionStorage,scope);}catch{}
   if(retained&&(retained.owner!==owner||retained.kind!==mode||retained.product!==product||Boolean(retained.renewalSetup)!==renewalSetup)){
    setError('This saved checkout belongs to a different purchase. Open My Billing to review it.');return;
@@ -100,8 +101,8 @@ export default function Checkout(){
   const ticket=++operation.current;paymentLock.current=true;leaving.current=false;setBusy(provider);setError('');setCanStartNew(false);
   try{
    let nextKey=replacementKey.current;
-   if(retained&&(retained.provider!==provider||canStartNew||retained.optionKey!==optionKey||retained.releaseRequested)){
-    retained={...retained,releaseRequested:true};remember(retained);
+   if(retained&&(restartable.current&&!lastAttempt.current||retained.provider!==provider||canStartNew||retained.optionKey!==optionKey||retained.releaseRequested)){
+    retained={...retained,releaseRequested:true};if(restartable.current&&!lastAttempt.current){restoredAttempt.current=retained;try{saveCheckoutAttempt(sessionStorage,retained);}catch{}}else remember(retained);
     setRecovering(true);
     const released=await apiFetch('/payments/checkout/release',{method:'POST',
      headers:{'Idempotency-Key':retained.key},body:JSON.stringify({})});
@@ -109,7 +110,7 @@ export default function Checkout(){
     const old=released.order;
     if(!old||old.provider!==retained.provider||old.kind!==retained.kind||old.product!==retained.product||
       (retained.orderId&&old._id!==retained.orderId)||(retained.sourceInvoiceId&&old.sourceInvoiceId!==retained.sourceInvoiceId))throw new Error('The previous checkout identity could not be verified.');
-    if(['paid','renewal_ready'].includes(old.status)){if(openOrder(released,retained.provider,ticket))return;}
+    if(['paid','renewal_ready'].includes(old.status)){remember({...retained,orderId:old._id});if(openOrder(released,retained.provider,ticket))return;}
     if(released.released!==true||!['failed','expired','cancelled'].includes(old.status)||
        typeof released.replacementKey!=='string'||!/^[-_a-zA-Z0-9]{16,128}$/.test(released.replacementKey))
       throw new Error('The previous payment is still being checked. Do not pay again yet.');
@@ -121,6 +122,7 @@ export default function Checkout(){
    if(!isCurrent(ticket))return;if(!openOrder(data,provider,ticket))throw new Error('Checkout is being prepared. Check the existing order.');
   }catch(e:any){
    if(!isCurrent(ticket))return;setError(e.message);
+   if(e.code==='CHECKOUT_RESTART_REQUIRED'){if(lastAttempt.current&&!lastAttempt.current.orderId)forget(lastAttempt.current);return;}
    if(e.code==='ACTIVE_ACCESS_EXISTS'){if(lastAttempt.current&&!lastAttempt.current.orderId)forget(lastAttempt.current);catalog.refresh();return;}
    if(lastAttempt.current&&(!e.status||[408,409,429,500,502,503,504].includes(e.status)))await recoverAttempt(lastAttempt.current.provider,lastAttempt.current.key,ticket);
    if(isCurrent(ticket)&&typeof e.code==='string'&&e.code.startsWith('PAYMENT_PROVIDER_'))setError(current=>current===e.message?current:e.message+(current?' '+current:''));

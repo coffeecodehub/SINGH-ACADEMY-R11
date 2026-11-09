@@ -11,9 +11,10 @@ export function paymentProviderError(original){
  if(!stripe&&!paypal)return null;
  const configuration=stripe&&['StripeAuthenticationError','StripePermissionError'].includes(original.type||original.name)||paypal&&[401,403].includes(original.providerStatus);
  const temporary=stripe&&['StripeConnectionError','StripeRateLimitError','StripeAPIError'].includes(original.type||original.name)||paypal&&(!original.providerStatus||original.providerStatus>=500||original.providerStatus===429);
- const error=new Error(configuration?'This payment method is temporarily unavailable. Please contact the Academy with the request ID.':temporary?'The payment provider is taking longer or is temporarily unavailable. Check or continue the same order before starting another payment.':'The payment provider could not start or confirm checkout. Please contact the Academy with the request ID; check the same order if you already approved payment.');
- error.status=configuration||temporary?503:502;
- error.code=configuration?'PAYMENT_PROVIDER_CONFIGURATION':temporary?'PAYMENT_PROVIDER_UNAVAILABLE':'PAYMENT_PROVIDER_REJECTED';
+ const referenceMissing=stripe&&original.statusCode===404&&original.code==='resource_missing';
+ const error=new Error(referenceMissing?'The previous checkout reference is unavailable in the current Stripe account or payment mode. Please contact the Academy with the request ID so the original reference can be verified before another payment.':configuration?'This payment method is temporarily unavailable. Please contact the Academy with the request ID.':temporary?'The payment provider is taking longer or is temporarily unavailable. Check or continue the same order before starting another payment.':'The payment provider could not start or confirm checkout. Please contact the Academy with the request ID; check the same order if you already approved payment.');
+ error.status=referenceMissing?502:configuration||temporary?503:502;
+ error.code=referenceMissing?'PAYMENT_PROVIDER_REFERENCE_MISSING':configuration?'PAYMENT_PROVIDER_CONFIGURATION':temporary?'PAYMENT_PROVIDER_UNAVAILABLE':'PAYMENT_PROVIDER_REJECTED';
  error.paymentProvider=stripe?'stripe':'paypal';
  const status=original.statusCode||original.providerStatus;
  error.providerStatus=Number.isInteger(status)&&status>=100&&status<=599?status:undefined;

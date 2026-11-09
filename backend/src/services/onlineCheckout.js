@@ -60,6 +60,43 @@ export async function quoteCheckout(req){
  return {...result,quote};
 }
 const CLOSED=new Set(['expired','failed','cancelled']);
+const regularPurchase=order=>['course','section'].includes(order.kind)&&order.renewalSetup!==true;
+function restartRequired(error=businessError('Another checkout for this product changed while your purchase was being prepared. Please choose the payment method again.',409)){
+ if(error.code==='ACTIVE_ACCESS_EXISTS'||error.code==='CHECKOUT_RESTART_REQUIRED')return error;
+ const wrapped=Object.assign(new Error(error.message),{status:error.status,code:'CHECKOUT_RESTART_REQUIRED',cause:error});
+ for(const field of ['paymentProvider','providerStatus','providerType','providerCode','providerParam','providerIssue','providerRequestId'])if(error[field]!==undefined)wrapped[field]=error[field];
+ return wrapped;
+}
+function otherPendingPurchase(userId,kind,product,environment,key){return {user:userId,kind,product,environment,renewalSetup:{$ne:true},requestKey:{$ne:key},status:{$in:['creating','pending']}};}
+/** A fresh purchase intent closes only earlier unpaid checkouts, preserving their
+ * financial history. Provider uncertainty must never become a second charge. */
+async function preparePendingRepurchase(user,kind,product,environment,key){
+ try{
+  const orders=await CheckoutOrder.find(otherPendingPurchase(user._id,kind,product,environment,key)).sort({createdAt:1,_id:1}).limit(21);
+  if(orders.length>20)throw businessError('Several previous checkouts need reconciliation. Contact the Academy before another payment.',409);
+  // A provider-confirmed closed checkout may still hold the abandoned mandate's
+  // unique key. Paid/deferred mandates remain subject to the existing guards.
+  const active=await BillingAgreement.findOne({user:user._id,kind,product,environment,activeKey:[user._id,environment,kind,product].join(':'),status:{$in:['creating','incomplete']},renewalSetup:{$ne:true}});
+  if(active&&!orders.some(order=>String(order._id)===String(active.checkoutOrder))){
+   const closed=await CheckoutOrder.findOne({_id:active.checkoutOrder,user:user._id,kind,product,environment,renewalSetup:{$ne:true},requestKey:{$ne:key},status:{$in:[...CLOSED]}});
+   if(closed)orders.push(closed);
+  }
+  for(const order of orders){
+   if(order.invoice||order.payment||await Payment.exists({user:user._id,checkoutOrder:order._id,status:'paid'})||order.billingAgreement&&await Invoice.exists({user:user._id,billingAgreement:order.billingAgreement,status:'paid'}))
+    throw businessError('The previous checkout has financial records that need reconciliation before another payment.',409);
+   if(order.billingAgreement){
+    const agreement=await BillingAgreement.findOne({_id:order.billingAgreement,user:user._id,checkoutOrder:order._id});
+    if(!agreement||agreement.provider!==order.provider||agreement.environment!==environment||agreement.kind!==kind||agreement.product!==product||agreement.renewalSetup||agreement.sourceInvoiceId||!['creating','incomplete'].includes(agreement.status)||agreement.renewalOperation||agreement.accessCancellationRequestedAt||agreement.accessCancelledAt){
+     const paid=await CheckoutOrder.exists({_id:order._id,user:user._id,status:{$in:['paid','renewal_ready']}});
+     if(paid){const error=businessError('The previous checkout completed. Refresh your access before paying again.',409);error.code='ACTIVE_ACCESS_EXISTS';throw error;}
+     throw businessError('The previous subscription needs its payment status confirmed before another purchase.',409);
+    }
+   }
+   const released=await releaseOwnedCheckout(order,user,{verifyClosure:true});
+   if(!released.released){const error=businessError('The previous checkout completed. Refresh your access before paying again.',409);error.code='ACTIVE_ACCESS_EXISTS';throw error;}
+  }
+ }catch(error){throw restartRequired(error);}
+}
 function recoveryError(){const e=businessError('The previous payment needs Academy reconciliation. Its status is uncertain; do not pay again. Contact support with the checkout reference.',409);e.code='CHECKOUT_RECONCILIATION_REQUIRED';return e;}
 async function markRecovery(order,reason){await CheckoutOrder.updateOne({_id:order._id,status:{$ne:'paid'}},{$set:{recoveryRequired:true,recoveryReason:reason}});}
 async function persistRemote(order,claim,remote){
@@ -174,9 +211,11 @@ export async function startCheckout(req){
  const free=quote.amountMinor===0;
  if(free&&(!quote.couponId||quote.discountMinor!==quote.subtotalMinor||quote.subtotalMinor<=0||autoRenew))throw businessError('A fully discounted term requires a valid coupon and one-time access.',409);
  const config=free?{environment:'live'}:requireGateway(provider),currency=gatewayCurrency(quote.currency),orderId=String(new mongoose.Types.ObjectId());
+ if(regularPurchase({kind,renewalSetup}))await preparePendingRepurchase(req.user,kind,product,config.environment,key);
  let order;
  try{order=await transaction(async session=>{
   const purchasingUser=await User.findOneAndUpdate({_id:req.user._id,role:'student',status:'active',removalState:{$nin:['pending','removed']}},{$inc:{commerceVersion:1}},{new:true,session});if(!purchasingUser)throw businessError('This account cannot start a new purchase while access or removal is restricted.',403);
+  if(regularPurchase({kind,renewalSetup})&&await CheckoutOrder.exists(otherPendingPurchase(req.user._id,kind,product,config.environment,key)).session(session))throw restartRequired();
   if(!renewalSetup)await assertNoActivePurchase(req.user._id,kind,product,{session,environment:config.environment});
   const conflict=await renewalCheckoutConflict(req.user._id,kind,product,{renewalSetup,autoRenew,environment:config.environment,session});if(conflict)throw businessError(conflict,409);
   if(renewalSetup){
@@ -300,24 +339,32 @@ async function releaseCheckoutOperation(order){
  */
 export async function releaseCheckout(req){
  const key=digest(String(req.user._id)+':'+requestKey(req));
- let original=await CheckoutOrder.findOne({requestKey:key,user:req.user._id});
+ const original=await CheckoutOrder.findOne({requestKey:key,user:req.user._id});
  if(!original)throw businessError('The earlier checkout could not be identified yet. Check its status before paying again.',409);
+ return releaseOwnedCheckout(original,req.user,{verifyClosure:regularPurchase(original)});
+}
+/** Shared owned release for an explicit retry and a fresh Academy purchase. */
+async function releaseOwnedCheckout(original,user,{verifyClosure=false}={}){
  if(['paid','renewal_ready'].includes(original.status))return {released:false,order:publicOrder(original)};
+ if(regularPurchase(original)&&CLOSED.has(original.status)&&!original.providerOrderId){
+  if(original.creationProtocolVersion!==1||original.creationAttemptedAt){await markRecovery(original,'Closed checkout has no verified provider identity.');throw recoveryError();}
+  if(new Date(original.creationClaimUntil||0)>new Date())throw businessError('The previous checkout is still being prepared. Retry the same action shortly.',409);
+ }
  if(!original.providerOrderId&&!CLOSED.has(original.status)){
   if(original.creationProtocolVersion===1&&!original.creationAttemptedAt){
    const closed=await CheckoutOrder.findOneAndUpdate({_id:original._id,creationProtocolVersion:1,creationAttemptedAt:{$exists:false},providerOrderId:{$exists:false},status:'creating',$or:[{creationClaimUntil:{$exists:false}},{creationClaimUntil:{$lt:new Date()}}]},
     {$set:{status:'cancelled',cancelRequestedAt:new Date(),recoveryRequired:false}},{new:true});
    if(!closed)throw businessError('The previous checkout is still being prepared. Retry the same action shortly.',409);original=closed;
   }else{
-   await makeRemote(original,req.user);
-   original=await CheckoutOrder.findOne({_id:original._id,user:req.user._id});
+   await makeRemote(original,user);
+   original=await CheckoutOrder.findOne({_id:original._id,user:user._id});
    if(!original?.providerOrderId&&!CLOSED.has(original?.status))throw businessError('The earlier checkout is still being reconciled. Check the same order.',409);
   }
  }
  const claimed=await claimCheckoutOperation(original._id);
  try{
   if(['paid','renewal_ready'].includes(claimed.status))return {released:false,order:publicOrder(claimed)};
-  if(claimed.provider==='paypal'&&claimed.providerOrderId&&!claimed.cancelRequestedAt||!['failed','expired','cancelled'].includes(claimed.status)){
+  if(verifyClosure&&claimed.providerOrderId||claimed.provider==='paypal'&&claimed.providerOrderId&&!claimed.cancelRequestedAt||!['failed','expired','cancelled'].includes(claimed.status)){
    const mark=await CheckoutOrder.updateOne({_id:claimed._id,operationClaim:claimed.operationClaim,status:{$ne:'paid'}},
     {$set:{cancelRequestedAt:claimed.cancelRequestedAt||new Date()}});
    if(mark.matchedCount!==1)throw businessError('Checkout changed while switching. Check its payment status.',409);
@@ -341,7 +388,10 @@ export async function releaseCheckout(req){
    if(['paid','renewal_ready'].includes(latest?.status))return {released:false,order:publicOrder(latest)};
    throw businessError('Checkout status changed. Check My Billing before paying again.',409);
   }
-  if(closed.billingAgreement)await BillingAgreement.updateOne({_id:closed.billingAgreement,status:'creating'},{$set:{status:'cancelled',autoRenew:false},$unset:{activeKey:1}});
+  if(closed.billingAgreement){
+   if(regularPurchase(closed))await BillingAgreement.updateOne({_id:closed.billingAgreement,user:closed.user,checkoutOrder:closed._id,status:{$in:['creating','incomplete']},renewalSetup:{$ne:true},sourceInvoiceId:{$exists:false},renewalOperation:{$exists:false},accessCancellationRequestedAt:{$exists:false},accessCancelledAt:{$exists:false}},{$set:{autoRenew:false},$unset:{activeKey:1}});
+   else await BillingAgreement.updateOne({_id:closed.billingAgreement,status:'creating'},{$set:{status:'cancelled',autoRenew:false},$unset:{activeKey:1}});
+  }
   if(closed.couponId)await transaction(session=>releaseCoupon({couponId:closed.couponId,orderId:closed._id,session}));
   return {released:true,order:publicOrder(closed),replacementKey:closed.replacementKey};
  }finally{await releaseCheckoutOperation(claimed);}

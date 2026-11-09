@@ -91,7 +91,7 @@ function serviceFixture(provider='stripe'){
 for(const provider of ['stripe','paypal'])test(`${provider} release preserves financial records and returns one replay-stable replacement key`,async()=>{
  const f=serviceFixture(provider),first=await f.releaseCheckout(f.req()),again=await f.releaseCheckout(f.req());
  assert.equal(first.released,true);assert.match(first.replacementKey,/^[\w-]{16,128}$/);assert.equal(first.replacementKey,again.replacementKey);
- assert.equal(f.closed.length,1);assert.equal(f.state.data.CheckoutOrder.length,1);
+ assert.equal(f.closed.length,2);assert.equal(f.state.data.CheckoutOrder.length,1);
  assert.equal(f.state.transactions,0);assert.equal(f.state.data.Invoice,undefined);assert.equal(f.state.data.Payment,undefined);
  assert.equal(f.state.data.CheckoutOrder[0].operationClaim,undefined);assert.equal(first.order.replacementKey,undefined);
 });

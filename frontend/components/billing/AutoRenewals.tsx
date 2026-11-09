@@ -35,14 +35,23 @@ export default function AutoRenewals({owner,onChanged}:{owner:string;onChanged:(
   const [readError,setReadError]=useState(''),[error,setError]=useState(''),[notice,setNotice]=useState(''),[busy,setBusy]=useState(''),[revision,setRevision]=useState(0);
   const [cancellation,setCancellation]=useState<{item:Agreement|SetupItem;purchase:boolean;owner:string}|null>(null);
   const [actionConfirmation,setActionConfirmation]=useState<ActionConfirmation|null>(null),confirmation=useRef<ActionConfirmation|null>(null);
+  const pendingFailure=useRef<{owner:string;id:string;message:string}|null>(null);
   const inFlight=useRef<symbol|null>(null),activeOwner=useRef(owner),loadedOwner=useRef('');activeOwner.current=owner;
-  useEffect(()=>{loadedOwner.current='';inFlight.current=null;confirmation.current=null;setBusy('');setNotice('');setError('');setReadError('');setItems([]);setSetupItems([]);setCancellation(null);setActionConfirmation(null);},[owner]);
+  useEffect(()=>{loadedOwner.current='';inFlight.current=null;confirmation.current=null;pendingFailure.current=null;setBusy('');setNotice('');setError('');setReadError('');setItems([]);setSetupItems([]);setCancellation(null);setActionConfirmation(null);},[owner]);
   useEffect(()=>{
     if(!owner)return;
-    const c=new AbortController();setLoading(loadedOwner.current!==owner);setReadError('');
+    const c=new AbortController(),failureAtRead=pendingFailure.current;setLoading(loadedOwner.current!==owner);setReadError('');
     apiFetch('/payments/mine/agreements',{signal:c.signal}).then(d=>{
       if(!Array.isArray(d.items)||d.setupItems!==undefined&&!Array.isArray(d.setupItems))throw new Error('Automatic renewal records could not be read.');
-      if(!c.signal.aborted){loadedOwner.current=owner;setItems(d.items);setSetupItems(d.setupItems||[]);}
+      if(!c.signal.aborted){
+        loadedOwner.current=owner;setItems(d.items);setSetupItems(d.setupItems||[]);
+        if(failureAtRead&&pendingFailure.current===failureAtRead&&failureAtRead.owner===owner&&activeOwner.current===owner&&!inFlight.current){
+          const row=d.items.find((item:Agreement)=>item._id===failureAtRead.id);
+          if(!row||row.pendingCheckout===false&&!['creating','incomplete'].includes(row.status)&&['paid','renewal_ready','cancelled','expired','failed'].includes(row.checkoutStatus||'')){
+            pendingFailure.current=null;setError(current=>current===failureAtRead.message?'':current);
+          }
+        }
+      }
     }).catch(e=>{if(!c.signal.aborted)setReadError(e.message);}).finally(()=>{if(!c.signal.aborted)setLoading(false);});
     return()=>c.abort();
   },[owner,revision]);
@@ -58,7 +67,7 @@ export default function AutoRenewals({owner,onChanged}:{owner:string;onChanged:(
       const next:ActionConfirmation={item,owner,action:'cancel',subject:'this pending checkout',pending:true,message:`Cancel the pending checkout for ${item.title||item.product}? No already-paid access will be cancelled. The card is removed only after the payment provider confirms this checkout is closed.`};confirmation.current=next;setActionConfirmation(next);return;
     }
     if(cancel&&confirmedOwner!==activeOwner.current)return;
-    const action=Symbol(),actionOwner=owner;inFlight.current=action;setBusy(item._id);setError('');setNotice('');
+    const action=Symbol(),actionOwner=owner;inFlight.current=action;pendingFailure.current=null;setBusy(item._id);setError('');setNotice('');
     try{const result=await apiFetch('/payments/mine/agreements/'+encodeURIComponent(item._id)+(cancel?'/cancel-pending':'/continue'),{method:'POST',body:JSON.stringify(cancel?{confirmPendingCancellation:true}:{})});
       if(activeOwner.current!==actionOwner||inFlight.current!==action)return;const value=result.item,order=result.order;
       if(value?._id!==item._id||value?.provider!==item.provider||value?.kind!==item.kind||value?.product!==item.product||value?.checkoutOrderId!==item.checkoutOrderId||order?._id!==item.checkoutOrderId||order?.provider!==item.provider||order?.kind!==item.kind||order?.product!==item.product)throw new Error('The original checkout could not be confirmed. Check the same pending checkout before paying again.');
@@ -70,7 +79,7 @@ export default function AutoRenewals({owner,onChanged}:{owner:string;onChanged:(
       else if(['paid','renewal_ready'].includes(order.status)){setItems(current=>current.map(row=>row._id===item._id?value:row));setNotice('The provider confirmed this checkout has completed. Your billing records have been updated.');}
       else throw new Error('The original checkout is still being prepared. Please retry Continue checkout shortly.');
       setRevision(n=>n+1);onChanged();
-    }catch(e:any){if(activeOwner.current===actionOwner&&inFlight.current===action){setError(e.message||'The pending checkout could not be confirmed. Retry the same action.');setRevision(n=>n+1);}}
+    }catch(e:any){if(activeOwner.current===actionOwner&&inFlight.current===action){const message=e.message||'The pending checkout could not be confirmed. Retry the same action.';pendingFailure.current={owner:actionOwner,id:item._id,message};setError(message);setRevision(n=>n+1);}}
     finally{if(inFlight.current===action){inFlight.current=null;setBusy('');}}
   }
   async function change(item:Agreement,enable:boolean,endDisabled=false,confirmedOwner?:string) {
@@ -87,7 +96,7 @@ export default function AutoRenewals({owner,onChanged}:{owner:string;onChanged:(
       const next:ActionConfirmation={item,owner,action:endDisabled?'cancel':enable?'enable':'disable',subject:endDisabled?'this disabled agreement':'automatic renewal',message:prompt,enable,endDisabled};confirmation.current=next;setActionConfirmation(next);return;
     }
     if(confirmedOwner!==activeOwner.current)return;
-    const action=Symbol(),actionOwner=owner;inFlight.current=action;
+    const action=Symbol(),actionOwner=owner;inFlight.current=action;pendingFailure.current=null;
     setBusy(item._id);setError('');setNotice('');
     try {
       const result=await apiFetch('/payments/mine/agreements/'+encodeURIComponent(item._id)+(endDisabled?'/end':enable?'/resume':'/cancel'),{method:'POST',body:JSON.stringify(enable&&!endDisabled?{termsAccepted:true,consentFingerprint:item.renewalConsentFingerprint}:{})});
@@ -107,7 +116,7 @@ export default function AutoRenewals({owner,onChanged}:{owner:string;onChanged:(
     if(confirmedOwner===undefined){if(confirmation.current)return;setCancellation({item,purchase,owner});return;}
     if(confirmedOwner!==activeOwner.current)return;
     setCancellation(null);
-    const action=Symbol(),actionOwner=confirmedOwner;inFlight.current=action;setBusy(id);setError('');setNotice('');
+    const action=Symbol(),actionOwner=confirmedOwner;inFlight.current=action;pendingFailure.current=null;setBusy(id);setError('');setNotice('');
     try{
       const result=await apiFetch('/payments/mine/'+(purchase?'purchases/':'agreements/')+encodeURIComponent(id)+'/cancel-now',{method:'POST',body:JSON.stringify({confirmImmediateCancellation:true})});
       if(activeOwner.current!==actionOwner||inFlight.current!==action)return;
