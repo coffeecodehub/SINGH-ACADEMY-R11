@@ -2292,7 +2292,7 @@
     },
     {
       "path": "frontend/app/book/page.tsx",
-      "sha256": "bd3d726ce94cb664696716b7675c508abed62db366f35ba368f7c01f24a9b798"
+      "sha256": "5a3ac3e25679681fa99732c37f8dd5d4ed0d404b1aca097d7a227dc398a270ab"
     },
     {
       "path": "frontend/app/certificates/page.tsx",
